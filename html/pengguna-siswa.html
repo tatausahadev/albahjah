@@ -321,12 +321,6 @@
                                                 <div class="d-flex align-items-start justify-content-between">
                                                     <div class="">
                                                         <span>Data berdasarkan</span>
-                                                        <div class="d-flex align-items-end mt-2"><span
-                                                                class="fw-bold">TA 2019 /
-                                                                2020, Semua
-                                                                kelas</span>
-
-                                                        </div>
                                                     </div>
                                                     <a type="button"
                                                         class="btn btn-primary btn-icon bg-white text-primary"
@@ -334,6 +328,11 @@
                                                         <i class="bx bx-filter bx-sm"></i>
                                                     </a>
                                                 </div>
+
+                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold">TA 2019 /
+                                                        2020, Semua tingkat, Semua
+                                                        kelas</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -343,33 +342,15 @@
                                             <div class="card-body">
                                                 <div class="d-flex align-items-start justify-content-between">
                                                     <div class="content-left">
-                                                        <span>Jumlah Siswa</span>
-                                                        <div class="d-flex align-items-end mt-2">
-                                                            <h3 class="mb-0 me-2">29</h3>
-                                                        </div>
+                                                        <span>Jumlah Siswa</span><br>
+                                                        <small class="text-primary"> 100%</small>
                                                     </div>
                                                     <span class="badge bg-label-primary rounded p-2">
                                                         <i class="bx bx-user bx-sm"></i>
                                                     </span>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-xl-3">
-                                        <div class="card h-100">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-start justify-content-between">
-                                                    <div class="content-left">
-                                                        <span>Siswa Aktif </span>
-                                                        <small class="text-success"> 95%</small>
-                                                        <div class="d-flex align-items-end mt-2">
-                                                            <h3 class="mb-0 me-2">24</h3>
-                                                        </div>
-                                                    </div>
-                                                    <span class="badge bg-label-success rounded p-2">
-                                                        <i class="bx bx-user-check bx-sm"></i>
-                                                    </span>
-
+                                                <div class="d-flex align-items-end mt-2">
+                                                    <h3 class="mb-0 me-2">193</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -379,15 +360,33 @@
                                             <div class="card-body">
                                                 <div class="d-flex align-items-start justify-content-between">
                                                     <div class="content-left">
-                                                        <span>Siswa Tidak Aktif</span>
+                                                        <span>Siswa Aktif </span> <br>
+                                                        <small class="text-success"> 95%</small>
+                                                    </div>
+                                                    <span class="badge bg-label-success rounded p-2">
+                                                        <i class="bx bx-user-check bx-sm"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="d-flex align-items-end mt-2">
+                                                    <h3 class="mb-0 me-2">185</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-xl-3">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-start justify-content-between">
+                                                    <div class="content-left">
+                                                        <span>Siswa Tidak Aktif</span> <br>
                                                         <small class="text-danger"> 5%</small>
-                                                        <div class="d-flex align-items-end mt-2">
-                                                            <h3 class="mb-0 me-2">0</h3>
-                                                        </div>
                                                     </div>
                                                     <span class="badge bg-label-danger rounded p-2">
                                                         <i class="bx bx-user-x bx-sm"></i>
                                                     </span>
+                                                </div>
+                                                <div class="d-flex align-items-end mt-2">
+                                                    <h3 class="mb-0 me-2">8</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -395,16 +394,15 @@
 
                                 </div>
                             </div>
-                            <div class="col-lg-12 mb-4 order-0">
-                                <!-- Hoverable Table rows -->
+                            <div class="col-lg-12 mb-4">
                                 <div class="card">
-                                    <div class="row">
+                                    <div class="row card-header ">
                                         <div class="col-md-5 col-12">
-                                            <h5 class="card-header pt-4">Daftar Siswa</h5>
+                                            <h5 class="pt-2">Daftar Siswa</h5>
                                         </div>
                                         <div class="col-md-7 col-12">
-                                            <div class="row py-4 px-3">
-                                                <div class="col-12 col-xl-5 pb-3">
+                                            <div class="row">
+                                                <div class="col-12 col-md-5 pb-3">
                                                     <div class="input-group">
                                                         <span class="input-group-text"><i
                                                                 class="tf-icons bx bx-search"></i></span>
@@ -412,197 +410,285 @@
                                                             placeholder="Cari nama siswa...">
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-6 col-xl-3 pb-3 ms-auto">
+                                                <div class="col-6 col-md-4 pb-3 ms-auto">
                                                     <select id="largeSelect" class="form-select form-select-md w-100">
-                                                        <option value="3">Semua status
-                                                        </option>
                                                         <option value="1">Aktif</option>
                                                         <option value="2">Tidak aktif</option>
+                                                        <option value="3" selected>Semua status
+                                                        </option>
                                                     </select>
                                                 </div>
-                                                <div class="col-sm-6 col-xl-3 ms-auto">
+                                                <div class="col-6 col-md-3 ms-auto">
                                                     <a type="button" class="btn btn-primary text-white w-100"
                                                         data-bs-toggle="modal" data-bs-target="#modal-tambah-siswa">
-                                                        <i class="bx bx-plus"></i> Data Siswa
+                                                        <i class="bx bx-plus"></i> Siswa
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="table-responsive text-nowrap">
-                                        <table class="table table-hover card-table">
+                                    <div class="table-responsive  mx-2">
+                                        <table class="table table-hover card-table table-striped table-borderless mb-4">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-primary" style="min-width: 200px;">Nama Siswa</th>
-                                                    <th class="text-primary">ID Pengguna</th>
-                                                    <th class="text-primary">Info Pendidikan</th>
-                                                    <th class="text-primary">Status Siswa</th>
-                                                    <th class="text-primary">Aksi</th>
+                                                    <th class="text-primary">
+                                                        Nama Siswa</th>
+                                                    <th class="text-primary">Kelas Formal</th>
+                                                    <th class="text-primary">Status</th>
+                                                    <th class="text-primary text-center">Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tbody class="table-border-bottom-0">
                                                 <tr>
                                                     <td>
-                                                        <div class="avatar">
-                                                            <img src="../assets/img/avatars/siswa-1.jpg" alt
-                                                                class="w-px-40 h-auto rounded-circle" /> &nbsp;
-                                                            <strong>Agus Nur Hida</strong>
-                                                        </div>
-                                                    </td>
-                                                    <td>2019827318920</td>
-                                                    <td>
-                                                        <b>SMP</b> (belum masuk kelas)
-                                                    </td>
-                                                    <td><span class="badge bg-label-success me-1">Aktif</span></td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button type="button"
-                                                                class="btn p-0 dropdown-toggle hide-arrow"
-                                                                data-bs-toggle="dropdown">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="siswa-detail.html"><i
-                                                                        class="bx bx-user me-1"></i> Lihat
-                                                                    Detail</a>
-                                                                <a class="dropdown-item"
-                                                                    href="siswa-tambah-edit.html"><i
-                                                                        class="bx bx-pencil me-1"></i>
-                                                                    Ubah
-                                                                    Data</a>
+                                                        <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                            <img src="../assets/img/avatars/default.jpg" alt=""
+                                                                class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <div>
+                                                                <strong class="text-black">Faeshal Ramdhan</strong> <br>
+                                                                <span class="small">2019827318945</span>
                                                             </div>
-                                                        </div>
+                                                        </a>
                                                     </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <div class="avatar">
-                                                            <img src="../assets/img/avatars/siswi-1.jpg" alt
-                                                                class="w-px-40 h-auto rounded-circle" /> &nbsp;
-                                                            <strong>Fatim Nur</strong>
-                                                        </div>
+                                                    <td>Kelas I
                                                     </td>
-                                                    <td>2019827318923</td>
-                                                    <td>
-                                                        <b>SMP</b> Kelas II - B
+                                                    <td><span class="badge bg-label-danger me-1">Tidak Aktif</span></td>
                                                     </td>
-                                                    <td><span class="badge bg-label-success me-1">Aktif</span></td>
-                                                    <td>
-                                                        <div class="dropdown">
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="siswa-detail.html"
+                                                                class="btn btn-outline-primary">Detail</a>
                                                             <button type="button"
-                                                                class="btn p-0 dropdown-toggle hide-arrow"
-                                                                data-bs-toggle="dropdown">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
                                                             </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                        class="bx bx-user me-1"></i>
-                                                                    Lihat Detail</a>
-                                                                <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                        class="bx bx-pencil me-1"></i>
-                                                                    Ubah
-                                                                    Data</a>
-                                                            </div>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="siswa-detail.html"><i
+                                                                            class="bx bx-user me-1"></i> Lihat
+                                                                        Detail</a></a></li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="penempatan-kelas.html"><i
+                                                                            class="bx bxs-graduation me-1"></i>
+                                                                        Penempatan Kelas</a></a></li>
+                                                                <li>
+                                                                    <div class="dropdown-divider"></div>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-aktifkan"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-user-check me-1"></i>
+                                                                        Aktifkan</a>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <div class="avatar">
-                                                            <img src="../assets/img/avatars/siswa-2.jpg" alt
-                                                                class="w-px-40 h-auto rounded-circle" /> &nbsp;
-                                                            <strong>Khoirul Huda</strong>
-                                                        </div>
+                                                        <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                            <img src="../assets/img/avatars/siswa-1.jpg" alt=""
+                                                                class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <div>
+                                                                <strong class="text-black">Agus
+                                                                    Fakhriz</strong> <br>
+                                                                <span class="small">2019827318920</span>
+                                                            </div>
+                                                        </a>
                                                     </td>
-                                                    <td>2019827318924</td>
-                                                    <td>
-                                                        <b>SMP</b> Kelas II - B
+                                                    <td>Kelas III - C
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
-                                                    <td>
-                                                        <div class="dropdown">
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="siswa-detail.html"
+                                                                class="btn btn-outline-primary">Detail</a>
                                                             <button type="button"
-                                                                class="btn p-0 dropdown-toggle hide-arrow"
-                                                                data-bs-toggle="dropdown">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
                                                             </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                        class="bx bx-user me-1"></i>
-                                                                    Lihat Detail</a>
-                                                                <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                        class="bx bx-pencil me-1"></i>
-                                                                    Ubah
-                                                                    Data</a>
-                                                            </div>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="siswa-detail.html"><i
+                                                                            class="bx bx-user me-1"></i> Lihat
+                                                                        Detail</a></a></li>
+                                                                <li>
+                                                                    <div class="dropdown-divider"></div>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-non-aktifkan"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-user-x me-1"></i>
+                                                                        Non Aktifkan</a>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </td>
                                                 </tr>
-
                                                 <tr>
                                                     <td>
-                                                        <div class="avatar">
-                                                            <img src="../assets/img/avatars/1.png" alt
-                                                                class="w-px-40 h-auto rounded-circle" /> &nbsp;
-                                                            <strong>Faeshal Makrub</strong>
+                                                        <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                            <img src="../assets/img/avatars/siswi-1.jpg" alt=""
+                                                                class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <div>
+                                                                <strong class="text-black">Fatim Nur</strong> <br>
+                                                                <span class="small">2019827318923</span>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td>Kelas II - B
+                                                    </td>
+                                                    <td><span class="badge bg-label-success me-1">Aktif</span></td>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="siswa-detail.html"
+                                                                class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="siswa-detail.html"><i
+                                                                            class="bx bx-user me-1"></i> Lihat
+                                                                        Detail</a></a></li>
+                                                                <li>
+                                                                    <div class="dropdown-divider"></div>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-non-aktifkan"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-user-x me-1"></i>
+                                                                        Non Aktifkan</a>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </td>
-                                                    <td>2019827318931</td>
+                                                </tr>
+                                                <tr>
                                                     <td>
-                                                        <b>SMP</b> Kelas III - A
-                                                    </td>
-                                                    <td><span class="badge bg-label-danger me-1">Tidak Aktif</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button type="button"
-                                                                class="btn p-0 dropdown-toggle hide-arrow"
-                                                                data-bs-toggle="dropdown">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                        class="bx bx-user me-1"></i>
-                                                                    Lihat Detail</a>
-                                                                <a class="dropdown-item" href="javascript:void(0);"><i
-                                                                        class="bx bx-pencil me-1"></i>
-                                                                    Ubah
-                                                                    Data</a>
+                                                        <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                            <img src="../assets/img/avatars/siswa-2.jpg" alt=""
+                                                                class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <div>
+                                                                <strong class="text-black">Khoirul Huda</strong> <br>
+                                                                <span class="small">2019827318924</span>
                                                             </div>
+                                                        </a>
+                                                    </td>
+                                                    <td><i>Belum&nbsp;masuk&nbsp;kelas</i>
+                                                    </td>
+                                                    <td><span class="badge bg-label-success me-1">Aktif</span></td>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="siswa-detail.html"
+                                                                class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="siswa-detail.html"><i
+                                                                            class="bx bx-user me-1"></i> Lihat
+                                                                        Detail</a></a></li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="penempatan-kelas.html"><i
+                                                                            class="bx bxs-graduation me-1"></i>
+                                                                        Penempatan Kelas</a></a></li>
+                                                                <li>
+                                                                    <div class="dropdown-divider"></div>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-non-aktifkan"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-user-x me-1"></i>
+                                                                        Non Aktifkan</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                            <img src="../assets/img/avatars/siswi-2.jpg" alt=""
+                                                                class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <div>
+                                                                <strong class="text-black">Nur Hidayah</strong> <br>
+                                                                <span class="small">2019827318931</span>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td>Kelas III - A
+                                                    </td>
+                                                    <td><span class="badge bg-label-danger me-1">Tidak Aktif</span></td>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="siswa-detail.html"
+                                                                class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="siswa-detail.html"><i
+                                                                            class="bx bx-user me-1"></i> Lihat
+                                                                        Detail</a></a></li>
+                                                                <li>
+                                                                    <div class="dropdown-divider"></div>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-aktifkan"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-user-check me-1"></i>
+                                                                        Aktifkan</a>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <nav aria-label="Page navigation" class="my-5">
-                                            <ul class="pagination justify-content-center">
-                                                <li class="page-item prev">
-                                                    <a class="page-link" href="javascript:void(0);"><i
-                                                            class="tf-icon bx bx-chevrons-left"></i></a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="javascript:void(0);">1</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="javascript:void(0);">2</a>
-                                                </li>
-                                                <li class="page-item active">
-                                                    <a class="page-link" href="javascript:void(0);">3</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="javascript:void(0);">4</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="javascript:void(0);">5</a>
-                                                </li>
-                                                <li class="page-item next">
-                                                    <a class="page-link" href="javascript:void(0);"><i
-                                                            class="tf-icon bx bx-chevrons-right"></i></a>
-                                                </li>
-                                            </ul>
-                                        </nav>
                                     </div>
+
+                                    <nav aria-label="Page navigation" class="my-4">
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item prev">
+                                                <a class="page-link" href="javascript:void(0);"><i
+                                                        class="tf-icon bx bx-chevrons-left"></i></a>
+                                            </li>
+                                            <li class="page-item active">
+                                                <a class="page-link" href="javascript:void(0);">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript:void(0);">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript:void(0);">3</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript:void(0);">4</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript:void(0);">5</a>
+                                            </li>
+                                            <li class="page-item next">
+                                                <a class="page-link" href="javascript:void(0);"><i
+                                                        class="tf-icon bx bx-chevrons-right"></i></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
 
                             </div>
@@ -628,40 +714,65 @@
                                                 placeholder="Tuliskan nama lengkap siswa" required />
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">Mulai</label>
-                                            <input class="form-control" type="month" id="mulai-tahun-ajaran"
-                                                placeholder="Bulan & Tahun mulai">
+                                            <label for="nameBasic" class="form-label">ID Siswa</label>
+                                            <input class="form-control" type="text" id="id-siswa"
+                                                placeholder="Digenerate oleh sistem" disabled value="2081029311">
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">Akhir</label>
-                                            <input class="form-control" type="month" id="akhir0tahun-ajaran"
-                                                placeholder="Bulan & Tahun akhir">
+                                            <label for="nameBasic" class="form-label">Nama Pengguna</label>
+                                            <input class="form-control" type="text" id="nama-pengguna"
+                                                placeholder="Masukkan Nama Pengguna">
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3 form-password-toggle">
+                                            <label for="nameBasic" class="form-label">Kata Sandi <b
+                                                    class="text-danger">*</b></label>
+                                            <div class="input-group input-group-merge">
+                                                <input type="password" id="password" class="form-control"
+                                                    name="password" aria-describedby="password"
+                                                    placeholder="Masukkan kata sandi ..." value="12345678" />
+                                                <span class="input-group-text cursor-pointer"><i
+                                                        class="bx bx-hide"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 mb-3">
+                                                    <label for="selectTingkat" class="form-label">Tingkat Kelas</label>
+                                                    <select id="selectTingkat" class="form-select form-select-md ">
+                                                        <option value="0" selected>...</option>
+                                                        <option value="1">Kelas I</option>
+                                                        <option value="2">Kelas II</option>
+                                                        <option value="3">Kelas III</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12 col-md-6 mb-3">
+                                                    <label for="selectNamaKelas" class="form-label">Nama Kelas</label>
+                                                    <select id="selectNamaKelas" class="form-select form-select-md ">
+                                                        <option value="0" selected>...</option>
+                                                        <option value="1">A</option>
+                                                        <option value="2">B</option>
+                                                        <option value="3">C</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="mb-3 col-12">
                                             <label for="nameBasic" class="form-label">Pilih Status</label> <br>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                     id="inlineRadio1" value="option1" checked />
-                                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
-                                                    <small class="text-secondary">(<i>Jika Tahun Ajaran masih belum
-                                                            dimulai, data tidak ditampilkan</i>)</small></label>
-                                            </div>
-                                            <br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio2" value="option2" />
-                                                <label class="form-check-label text-info" for="inlineRadio2">Berlangsung
-                                                    <small class="text-secondary">(<i>Jika Tahun Ajaran sedang
-                                                            berlangsung saat
-                                                            ini, data ditampilkan</i>)</small></label>
+                                                <label class="form-check-label text-danger" for="inlineRadio1">Tidak
+                                                    Aktif
+                                                    <small class="text-secondary">(<i>Siswa terkait dapat mengakses
+                                                            sistem dengan batasan</i>)</small></label>
                                             </div>
                                             <br>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="inlineRadioOptions"
                                                     id="inlineRadio3" value="option3" />
-                                                <label class="form-check-label text-success" for="inlineRadio2">Selesai
-                                                    <small class="text-secondary">(<i>Jika Tahun Ajaran sudah
-                                                            terlewati, data ditampilkan</i>)</small></label>
+                                                <label class="form-check-label text-success" for="inlineRadio3">Aktif
+                                                    <small class="text-secondary">(<i>Siswa terkait dapat mengakses
+                                                            sistem secara normal</i>)</small></label>
                                             </div>
                                         </div>
                                     </div>
@@ -693,7 +804,6 @@
                                             <select id="selectTahunAjaran" class="form-select form-select-md ">
                                                 <option value="1">TA 2019 / 2020</option>
                                                 <option value="2">TA 2018 / 2019</option>
-                                                <option value="3">Semua TA</option>
                                             </select>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
@@ -702,7 +812,7 @@
                                                 <option value="1">Kelas I</option>
                                                 <option value="2">Kelas II</option>
                                                 <option value="3">Kelas III</option>
-                                                <option value="4">Semua Kelas</option>
+                                                <option value="4">Semua Tingkat</option>
                                             </select>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
@@ -714,8 +824,6 @@
                                                 <option value="4">Semua Kelas</option>
                                             </select>
                                         </div>
-
-
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -728,7 +836,94 @@
                         </div>
                     </div>
 
+                    <!-- Modal Non Aktifkan Siswa-->
+                    <div class="modal fade" id="modal-non-aktifkan" tabindex="-1" data-bs-backdrop="static">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Konfirmasi Non Aktifkan Siswa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
+                                            <div class="alert alert-warning d-flex" role="alert">
+                                                <span
+                                                    class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
+                                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                                <div class="d-flex flex-column ps-1">
+                                                    <span class="text-black">Apakah Anda yakin siswa <span
+                                                            class="fw-semibold">Agus Fakhriz Kelas III - C</span>
+                                                        akan di<span class="fw-semibold"> Non Aktifkan </span> dari
+                                                        sistem?
+                                                </div>
+                                            </div>
 
+                                            <label for="nameSmall" class="form-label">Tuliskan alasan siswa di Non
+                                                Aktifkan <span class="text-danger">*</span></label>
+                                            <input type="text" id="nameSmall" class="form-control"
+                                                placeholder="Tulis keterangan ">
+                                            <small class="text-muted"><i>(Keterangan di atas akan ditampilkan pada akun
+                                                    siswa terkait)</i></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                        Batal
+                                    </button>
+                                    <button type="button" class="btn btn-danger" onclick="sweet()"
+                                        data-bs-dismiss="modal">Ya</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Aktifkan Siswa-->
+                    <div class="modal fade" id="modal-aktifkan" tabindex="-1" data-bs-backdrop="static">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Konfirmasi Aktifkan Siswa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
+                                            <div class="alert alert-warning d-flex" role="alert">
+                                                <span
+                                                    class="badge badge-center rounded-pill bg-warning border-label-warning p-3 me-2"><i
+                                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                                <div class="d-flex flex-column ps-1">
+                                                    <span class="text-black">Apakah Anda yakin siswa <span
+                                                            class="fw-semibold">Agus Fakhriz Kelas III - C</span>
+                                                        akan di<span class="fw-semibold"> Aktifkan </span> pada
+                                                        sistem?
+                                                </div>
+                                            </div>
+
+                                            <label for="nameSmall" class="form-label">Tuliskan alasan siswa di
+                                                Aktifkan</label>
+                                            <input type="text" id="nameSmall" class="form-control"
+                                                placeholder="Tulis keterangan ">
+                                            <small class="text-muted"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                        Batal
+                                    </button>
+                                    <button type="button" class="btn btn-warning" onclick="sweet()"
+                                        data-bs-dismiss="modal">Ya</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
