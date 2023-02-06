@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/"
+    data-template="vertical-menu-template-free">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>SMP Al Bahjah | TU-Apps </title>
+
+    <meta name="description" content="" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+
+    <link rel="stylesheet" href="../assets/boxicons-2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="../fonts/boxicons.scss" />
+
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/tagify/tagify.css" />
+
+    <script src="../assets/vendor/js/helpers.js"></script>
+
+    <script src="../assets/js/config.js"></script>
+
+</head>
+
+<body>
+
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo">
+                    <a href="index.html" class="app-brand-link">
+                        <img class="img-fluid p-5" src="logo-tu-apps.png" alt="">
+                    </a>
+
+                    <a href="javascript:void(0);"
+                        class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                        <i class="bx bx-chevron-left bx-sm align-middle"></i>
+                    </a>
+                </div>
+
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-dashboard"></i>
+                            <div>Beranda</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Menu utama</span>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="transaksi-siswa.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                            <div>Transaksi Siswa</div>
+                        </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="transaksi-pegawai.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                            <div> Transaksi Pegawai</div>
+                        </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="transaksi-instansi.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                            <div> Transaksi Instansi</div>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="keuangan.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-bar-chart-alt-2"></i>
+                            <div>Keuangan</div>
+                        </a>
+                    </li>
+
+
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Pengaturan Umum</span>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="instansi.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-bank"></i>
+                            <div>Instansi</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="periode-waktu.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-calendar"></i>
+                            <div>Periode Waktu</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0)" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-male-female"></i>
+                            <div>Pengguna</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="pengguna-siswa.html" class="menu-link">
+                                    <div>Siswa</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="pengguna-pegawai.html" class="menu-link">
+                                    <div>Pegawai</div>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0)" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bxs-graduation"></i>
+                            <div>Kelas</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="kelas-formal.html" class="menu-link">
+                                    <div>Kelas Formal</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="kelas-non-formal.html" class="menu-link">
+                                    <div>Kelas Non-Formal</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="pindah-kelas.html" class="menu-link">
+                                    <div>Penempatan Siswa</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0)" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                            <div>Transaksi</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="pengaturan-transaksi-siswa.html" class="menu-link">
+                                    <div>Dari Siswa</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="pengaturan-transaksi-pegawai.html" class="menu-link">
+                                    <div>Dari Pegawai</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="pengaturan-transaksi-instansi.html" class="menu-link">
+                                    <div>Dari Instansi</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Lain - lain</span></li>
+
+                    
+                    <li class="menu-item">
+                        <a href="riwayat.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-timer"></i>
+                            <div>Riwayat</div>
+                        </a>
+                    </li>
+
+                </ul>
+            </aside>
+
+            <div class="layout-page">
+
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+                    id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                            <i class="bx bx-menu bx-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item d-flex align-items-center">
+                                <img style="height: 50px;" src="../assets/img/logo/logo-sekolah-header.png" alt="">
+                            </div>
+                        </div>
+
+
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+                            <li class="nav-item lh-1 me-3">
+                                <span class="github-button" href="#" data-icon="octicon-star" data-size="large">Faishal
+                                    Salim</span>
+                            </li>
+
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                    data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="../assets/img/avatars/1.png" alt
+                                            class="w-px-40 h-auto rounded-circle" />
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="../assets/img/avatars/1.png" alt
+                                                            class="w-px-40 h-auto rounded-circle" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-semibold d-block">Faishal Salim</span>
+                                                    <small class="text-muted">Admin Instansi</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bx bx-user me-2"></i>
+                                            <span class="align-middle">Profilku</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="masuk.html">
+                                            <i class="bx bx-power-off me-2"></i>
+                                            <span class="align-middle">Keluar Apps</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="content-wrapper">
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row">
+
+                            <div class="col-12 col-lg-8 order-0 mb-4">
+
+                                <div class="row g-4">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header row ">
+                                                <div class="col-12 col-md-7">
+                                                    <h5 class="mt-2">Data transaksi</h5>
+                                                </div>
+                                                <div class="col-10 col-md-4">
+                                                    <select id="namaPeriodeSelect" class="form-select">
+                                                        <option disabled="" selected="" value="">Pilih periode
+                                                        </option>
+                                                        <option value="1">TA 2017 / 2018</option>
+                                                        <option value="2">TA 2018 / 2019</option>
+                                                        <option value="3" selected>TA 2019 / 2020</option>
+                                                        <option value="4">TA 2020 / 2021</option>
+
+                                                    </select>
+                                                </div>
+                                                <div class="col-2 col-md-1">
+                                                    <div class="btn-group">
+                                                        <button type="button"
+                                                            class="btn btn-primary btn-icon rounded-pill dropdown-toggle hide-arrow"
+                                                            data-bs-toggle="dropdown">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item"
+                                                                    href="javascript:void(0);">Lihat detail</a></li>
+                                                            <li><a class="dropdown-item"
+                                                                    href="javascript:void(0);">Unduh laporan</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div id="totalRevenueChart" class="px-2"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-12 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0 me-3">
+                                                        <span class="avatar-initial rounded bg-label-primary"><i
+                                                                class="bx bx-wallet bx-sm"></i></span>
+                                                    </div>
+
+                                                </div>
+                                                <h5 class="card-title mb-1">Keuangan Instansi</h5> <br>
+                                                <a type="button" href="keuangan-instansi.html"
+                                                    class="btn btn-sm rounded-pill btn-primary">
+                                                    &nbsp; Selengkapnya <span
+                                                        class="tf-icons bx bx-chevron-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-12 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+                                                    <div class="avatar flex-shrink-0 me-3">
+                                                        <span class="avatar-initial rounded bg-label-primary"><i
+                                                                class="bx bx-wallet bx-sm"></i></span>
+                                                    </div>
+
+                                                </div>
+                                                <h5 class="card-title mb-1">Keuangan Siswa</h5> <br>
+                                                <a type="button" href="keuangan-siswa.html"
+                                                    class="btn btn-sm rounded-pill btn-primary">
+                                                    &nbsp; Selengkapnya <span
+                                                        class="tf-icons bx bx-chevron-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4 col-12 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div
+                                                    class="card-title d-flex align-items-start justify-content-between">
+
+                                                    <div class="avatar flex-shrink-0 me-3">
+                                                        <span class="avatar-initial rounded bg-label-primary"><i
+                                                                class="bx bx-wallet bx-sm"></i></span>
+                                                    </div>
+
+                                                </div>
+                                                <h5 class="card-title mb-1">Keuangan Pegawai</h5> <br>
+                                                <a type="button" href="keuangan-pegawai.html"
+                                                    class="btn btn-sm rounded-pill btn-primary">
+                                                    &nbsp; Selengkapnya <span
+                                                        class="tf-icons bx bx-chevron-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 col-lg-4 col-md-4 order-1">
+                                <div class="card">
+                                    <!-- <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                                        <div class="card-title mb-0">   
+                                        </div>
+                                    </div> -->
+                                    <div class="card-body">
+                                        <h5 class="mb-4">Total Keuangan Saat Ini</h5>
+                                        <div
+                                            class="d-flex justify-content-between align-items-center mt-3 mb-2 rounded bg-label-primary">
+                                            <!-- <div id="orderStatisticsChart"></div> -->
+                                            <div class="p-4">
+                                                <h2 class="fw-normal text-primary mb-0"> Rp 1.292.012.000</h2>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <ul class="p-0 m-0">
+                                            <li class="d-flex mb-4 pb-1">
+                                                <div class="avatar flex-shrink-0 me-3">
+                                                    <span class="avatar-initial rounded bg-label-primary"><i
+                                                            class="bx bx-transfer-alt bx-sm"></i></span>
+                                                </div>
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0">Transaksi Instansi</h6>
+                                                        <small class="text-muted">Keungan instansi</small>
+                                                    </div>
+                                                    <div class="user-progress">
+                                                        <h5 class="fw-semibold"> 1.208.890.000</h5>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex mb-4 pb-1">
+                                                <div class="avatar flex-shrink-0 me-3">
+                                                    <span class="avatar-initial rounded bg-label-primary"><i
+                                                            class="bx bx-transfer-alt bx-sm"></i></span>
+                                                </div>
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0">Transaksi Siswa </h6>
+                                                        <small class="text-muted">Keuangan Siswa</small>
+                                                    </div>
+                                                    <div class="user-progress">
+                                                        <h5 class="fw-semibold"> 855.220.000</h5>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+                                            <li class="d-flex mb-4 pb-1">
+                                                <div class="avatar flex-shrink-0 me-3">
+                                                    <span class="avatar-initial rounded bg-label-primary"><i
+                                                            class="bx bx-transfer-alt bx-sm"></i></span>
+                                                </div>
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0">Transaksi Pegawai</h6>
+                                                        <small class="text-muted">Keuangan Pegawai</small>
+                                                    </div>
+                                                    <div class="user-progress">
+                                                        <h5 class="fw-semibold"> - 408.890.000</h5>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex pb-1">
+                                                <div class="avatar flex-shrink-0 me-3">
+                                                    <span class="avatar-initial rounded bg-label-warning"><i
+                                                            class="bx bx-transfer-alt bx-sm"></i></span>
+                                                </div>
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0">Tabungan Siswa </h6>
+                                                        <small class="text-muted">Keuangan Siswa</small>
+                                                    </div>
+                                                    <div class="user-progress">
+                                                        <h5 class="fw-semibold"> 109.220.000</h5>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="content-backdrop fade"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout-overlay layout-menu-toggle"></div>
+        </div>
+
+        <!-- Modal Tambah Transaksi Siswa-->
+        <div class="modal fade" id="modal-tambah-transaksi-siswa" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel1">Tambah Transaksi Siswa</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nameBasic" class="form-label">Periode Transaksi ini</label>
+                                <input type="text" id="nameBasic" class="form-control"
+                                    placeholder="Tahun Ajaran Pembayaran" value="TA 2019 / 2020" disabled />
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nameBasic" class="form-label">Nama Transaksi <b
+                                        class="text-danger">*</b></label>
+                                <select id="transaksiSelect" class="form-select">
+                                    <option disabled="" selected="" value="">Pilih Transaksi
+                                    </option>
+                                    <option value="1">SPP Bulanan</option>
+                                    <option value="2">LKS / Buku Pelajaran</option>
+                                    <option value="3">Seragam Sekolah Laki-laki</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nameBasic" class="form-label">Waktu Pembayaran <b
+                                        class="text-danger">*</b></label>
+                                <select id="waktuPembayaranSelect" class="form-select">
+                                    <option disabled="" selected="" value="">Pilih Waktu
+                                    </option>
+                                    <option value="1">Sekali Saja</option>
+                                    <option value="2">Tiap Bulan</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nameBasic" class="form-label">Nominal <b class="text-danger">*</b></label>
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text" id="basic-default-email2">Rp</span>
+                                    <input type="text" id="basic-default-email" class="form-control" placeholder="0">
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 mb-3">
+                                <label for="nameBasic" class="form-label">Deskripsi transaksi</label>
+                                <input type="text" id="nameBasic" class="form-control"
+                                    placeholder="Tuliskan deskripsi jika perlu" required />
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1" checked />
+                                    <label class="form-check-label text-secondary" for="inlineRadio1">Draft
+                                        <small class="text-secondary">(<i>Tagihan transaksi ini tidak ditampilkan pada
+                                                siswa</i>)</small></label>
+                                </div>
+                                <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label text-info" for="inlineRadio2">Proses
+                                        <small class="text-secondary">(<i>Tagihan transaksi ini ditampilkan pada
+                                                siswa</i>)</small></label>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="py-4">
+                                    <div class="row">
+                                        <div class="col-12 col-md-9">
+                                            <h6 class="mt-2 text-primary">Siapa yang melakukan pembayaran transaksi ini?
+                                            </h6>
+                                        </div>
+                                        <div class=" col-12 col-md-3 text-md-end">
+                                            <a class="btn btn-outline-primary collapsed" data-bs-toggle="collapse"
+                                                href="#subjek-transaksi-siswa" role="button" aria-expanded="false"
+                                                aria-controls="subjek-transaksi-siswa"> <span
+                                                    class="badge badge-center rounded-pill bg-label-primary"><i
+                                                        class='bx bxs-user pt-1'></i></span> &nbsp;
+                                                Pilih
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="subjek-transaksi-siswa">
+                                    <div class="mb-3">
+                                        <label for="kelasSelect" class="form-label">berdasarkan kelas</label>
+                                        <input id="kelasSelect" name="kelasSelect" class="form-control"
+                                            placeholder="Pilih kelas">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Batal
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="sweet()"
+                            data-bs-dismiss="modal">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Ubah Tahun Ajaran-->
+        <div class="modal fade" id="modal-ubah-tahun-ajaran" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel1">Tambah Tahun Ajaran</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 col-md-12 mb-3">
+                                <label for="nameBasic" class="form-label">Label Periode <b
+                                        class="text-danger">*</b></label>
+                                <input type="text" id="nameBasic" class="form-control"
+                                    placeholder="TA Tahun mulai / Tahun akhir" value="TA 2022 / 2023" />
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nameBasic" class="form-label">Mulai</label>
+                                <input class="form-control" type="month" id="mulai-tahun-ajaran"
+                                    placeholder="Bulan & Tahun mulai" value="2022-07">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nameBasic" class="form-label">Akhir</label>
+                                <input class="form-control" type="month" id="akhir0tahun-ajaran"
+                                    placeholder="Bulan & Tahun akhir" value="2023-08">
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1" checked />
+                                    <label class="form-check-label text-secondary" for="inlineRadio1">Draft
+                                        <small class="text-secondary">(<i>Jika Tahun Ajaran masih belum
+                                                dimulai, data tidak ditampilkan</i>)</small></label>
+                                </div>
+                                <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label text-info" for="inlineRadio2">Berlangsung
+                                        <small class="text-secondary">(<i>Jika Tahun Ajaran sedang berlangsung
+                                                saat
+                                                ini, data ditampilkan</i>)</small></label>
+                                </div>
+                                <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio3" value="option3" />
+                                    <label class="form-check-label text-success" for="inlineRadio2">Selesai
+                                        <small class="text-secondary">(<i>Jika Tahun Ajaran sudah
+                                                terlewati, data ditampilkan</i>)</small></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            Batal
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="sweet()"
+                            data-bs-dismiss="modal">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="master-transaksi-siswa" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-fullscreen" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalFullTitle">Master Transaksi Siswa</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac
+                            facilisis in,
+                            egestas
+                            eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-primary" onclick="sweet()"
+                            data-bs-dismiss="modal">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="../assets/vendor/libs/popper/popper.js"></script>
+        <script src="../assets/vendor/js/bootstrap.js"></script>
+        <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+        <script src="../assets/vendor/js/menu.js"></script>
+
+        <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/vendor/libs/select2/select2.js"></script>
+        <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+
+        <script src="../assets/js/dashboards-analytics.js"></script>
+
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+        <script src="../assets/js/sweetalert.min.js"></script>
+
+        <script src="../libs/select/select.js"></script>
+
+        <script>
+            function sweet() {
+                swal({
+                    title: "Data berhasil disimpan!",
+                    // text: "You clicked the button!",
+                    icon: "success",
+                    button: false,
+                    timer: 2000,
+                });
+            }
+        </script>
+        <script>
+            $(".select2").select2();
+        </script>
+        <script>
+
+            $("#namaPeriodeSelect").select2({
+                placeholder: "Pilih Periode",
+                allowClear: false
+            });
+        </script>
+
+</body>
+
+</html>
