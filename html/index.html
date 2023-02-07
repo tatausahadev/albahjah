@@ -27,6 +27,15 @@
   <script src="../assets/vendor/js/helpers.js"></script>
 
   <script src="../assets/js/config.js"></script>
+
+  <style>
+    .bg-card-utama {
+      background-color: #FFFFFF;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.12'%3E%3Cpolygon fill='%23e1e2ff' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23c3c4ff' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23a5a7ff' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%238789ff' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23696CFF' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
 </head>
 
 <body>
@@ -167,12 +176,6 @@
           <li class="menu-header small text-uppercase"><span class="menu-header-text">Lain - lain</span></li>
 
           <li class="menu-item">
-            <a href="bantuan.html" class="menu-link">
-              <i class="menu-icon tf-icons bx bxs-help-circle"></i>
-              <div>Bantuan</div>
-            </a>
-          </li>
-          <li class="menu-item">
             <a href="riwayat.html" class="menu-link">
               <i class="menu-icon tf-icons bx bxs-timer"></i>
               <div>Riwayat</div>
@@ -288,7 +291,7 @@
           <div class="container-xxl flex-grow-1 container-p-y">
             <div class="row mb-4">
               <div class="col-12 col-md-12">
-                <div class="card h-100">
+                <div class="card h-100 bg-card-utama">
                   <div class="row">
                     <div class="col-12 col-md-10">
                       <div class="card-body">
@@ -325,7 +328,7 @@
                       </div>
                     </div>
                     <div class="col-12 col-md-2 ">
-                      <div class="card-body h-100 bg-label-primary">
+                      <div class="card-body h-100 bg-label-primary bg-card-utama">
                         <img class="img-fluid d-none d-md-block"
                           src="../assets/img/illustrations/girl-muslim-with-laptop-light.png" />
                         <button class="btn btn-primary btn-sm w-100" type="button" data-bs-toggle="offcanvas"
@@ -335,8 +338,8 @@
                   </div>
                 </div>
               </div>
-              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStart" data-bs-scroll="true"
-                data-bs-backdrop="false" aria-labelledby="offcanvasStartLabel">
+              <div class="offcanvas offcanvas-start bg-card-utama" tabindex="-1" id="offcanvasStart" data-bs-scroll="true"
+                data-bs-backdrop="true" aria-labelledby="offcanvasStartLabel">
                 <div class="offcanvas-header">
                   <h5 id="offcanvasStartLabel" class="offcanvas-title">Bantuan
                   </h5>
@@ -520,7 +523,7 @@
 
             <div class="row">
               <div class="col-lg-3 col-md-6 col-12 mb-4">
-                <div class="card">
+                <div class="card bg-card-utama">
                   <div class="card-body">
                     <div class="card-title d-flex align-items-start justify-content-between">
                       <div class="avatar flex-shrink-0">
@@ -538,7 +541,7 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 col-12 mb-4">
-                <div class="card">
+                <div class="card bg-card-utama">
                   <div class="card-body">
                     <div class="card-title d-flex align-items-start justify-content-between">
                       <div class="avatar flex-shrink-0">
@@ -557,7 +560,7 @@
               </div>
 
               <div class="col-lg-3 col-md-6 col-12 mb-4">
-                <div class="card">
+                <div class="card bg-card-utama">
                   <div class="card-body">
                     <div class="card-title d-flex align-items-start justify-content-between">
                       <div class="avatar flex-shrink-0">
@@ -576,7 +579,7 @@
               </div>
 
               <div class="col-lg-3 col-md-6 col-12 mb-4">
-                <div class="card">
+                <div class="card bg-card-utama">
                   <div class="card-body">
                     <div class="card-title d-flex align-items-start justify-content-between">
                       <div class="avatar flex-shrink-0">
