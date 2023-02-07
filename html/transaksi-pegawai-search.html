@@ -301,220 +301,49 @@
                 <div class="content-wrapper">
 
                     <div class="container-xxl flex-grow-1 container-p-y">
-                        <div class="row">
-
-                            <div class="col-lg-8 mb-4 order-0">
-                                <div class="row">
-                                    <div class="col-12 mb-4">
-                                        <div class="card h-100">
-                                            <div class="d-flex align-items-end row">
-                                                <div class="col-sm-8">
-                                                    <div class="card-body">
-                                                        <span class="badge bg-label-secondary me-1 mb-3">Menu
-                                                            Utama</span>
-                                                        <h4 class="card-title text-primary">
-                                                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
-                                                            Transaksi Pegawai
-                                                        </h4>
-                                                        <p class="mb-4">
-                                                            Berisikan semua transaksi yang diterapkan pada pegawai pada
-                                                            instansi
-                                                            Anda
-                                                        </p>
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4 text-center text-sm-left">
-                                                    <div class="card-body pb-0 px-0 px-md-4">
-                                                        <img src="../assets/img/illustrations/girl-muslim-with-laptop-light.png"
-                                                            height="140" alt="View Badge User"
-                                                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                                                            data-app-light-img="illustrations/man-with-laptop-light.png" />
-                                                    </div>
-                                                </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="card h-100">
+                                    <div class="row">
+                                        <div class="col-12 col-md-10">
+                                            <div class="card-body">
+                                                <span class="badge bg-label-secondary me-1 mb-3">Menu
+                                                    Utama</span>
+                                                <h4 class="card-title text-primary">
+                                                    <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                                                    Transaksi Pegawai
+                                                </h4>
+                                                <p class="mb-4">
+                                                    Berisikan semua transaksi yang diterapkan pada pegawai di
+                                                    instansi
+                                                    Anda
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-2">
+                                            <div class="card-body h-100 bg-label-primary">
+                                                <img class="img-fluid d-none d-md-block"
+                                                    src="../assets/img/illustrations/girl-muslim-with-laptop-light.png" />
+                                                <button class="btn btn-primary btn-sm w-100" type="button"
+                                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart"
+                                                    aria-controls="offcanvasStart">Bantuan</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-header pt-4">
-
-                                                <div class="row">
-                                                    <div class="col-12 col-md-4 my-2">
-                                                        <select id="jabatanSelect" class="form-select">
-                                                            <option disabled="" selected="" value="">Pilih jabatan
-                                                            </option>
-                                                            <option value="1">Kepala Sekolah </option>
-                                                            <option value="2">Sekretaris</option>
-                                                            <option value="3">Bendahara</option>
-                                                            <option value="4">Wali Kelas </option>
-                                                            <option value="5" selected>Guru</option>
-                                                            <option value="6">Semua jabatan</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="col-12 col-md-4 my-2">
-                                                        <select id="statusSelect" class="form-select">
-                                                            <option disabled="" selected="" value="">Pilih status
-                                                            </option>
-                                                            <option value="1">Lunas </option>
-                                                            <option value="2">Belum Lunas</option>
-                                                            <option value="3" selected>Semuanya</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="col-12 col-md-4 align-items-center d-flex my-2"> <input
-                                                            type="search" class="form-control"
-                                                            placeholder="Cari pegawai">
-                                                        &emsp;
-                                                        <a href="transaksi-pegawai-search.html" type="button"
-                                                            class="btn btn-icon btn-primary">
-                                                            <span class='bx bx-search-alt h4 pt-3 text-white'></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-12 my-4">
-                                                <div class="card">
-                                                    <div class="card-header row ">
-                                                        <div class="col-12 col-md-5">
-                                                            <h5 class="mt-2">Ditampilkan berdasarkan</h5>
-                                                        </div>
-                                                        <div class="col-12 col-md-7 pe-3 text-end">
-                                                            <span class="badge bg-label-primary me-1 mb-2"
-                                                                data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                data-bs-placement="top" data-bs-html="true" title=""
-                                                                data-bs-original-title="Jabatan pegawai ini">Guru</span>
-                                                            <span class="badge bg-label-primary me-1 mb-2"
-                                                                data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                data-bs-placement="top" data-bs-html="true" title=""
-                                                                data-bs-original-title="Status transaksi">Semua
-                                                                Status</span>
-                                                            <br>
-
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="table-responsive text-nowrap mx-2">
-                                                        <table
-                                                            class="table table-hover card-table table-striped table-borderless mb-4">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="text-primary">
-                                                                        Nama Pegawai</th>
-                                                                    <th class="text-primary">Status Pembayaran</th>
-                                                                    <th class="text-primary">Nominal</th>
-                                                                    <th class="text-primary">Aksi</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody class="table-border-bottom-0">
-                                                                <tr>
-                                                                    <td>
-                                                                        <a class="d-flex mt-1 text-secondary"
-                                                                            href="transaksi-pegawai-detail.html">
-                                                                            <img src="../assets/img/avatars/muslimah-1.png"
-                                                                                alt=""
-                                                                                class="w-px-40 h-px-40 rounded-circle mt-0">
-                                                                            &emsp;
-                                                                            <div>
-                                                                                <strong class="text-black">Nur
-                                                                                    Muftah</strong> <br>
-                                                                                <span class="small">Guru, Wali Kelas,
-                                                                                    dan Bendahara</span>
-                                                                            </div>
-                                                                        </a>
-                                                                    </td>
-                                                                    <td> <span class="badge bg-label-danger me-1"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-offset="0,4"
-                                                                            data-bs-placement="right"
-                                                                            data-bs-html="true" title=""
-                                                                            data-bs-original-title="Terdapat tagihan pembayaran">Belum
-                                                                            Lunas</span>
-                                                                    </td>
-                                                                    <td>2.250.000</td>
-                                                                    <td>
-                                                                        <div class="btn-group dropend">
-                                                                            <a href="javascript:;"
-                                                                                class="btn btn-outline-primary"
-                                                                                data-bs-target="#bayar-transaksi-siswa"
-                                                                                data-bs-toggle="modal">Bayar</a>
-                                                                            <button type="button"
-                                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
-                                                                                data-bs-toggle="dropdown"
-                                                                                aria-haspopup="true"
-                                                                                aria-expanded="false">
-                                                                                <span class="visually-hidden"></span>
-                                                                            </button>
-                                                                            <ul class="dropdown-menu">
-                                                                                <li><a class="dropdown-item"
-                                                                                        data-bs-target="#bayar-transaksi-siswa"
-                                                                                        data-bs-toggle="modal">Bayar
-                                                                                        sekarang</a></li>
-                                                                                <li>
-                                                                                <li><a class="dropdown-item"
-                                                                                        href="transaksi-pegawai-detail.html">Lihat
-                                                                                        detail</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <a href="transaksi-pegawai-detail.html"
-                                                                            class="d-flex mt-1 text-secondary">
-                                                                            <img src="../assets/img/avatars/muslimah-2.png"
-                                                                                alt=""
-                                                                                class="w-px-40 h-px-40 rounded-circle mt-0">
-                                                                            &emsp;
-                                                                            <div>
-                                                                                <strong class="text-black">Cahya
-                                                                                    Ningsih</strong> <br>
-                                                                                <span class="small">Guru, Wali Kelas,
-                                                                                    dan Bendahara</span>
-                                                                            </div>
-                                                                        </a>
-                                                                    </td>
-                                                                    <td> <span class="badge bg-label-success me-1"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-offset="0,4"
-                                                                            data-bs-placement="right"
-                                                                            data-bs-html="true" title=""
-                                                                            data-bs-original-title="Tidak ada tagihan pembayaran">Lunas</span>
-                                                                    </td>
-                                                                    <td>Tidak tersedia</td>
-                                                                    <td>
-                                                                        <a href="transaksi-pegawai-detail-status-berhasil.html"
-                                                                            class="btn btn-outline-primary">Detail</a>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
-
-                            <div class="col-lg-4 col-md-4">
-                                <div class="alert alert-info" role="alert">Berikut informasi terkait fitur pada
-                                    laman
-                                    ini</div>
-                                <div class="col-md">
-
-
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStart"
+                                data-bs-scroll="true" data-bs-backdrop="true" aria-labelledby="offcanvasStartLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasStartLabel" class="offcanvas-title">Bantuan
+                                    </h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                                    <div class="alert alert-info" role="alert">Berikut informasi terkait fitur pada
+                                        laman
+                                        ini</div>
                                     <div id="accordionIcon" class="accordion mt-3 accordion-without-arrow">
                                         <div class="accordion-item my-4">
                                             <h2 class="accordion-header text-body d-flex justify-content-between"
@@ -569,217 +398,382 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-primary mb-2 d-grid w-100"
+                                        data-bs-dismiss="offcanvas">Tutup</button>
                                 </div>
                             </div>
-
                         </div>
-
-                        <div class="content-backdrop fade"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="layout-overlay layout-menu-toggle"></div>
-        </div>
-
-        <!-- Modal Bayar Transaksi-->
-        <div class="modal fade" id="bayar-transaksi-siswa" tabindex="-1" data-bs-backdrop="static">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Pembayaran Transaksi Pegawai</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="d-flex">
-                                    <img src="../assets/img/avatars/muslimah-1.png" alt=""
-                                        class="w-px-40 h-px-40 rounded-circle">
-                                    &emsp;
-                                    <div>
-                                        <h5 class="mb-0 fw-bold">Nur Miftah</h5>
-                                        <span class="small">NIP : 712381239</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="d-flex">
-                                    <span class="btn btn-icon rounded-pill bg-label-info">
-                                        <i class="bx bxs-graduation bx-sm bx-tada-hover"></i>
-                                    </span>
-                                    &emsp;
-                                    <div>
-
-                                        <span class="small">Jabatan</span> <br> <span
-                                            class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
-                                            data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true" title=""
-                                            data-bs-original-title="Jabatan pegawai ini">Guru</span> <span
-                                            class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
-                                            data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true" title=""
-                                            data-bs-original-title="Jabatan pegawai ini">Wali Kelas</span> <span
-                                            class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
-                                            data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true" title=""
-                                            data-bs-original-title="Jabatan pegawai ini">Bendahara</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row mb-4">
                             <div class="col-12">
-                                <div class="collapse" id="saldo-uang-siswa">
-                                    <div class="mb-3">
-                                        <div class="input-group input-group-merge">
-                                            <span class="input-group-text" id="saldoTabunganTRansaksiInput">Rp</span>
-                                            <input type="text" id="saldoTabunganTRansaksiInput"
-                                                class="form-control text-end" placeholder="0">
+                                <div class="card">
+                                    <div class="card-header pt-4">
+                                        <div class="row">
+                                            <div class="col-12 col-md-3 my-2">
+                                                <select id="periodeWaktuSelect" class="form-select">
+                                                    <option disabled="" selected="" value="">Pilih Periode Waktu
+                                                    </option>
+                                                    <option value="1" selected>TA 2019 / 2020 </option>
+                                                    <option value="2">TA 2018 / 2019</option>
+                                                    <option value="3">TA 2017 / 2018</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-3 my-2">
+                                                <select id="jabatanSelect" class="form-select">
+                                                    <option disabled="" selected="" value="">Pilih jabatan
+                                                    </option>
+                                                    <option value="1">Kepala Sekolah </option>
+                                                    <option value="2">Sekretaris</option>
+                                                    <option value="3">Bendahara</option>
+                                                    <option value="4">Wali Kelas </option>
+                                                    <option value="5" selected>Guru Mapel</option>
+                                                    <option value="6">Semua jabatan</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12 col-md-3 my-2">
+                                                <select id="statusSelect" class="form-select">
+                                                    <option disabled="" selected="" value="">Pilih status
+                                                    </option>
+                                                    <option value="1">Belum Lunas</option>
+                                                    <option value="2"></option>
+                                                    <option value="3" selected>Semua status</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-12 col-md-3 align-items-center d-flex my-2"> <input
+                                                    type="search" class="form-control" placeholder="Cari pegawai">
+                                                &emsp;
+                                                <a href="transaksi-pegawai-search.html" type="button"
+                                                    class="btn btn-icon btn-primary">
+                                                    <span class='bx bx-search-alt h4 pt-3 text-white'></span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
-                            <div class="mb-3 col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-flush-spacing">
-                                        <tbody>
-                                            <tr>
-                                                <td class="fw-normal">
-                                                    <div class="form-check">
-                                                        <label class="form-check-label" for="selectAll">
-                                                            Gaji Pokok
-                                                        </label>
-                                                        <input class="form-check-input" type="checkbox" checked
-                                                            disabled>
-                                                    </div>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span>1.125.000</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-normal">
-                                                    <div class="form-check">
-                                                        <label class="form-check-label" for="selectAll">
-                                                            Tunjangan Wali Kelas
-                                                        </label>
-                                                        <input class="form-check-input" type="checkbox" checked
-                                                            disabled>
-                                                    </div>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span>125.000</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-normal">
-                                                    <div class="form-check">
-                                                        <label class="form-check-label" for="selectAll">
-                                                            Tunjangan Bendahara
-                                                        </label>
-                                                        <input class="form-check-input" type="checkbox" checked
-                                                            disabled>
-                                                    </div>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span>1.000.000</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-normal">
-                                                    <div class="form-check">
-                                                        <label class="form-check-label" for="selectAll">
-                                                            Tunjangan komunikasi
-                                                        </label>
-                                                        <input class="form-check-input" type="checkbox" checked
-                                                            disabled>
-                                                    </div>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span>25.000</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="fw-normal">
-                                                    <div class="form-check">
-                                                        <label class="form-check-label" for="selectAll">
-                                                            Arisan wajib bulanan
-                                                        </label>
-                                                        <input class="form-check-input" type="checkbox" checked
-                                                            disabled>
-                                                    </div>
-                                                </td>
-                                                <td class="text-end">
-                                                    <span>- 25.000</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header row">
+                                        <div class="col-12 col-md-5">
+                                            <h5 class="mt-2">Ditampilkan berdasarkan</h5>
+                                        </div>
+                                        <div class="col-12 col-md-7 pe-3 text-end">
+                                            <span class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
+                                                data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true"
+                                                title="" data-bs-original-title="Hanya menampilkan data periode ini ">TA 2019 / 2020</span>
+                                            <span class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
+                                                data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true"
+                                                title="" data-bs-original-title="Jabatan pegawai">Guru Mapel</span>
+                                            <span class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
+                                                data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true"
+                                                title="" data-bs-original-title="Status transaksi">Semua
+                                                Status</span>
+                                            <br>
 
-                                <div class="bg-label-warning d-flex justify-content-between p-3">
-                                    <p class="text-black mb-0"> <span
-                                            class="badge badge-center rounded-pill bg-danger">5</span>&nbsp;
-                                        Total
-                                        pembayaran</p>
-                                    <span class="fw-bold text-black">2.250.000</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="table-responsive text-nowrap mx-2">
+                                        <table class="table table-hover card-table table-striped table-borderless mb-4">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-primary">
+                                                        Nama Pegawai</th>
+                                                    <th class="text-primary">Status Pembayaran</th>
+                                                    <th class="text-primary">Nominal</th>
+                                                    <th class="text-primary">Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-border-bottom-0">
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary"
+                                                            href="transaksi-pegawai-detail.html">
+                                                            <img src="../assets/img/avatars/muslimah-1.png" alt=""
+                                                                class="w-px-40 h-px-40 rounded-circle mt-0">
+                                                            &emsp;
+                                                            <div>
+                                                                <strong class="text-black">Nur
+                                                                    Muftah</strong> <br>
+                                                                <span class="small">Guru, Wali Kelas,
+                                                                    dan Bendahara</span>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-danger me-1"
+                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Terdapat tagihan pembayaran">Belum
+                                                            Lunas</span>
+                                                    </td>
+                                                    <td>2.250.000</td>
+                                                    <td>
+                                                        <div class="btn-group dropend">
+                                                            <a href="javascript:;" class="btn btn-outline-primary"
+                                                                data-bs-target="#bayar-transaksi-siswa"
+                                                                data-bs-toggle="modal">Bayar</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#bayar-transaksi-siswa"
+                                                                        data-bs-toggle="modal">Bayar
+                                                                        sekarang</a></li>
+                                                                <li>
+                                                                <li><a class="dropdown-item"
+                                                                        href="transaksi-pegawai-detail.html">Lihat
+                                                                        detail</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="transaksi-pegawai-detail.html"
+                                                            class="d-flex mt-1 text-secondary">
+                                                            <img src="../assets/img/avatars/muslimah-2.png" alt=""
+                                                                class="w-px-40 h-px-40 rounded-circle mt-0">
+                                                            &emsp;
+                                                            <div>
+                                                                <strong class="text-black">Cahya
+                                                                    Ningsih</strong> <br>
+                                                                <span class="small">Guru, Wali Kelas,
+                                                                    dan Bendahara</span>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-success me-1"
+                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Tidak ada tagihan pembayaran">Lunas</span>
+                                                    </td>
+                                                    <td>Tidak tersedia</td>
+                                                    <td>
+                                                        <a href="transaksi-pegawai-detail-status-berhasil.html"
+                                                            class="btn btn-outline-primary">Detail</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                            Batal
-                        </button>
-                        <button type="button" class="btn btn-primary" onclick="sweet()"
-                            data-bs-dismiss="modal">Konfirmasi
-                            Pembayaran</button>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Modal Bayar Transaksi-->
+    <div class="modal fade" id="bayar-transaksi-siswa" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pembayaran Transaksi Pegawai</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="d-flex">
+                                <img src="../assets/img/avatars/muslimah-1.png" alt=""
+                                    class="w-px-40 h-px-40 rounded-circle">
+                                &emsp;
+                                <div>
+                                    <h5 class="mb-0 fw-bold">Nur Miftah</h5>
+                                    <span class="small">NIP : 712381239</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="d-flex">
+                                <span class="btn btn-icon rounded-pill bg-label-info">
+                                    <i class="bx bxs-graduation bx-sm bx-tada-hover"></i>
+                                </span>
+                                &emsp;
+                                <div>
+
+                                    <span class="small">Jabatan</span> <br> <span
+                                        class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
+                                        data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true" title=""
+                                        data-bs-original-title="Jabatan pegawai ini">Guru</span> <span
+                                        class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
+                                        data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true" title=""
+                                        data-bs-original-title="Jabatan pegawai ini">Wali Kelas</span> <span
+                                        class="badge bg-label-primary me-1 mb-2" data-bs-toggle="tooltip"
+                                        data-bs-offset="0,4" data-bs-placement="top" data-bs-html="true" title=""
+                                        data-bs-original-title="Jabatan pegawai ini">Bendahara</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="collapse" id="saldo-uang-siswa">
+                                <div class="mb-3">
+                                    <div class="input-group input-group-merge">
+                                        <span class="input-group-text" id="saldoTabunganTRansaksiInput">Rp</span>
+                                        <input type="text" id="saldoTabunganTRansaksiInput"
+                                            class="form-control text-end" placeholder="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 col-12">
+                            <div class="table-responsive">
+                                <table class="table table-flush-spacing">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-normal">
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="selectAll">
+                                                        Gaji Pokok
+                                                    </label>
+                                                    <input class="form-check-input" type="checkbox" checked disabled>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <span>1.125.000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-normal">
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="selectAll">
+                                                        Tunjangan Wali Kelas
+                                                    </label>
+                                                    <input class="form-check-input" type="checkbox" checked disabled>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <span>125.000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-normal">
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="selectAll">
+                                                        Tunjangan Bendahara
+                                                    </label>
+                                                    <input class="form-check-input" type="checkbox" checked disabled>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <span>1.000.000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-normal">
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="selectAll">
+                                                        Tunjangan komunikasi
+                                                    </label>
+                                                    <input class="form-check-input" type="checkbox" checked disabled>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <span>25.000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-normal">
+                                                <div class="form-check">
+                                                    <label class="form-check-label" for="selectAll">
+                                                        Arisan wajib bulanan
+                                                    </label>
+                                                    <input class="form-check-input" type="checkbox" checked disabled>
+                                                </div>
+                                            </td>
+                                            <td class="text-end">
+                                                <span>- 25.000</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="bg-label-warning d-flex justify-content-between p-3">
+                                <p class="text-black mb-0"> <span
+                                        class="badge badge-center rounded-pill bg-danger">5</span>&nbsp;
+                                    Total
+                                    pembayaran</p>
+                                <span class="fw-bold text-black">2.250.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()" data-bs-dismiss="modal">Konfirmasi
+                        Pembayaran</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-        <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-        <script src="../assets/vendor/libs/popper/popper.js"></script>
-        <script src="../assets/vendor/js/bootstrap.js"></script>
-        <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-        <script src="../assets/vendor/js/menu.js"></script>
+    <script src="../assets/vendor/js/menu.js"></script>
 
-        <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-        <script src="../assets/js/main.js"></script>
-        <script src="../assets/vendor/libs/select2/select2.js"></script>
-        <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/vendor/libs/select2/select2.js"></script>
+    <script src="../assets/vendor/libs/tagify/tagify.js"></script>
 
-        <script src="../assets/js/dashboards-analytics.js"></script>
+    <script src="../assets/js/dashboards-analytics.js"></script>
 
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-        <script src="../assets/js/sweetalert.min.js"></script>
+    <script src="../assets/js/sweetalert.min.js"></script>
 
-        <script>
-            function sweet() {
-                swal({
-                    title: "Data berhasil disimpan!",
-                    // text: "You clicked the button!",
-                    icon: "success",
-                    button: false,
-                    timer: 2000,
-                });
-            }
-        </script>
-        <script>
-            $(".select2").select2();
-        </script>
-        <script>
-            $("#jabatanSelect").select2({
-                placeholder: "Pilih jabatan",
-                allowClear: true
+    <script>
+        function sweet() {
+            swal({
+                title: "Data berhasil disimpan!",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: false,
+                timer: 2000,
             });
-            $("#statusSelect").select2({
-                placeholder: "Pilih status",
-                allowClear: true
-            });
-        </script>
+        }
+    </script>
+    <script>
+        $(".select2").select2();
+    </script>
+    <script>
+        $("#jabatanSelect").select2({
+            placeholder: "Pilih jabatan",
+            allowClear: true
+        });
+        $("#statusSelect").select2({
+            placeholder: "Pilih status",
+            allowClear: true
+        });
+        $("#periodeWaktuSelect").select2({
+            placeholder: "Pilih periode waktu",
+            allowClear: false,
+        });
+    </script>
 
 
 </body>

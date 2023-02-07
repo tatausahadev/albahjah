@@ -71,19 +71,19 @@
                     <li class="menu-header small text-uppercase">
                         <span class="menu-header-text">Menu utama</span>
                     </li>
-                    <li class="menu-item active">
+                    <li class="menu-item">
                         <a href="transaksi-siswa.html" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
                             <div>Transaksi Siswa</div>
                         </a>
                     </li>
-                    <li class="menu-item ">
+                    <li class="menu-item">
                         <a href="transaksi-pegawai.html" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
                             <div> Transaksi Pegawai</div>
                         </a>
                     </li>
-                    <li class="menu-item ">
+                    <li class="menu-item active">
                         <a href="transaksi-instansi.html" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
                             <div> Transaksi Instansi</div>
@@ -301,6 +301,7 @@
                 <div class="content-wrapper">
 
                     <div class="container-xxl flex-grow-1 container-p-y">
+
                         <div class="row mb-4">
                             <div class="col-12">
                                 <div class="card h-100">
@@ -311,11 +312,10 @@
                                                     Utama</span>
                                                 <h4 class="card-title text-primary">
                                                     <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
-                                                    Transaksi Siswa
+                                                    Transaksi Instansi
                                                 </h4>
-                                                <p>
-                                                    Berisikan semua transaksi yang diterapkan pada siswa di
-                                                    instansi
+                                                <p class="mb-4">
+                                                    Berisikan semua transaksi yang diterapkan pada instansi
                                                     Anda
                                                 </p>
                                             </div>
@@ -352,17 +352,16 @@
                                                     data-bs-toggle="collapse" data-bs-target="#accordionIcon-1"
                                                     aria-controls="accordionIcon-1" aria-expanded="false"><i
                                                         class='bx bx-info-circle text-info'>&nbsp;</i>
-                                                    Melakukan transaksi siswa
+                                                    Melakukan transaksi instansi
                                                 </button>
                                             </h2>
 
                                             <div id="accordionIcon-1" class="accordion-collapse collapse"
                                                 data-bs-parent="#accordionIcon">
                                                 <div class="accordion-body">
-                                                    Pastika, Anda telah memilih filter data yang sesuai berdasarkan
-                                                    Tahun
-                                                    Ajaran, Nama Kelas, dan
-                                                    masukkan nama siswa. Kemudian tekan tombol
+                                                    Pastikan Anda telah memilih filter data yang sesuai berdasarkan
+                                                    transaksi, status, dan
+                                                    masukkan nama transaksi, kemudian tekan tombol
                                                     <span class="bx bx-search-alt text-primary h5 mb-0"></span>
                                                 </div>
                                             </div>
@@ -375,7 +374,7 @@
                                                     data-bs-toggle="collapse" data-bs-target="#accordionIcon-3"
                                                     aria-expanded="false" aria-controls="accordionIcon-3"> <i
                                                         class='bx bx-info-circle text-info'>&nbsp;</i>
-                                                    Informasi status pembayaran
+                                                    Informasi status transaksi
                                                 </button>
                                             </h2>
                                             <div id="accordionIcon-3" class="accordion-collapse collapse"
@@ -384,17 +383,13 @@
                                                     <span class="badge bg-label-danger me-1" data-bs-toggle="tooltip"
                                                         data-bs-offset="0,4" data-bs-placement="right"
                                                         data-bs-html="true" title=""
-                                                        data-bs-original-title="Terdapat tagihan pembayaran">Belum
-                                                        Lunas</span>
-                                                    berarti siswa yang bersangkutan memiliki tagihan pembayaran yang
-                                                    perlu dibayarankan pada bulan ini. <br><br>
+                                                        data-bs-original-title="Terdapat tagihan pembayaran">Menunggu</span>
+                                                    berarti transaksi tersebut belum dilakukan pengecekan dan mendapatkan persetujuan. <br><br>
                                                     <span class="badge bg-label-success me-1" data-bs-toggle="tooltip"
                                                         data-bs-offset="0,4" data-bs-placement="right"
                                                         data-bs-html="true" title=""
-                                                        data-bs-original-title="Ditampilkan">Lunas</span>
-                                                    berarti siswa yang bersangkutan tidak memiliki tagihan pembayaran
-                                                    yang
-                                                    perlu dibayarankan pada bulan ini.
+                                                        data-bs-original-title="Ditampilkan">Disetujui</span>
+                                                    berarti transaksi tersebut sudah dilakukan pengecekan dan mendapatkan persetujuan.
                                                 </div>
                                             </div>
                                         </div>
@@ -404,12 +399,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mb-4">
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-header pt-4">
-
                                         <div class="row">
                                             <div class="col-12 col-md-3 my-2">
                                                 <select id="periodeWaktuSelect" class="form-select">
@@ -421,35 +414,29 @@
                                                 </select>
                                             </div>
                                             <div class="col-12 col-md-3 my-2">
-                                                <select id="namaKelasSelect" class="form-select">
-                                                    <option disabled="" selected="" value="">Pilih Kelas
+                                                <select id="transaksiSelect" class="form-select">
+                                                    <option disabled="" selected="" value="">Jenis Transaksi
                                                     </option>
-                                                    <option value="1">Kelas I - A </option>
-                                                    <option value="2">Kelas I - B</option>
-                                                    <option value="3">Kelas I - C</option>
-                                                    <option value="4">Kelas II - A </option>
-                                                    <option value="5">Kelas II - B</option>
-                                                    <option value="6">Kelas II - C</option>
-                                                    <option value="7">Kelas III - A </option>
-                                                    <option value="8">Kelas III - B</option>
-                                                    <option value="9">Kelas III - C</option>
-                                                    <option value="10">Semua kelas</option>
+                                                    <option value="1">Pemasukan</option>
+                                                    <option value="2">Pengeluaran</option>
+                                                    <option value="6">Semua Transaksi</option>
                                                 </select>
                                             </div>
+
                                             <div class="col-12 col-md-3 my-2">
                                                 <select id="statusSelect" class="form-select">
                                                     <option disabled="" selected="" value="">Pilih status
                                                     </option>
-                                                    <option value="1">Belum Lunas</option>
-                                                    <option value="2">Lunas</option>
+                                                    <option value="1">Menunggu</option>
+                                                    <option value="2">Disetujui</option>
                                                     <option value="3">Semua status</option>
                                                 </select>
                                             </div>
 
                                             <div class="col-12 col-md-3 align-items-center d-flex my-2"> <input
-                                                    type="search" class="form-control" placeholder="Cari siswa">
+                                                    type="search" class="form-control" placeholder="Cari transaksi">
                                                 &emsp;
-                                                <a href="transaksi-siswa-search.html" type="button"
+                                                <a href="transaksi-instansi-search.html" type="button"
                                                     class="btn btn-icon btn-primary">
                                                     <span class='bx bx-search-alt h4 pt-3 text-white'></span>
                                                 </a>
@@ -460,9 +447,10 @@
                                 </div>
                             </div>
 
-                        </div>
-                    </div>
 
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -871,11 +859,10 @@
         $(".select2").select2();
     </script>
     <script>
-        $("#namaKelasSelect").select2({
-            placeholder: "Pilih kelas",
+        $("#transaksiSelect").select2({
+            placeholder: "Pilih transaksi",
             allowClear: true
         });
-
         $("#statusSelect").select2({
             placeholder: "Pilih status",
             allowClear: true
