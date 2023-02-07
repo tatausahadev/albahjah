@@ -473,16 +473,32 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row mb-4">
-                            <div class="col-md-12 col-lg-12">
-                                <div class="card">
-                                    <div class="row card-header ">
-                                        <div class="col-md-4 col-12">
-                                            <h5 class="pt-2">Daftar Transaksi Siswa</h5>
-                                        </div>
-                                        <div class="col-md-8 col-12">
-                                            <div class="row">
-                                                <div class="col-6 col-md-4 pb-3">
+
+                            <div class="col-12">
+                                <div class="nav-align-top">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <button type="button" class="nav-link active p-3" role="tab"
+                                                data-bs-toggle="tab" data-bs-target="#tagihan-pembayaran"
+                                                aria-controls="tagihan-pembayaran" aria-selected="true"><span
+                                                    class="badge badge-center rounded-pill bg-primary me-1"><i
+                                                        class="bx bx-transfer-alt"></i></span> Tagihan
+                                                Pembayaran</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button type="button" class="nav-link p-3" role="tab" data-bs-toggle="tab"
+                                                data-bs-target="#keringanan-pembayaran" aria-controls="keringanan-pembayaran"
+                                                aria-selected="false"><span
+                                                    class="badge badge-center rounded-pill bg-warning me-1"><i
+                                                        class="bx bx-transfer-alt"></i></span> Keringanan Pembayaran</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="tagihan-pembayaran" role="tabpanel">
+                                            <div class="row mt-4">
+                                                <div class="col-6 col-md-3 pb-3">
                                                     <select id="largeSelect" class="form-select form-select-md">
                                                         <option value="0">TA 2019 / 2020
                                                         </option>
@@ -490,11 +506,20 @@
                                                         </option>
                                                     </select>
                                                 </div>
-                                                <div class="col-6 col-md-4 pb-3">
+                                                <div class="col-6 col-md-2 pb-3">
+                                                    <select id="largeSelect" class="form-select form-select-md">
+                                                        <option value="1">Pos SPP Rutin</option>
+                                                        <option value="2">Pos DU Lanjut</option>
+                                                        <option value="3">Pos PSB Awal</option>
+                                                        <option value="4" selected>Semua Pos
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
                                                     <select id="largeSelect" class="form-select form-select-md">
                                                         <option value="1">Pembayaran Sekali</option>
                                                         <option value="2">Pembayaran Bulanan</option>
-                                                        <option value="4" selected>Semua Pembayaran
+                                                        <option value="3" selected>Semua Pembayaran
                                                         </option>
                                                     </select>
                                                 </div>
@@ -507,185 +532,254 @@
                                                         </option>
                                                     </select>
                                                 </div>
-                                                <div class="col-6 col-md-1 text-end ps-md-0 ps-lg-3">
+                                                <div class="col-6 col-md-1">
                                                     <a type="button" class="btn btn-primary btn-icon text-white w-100"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-tambah-transaksi-siswa">
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modal-tambah-transaksi-siswa">
                                                         <i class="bx bx-plus bx-sm"></i>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <div class="table-responsive mt-3 mx-2">
+                                                <table
+                                                    class="table table-hover card-table table-striped table-borderless">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-primary">
+                                                                Label transaksi</th>
+                                                            <th class="text-primary">Nominal (Rp)</th>
+                                                            <th class="text-primary">Pembayaran</th>
+                                                            <th class="text-primary">Status</th>
+                                                            <th class="text-primary text-center">Aksi</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="table-border-bottom-0">
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary"
+                                                                    href="transaksi-siswa-detail.html">
+                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
+                                                                        alt=""
+                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
+                                                                    <div>
+                                                                        <strong>Penerimaan Santri Baru</strong> <br>
+                                                                        <span class="small">23 Jul 2019</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>19.700.000</td>
+                                                            <td>Sekali saja</td>
+                                                            <td>
+                                                                <span class="badge bg-label-secondary me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Transaksi ini belum ditampilkan pada siswa">Draft</span>
+                                                                <span class="badge bg-label-secondary me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
+                                                                        class='bx bxs-user'></i> 12</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="dropdown text-center">
+                                                                    <button type="button"
+                                                                        class="btn p-0 dropdown-toggle hide-arrow"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <!-- <a class="dropdown-item"
+                                                                            href="pengaturan-transaksi-siswa-detail.html"><i
+                                                                                class="bx bxs-show me-1"></i>
+                                                                            Lihat Detail</a> -->
+                                                                        <a class="dropdown-item" data-bs-toggle="modal"
+                                                                            data-bs-target="#modal-ubah-transaksi-siswa"><i
+                                                                                class="bx bxs-pencil me-1"></i>
+                                                                            Ubah</a>
+                                                                        <a class="dropdown-item" data-bs-toggle="modal"
+                                                                            data-bs-target="#modal-tambah-siswa-ditagih"><i
+                                                                                class="bx bxs-user-plus me-1"></i>
+                                                                            Cari Siswa</a>
+                                                                        <a class="dropdown-item"
+                                                                            href="keuangan-detail-item.html"><i
+                                                                                class="bx bxs-bar-chart-alt-2 me-1"></i>
+                                                                            Data Pembayaran</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary"
+                                                                    href="transaksi-siswa-detail.html">
+                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
+                                                                        alt=""
+                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
+                                                                    <div>
+                                                                        <strong>Daftar Ulang</strong> <br>
+                                                                        <span class="small">16 Des 2019</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>3.600.000</td>
+                                                            <td>Sekali Saja</td>
+                                                            <td>
+                                                                <span class="badge bg-label-info me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Terdapat siswa yang belum lunas">Proses</span>
+                                                                <span class="badge bg-label-secondary me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
+                                                                        class='bx bxs-user'></i> 0</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="dropdown text-center">
+                                                                    <div class="dropdown text-center">
+                                                                        <button type="button"
+                                                                            class="btn p-0 dropdown-toggle hide-arrow"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <!-- <a class="dropdown-item"
+                                                                                href="pengaturan-transaksi-siswa-detail.html"><i
+                                                                                    class="bx bxs-show me-1"></i>
+                                                                                Lihat Detail</a> -->
+                                                                            <a class="dropdown-item"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#modal-ubah-transaksi-siswa"><i
+                                                                                    class="bx bxs-pencil me-1"></i>
+                                                                                Ubah</a>
+                                                                            <a class="dropdown-item"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#modal-tambah-siswa-ditagih"><i
+                                                                                    class="bx bxs-user-plus me-1"></i>
+                                                                                Cari Siswa</a>
+
+                                                                            <div class="dropdown-divider"></div>
+                                                                            <a class="dropdown-item"
+                                                                                href="keuangan-detail-item.html"><i
+                                                                                    class="bx bxs-trash me-1"></i>
+                                                                                Hapus</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary"
+                                                                    href="transaksi-siswa-detail.html">
+                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
+                                                                        alt=""
+                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
+                                                                    <div>
+                                                                        <strong>SPP Bulanan</strong> <br>
+                                                                        <span class="small">24 Des 2019</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>1.450.000</td>
+                                                            <td>Tiap Bulan</td>
+                                                            <td>
+                                                                <span class="badge bg-label-success me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Semua siswa sudah lunas">Selesai</span>
+                                                                <span class="badge bg-label-secondary me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
+                                                                        class='bx bxs-user'></i> 292</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="dropdown text-center">
+                                                                    <button type="button"
+                                                                        class="btn p-0 dropdown-toggle hide-arrow"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <!-- <a class="dropdown-item"
+                                                                            href="pengaturan-transaksi-siswa-detail.html"><i
+                                                                                class="bx bxs-show me-1"></i>
+                                                                            Lihat Detail</a> -->
+                                                                        <a class="dropdown-item" data-bs-toggle="modal"
+                                                                            data-bs-target="#modal-ubah-transaksi-siswa"><i
+                                                                                class="bx bxs-pencil me-1"></i>
+                                                                            Ubah</a>
+                                                                        <a class="dropdown-item" data-bs-toggle="modal"
+                                                                            data-bs-target="#modal-tambah-siswa-ditagih"><i
+                                                                                class="bx bxs-user-plus me-1"></i>
+                                                                            Cari Siswa</a>
+                                                                        <a class="dropdown-item"
+                                                                            href="keuangan-detail-item.html"><i
+                                                                                class="bx bxs-bar-chart-alt-2 me-1"></i>
+                                                                            Data Pembayaran</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <nav aria-label="Page navigation" class="my-4">
+                                                    <ul class="pagination justify-content-center">
+                                                        <li class="page-item prev">
+                                                            <a class="page-link" href="javascript:void(0);"><i
+                                                                    class="tf-icon bx bx-chevrons-left"></i></a>
+                                                        </li>
+                                                        <li class="page-item active">
+                                                            <a class="page-link" href="javascript:void(0);">1</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="javascript:void(0);">2</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="javascript:void(0);">3</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="javascript:void(0);">4</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="javascript:void(0);">5</a>
+                                                        </li>
+                                                        <li class="page-item next">
+                                                            <a class="page-link" href="javascript:void(0);"><i
+                                                                    class="tf-icon bx bx-chevrons-right"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="tab-pane fade" id="keringanan-pembayaran" role="tabpanel">
+                                            <p>
+                                                Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer
+                                                candy oat cake ice cream. Gummies
+                                                halvah
+                                                tootsie roll muffin biscuit icing dessert gingerbread. Pastry ice cream
+                                                cheesecake fruitcake.
+                                            </p>
+                                            <p class="mb-0">
+                                                Jelly-o jelly beans icing pastry cake cake lemon drops. Muffin muffin
+                                                pie tiramisu halvah cotton candy
+                                                liquorice caramels.
+                                            </p>
+                                        </div>
 
-
-                                    <div class="table-responsive text-nowrap mx-2">
-                                        <table class="table table-hover card-table table-striped table-borderless">
-                                            <thead>
-                                                <tr>
-                                                    <th class="text-primary">
-                                                        Label transaksi</th>
-                                                    <th class="text-primary">Nominal (Rp)</th>
-                                                    <th class="text-primary">Pembayaran</th>
-                                                    <th class="text-primary">Status</th>
-                                                    <th class="text-primary">Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="table-border-bottom-0">
-                                                <tr>
-                                                    <td>
-                                                        <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                            alt="" class="w-px-40 h-auto rounded-circle">
-                                                        &nbsp;
-                                                        <a class="text-secondary"
-                                                            href="pengaturan-transaksi-siswa-detail.html">
-                                                            <strong>SPP Bulanan</strong></a>
-                                                    </td>
-                                                    <td>250.000</td>
-                                                    <td>Tiap Bulan</td>
-                                                    <td>
-                                                        <span class="badge bg-label-secondary me-1"
-                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                            data-bs-placement="right" data-bs-html="true" title=""
-                                                            data-bs-original-title="Transaksi ini belum ditampilkan pada siswa">Draft</span>
-                                                        <span class="badge bg-label-secondary me-1"
-                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                            data-bs-placement="right" data-bs-html="true" title=""
-                                                            data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
-                                                                class='bx bxs-user'></i> 12</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button type="button"
-                                                                class="btn p-0 dropdown-toggle hide-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item"
-                                                                    href="pengaturan-transaksi-siswa-detail.html"><i
-                                                                        class="bx bxs-show me-1"></i>
-                                                                    Lihat Detail</a>
-                                                                <a class="dropdown-item" data-bs-toggle="modal"
-                                                                    data-bs-target="#modal-ubah-tahun-ajaran"><i
-                                                                        class="bx bxs-pencil me-1"></i>
-                                                                    Ubah</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                            alt="" class="w-px-40 h-auto rounded-circle">
-                                                        &nbsp;
-                                                        <strong>LKS / Buku Belajar</strong>
-                                                    </td>
-                                                    <td>120.000</td>
-                                                    <td>Sekali Saja</td>
-                                                    <td>
-                                                        <span class="badge bg-label-info me-1" data-bs-toggle="tooltip"
-                                                            data-bs-offset="0,4" data-bs-placement="right"
-                                                            data-bs-html="true" title=""
-                                                            data-bs-original-title="Terdapat siswa yang belum lunas">Proses</span>
-                                                        <span class="badge bg-label-secondary me-1"
-                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                            data-bs-placement="right" data-bs-html="true" title=""
-                                                            data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
-                                                                class='bx bxs-user'></i> 0</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button type="button"
-                                                                class="btn p-0 dropdown-toggle hide-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item"
-                                                                    href="pengaturan-transaksi-siswa-detail.html"><i
-                                                                        class="bx bxs-show me-1"></i>
-                                                                    Lihat Detail</a>
-                                                                <a class="dropdown-item" data-bs-toggle="modal"
-                                                                    data-bs-target="#modal-ubah-tahun-ajaran"><i
-                                                                        class="bx bxs-pencil me-1"></i>
-                                                                    Ubah</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                            alt="" class="w-px-40 h-auto rounded-circle">
-                                                        &nbsp;
-                                                        <strong>Seragam Sekolah Putra</strong>
-                                                    </td>
-                                                    <td>220.000</td>
-                                                    <td>Sekali Saja</td>
-                                                    <td>
-                                                        <span class="badge bg-label-success me-1"
-                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                            data-bs-placement="right" data-bs-html="true" title=""
-                                                            data-bs-original-title="Semua siswa sudah lunas">Selesai</span>
-                                                        <span class="badge bg-label-secondary me-1"
-                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                            data-bs-placement="right" data-bs-html="true" title=""
-                                                            data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
-                                                                class='bx bxs-user'></i> 292</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button type="button"
-                                                                class="btn p-0 dropdown-toggle hide-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item"
-                                                                    href="pengaturan-transaksi-siswa-detail.html"><i
-                                                                        class="bx bxs-show me-1"></i>
-                                                                    Lihat Detail</a>
-                                                                <a class="dropdown-item" data-bs-toggle="modal"
-                                                                    data-bs-target="#modal-ubah-tahun-ajaran"><i
-                                                                        class="bx bxs-pencil me-1"></i>
-                                                                    Ubah</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <nav aria-label="Page navigation" class="my-5">
-                                            <ul class="pagination justify-content-center">
-                                                <li class="page-item prev">
-                                                    <a class="page-link" href="javascript:void(0);"><i
-                                                            class="tf-icon bx bx-chevrons-left"></i></a>
-                                                </li>
-                                                <li class="page-item active">
-                                                    <a class="page-link" href="javascript:void(0);">1</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="javascript:void(0);">2</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="javascript:void(0);">3</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="javascript:void(0);">4</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="javascript:void(0);">5</a>
-                                                </li>
-                                                <li class="page-item next">
-                                                    <a class="page-link" href="javascript:void(0);"><i
-                                                            class="tf-icon bx bx-chevrons-right"></i></a>
-                                                </li>
-                                            </ul>
-                                        </nav>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -694,12 +788,368 @@
     </div>
 
 
-    <!-- Modal Tambah Transaksi Siswa-->
+    <!-- Modal Tambah Transaksi Tagihan Pembayaran Siswa-->
     <div class="modal fade" id="modal-tambah-transaksi-siswa" tabindex="-1" data-bs-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Transaksi Siswa</h5>
+                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Tagihan Pembayaran Siswa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Periode Transaksi <b
+                                    class="text-danger">*</b></label>
+                            <select id="pembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih ...
+                                </option>
+                                <option value="1" selected>TA 2019 / 2020</option>
+                                <option value="2">TA 2018 / 2019</option>
+                                <option value="3">TA 2017 / 2018</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Pos Dana <b class="text-danger">*</b></label>
+                            <select id="pembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih ...
+                                </option>
+                                <option value="1">Pos SPP Rutin</option>
+                                <option value="2">Pos DU Lanjut</option>
+                                <option value="3">Pos PSB Awal</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Transaksi <b
+                                    class="text-danger">*</b></label>
+                            <select id="pembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih ...
+                                </option>
+                                <option value="1">Penerimaan Santri Baru</option>
+                                <option value="2">Daftar Ulang</option>
+                                <option value="3">SPP Bulanan</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nominal <b class="text-danger">*</b></label>
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text" id="basic-default-email2">Rp</span>
+                                <input type="text" id="basic-default-email" class="form-control" placeholder="0">
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Tagihan Pembayaran <b
+                                    class="text-danger">*</b></label>
+                            <select id="tagihanPembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih ...
+                                </option>
+                                <option value="1">Sekali Saja</option>
+                                <option value="2">Tiap Bulan</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Mulai Penagihan pada</label>
+                            <input class="form-control" type="date" id="waktu-penagihan">
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="nameBasic" class="form-label">Deskripsi transaksi</label>
+                            <input type="text" id="nameBasic" class="form-control"
+                                placeholder="Tuliskan deskripsi jika perlu" required />
+                        </div>
+                        <div class="mb-3 col-12">
+                            <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1" checked />
+                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
+                                    <small class="text-secondary">(<i>Tagihan transaksi ini tidak ditampilkan
+                                            pada
+                                            siswa</i>)</small></label>
+                            </div>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2" />
+                                <label class="form-check-label text-info" for="inlineRadio2">Proses
+                                    <small class="text-secondary">(<i>Tagihan transaksi ini ditampilkan pada
+                                            siswa</i>)</small></label>
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                        data-bs-dismiss="modal">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ubah Transaksi Tagihan Pembayaran Siswa-->
+    <div class="modal fade" id="modal-ubah-transaksi-siswa" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Ubah Tagihan Pembayaran Siswa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Periode Transaksi <b
+                                    class="text-danger">*</b></label>
+                            <select id="pembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih ...
+                                </option>
+                                <option value="1" selected>TA 2019 / 2020</option>
+                                <option value="2">TA 2018 / 2019</option>
+                                <option value="3">TA 2017 / 2018</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Pos Dana <b class="text-danger">*</b></label>
+                            <select id="pembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih ...
+                                </option>
+                                <option value="1" selected>Pos SPP Rutin</option>
+                                <option value="2">Pos DU Lanjut</option>
+                                <option value="3">Pos PSB Awal</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Transaksi <b
+                                    class="text-danger">*</b></label>
+                            <select id="pembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih ...
+                                </option>
+                                <option value="1">Penerimaan Santri Baru</option>
+                                <option value="2">Daftar Ulang</option>
+                                <option value="3" selected>SPP Bulanan</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nominal <b class="text-danger">*</b></label>
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text" id="basic-default-email2">Rp</span>
+                                <input type="text" id="basic-default-email" class="form-control" placeholder="0" value="1.450.000">
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Tagihan Pembayaran <b
+                                    class="text-danger">*</b></label>
+                            <select id="tagihanPembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih ...
+                                </option>
+                                <option value="1" >Sekali Saja</option>
+                                <option value="2" selected>Tiap Bulan</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Mulai Penagihan pada</label>
+                            <input class="form-control" type="date" id="waktu-penagihan" value="2019-12-24">
+                        </div>
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="nameBasic" class="form-label">Deskripsi transaksi</label>
+                            <input type="text" id="nameBasic" class="form-control"
+                                placeholder="Tuliskan deskripsi jika perlu" required value="Merupakan pebayaran rutin untuk keperluan bulanan "/>
+                        </div>
+                        <div class="mb-3 col-12">
+                            <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1" checked />
+                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
+                                    <small class="text-secondary">(<i>Tagihan transaksi ini tidak ditampilkan
+                                            pada
+                                            siswa</i>)</small></label>
+                            </div>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2" />
+                                <label class="form-check-label text-info" for="inlineRadio2">Proses
+                                    <small class="text-secondary">(<i>Tagihan transaksi ini ditampilkan pada
+                                            siswa</i>)</small></label>
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                        data-bs-dismiss="modal">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Siswa yang Tagihan-->
+    <div class="modal fade" id="modal-tambah-siswa-ditagih" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Pilih Siswa yang Mendapatkan Tagihan Pembayaran</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-info d-flex" role="alert">
+                                <span class="badge badge-center rounded-pill bg-info border-label-info p-3 me-2"><i class="bx bx-transfer-alt bx-sm pt-1"></i></span>
+                                <div class="d-flex flex-column ps-1">
+                                    <span class="text-black">TA 2019 / 2020, transaksi <span class="fw-semibold">Penerimaan Santri Baru </span>
+                                        sebesar<span class="fw-semibold"> 19.700.000 </span> yang akan dilakukan penagihan <span class="fw-semibold"> Sekali saja</span>
+                                </span></div>
+                            </div>
+
+                            <div class="nav-align-top mb">
+                                <ul class="nav nav-pills mx-auto" role="tablist">
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                                            data-bs-target="#perKelas" aria-controls="perKelas"
+                                            aria-selected="true">Berdasarkan Kelas</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                            data-bs-target="#perIndividu" aria-controls="perIndividu"
+                                            aria-selected="false">Berdasarkan Siswa</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="perKelas" role="tabpanel">
+                                        <div>
+                                            <label for="kelasSelect" class="form-label">berdasarkan kelas</label>
+                                            <input id="kelasSelect" name="kelasSelect" class="form-control"
+                                                placeholder="Pilih kelas ..." value="Kelas I-A, Kelas I-B, Kelas I-C">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="perIndividu" role="tabpanel">
+                                        <div>
+                                            <label for="siswaKelas1" class="form-label">Pilih Siswa Kelas I</label>
+                                            <input id="siswaKelas1" name="siswaKelas1" class="form-control mb-3"  
+                                                placeholder="pilih siswa ..." />
+                                            <label for="siswaKelas2" class="form-label">Pilih Siswa Kelas II</label>
+                                            <input id="siswaKelas2" name="siswaKelas1" class="form-control mb-3"
+                                                placeholder="pilih siswa ..." />
+                                            <label for="siswaKelas3" class="form-label">Pilih Siswa Kelas III</label>
+                                            <input id="siswaKelas3" name="siswaKelas1" class="form-control mb-3" 
+                                                placeholder="pilih siswa ..." />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-label-white text-black d-flex justify-content-center pt-4">
+                                <p class=" mb-0"> <span class="badge badge-center rounded-pill bg-danger">96</span>&nbsp;
+                                    Siswa telah dipilih</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                        data-bs-dismiss="modal">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Siswa yang Diringankan-->
+    <div class="modal fade" id="modal-tambah-siswa-diringankan" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Pilih Siswa yang Mendapatkan Keringanan Pembayaran</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-info d-flex" role="alert">
+                                <span class="badge badge-center rounded-pill bg-info border-label-info p-3 me-2"><i class="bx bx-transfer-alt bx-sm pt-1"></i></span>
+                                <div class="d-flex flex-column ps-1">
+                                    <span class="text-black">TA 2019 / 2020, transaksi <span class="fw-semibold">PSB - Memiliki Saudara 1 pondok</span>
+                                        sebesar<span class="fw-semibold"> 200.000 </span> yang akan dilakukan penagihan <span class="fw-semibold"> Sekali Saja</span>
+                                </span></div>
+                            </div>
+
+                            <div class="nav-align-top mb">
+                                <ul class="nav nav-pills mx-auto" role="tablist">
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
+                                            data-bs-target="#perKelas" aria-controls="perKelas"
+                                            aria-selected="true">Berdasarkan Kelas</button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                                            data-bs-target="#perIndividu" aria-controls="perIndividu"
+                                            aria-selected="false">Berdasarkan Siswa</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="perKelas" role="tabpanel">
+                                        <div>
+                                            <label for="kelasSelect" class="form-label">berdasarkan kelas</label>
+                                            <input id="kelasSelect" name="kelasSelect" class="form-control"
+                                                placeholder="Pilih kelas ...">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="perIndividu" role="tabpanel">
+                                        <div>
+                                            <label for="siswaKelas1" class="form-label">Pilih Siswa Kelas I</label>
+                                            <input id="siswaKelas1" name="siswaKelas1" class="form-control mb-3" value="Nur Hasanah, Abbas Hamzah" 
+                                                placeholder="pilih siswa ..." />
+                                            <label for="siswaKelas2" class="form-label">Pilih Siswa Kelas II</label>
+                                            <input id="siswaKelas2" name="siswaKelas1" class="form-control mb-3" value="Akifah Nailah, Sami Yafi Alfatih"
+                                                placeholder="pilih siswa ..." />
+                                            <label for="siswaKelas3" class="form-label">Pilih Siswa Kelas III</label>
+                                            <input id="siswaKelas3" name="siswaKelas1" class="form-control mb-3" value="Afina Mawaddah, Adzkiya Naila Taleetha" 
+                                                placeholder="pilih siswa ..." />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-label-white text-black d-flex justify-content-center pt-4">
+                                <p class=" mb-0"> <span class="badge badge-center rounded-pill bg-danger">6</span>&nbsp;
+                                    Siswa telah dipilih</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                        data-bs-dismiss="modal">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Transaksi Keringanan Pembayaran Siswa-->
+    <div class="modal fade" id="modal-tambah-keringanan-siswa" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Keringanan Pembayaran Siswa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -710,14 +1160,24 @@
                                 value="TA 2019 / 2020" disabled />
                         </div>
                         <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Pos Dana <b class="text-danger">*</b></label>
+                            <select id="pembayaranSelect" class="form-select">
+                                <option disabled="" selected="" value="">Pilih Pos Dana
+                                </option>
+                                <option value="1">Pos SPP Rutin</option>
+                                <option value="2">Pos DU Lanjut</option>
+                                <option value="3">Pos PSB Awal</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
                             <label for="nameBasic" class="form-label">Nama Transaksi <b
                                     class="text-danger">*</b></label>
-                            <select id="transaksiSelect" class="form-select">
+                            <select id="pembayaranSelect" class="form-select">
                                 <option disabled="" selected="" value="">Pilih Transaksi
                                 </option>
-                                <option value="1">SPP Bulanan</option>
-                                <option value="2">LKS / Buku Pelajaran</option>
-                                <option value="3">Seragam Sekolah Laki-laki</option>
+                                <option value="1">Penerimaan Santri Baru</option>
+                                <option value="2">Daftar Ulang</option>
+                                <option value="3">SPP Bulanan</option>
                             </select>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
@@ -805,71 +1265,6 @@
         </div>
     </div>
 
-    <!-- Modal Ubah Tahun Ajaran-->
-    <div class="modal fade" id="modal-ubah-tahun-ajaran" tabindex="-1" data-bs-backdrop="static">
-        <div class="modal-dialog " role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Tahun Ajaran</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 col-md-12 mb-3">
-                            <label for="nameBasic" class="form-label">Label Periode <b class="text-danger">*</b></label>
-                            <input type="text" id="nameBasic" class="form-control"
-                                placeholder="TA Tahun mulai / Tahun akhir" value="TA 2022 / 2023" />
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Mulai</label>
-                            <input class="form-control" type="month" id="mulai-tahun-ajaran"
-                                placeholder="Bulan & Tahun mulai" value="2022-07">
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Akhir</label>
-                            <input class="form-control" type="month" id="akhir0tahun-ajaran"
-                                placeholder="Bulan & Tahun akhir" value="2023-08">
-                        </div>
-                        <div class="mb-3 col-12">
-                            <label for="nameBasic" class="form-label">Pilih Status</label> <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1" checked />
-                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
-                                    <small class="text-secondary">(<i>Jika Tahun Ajaran masih belum
-                                            dimulai, data tidak ditampilkan</i>)</small></label>
-                            </div>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2" />
-                                <label class="form-check-label text-info" for="inlineRadio2">Berlangsung
-                                    <small class="text-secondary">(<i>Jika Tahun Ajaran sedang berlangsung
-                                            saat
-                                            ini, data ditampilkan</i>)</small></label>
-                            </div>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                    value="option3" />
-                                <label class="form-check-label text-success" for="inlineRadio2">Selesai
-                                    <small class="text-secondary">(<i>Jika Tahun Ajaran sudah
-                                            terlewati, data ditampilkan</i>)</small></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        Batal
-                    </button>
-                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                        data-bs-dismiss="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Modal Master Transaksi Siswa -->
     <div class="modal fade" id="modal-master-transaksi-siswa" tabindex="-1" aria-modal="true" role="dialog">
         <div class="modal-dialog modal-fullscreen" role="document">
@@ -928,6 +1323,14 @@
     <script>
         $(".select2").select2();
     </script>
+
+    <!-- <script>
+        $("#pembayaranSelect").select2({
+            placeholder: "Pilih transaksi",
+            allowClear: true
+        });
+    </script> -->
+
     <script>
         const TagifyCustomListSuggestionEl = document.querySelector("#kelasSelect");
 
@@ -952,6 +1355,480 @@
                 closeOnSelect: false
             }
         });
+    </script>
+
+    <script>
+        const TagifyUserListEl = document.querySelector("#siswaKelas1");
+        const usersList = [
+            {
+                value: 1,
+                name: "Nur Hasanah",
+                avatar: "https://images.tokopedia.net/img/cache/250-square/hDjmkQ/2021/5/31/c4580a9d-99bc-428e-b0ca-9141b73f02c1.jpg",
+                email: "Kelas I - A | 20182039812"
+            },
+            {
+                value: 2,
+                name: "Abbas Hamzah",
+                avatar: "https://i.pinimg.com/474x/e5/66/15/e566150dfdb429ed3ec39002e1f92fda.jpg",
+                email: "Kelas I - B | 20182039432"
+            },
+            {
+                value: 3,
+                name: "Sulthan Sayyaf Arshaq",
+                avatar: "https://i.pinimg.com/564x/f1/64/1c/f1641c26e6b3242f31901033bf5c04e0.jpg",
+                email: "Kelas I - C | 20182039234"
+            },
+            {
+                value: 4,
+                name: "Shifan Alfarezel Khairan",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL4vGeOTMttdvzvFSkyw6WQDelEK2gcpij010OFTtAzABkpLH6Bs89wmQYBWgF6xaQSQs&usqp=CAU",
+                email: "Kelas I - B | 20182039123"
+            },
+            {
+                value: 5,
+                name: "Afina Mawaddah",
+                avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q5Ny8zMjcvNzY1Mjk3OTAxMC8xMDQ3NjkvZDQ4NTc0ZS82MjFkYjE0MU43MjAyYTZkZQ.jpg.dpg.webp",
+                email: "Kelas I - A | 20182039342"
+            },
+            {
+                value: 6,
+                name: "Sharim Yazid Al-Ayubi ",
+                avatar: "https://lh6.googleusercontent.com/-XkZeLnIiEUA/AAAAAAAAAAI/AAAAAAAAGac/nSiwjC1tYm8/photo.jpg",
+                email: "Kelas I - C | 20182039787"
+            },
+            {
+                value: 7,
+                name: "Adzkiya Naila Taleetha",
+                avatar: "https://s3.bukalapak.com/bukalapak-kontenz-production/content_attachments/72308/original/merk_hijab_terkenal_asli_indonesia_11.jpg",
+                email: "Kelas I - A | 20182039345"
+            },
+            {
+                value: 8,
+                name: "Sami Yafi Alfatih",
+                avatar: "https://a.wattpad.com/useravatar/vhoNaaaa.256.767468.jpg",
+                email: "Kelas I - C | 20182039567"
+            },
+            {
+                value: 9,
+                name: "Akifah Nailah",
+                avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q4NS8yODcvNzM2MjcxMzE1Ni80NzA5NS8zMTU5MjE4ZS82MjMzZTAxZk5lYTZiZTQyMQ.jpg.dpg.webp",
+                email: "Kelas I - A | 20182033456"
+            },
+            {
+                value: 10,
+                name: "Shabir Abrar Khairan",
+                avatar: "data:image/jpeg;base64,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",
+                email: "Kelas I - B | 2018203567"
+            }
+        ];
+
+        function tagTemplate(tagData) {
+            return `
+    <tag title="${tagData.title || tagData.email}"
+      contenteditable='false'
+      spellcheck='false'
+      tabIndex="-1"
+      class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+      ${this.getAttributes(tagData)}
+    >
+      <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+      <div>
+        <div class='tagify__tag__avatar-wrap'>
+          <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+        </div>
+        <span class='tagify__tag-text'>${tagData.name}</span>
+      </div>
+    </tag>
+  `;
+        }
+
+        function suggestionItemTemplate(tagData) {
+            return `
+    <div ${this.getAttributes(tagData)}
+      class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+      tabindex="0"
+      role="option"
+    >
+      ${tagData.avatar ?
+                    `<div class='tagify__dropdown__item__avatar-wrap'>
+          <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+        </div>`
+                    : ''
+                }
+      <strong>${tagData.name}</strong>
+      <span>${tagData.email}</span>
+    </div>
+  `;
+        }
+
+        // initialize Tagify on the above input node reference
+        let TagifyUserList = new Tagify(TagifyUserListEl, {
+            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            enforceWhitelist: true,
+            skipInvalid: true, // do not remporarily add invalid tags
+            dropdown: {
+                closeOnSelect: false,
+                enabled: 0,
+                classname: "users-list",
+                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+            },
+            templates: {
+                tag: tagTemplate,
+                dropdownItem: suggestionItemTemplate
+            },
+            whitelist: usersList
+        });
+
+        TagifyUserList.on("dropdown:show dropdown:updated", onDropdownShow);
+        TagifyUserList.on("dropdown:select", onSelectSuggestion);
+
+        let addAllSuggestionsEl;
+
+        function onDropdownShow(e) {
+            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+            if (TagifyUserList.suggestedListItems.length > 1) {
+                addAllSuggestionsEl = getAddAllSuggestionsEl();
+
+                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                dropdownContentEl.insertBefore(addAllSuggestionsEl, dropdownContentEl.firstChild);
+            }
+        }
+
+        function onSelectSuggestion(e) {
+            if (e.detail.elm == addAllSuggestionsEl) TagifyUserList.dropdown.selectAll.call(TagifyUserList);
+        }
+
+        // create an "add all" custom suggestion element every time the dropdown changes
+        function getAddAllSuggestionsEl() {
+            // suggestions items should be based on "dropdownItem" template
+            return TagifyUserList.parseTemplate("dropdownItem", [
+                {
+                    class: "addAll",
+                    name: "Tambahkan semua",
+                    email:
+                        TagifyUserList.settings.whitelist.reduce(function (remainingSuggestions, item) {
+                            return TagifyUserList.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+                        }, 0) + " Siswa"
+                }
+            ]);
+        }
+    </script>
+
+    <script>
+        const TagifyUserListEl2 = document.querySelector("#siswaKelas2");
+        const usersList2 = [
+            {
+                value: 1,
+                name: "Nur Hasanah",
+                avatar: "https://images.tokopedia.net/img/cache/250-square/hDjmkQ/2021/5/31/c4580a9d-99bc-428e-b0ca-9141b73f02c1.jpg",
+                email: "Kelas II - A | 20182039812"
+            },
+            {
+                value: 2,
+                name: "Abbas Hamzah",
+                avatar: "https://i.pinimg.com/474x/e5/66/15/e566150dfdb429ed3ec39002e1f92fda.jpg",
+                email: "Kelas II - B | 20182039432"
+            },
+            {
+                value: 3,
+                name: "Sulthan Sayyaf Arshaq",
+                avatar: "https://i.pinimg.com/564x/f1/64/1c/f1641c26e6b3242f31901033bf5c04e0.jpg",
+                email: "Kelas II - C | 20182039234"
+            },
+            {
+                value: 4,
+                name: "Shifan Alfarezel Khairan",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL4vGeOTMttdvzvFSkyw6WQDelEK2gcpij010OFTtAzABkpLH6Bs89wmQYBWgF6xaQSQs&usqp=CAU",
+                email: "Kelas II - B | 20182039123"
+            },
+            {
+                value: 5,
+                name: "Afina Mawaddah",
+                avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q5Ny8zMjcvNzY1Mjk3OTAxMC8xMDQ3NjkvZDQ4NTc0ZS82MjFkYjE0MU43MjAyYTZkZQ.jpg.dpg.webp",
+                email: "Kelas II - A | 20182039342"
+            },
+            {
+                value: 6,
+                name: "Sharim Yazid Al-Ayubi ",
+                avatar: "https://lh6.googleusercontent.com/-XkZeLnIiEUA/AAAAAAAAAAI/AAAAAAAAGac/nSiwjC1tYm8/photo.jpg",
+                email: "Kelas II - C | 20182039787"
+            },
+            {
+                value: 7,
+                name: "Adzkiya Naila Taleetha",
+                avatar: "https://s3.bukalapak.com/bukalapak-kontenz-production/content_attachments/72308/original/merk_hijab_terkenal_asli_indonesia_11.jpg",
+                email: "Kelas II - A | 20182039345"
+            },
+            {
+                value: 8,
+                name: "Sami Yafi Alfatih",
+                avatar: "https://a.wattpad.com/useravatar/vhoNaaaa.256.767468.jpg",
+                email: "Kelas II - C | 20182039567"
+            },
+            {
+                value: 9,
+                name: "Akifah Nailah",
+                avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q4NS8yODcvNzM2MjcxMzE1Ni80NzA5NS8zMTU5MjE4ZS82MjMzZTAxZk5lYTZiZTQyMQ.jpg.dpg.webp",
+                email: "Kelas II - A | 20182033456"
+            },
+            {
+                value: 10,
+                name: "Shabir Abrar Khairan",
+                avatar: "data:image/jpeg;base64,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",
+                email: "Kelas II - B | 2018203567"
+            }
+        ];
+
+        function tagTemplate(tagData) {
+            return `
+<tag title="${tagData.title || tagData.email}"
+  contenteditable='false'
+  spellcheck='false'
+  tabIndex="-1"
+  class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+  ${this.getAttributes(tagData)}
+>
+  <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+  <div>
+    <div class='tagify__tag__avatar-wrap'>
+      <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+    </div>
+    <span class='tagify__tag-text'>${tagData.name}</span>
+  </div>
+</tag>
+`;
+        }
+
+        function suggestionItemTemplate(tagData) {
+            return `
+<div ${this.getAttributes(tagData)}
+  class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+  tabindex="0"
+  role="option"
+>
+  ${tagData.avatar ?
+                    `<div class='tagify__dropdown__item__avatar-wrap'>
+      <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+    </div>`
+                    : ''
+                }
+  <strong>${tagData.name}</strong>
+  <span>${tagData.email}</span>
+</div>
+`;
+        }
+
+        // initialize Tagify on the above input node reference
+        let TagifyUserList2 = new Tagify(TagifyUserListEl2, {
+            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            enforceWhitelist: true,
+            skipInvalid: true, // do not remporarily add invalid tags
+            dropdown: {
+                closeOnSelect: false,
+                enabled: 0,
+                classname: "users-list",
+                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+            },
+            templates: {
+                tag: tagTemplate,
+                dropdownItem: suggestionItemTemplate
+            },
+            whitelist: usersList2
+        });
+
+        TagifyUserList2.on("dropdown:show dropdown:updated", onDropdownShow);
+        TagifyUserList2.on("dropdown:select", onSelectSuggestion);
+
+        let addAllSuggestionsEl2;
+
+        function onDropdownShow(e) {
+            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+            if (TagifyUserList2.suggestedListItems.length > 1) {
+                addAllSuggestionsEl2 = getAddAllSuggestionsEl2();
+
+                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                dropdownContentEl.insertBefore(addAllSuggestionsEl2, dropdownContentEl.firstChild);
+            }
+        }
+
+        function onSelectSuggestion(e) {
+            if (e.detail.elm == addAllSuggestionsEl2) TagifyUserList2.dropdown.selectAll.call(TagifyUserList2);
+        }
+
+        // create an "add all" custom suggestion element every time the dropdown changes
+        function getAddAllSuggestionsEl2() {
+            // suggestions items should be based on "dropdownItem" template
+            return TagifyUserList2.parseTemplate("dropdownItem", [
+                {
+                    class: "addAll",
+                    name: "Tambahkan semua",
+                    email:
+                        TagifyUserList2.settings.whitelist.reduce(function (remainingSuggestions, item) {
+                            return TagifyUserList2.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+                        }, 0) + " Siswa"
+                }
+            ]);
+        }
+    </script>
+
+    <script>
+        const TagifyUserListEl3 = document.querySelector("#siswaKelas3");
+        const usersList3 = [
+            {
+                value: 1,
+                name: "Nur Hasanah",
+                avatar: "https://images.tokopedia.net/img/cache/250-square/hDjmkQ/2021/5/31/c4580a9d-99bc-428e-b0ca-9141b73f02c1.jpg",
+                email: "Kelas III - A | 20182039812"
+            },
+            {
+                value: 2,
+                name: "Abbas Hamzah",
+                avatar: "https://i.pinimg.com/474x/e5/66/15/e566150dfdb429ed3ec39002e1f92fda.jpg",
+                email: "Kelas III - B | 20182039432"
+            },
+            {
+                value: 3,
+                name: "Sulthan Sayyaf Arshaq",
+                avatar: "https://i.pinimg.com/564x/f1/64/1c/f1641c26e6b3242f31901033bf5c04e0.jpg",
+                email: "Kelas III - C | 20182039234"
+            },
+            {
+                value: 4,
+                name: "Shifan Alfarezel Khairan",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL4vGeOTMttdvzvFSkyw6WQDelEK2gcpij010OFTtAzABkpLH6Bs89wmQYBWgF6xaQSQs&usqp=CAU",
+                email: "Kelas II - B | 20182039123"
+            },
+            {
+                value: 5,
+                name: "Afina Mawaddah",
+                avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q5Ny8zMjcvNzY1Mjk3OTAxMC8xMDQ3NjkvZDQ4NTc0ZS82MjFkYjE0MU43MjAyYTZkZQ.jpg.dpg.webp",
+                email: "Kelas III - A | 20182039342"
+            },
+            {
+                value: 6,
+                name: "Sharim Yazid Al-Ayubi ",
+                avatar: "https://lh6.googleusercontent.com/-XkZeLnIiEUA/AAAAAAAAAAI/AAAAAAAAGac/nSiwjC1tYm8/photo.jpg",
+                email: "Kelas III - C | 20182039787"
+            },
+            {
+                value: 7,
+                name: "Adzkiya Naila Taleetha",
+                avatar: "https://s3.bukalapak.com/bukalapak-kontenz-production/content_attachments/72308/original/merk_hijab_terkenal_asli_indonesia_11.jpg",
+                email: "Kelas III - A | 20182039345"
+            },
+            {
+                value: 8,
+                name: "Sami Yafi Alfatih",
+                avatar: "https://a.wattpad.com/useravatar/vhoNaaaa.256.767468.jpg",
+                email: "Kelas III - C | 20182039567"
+            },
+            {
+                value: 9,
+                name: "Akifah Nailah",
+                avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q4NS8yODcvNzM2MjcxMzE1Ni80NzA5NS8zMTU5MjE4ZS82MjMzZTAxZk5lYTZiZTQyMQ.jpg.dpg.webp",
+                email: "Kelas III - A | 20182033456"
+            },
+            {
+                value: 10,
+                name: "Shabir Abrar Khairan",
+                avatar: "data:image/jpeg;base64,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",
+                email: "Kelas III - B | 2018203567"
+            }
+        ];
+
+        function tagTemplate(tagData) {
+            return `
+<tag title="${tagData.title || tagData.email}"
+contenteditable='false'
+spellcheck='false'
+tabIndex="-1"
+class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+${this.getAttributes(tagData)}
+>
+<x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+<div>
+<div class='tagify__tag__avatar-wrap'>
+  <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+</div>
+<span class='tagify__tag-text'>${tagData.name}</span>
+</div>
+</tag>
+`;
+        }
+
+        function suggestionItemTemplate(tagData) {
+            return `
+<div ${this.getAttributes(tagData)}
+class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+tabindex="0"
+role="option"
+>
+${tagData.avatar ?
+                    `<div class='tagify__dropdown__item__avatar-wrap'>
+  <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+</div>`
+                    : ''
+                }
+<strong>${tagData.name}</strong>
+<span>${tagData.email}</span>
+</div>
+`;
+        }
+
+        // initialize Tagify on the above input node reference
+        let TagifyUserList3 = new Tagify(TagifyUserListEl3, {
+            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            enforceWhitelist: true,
+            skipInvalid: true, // do not remporarily add invalid tags
+            dropdown: {
+                closeOnSelect: false,
+                enabled: 0,
+                classname: "users-list",
+                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+            },
+            templates: {
+                tag: tagTemplate,
+                dropdownItem: suggestionItemTemplate
+            },
+            whitelist: usersList3
+        });
+
+        TagifyUserList3.on("dropdown:show dropdown:updated", onDropdownShow);
+        TagifyUserList3.on("dropdown:select", onSelectSuggestion);
+
+        let addAllSuggestionsEl3;
+
+        function onDropdownShow(e) {
+            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+            if (TagifyUserList3.suggestedListItems.length > 1) {
+                addAllSuggestionsEl3 = getAddAllSuggestionsEl3();
+
+                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                dropdownContentEl.insertBefore(addAllSuggestionsEl3, dropdownContentEl.firstChild);
+            }
+        }
+
+        function onSelectSuggestion(e) {
+            if (e.detail.elm == addAllSuggestionsEl3) TagifyUserList3.dropdown.selectAll.call(TagifyUserList3);
+        }
+
+        // create an "add all" custom suggestion element every time the dropdown changes
+        function getAddAllSuggestionsEl3() {
+            // suggestions items should be based on "dropdownItem" template
+            return TagifyUserList3.parseTemplate("dropdownItem", [
+                {
+                    class: "addAll",
+                    name: "Tambahkan semua",
+                    email:
+                        TagifyUserList3.settings.whitelist.reduce(function (remainingSuggestions, item) {
+                            return TagifyUserList3.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+                        }, 0) + " Siswa"
+                }
+            ]);
+        }
     </script>
 
 </body>
