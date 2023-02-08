@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="../assets/boxicons-2.1.4/css/boxicons.min.css" />
     <link rel="stylesheet" href="fonts/boxicons.scss" />
 
-    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <!-- <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../assets/css/demo.css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" /> -->
 
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
@@ -38,9 +38,20 @@
 
     <script src="../assets/js/config.js"></script>
 
+    <!-- UPDATE -->
+    <link rel="stylesheet" href="../assets/new/core.css" />
+    <link rel="stylesheet" href="../assets/new/demo.css" />
+    <link rel="stylesheet" href="../assets/new/theme-default.css" />
+
+    <!-- TAMBAHAN -->
+    <link rel="stylesheet" href="../assets/vendor/libs/toastr/toastr.css" />
+    <script src="../assets/vendor/libs/toastr/toastr.js"></script>
+
+
 </head>
 
 <body>
+
 
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -161,11 +172,6 @@
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item active">
-                                <a href="pengaturan-transaksi-master-data.html" class="menu-link">
-                                    <div>Master Data</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
                                 <a href="pengaturan-transaksi-master-data.html" class="menu-link">
                                     <div>Master Data</div>
                                 </a>
@@ -321,60 +327,17 @@
                                                     Umum</span>
                                                 <h4 class="card-title text-primary">
                                                     <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
-                                                    Transaksi dari Siswa
+                                                    Master Data Pos Transaksi
                                                 </h4>
                                                 <p>
-                                                    Berisikan semua transaksi yang diterapkan pada siswa pada instansi
-                                                    Anda
+                                                    Berisikan semua pos transaksi yang digunakan sebagai pusat dana
+                                                    masuk dan keluar
                                                 </p>
-                                                <div class="btn-group dropend">
-                                                    <a class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                                        href="#master-pembayaran" role="button" aria-expanded="false"
-                                                        aria-controls="master-pembayaran"> Master Data <span
-                                                            class="badge badge-center rounded-pill bg-label-primary me-1">3</span><span
-                                                            class="badge badge-center rounded-pill bg-label-warning">3</span></a>
-                                                    <button type="button"
-                                                        class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
-                                                        data-bs-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
-                                                        <span class="visually-hidden"></span>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><button class="dropdown-item" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#master-pembayaran"
-                                                                aria-expanded="false"
-                                                                aria-controls="master-pembayaran">Lihat Detail</button>
-                                                        </li>
-                                                        <li>
-                                                        </li>
-                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
-                                                                data-bs-target="#modal-tambah-master-data">Ubah /
-                                                                Tambah</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div id="master-pembayaran" class="collapse">
-                                                    <div class="pt-4">
-                                                        <h6>Pembayaran oleh siswa</h6>
-                                                        <span class="badge bg-label-primary me-1 mb-2">Penerimaan Santri
-                                                            Baru</span>
-                                                        <span class="badge bg-label-primary me-1 mb-2">Daftar
-                                                            Ulang</span>
-                                                        <span class="badge bg-label-primary me-1 mb-2">SPP
-                                                            Bulanan</span>
+                                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-tambah-pos-transaksi">
+                                                    <i class="bx bx-plus"></i> Pos Transaksi
+                                                </button>
 
-                                                        <br><br>
-                                                        <h6>Bantuan untuk siswa</h6>
-                                                        <span class="badge bg-label-warning me-1 mb-2">Alumni
-                                                            SDIQU</span>
-                                                        <span class="badge bg-label-warning me-1 mb-2">Memiliki Saudara
-                                                            Kandung di Pondok</span>
-                                                        <span class="badge bg-label-warning me-1 mb-2">Santri
-                                                            Berprestasi</span>
-                                                        <br>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-2 ">
@@ -473,521 +436,146 @@
                             </div>
                         </div>
 
-                        <div class="row mb-4">
+                        <div id="toast-container" class="toast-top-right">
+                            <div class="toast bg-success" id="previewToast" aria-live="polite">
+                                <!-- <button type="button" class="toast-close-button" role="button">×</button> -->
+                                <div class="toast-title ms-2 fw-semibold">Nomor rekening berhasil disalin !</div>
+                            </div>
+                        </div>
 
-                            <div class="col-12">
-                                <div class="nav-align-top">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item">
-                                            <button type="button" class="nav-link active p-3" role="tab"
-                                                data-bs-toggle="tab" data-bs-target="#tagihan-pembayaran"
-                                                aria-controls="tagihan-pembayaran" aria-selected="true"><span
-                                                    class="badge badge-center rounded-pill bg-primary me-1"><i
-                                                        class="bx bx-transfer-alt"></i></span> Tagihan
-                                                Pembayaran</button>
-                                        </li>
-                                        <li class="nav-item">
-                                            <button type="button" class="nav-link p-3" role="tab" data-bs-toggle="tab"
-                                                data-bs-target="#keringanan-pembayaran"
-                                                aria-controls="keringanan-pembayaran" aria-selected="false"><span
-                                                    class="badge badge-center rounded-pill bg-warning me-1"><i
-                                                        class="bx bx-transfer-alt"></i></span> Keringanan
-                                                Pembayaran</button>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade show active" id="tagihan-pembayaran" role="tabpanel">
-                                            <div class="row mt-4">
-                                                <div class="col-6 col-md-3 pb-3">
-                                                    <select id="largeSelect" class="form-select form-select-md">
-                                                        <option value="0">TA 2019 / 2020
-                                                        </option>
-                                                        <option value="1">TA 2018 / 2019
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-2 pb-3">
-                                                    <select id="largeSelect" class="form-select form-select-md">
-                                                        <option value="1">Pos SPP Rutin</option>
-                                                        <option value="2">Pos DU Lanjut</option>
-                                                        <option value="3">Pos PSB Awal</option>
-                                                        <option value="4" selected>Semua Pos
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-3 pb-3">
-                                                    <select id="largeSelect" class="form-select form-select-md">
-                                                        <option value="1">Pembayaran Sekali</option>
-                                                        <option value="2">Pembayaran Bulanan</option>
-                                                        <option value="3" selected>Semua Pembayaran
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-3 pb-3">
-                                                    <select id="largeSelect" class="form-select form-select-md">
-                                                        <option value="1">Draft</option>
-                                                        <option value="2">Proses</option>
-                                                        <option value="3">Selesai</option>
-                                                        <option value="4" selected>Semua status
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-1">
-                                                    <a type="button" class="btn btn-primary btn-icon text-white w-100"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#modal-tambah-transaksi-siswa">
-                                                        <i class="bx bx-plus bx-sm"></i>
-                                                    </a>
+                        <div class="row g-4 mb-4">
+
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start justify-content-between">
+
+                                            <span class="badge bg-label-primary rounded p-2">
+                                                <i class="bx bx-credit-card bx-sm"></i>
+                                            </span>
+                                            <div class="dropdown text-center">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-ubah-pos"><i
+                                                            class="bx bxs-pencil me-1"></i>
+                                                        Ubah</a>
+                                                    <a class="dropdown-item" href="keuangan.html"><i
+                                                            class="bx bxs-bar-chart-alt-2 me-1"></i>
+                                                        Data Transaksi</a>
+                                                    <div class="dropdown-divider"></div>
+
+                                                    <a class="dropdown-item" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-hapus-pos"><i
+                                                            class="bx bxs-trash me-1"></i>
+                                                        Hapus </a>
                                                 </div>
                                             </div>
-                                            <div class="table-responsive mt-3 mx-2">
-                                                <table
-                                                    class="table table-hover card-table table-striped table-borderless">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="text-primary">
-                                                                Label transaksi</th>
-                                                            <th class="text-primary">Nominal (Rp)</th>
-                                                            <th class="text-primary">Pembayaran</th>
-                                                            <th class="text-primary">Status</th>
-                                                            <th class="text-primary text-center">Aksi</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody class="table-border-bottom-0">
-                                                        <tr>
-                                                            <td>
-                                                                <a class="d-flex mt-1 text-secondary"
-                                                                    href="transaksi-siswa-detail.html">
-                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                                        alt=""
-                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
-                                                                    <div>
-                                                                        <strong>Penerimaan Santri Baru</strong> <br>
-                                                                        <span class="small">23 Jul 2019</span>
-                                                                    </div>
-                                                                </a>
-                                                            </td>
-                                                            <td>19.700.000</td>
-                                                            <td>Sekali saja</td>
-                                                            <td>
-                                                                <span class="badge bg-label-secondary me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Transaksi ini belum ditampilkan pada siswa">Draft</span>
-                                                                <span class="badge bg-label-secondary me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
-                                                                        class='bx bxs-user'></i> 96</span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="dropdown text-center">
-                                                                    <button type="button"
-                                                                        class="btn p-0 dropdown-toggle hide-arrow"
-                                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                                                    </button>
-                                                                    <div class="dropdown-menu">
-                                                                        <!-- <a class="dropdown-item"
-                                                                            href="pengaturan-transaksi-siswa-detail.html"><i
-                                                                                class="bx bxs-show me-1"></i>
-                                                                            Lihat Detail</a> -->
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-ubah-transaksi-siswa"><i
-                                                                                class="bx bxs-pencil me-1"></i>
-                                                                            Ubah</a>
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-tambah-siswa-ditagih"><i
-                                                                                class="bx bxs-user-plus me-1"></i>
-                                                                            Cari Siswa</a>
-                                                                        <a class="dropdown-item"
-                                                                            href="keuangan-detail-item.html"><i
-                                                                                class="bx bxs-bar-chart-alt-2 me-1"></i>
-                                                                            Data Pembayaran</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <a class="d-flex mt-1 text-secondary"
-                                                                    href="transaksi-siswa-detail.html">
-                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                                        alt=""
-                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
-                                                                    <div>
-                                                                        <strong>Daftar Ulang</strong> <br>
-                                                                        <span class="small">16 Des 2019</span>
-                                                                    </div>
-                                                                </a>
-                                                            </td>
-                                                            <td>3.600.000</td>
-                                                            <td>Sekali Saja</td>
-                                                            <td>
-                                                                <span class="badge bg-label-info me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Terdapat siswa yang belum lunas">Proses</span>
-                                                                <span class="badge bg-label-secondary me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
-                                                                        class='bx bxs-user'></i> 0</span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="dropdown text-center">
-                                                                    <div class="dropdown text-center">
-                                                                        <button type="button"
-                                                                            class="btn p-0 dropdown-toggle hide-arrow"
-                                                                            data-bs-toggle="dropdown"
-                                                                            aria-expanded="false">
-                                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                                        </button>
-                                                                        <div class="dropdown-menu">
-                                                                            <!-- <a class="dropdown-item"
-                                                                                href="pengaturan-transaksi-siswa-detail.html"><i
-                                                                                    class="bx bxs-show me-1"></i>
-                                                                                Lihat Detail</a> -->
-                                                                            <a class="dropdown-item"
-                                                                                data-bs-toggle="modal"
-                                                                                data-bs-target="#modal-ubah-transaksi-siswa"><i
-                                                                                    class="bx bxs-pencil me-1"></i>
-                                                                                Ubah</a>
-                                                                            <a class="dropdown-item"
-                                                                                data-bs-toggle="modal"
-                                                                                data-bs-target="#modal-tambah-siswa-ditagih"><i
-                                                                                    class="bx bxs-user-plus me-1"></i>
-                                                                                Cari Siswa</a>
 
-                                                                            <div class="dropdown-divider"></div>
-                                                                            <a class="dropdown-item"
-                                                                                href="keuangan-detail-item.html"><i
-                                                                                    class="bx bxs-trash me-1"></i>
-                                                                                Hapus</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <a class="d-flex mt-1 text-secondary"
-                                                                    href="transaksi-siswa-detail.html">
-                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                                        alt=""
-                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
-                                                                    <div>
-                                                                        <strong>SPP Bulanan</strong> <br>
-                                                                        <span class="small">24 Des 2019</span>
-                                                                    </div>
-                                                                </a>
-                                                            </td>
-                                                            <td>1.450.000</td>
-                                                            <td>Tiap Bulan</td>
-                                                            <td>
-                                                                <span class="badge bg-label-success me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Semua siswa sudah lunas">Selesai</span>
-                                                                <span class="badge bg-label-secondary me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
-                                                                        class='bx bxs-user'></i> 292</span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="dropdown text-center">
-                                                                    <button type="button"
-                                                                        class="btn p-0 dropdown-toggle hide-arrow"
-                                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                                                    </button>
-                                                                    <div class="dropdown-menu">
-                                                                        <!-- <a class="dropdown-item"
-                                                                            href="pengaturan-transaksi-siswa-detail.html"><i
-                                                                                class="bx bxs-show me-1"></i>
-                                                                            Lihat Detail</a> -->
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-ubah-transaksi-siswa"><i
-                                                                                class="bx bxs-pencil me-1"></i>
-                                                                            Ubah</a>
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-tambah-siswa-ditagih"><i
-                                                                                class="bx bxs-user-plus me-1"></i>
-                                                                            Cari Siswa</a>
-                                                                        <a class="dropdown-item"
-                                                                            href="keuangan-detail-item.html"><i
-                                                                                class="bx bxs-bar-chart-alt-2 me-1"></i>
-                                                                            Data Pembayaran</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <nav aria-label="Page navigation" class="my-4">
-                                                    <ul class="pagination justify-content-center">
-                                                        <li class="page-item prev">
-                                                            <a class="page-link" href="javascript:void(0);"><i
-                                                                    class="tf-icon bx bx-chevrons-left"></i></a>
-                                                        </li>
-                                                        <li class="page-item active">
-                                                            <a class="page-link" href="javascript:void(0);">1</a>
-                                                        </li>
-                                                        <li class="page-item next">
-                                                            <a class="page-link" href="javascript:void(0);"><i
-                                                                    class="tf-icon bx bx-chevrons-right"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </nav>
-                                            </div>
                                         </div>
-                                        <div class="tab-pane fade" id="keringanan-pembayaran" role="tabpanel">
-                                            <div class="row mt-4">
-                                                <div class="col-6 col-md-3 pb-3">
-                                                    <select id="largeSelect" class="form-select form-select-md">
-                                                        <option value="0">TA 2019 / 2020
-                                                        </option>
-                                                        <option value="1">TA 2018 / 2019
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-2 pb-3">
-                                                    <select id="largeSelect" class="form-select form-select-md">
-                                                        <option value="1">Pos SPP Rutin</option>
-                                                        <option value="2">Pos DU Lanjut</option>
-                                                        <option value="3">Pos PSB Awal</option>
-                                                        <option value="4" selected="">Semua Pos
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-3 pb-3">
-                                                    <select id="largeSelect" class="form-select form-select-md">
-                                                        <option value="1">Pembayaran Sekali</option>
-                                                        <option value="2">Pembayaran Bulanan</option>
-                                                        <option value="3" selected="">Semua Pembayaran
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-3 pb-3">
-                                                    <select id="largeSelect" class="form-select form-select-md">
-                                                        <option value="1">Draft</option>
-                                                        <option value="2">Proses</option>
-                                                        <option value="3">Selesai</option>
-                                                        <option value="4" selected="">Semua status
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-1">
-                                                    <a type="button" class="btn btn-primary btn-icon text-white w-100"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#modal-tambah-keringanan-siswa">
-                                                        <i class="bx bx-plus bx-sm"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="table-responsive mt-3 mx-2">
-                                                <table
-                                                    class="table table-hover card-table table-striped table-borderless">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="text-primary">
-                                                                Label transaksi</th>
-                                                            <th class="text-primary">Nominal (Rp)</th>
-                                                            <th class="text-primary">Pembayaran</th>
-                                                            <th class="text-primary">Status</th>
-                                                            <th class="text-primary text-center">Aksi</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody class="table-border-bottom-0">
-                                                        <tr>
-                                                            <td>
-                                                                <a class="d-flex mt-1 text-secondary"
-                                                                    href="transaksi-siswa-detail.html">
-                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                                        alt=""
-                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
-                                                                    <div>
-                                                                        <strong>Alumni SDIQU</strong> <br>
-                                                                        <span class="small">16 Des 2019</span>
-                                                                    </div>
-                                                                </a>
-                                                            </td>
-                                                            <td>1.200.000</td>
-                                                            <td>Sekali Saja</td>
-                                                            <td>
-                                                                <span class="badge bg-label-info me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Terdapat siswa yang belum lunas">Proses</span>
-                                                                <span class="badge bg-label-secondary me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Total siswa yang mendapat keringanan ini"><i
-                                                                        class="bx bxs-user"></i> 3</span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="dropdown text-center">
-                                                                    <button type="button"
-                                                                        class="btn p-0 dropdown-toggle hide-arrow"
-                                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                                                    </button>
-                                                                    <div class="dropdown-menu">
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-ubah-transaksi-keringanan-siswa"><i
-                                                                                class="bx bxs-pencil me-1"></i>
-                                                                            Ubah</a>
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-tambah-siswa-diringankan"><i
-                                                                                class="bx bxs-user-plus me-1"></i>
-                                                                            Cari Siswa</a>
-                                                                        <a class="dropdown-item"
-                                                                            href="keuangan-detail-item-keringanan.html"><i
-                                                                                class="bx bxs-bar-chart-alt-2 me-1"></i>
-                                                                            Data Pembayaran</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <a class="d-flex mt-1 text-secondary"
-                                                                    href="transaksi-siswa-detail.html">
-                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                                        alt=""
-                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
-                                                                    <div>
-                                                                        <strong>Santri Berprestasi</strong> <br>
-                                                                        <span class="small">23 Des 2019</span>
-                                                                    </div>
-                                                                </a>
-                                                            </td>
-                                                            <td>500.000</td>
-                                                            <td>Tiap Bulan</td>
-                                                            <td>
-                                                                <span class="badge bg-label-secondary me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Transaksi ini belum ditampilkan pada siswa">Draft</span>
-                                                                <span class="badge bg-label-secondary me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Total siswa yang mendapat tanggungan transaksi ini"><i
-                                                                        class="bx bxs-user"></i> 12</span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="dropdown text-center">
-                                                                    <button type="button"
-                                                                        class="btn p-0 dropdown-toggle hide-arrow"
-                                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                                                    </button>
-                                                                    <div class="dropdown-menu">
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-ubah-transaksi-keringanan-siswa"><i
-                                                                                class="bx bxs-pencil me-1"></i>
-                                                                            Ubah</a>
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-tambah-siswa-diringankan"><i
-                                                                                class="bx bxs-user-plus me-1"></i>
-                                                                            Cari Siswa</a>
-                                                                        <a class="dropdown-item"
-                                                                            href="keuangan-detail-item-keringanan.html"><i
-                                                                                class="bx bxs-bar-chart-alt-2 me-1"></i>
-                                                                            Data Pembayaran</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        
-                                                        <tr>
-                                                            <td>
-                                                                <a class="d-flex mt-1 text-secondary"
-                                                                    href="transaksi-siswa-detail.html">
-                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi.jpg"
-                                                                        alt=""
-                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
-                                                                    <div>
-                                                                        <strong>Memiliki Saudara Kandung di
-                                                                            Pondok</strong> <br>
-                                                                        <span class="small">24 Des 2019</span>
-                                                                    </div>
-                                                                </a>
-                                                            </td>
-                                                            <td>200.000</td>
-                                                            <td>Sekali Saja</td>
-                                                            <td>
-                                                                <span class="badge bg-label-success me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Semua siswa sudah lunas">Selesai</span>
-                                                                <span class="badge bg-label-secondary me-1 mb-1"
-                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                    data-bs-placement="right" data-bs-html="true"
-                                                                    title=""
-                                                                    data-bs-original-title="Total siswa yang mendapat keringanan ini"><i
-                                                                        class="bx bxs-user"></i> 3</span>
-                                                            </td>
-                                                            <td>
-                                                                <div class="dropdown text-center">
-                                                                    <button type="button"
-                                                                        class="btn p-0 dropdown-toggle hide-arrow"
-                                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                                                    </button>
-                                                                    <div class="dropdown-menu">
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-ubah-transaksi-keringanan-siswa"><i
-                                                                                class="bx bxs-pencil me-1"></i>
-                                                                            Ubah</a>
-                                                                        <a class="dropdown-item" data-bs-toggle="modal"
-                                                                            data-bs-target="#modal-tambah-siswa-diringankan"><i
-                                                                                class="bx bxs-user-plus me-1"></i>
-                                                                            Cari Siswa</a>
-                                                                        <a class="dropdown-item"
-                                                                            href="keuangan-detail-item-keringanan.html"><i
-                                                                                class="bx bxs-bar-chart-alt-2 me-1"></i>
-                                                                            Data Pembayaran</a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <nav aria-label="Page navigation" class="my-4">
-                                                    <ul class="pagination justify-content-center">
-                                                        <li class="page-item prev">
-                                                            <a class="page-link" href="javascript:void(0);"><i
-                                                                    class="tf-icon bx bx-chevrons-left"></i></a>
-                                                        </li>
-                                                        <li class="page-item active">
-                                                            <a class="page-link" href="javascript:void(0);">1</a>
-                                                        </li>
-                                                        <li class="page-item next">
-                                                            <a class="page-link" href="javascript:void(0);"><i
-                                                                    class="tf-icon bx bx-chevrons-right"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </nav>
-                                            </div>
+                                        <div class="mt-3">
+                                            <h5 class="mb-0"><i class="bx bxs-lock text-secondary"></i> PSB Awal</h5>
+                                            <span class="small">Digunakan untuk pembayaran penerimaman santri
+                                                baru</span>
+                                            <button class="btn btn-outline-primary mt-3 w-100" data-bs-toggle="modal"
+                                                data-bs-target="#modal-info-pembayaran">
+                                                Info Pembayaran
+                                            </button>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start justify-content-between">
+
+                                            <span class="badge bg-label-primary rounded p-2">
+                                                <i class="bx bx-credit-card bx-sm"></i>
+                                            </span>
+                                            <div class="dropdown text-center">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-ubah-pos"><i
+                                                            class="bx bxs-pencil me-1"></i>
+                                                        Ubah</a>
+                                                    <a class="dropdown-item" href="keuangan.html"><i
+                                                            class="bx bxs-bar-chart-alt-2 me-1"></i>
+                                                        Data Transaksi</a>
+                                                    <div class="dropdown-divider"></div>
+
+                                                    <a class="dropdown-item" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-hapus-pos"><i
+                                                            class="bx bxs-trash me-1"></i>
+                                                        Hapus </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="mt-3">
+                                            <h5 class="mb-0"><i class="bx bxs-lock text-secondary"></i> DU Lanjut</h5>
+                                            <span class="small">Digunakan untuk pembayaran daftar ulang kelas 2 &
+                                                3</span>
+                                            <button class="btn btn-outline-primary mt-3 w-100" data-bs-toggle="modal"
+                                                data-bs-target="#modal-info-pembayaran">
+                                                Info Pembayaran
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-start justify-content-between">
+
+                                            <span class="badge bg-label-primary rounded p-2">
+                                                <i class="bx bx-credit-card bx-sm"></i>
+                                            </span>
+                                            <div class="dropdown text-center">
+                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-ubah-pos"><i
+                                                            class="bx bxs-pencil me-1"></i>
+                                                        Ubah</a>
+                                                    <a class="dropdown-item" href="keuangan.html"><i
+                                                            class="bx bxs-bar-chart-alt-2 me-1"></i>
+                                                        Data Transaksi</a>
+                                                    <div class="dropdown-divider"></div>
+
+                                                    <a class="dropdown-item" data-bs-toggle="modal"
+                                                        data-bs-target="#modal-hapus-pos"><i
+                                                            class="bx bxs-trash me-1"></i>
+                                                        Hapus </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="mt-3">
+                                            <h5 class="mb-0"><i class="bx bxs-lock text-secondary"></i> SPP Rutin</h5>
+                                            <span class="small">Digunakan untuk pembayaran rutin bulanan</span>
+                                            <button class="btn btn-outline-primary mt-3 w-100" data-bs-toggle="modal"
+                                                data-bs-target="#modal-info-pembayaran">
+                                                Info Pembayaran
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -1000,520 +588,59 @@
 
 
     <!-- Modal Tambah Master Data Siswa-->
-    <div class="modal fade" id="modal-tambah-master-data" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal fade" id="modal-tambah-pos-transaksi" tabindex="-1" data-bs-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Master Data Siswa</h5>
+                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Master Data Pos Transaksi</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <label class="form-label text-primary">Tagihan Pembayaran</label>
-                    <div class="row" class="form-group">
-                        <div class="col-9 mb-3">
-                            <div class="input-group input-group-merge" name="item-tagihan">
-                                <span class="input-group-text">1</span>
-                                <input type="text" id="pembayaran1" class="form-control"
-                                    placeholder="Nama pembayaran ..." value="Penerimaan Santri Baru">
-                            </div>
-                        </div>
-                        <div class="col-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                <span class="tf-icons bx bx-x bx-sm"></span>
-                            </button>
-                            <button type="button" class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row" class="form-group">
-                        <div class="col-9 mb-3">
-                            <div class="input-group input-group-merge" name="item-tagihan">
-                                <span class="input-group-text">2</span>
-                                <input type="text" id="pembayaran1" class="form-control"
-                                    placeholder="Nama pembayaran ..." value="Daftar Ulang">
-                            </div>
-                        </div>
-                        <div class="col-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                <span class="tf-icons bx bx-x bx-sm"></span>
-                            </button>
-                            <button type="button" class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row" class="form-group">
-                        <div class="col-9 mb-3">
-                            <div class="input-group input-group-merge" name="item-tagihan">
-                                <span class="input-group-text">3</span>
-                                <input type="text" id="pembayaran1" class="form-control"
-                                    placeholder="Nama pembayaran ..." value="SPP Bulanan">
-                            </div>
-                        </div>
-                        <div class="col-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                <span class="tf-icons bx bx-x bx-sm"></span>
-                            </button>
-                            <button type="button" class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row" class="form-group">
-                        <div class="col-9 mb-3">
-                            <div class="input-group input-group-merge" name="item-tagihan">
-                                <span class="input-group-text">4</span>
-                                <input type="text" id="pembayaran1" class="form-control"
-                                    placeholder="Nama pembayaran ...">
-                            </div>
-                        </div>
-                        <div class="col-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                <span class="tf-icons bx bx-x bx-sm"></span>
-                            </button>
-                            <button type="button" class="btn btn-icon ms-2 me-1 btn-outline-success">
-                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                            </button>
-                        </div>
-                    </div>
 
-                    <label class="form-label text-warning mt-4">Keringanan Pembayaran</label>
                     <div class="row" class="form-group">
-                        <div class="col-9 mb-3">
-                            <div class="input-group input-group-merge" name="item-tagihan">
-                                <span class="input-group-text">1</span>
-                                <input type="text" id="pembayaran1" class="form-control"
-                                    placeholder="Nama pembayaran ..." value="Alumni SDIQU">
-                            </div>
-                        </div>
-                        <div class="col-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                <span class="tf-icons bx bx-x bx-sm"></span>
-                            </button>
-                            <button type="button" class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row" class="form-group">
-                        <div class="col-9 mb-3">
-                            <div class="input-group input-group-merge" name="item-tagihan">
-                                <span class="input-group-text">2</span>
-                                <input type="text" id="pembayaran2" class="form-control"
-                                    placeholder="Nama pembayaran ..." value="Memiliki Saudara Kandung di Pondok">
-                            </div>
-                        </div>
-                        <div class="col-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                <span class="tf-icons bx bx-x bx-sm"></span>
-                            </button>
-                            <button type="button" class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row" class="form-group">
-                        <div class="col-9 mb-3">
-                            <div class="input-group input-group-merge" name="item-tagihan">
-                                <span class="input-group-text">3</span>
-                                <input type="text" id="pembayaran3" class="form-control"
-                                    placeholder="Nama pembayaran ..." value="Santri Berprestasi">
-                            </div>
-                        </div>
-                        <div class="col-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                <span class="tf-icons bx bx-x bx-sm"></span>
-                            </button>
-                            <button type="button" class="btn btn-icon ms-2 me-1 btn-outline-success">
-                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row" class="form-group">
-                        <div class="col-9 mb-3">
-                            <div class="input-group input-group-merge" name="item-tagihan">
-                                <span class="input-group-text">4</span>
-                                <input type="text" id="pembayaran4" class="form-control"
-                                    placeholder="Nama pembayaran ...">
-                            </div>
-                        </div>
-                        <div class="col-3 d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                <span class="tf-icons bx bx-x bx-sm"></span>
-                            </button>
-                            <button type="button" class="btn btn-icon ms-2 me-1 btn-outline-success">
-                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        Batal
-                    </button>
-                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                        data-bs-dismiss="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Tambah Transaksi Tagihan Pembayaran Siswa-->
-    <div class="modal fade" id="modal-tambah-transaksi-siswa" tabindex="-1" data-bs-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Tagihan Pembayaran Siswa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Periode Transaksi <b
-                                    class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1" selected>TA 2019 / 2020</option>
-                                <option value="2">TA 2018 / 2019</option>
-                                <option value="3">TA 2017 / 2018</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Pos Dana <b class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1">Pos SPP Rutin</option>
-                                <option value="2">Pos DU Lanjut</option>
-                                <option value="3">Pos PSB Awal</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Transaksi <b
-                                    class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1">Penerimaan Santri Baru</option>
-                                <option value="2">Daftar Ulang</option>
-                                <option value="3">SPP Bulanan</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Deskripsi transaksi</label>
-                            <input type="text" id="nameBasic" class="form-control"
-                                placeholder="Tuliskan deskripsi jika perlu" required />
-                        </div>
-                        <!-- <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nominal <b class="text-danger">*</b></label>
-                            <div class="input-group input-group-merge">
-                                <span class="input-group-text" id="basic-default-email2">Rp</span>
-                                <input type="text" id="basic-default-email" class="form-control" placeholder="0">
-
-                            </div>
-                        </div> -->
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Tagihan Pembayaran <b
-                                    class="text-danger">*</b></label>
-                            <select id="tagihanPembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1">Sekali Saja</option>
-                                <option value="2">Tiap Bulan</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Mulai Penagihan pada</label>
-                            <input class="form-control" type="date" id="waktu-penagihan">
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Nama Pos</label>
+                            <input type="text" id="nama-pos" class="form-control" placeholder="Tuliskan nama pos ...">
                         </div>
 
                         <div class="col-12 mb-3">
-
-                            <label for="nameBasic" class="form-label">Pilih Nominal <b class="text-danger">*</b></label>
-                            <div class="nav-align-top">
-                                <ul class="nav nav-pills" role="tablist">
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#satuKomponen" aria-controls="satuKomponen"
-                                            aria-selected="true">Satu Komponen</button>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#banyakKomponen" aria-controls="banyakKomponen"
-                                            aria-selected="false">Banyak Komponen</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane fade active show" id="satuKomponen" role="tabpanel">
-                                        <div>
-                                            <div class="input-group input-group-merge">
-                                                <span class="input-group-text" id="basic-default-email2">Rp</span>
-                                                <input type="text" id="basic-default-email" class="form-control"
-                                                    placeholder="0">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="banyakKomponen" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-6 col-md-6 mb-3">
-                                                <input type="text" id="pembayaran1" class="form-control"
-                                                    placeholder="Nama komponen pembayaran ...">
-                                            </div>
-                                            <div class="col-6 col-md-4 mb-3">
-                                                <div class="input-group input-group-merge" name="item-tagihan">
-                                                    <span class="input-group-text">Rp</span>
-                                                    <input type="text" id="pembayaran1" class="form-control"
-                                                        placeholder="0">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-2 d-flex justify-content-between">
-                                                <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                    <span class="tf-icons bx bx-x bx-sm"></span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                                    <span class="tf-icons bx bx-plus bx-sm"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 col-md-6 mb-3">
-                                                <input type="text" id="pembayaran2" class="form-control"
-                                                    placeholder="Nama komponen pembayaran ...">
-                                            </div>
-                                            <div class="col-6 col-md-4 mb-3">
-                                                <div class="input-group input-group-merge" name="item-tagihan">
-                                                    <span class="input-group-text">Rp</span>
-                                                    <input type="text" id="pembayaran1" class="form-control"
-                                                        placeholder="0">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-2 d-flex justify-content-between">
-                                                <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                    <span class="tf-icons bx bx-x bx-sm"></span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-icon ms-2 me-1 btn-outline-success">
-                                                    <span class="tf-icons bx bx-plus bx-sm"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-label-danger me-1 mb-1" data-bs-toggle="tooltip"
-                                            data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title=""
-                                            data-bs-original-title="Total tagihan pembayaran">Total</span> <span
-                                            class="fw-bold">Rp 0</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-3 col-12">
-                            <label for="nameBasic" class="form-label">Pilih Status <b class="text-danger">*</b></label>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1" checked>
-                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
-                                    <small class="text-secondary">(<i>Tagihan transaksi ini tidak ditampilkan
-                                            pada
-                                            siswa</i>)</small></label>
-                            </div>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2" />
-                                <label class="form-check-label text-info" for="inlineRadio2">Proses
-                                    <small class="text-secondary">(<i>Tagihan transaksi ini ditampilkan pada
-                                            siswa</i>)</small></label>
-                            </div>
-                            <br>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        Batal
-                    </button>
-                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                        data-bs-dismiss="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Ubah Transaksi Tagihan Pembayaran Siswa-->
-    <div class="modal fade" id="modal-ubah-transaksi-siswa" tabindex="-1" data-bs-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Ubah Tagihan Pembayaran Siswa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Periode Transaksi <b
-                                    class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1" selected>TA 2019 / 2020</option>
-                                <option value="2">TA 2018 / 2019</option>
-                                <option value="3">TA 2017 / 2018</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Pos Dana <b class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1">Pos SPP Rutin</option>
-                                <option value="2">Pos DU Lanjut</option>
-                                <option value="3" selected>Pos PSB Awal</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Transaksi <b
-                                    class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1" selected>Penerimaan Santri Baru</option>
-                                <option value="2">Daftar Ulang</option>
-                                <option value="3">SPP Bulanan</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Deskripsi transaksi</label>
-                            <input type="text" id="nameBasic" class="form-control"
-                                placeholder="Tuliskan deskripsi jika perlu" required
-                                value="Pembayaran awal saat penerimaan santri baru" />
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Tagihan Pembayaran <b
-                                    class="text-danger">*</b></label>
-                            <select id="tagihanPembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1" selected>Sekali Saja</option>
-                                <option value="2">Tiap Bulan</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Mulai Penagihan pada</label>
-                            <input class="form-control" type="date" id="waktu-penagihan" value="2019-07-23">
+                            <label class="form-label">Deskripsi</label>
+                            <input type="text" id="deskripsi-pos" class="form-control"
+                                placeholder="Deskripsi pos transaksi ...">
                         </div>
 
                         <div class="col-12 mb-3">
-
-                            <label for="nameBasic" class="form-label">Pilih Nominal <b class="text-danger">*</b></label>
-                            <div class="nav-align-top">
-                                <ul class="nav nav-pills" role="tablist">
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link " role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#satuKomponenUbah1" aria-controls="satuKomponenUbah1"
-                                            aria-selected="true">Satu Komponen</button>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#banyakKomponenUbah1" aria-controls="banyakKomponenUbah1"
-                                            aria-selected="false">Banyak Komponen</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane fade" id="satuKomponenUbah1" role="tabpanel">
-                                        <div>
-                                            <div class="input-group input-group-merge">
-                                                <span class="input-group-text">Rp</span>
-                                                <input type="text" class="form-control" placeholder="0">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade active show" id="banyakKomponenUbah1" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-6 col-md-6 mb-3">
-                                                <input type="text" id="pembayaran1Ubah1" class="form-control"
-                                                    placeholder="Nama komponen pembayaran ..." value="AB Sehat">
-                                            </div>
-                                            <div class="col-6 col-md-4 mb-3">
-                                                <div class="input-group input-group-merge" name="item-tagihan">
-                                                    <span class="input-group-text">Rp</span>
-                                                    <input type="text" id="pembayaran1Ubah1" class="form-control"
-                                                        placeholder="0" value="600.000">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-2 d-flex justify-content-between">
-                                                <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                    <span class="tf-icons bx bx-x bx-sm"></span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                                    <span class="tf-icons bx bx-plus bx-sm"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 col-md-6 mb-3">
-                                                <input type="text" id="pembayaran2" class="form-control"
-                                                    placeholder="Nama komponen pembayaran ..."
-                                                    value="Perlengkapan Sekolah (Buku, Seragam, Al Quran, dan Tashili)">
-                                            </div>
-                                            <div class="col-6 col-md-4 mb-3">
-                                                <div class="input-group input-group-merge" name="item-tagihan">
-                                                    <span class="input-group-text">Rp</span>
-                                                    <input type="text" id="pembayaran1" class="form-control"
-                                                        placeholder="0" value="2.700.000">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-2 d-flex justify-content-between">
-                                                <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                    <span class="tf-icons bx bx-x bx-sm"></span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-icon ms-2 me-1 btn-outline-success">
-                                                    <span class="tf-icons bx bx-plus bx-sm"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-label-danger me-1 mb-1" data-bs-toggle="tooltip"
-                                            data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title=""
-                                            data-bs-original-title="Total tagihan pembayaran">Total</span> <span
-                                            class="fw-bold">Rp 0</span>
-
-                                    </div>
+                            <label class="form-label">Info Pembayaran Siswa</label>
+                            <div class="row">
+                                <div class="col-4 mb-3">
+                                    <input type="text" id="bank-rekening" class="form-control"
+                                        placeholder="Nama Bank ...">
+                                </div>
+                                <div class="col-8 mb-3">
+                                    <input type="text" id="no-rekening" class="form-control"
+                                        placeholder="No Rekening pembayaran ...">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" id="informasi-pos-transaksi"
+                                        placeholder="Tuliskan informasi pada transaksi siswa (jika perlu)"
+                                        rows="2"></textarea>
                                 </div>
                             </div>
+
                         </div>
 
-                        <div class="mb-3 col-12">
-                            <label for="nameBasic" class="form-label">Pilih Status <b class="text-danger">*</b></label>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1" checked>
-                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
-                                    <small class="text-secondary">(<i>Tagihan transaksi ini tidak ditampilkan
-                                            pada
-                                            siswa</i>)</small></label>
-                            </div>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2" />
-                                <label class="form-check-label text-info" for="inlineRadio2">Proses
-                                    <small class="text-secondary">(<i>Tagihan transaksi ini ditampilkan pada
-                                            siswa</i>)</small></label>
-                            </div>
-                            <br>
+                        <div class="col-12">
+                            <label class="switch">
+                                <input type="checkbox" class="switch-input">
+                                <span class="switch-toggle-slider">
+                                    <span class="switch-on"></span>
+                                    <span class="switch-off"></span>
+                                </span>
+                                <span class="switch-label">Tampilkan info pembayaran di atas pada siswa</span>
+                            </label>
                         </div>
-
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -1526,561 +653,131 @@
         </div>
     </div>
 
-    <!-- Modal Ubah Transaksi Diringankan Pembayaran Siswa-->
-    <div class="modal fade" id="modal-ubah-transaksi-keringanan-siswa" tabindex="-1" data-bs-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Ubah Keringanan Pembayaran Siswa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Periode Transaksi <b
-                                    class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1" selected>TA 2019 / 2020</option>
-                                <option value="2">TA 2018 / 2019</option>
-                                <option value="3">TA 2017 / 2018</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Pos Dana <b class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1">Pos SPP Rutin</option>
-                                <option value="2">Pos DU Lanjut</option>
-                                <option value="3" selected>Pos PSB Awal</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Transaksi <b
-                                    class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1" selected>Alumni SDIQU</option>
-                                <option value="2">Memiliki Saudara Kandung di Pondok</option>
-                                <option value="3">Santri Berprestasi</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Deskripsi transaksi</label>
-                            <input type="text" id="nameBasic" class="form-control"
-                                placeholder="Tuliskan deskripsi jika perlu" required
-                                value="Keringanan pembayaran awal bagi alumni SDIQU saat penerimaan santri baru" />
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Tagihan Pembayaran <b
-                                    class="text-danger">*</b></label>
-                            <select id="tagihanPembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1" selected>Sekali Saja</option>
-                                <option value="2">Tiap Bulan</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Mulai Penagihan pada</label>
-                            <input class="form-control" type="date" id="waktu-penagihan" value="2019-12-16">
-                        </div>
-
-                        <div class="col-12 mb-3">
-
-                            <label for="nameBasic" class="form-label">Pilih Nominal <b class="text-danger">*</b></label>
-                            <div class="nav-align-top">
-                                <ul class="nav nav-pills" role="tablist">
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#satuKomponenUbah1Keringanan"
-                                            aria-controls="satuKomponenUbah1Keringanan" aria-selected="true">Satu
-                                            Komponen</button>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link " role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#banyakKomponenUbah1Keringanan"
-                                            aria-controls="banyakKomponenUbah1Keringanan" aria-selected="false">Banyak
-                                            Komponen</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane fade active show" id="satuKomponenUbah1Keringanan"
-                                        role="tabpanel">
-                                        <div>
-                                            <div class="input-group input-group-merge">
-                                                <span class="input-group-text">Rp</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    value="1.200.000">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade " id="banyakKomponenUbah1Keringanan" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-6 col-md-6 mb-3">
-                                                <input type="text" id="pembayaran1Ubah1Keringanan" class="form-control"
-                                                    placeholder="Nama komponen keringanan pembayaran ..." value="">
-                                            </div>
-                                            <div class="col-6 col-md-4 mb-3">
-                                                <div class="input-group input-group-merge" name="item-tagihan">
-                                                    <span class="input-group-text">Rp</span>
-                                                    <input type="text" id="pembayaran1Ubah1Keringanan"
-                                                        class="form-control" placeholder="0" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-2 d-flex justify-content-between">
-                                                <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                    <span class="tf-icons bx bx-x bx-sm"></span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                                    <span class="tf-icons bx bx-plus bx-sm"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 col-md-6 mb-3">
-                                                <input type="text" id="pembayaranUbah2Keringanan" class="form-control"
-                                                    placeholder="Nama komponen keringanan pembayaran ..." value="">
-                                            </div>
-                                            <div class="col-6 col-md-4 mb-3">
-                                                <div class="input-group input-group-merge" name="item-tagihan">
-                                                    <span class="input-group-text">Rp</span>
-                                                    <input type="text" id="pembayaranUbah2Keringanan"
-                                                        class="form-control" placeholder="0" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-2 d-flex justify-content-between">
-                                                <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                    <span class="tf-icons bx bx-x bx-sm"></span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-icon ms-2 me-1 btn-outline-success">
-                                                    <span class="tf-icons bx bx-plus bx-sm"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-label-danger me-1 mb-1" data-bs-toggle="tooltip"
-                                            data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title=""
-                                            data-bs-original-title="Total tagihan pembayaran">Total</span> <span
-                                            class="fw-bold">Rp 0</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-3 col-12">
-                            <label for="nameBasic" class="form-label">Pilih Status <b class="text-danger">*</b></label>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1" checked>
-                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
-                                    <small class="text-secondary">(<i>Tagihan transaksi ini tidak ditampilkan
-                                            pada
-                                            siswa</i>)</small></label>
-                            </div>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2" />
-                                <label class="form-check-label text-info" for="inlineRadio2">Proses
-                                    <small class="text-secondary">(<i>Tagihan transaksi ini ditampilkan pada
-                                            siswa</i>)</small></label>
-                            </div>
-                            <br>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        Batal
-                    </button>
-                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                        data-bs-dismiss="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Tambah Siswa yang Diberikan Tagihan-->
-    <div class="modal fade" id="modal-tambah-siswa-ditagih" tabindex="-1" data-bs-backdrop="static">
+    <!-- Modal Ubah Master Data Siswa-->
+    <div class="modal fade" id="modal-ubah-pos" tabindex="-1" data-bs-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Pilih Siswa yang Mendapatkan Tagihan Pembayaran
+                    <h5 class="modal-title" id="exampleModalLabel1">Ubah Master Data Pos Transaksi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row" class="form-group">
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Nama Pos</label>
+                            <input type="text" id="nama-pos" class="form-control" placeholder="Tuliskan nama pos ..."
+                                value="PSB Awal">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Deskripsi</label>
+                            <input type="text" id="deskripsi-pos" class="form-control"
+                                placeholder="Deskripsi pos transaksi ..."
+                                value="Digunakan untuk pembayaran penerimaman santri baru">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Info Pembayaran Siswa</label>
+                            <div class="row">
+                                <div class="col-4 mb-3">
+                                    <input type="text" id="bank-rekening" class="form-control"
+                                        placeholder="Nama Bank ..." value="BSI">
+                                </div>
+                                <div class="col-8 mb-3">
+                                    <input type="text" id="no-rekening" class="form-control"
+                                        placeholder="No Rekening pembayaran ..." value="23847234">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" id="informasi-pos-transaksi"
+                                        placeholder="Tuliskan informasi pada transaksi siswa (jika perlu)"
+                                        rows="2">Silakan konfirmasi setelah transfer dengan mengunggah bukti transfer pada bagian yang telah disediakan. Rekening atas nama SMPIQU Al Bahjah Blitar.</textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+                            <label class="switch">
+                                <input type="checkbox" class="switch-input">
+                                <span class="switch-toggle-slider">
+                                    <span class="switch-on"></span>
+                                    <span class="switch-off"></span>
+                                </span>
+                                <span class="switch-label">Tampilkan info pembayaran di atas pada siswa</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                        data-bs-dismiss="modal">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Info Pembayaran-->
+    <div class="modal fade" id="modal-info-pembayaran" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Preview Info Pembayaran Tagihan Siswa
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-12">
-                            <div class="alert alert-info d-flex" role="alert">
+                            <div class="alert alert-info row" role="alert">
+                                <div class="col-12 col-md-1 text-center">
                                 <span class="badge badge-center rounded-pill bg-info border-label-info p-3 me-2"><i
-                                        class="bx bx-transfer-alt bx-sm pt-1"></i></span>
-                                <div class="d-flex flex-column ps-1">
-                                    <span class="text-black">TA 2019 / 2020, transaksi <span
-                                            class="fw-semibold">Penerimaan Santri Baru </span>
-                                        sebesar<span class="fw-semibold"> 19.700.000 </span> yang akan dilakukan
-                                        penagihan <span class="fw-semibold"> Sekali Saja</span>
+                                        class="bx bx-transfer-alt bx-sm pt-1"></i></span></div>
+                                <div class="col-12 col-md-11">
+                                    <span class="text-black">Silakan konfirmasi setelah transfer dengan mengunggah bukti
+                                        transfer pada bagian yang telah disediakan. Rekening atas nama SMPIQU Al Bahjah
+                                        Blitar. <span class="fw-semibold">BSI</span> No. Rekening<span
+                                            class="fw-semibold"> 23847234 </span>
+
+                                            <div class="d-none">
+                                                <input class="form-control " id="no-rekening" type="text"
+                                                    value="23847234" />
+                                            </div>
+                                            <br>
+                                        <button class="clipboard-btn btn btn-outline-primary btn-sm mt-2"
+                                            id="testToast" data-clipboard-action="copy"
+                                            data-clipboard-target="#no-rekening"><i class="bx bx-copy">&nbsp;</i> Salin No
+                                            Rekening</button>
                                     </span>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="nav-align-top mb">
-                                <ul class="nav nav-pills mx-auto" role="tablist">
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#perKelas" aria-controls="perKelas"
-                                            aria-selected="true">Berdasarkan Kelas</button>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#perIndividu" aria-controls="perIndividu"
-                                            aria-selected="false">Berdasarkan Siswa</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="perKelas" role="tabpanel">
-                                        <div>
-                                            <label for="kelasSelect" class="form-label">berdasarkan kelas</label>
-                                            <input id="kelasSelect" name="kelasSelect" class="form-control"
-                                                placeholder="Pilih kelas ..." value="Kelas I-A, Kelas I-B, Kelas I-C">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="perIndividu" role="tabpanel">
-                                        <div>
-                                            <label for="siswaKelas1" class="form-label">Pilih Siswa Kelas I</label>
-                                            <input id="siswaKelas1" name="siswaKelas1" class="form-control mb-3"
-                                                placeholder="pilih siswa ..." />
-                                            <label for="siswaKelas2" class="form-label">Pilih Siswa Kelas II</label>
-                                            <input id="siswaKelas2" name="siswaKelas1" class="form-control mb-3"
-                                                placeholder="pilih siswa ..." />
-                                            <label for="siswaKelas3" class="form-label">Pilih Siswa Kelas
-                                                III</label>
-                                            <input id="siswaKelas3" name="siswaKelas1" class="form-control mb-3"
-                                                placeholder="pilih siswa ..." />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-label-white text-black d-flex justify-content-center pt-4">
-                                <p class=" mb-0"> <span
-                                        class="badge badge-center rounded-pill bg-danger">96</span>&nbsp;
-                                    Siswa telah dipilih</p>
+                        <div class="col-12 w-100 h-50">
+                            <div class=" bg-label-secondary text-center py-5">
+                                <span class="text-secondary"><i>Konten lain dalam laman</i></span>
                             </div>
                         </div>
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        Batal
+                    <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modal-ubah-pos">
+                        Ubah Info
                     </button>
-                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                        data-bs-dismiss="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Tambah Siswa yang Diringankan-->
-    <div class="modal fade" id="modal-tambah-siswa-diringankan" tabindex="-1" data-bs-backdrop="static">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Pilih Siswa yang Mendapatkan Keringanan
-                        Pembayaran
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="alert alert-info d-flex" role="alert">
-                                <span class="badge badge-center rounded-pill bg-info border-label-info p-3 me-2"><i
-                                        class="bx bx-transfer-alt bx-sm pt-1"></i></span>
-                                <div class="d-flex flex-column ps-1">
-                                    <span class="text-black">TA 2019 / 2020, transaksi <span class="fw-semibold">Alumni
-                                            SDIQU </span>
-                                        sebesar<span class="fw-semibold"> 1.200.000 </span> yang akan dilakukan
-                                        keringanan<span class="fw-semibold"> Sekali Saja</span>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="nav-align-top mb">
-                                <ul class="nav nav-pills mx-auto" role="tablist">
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link " role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#perKelasKeringanan" aria-controls="perKelas"
-                                            aria-selected="true">Berdasarkan Kelas</button>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#perIndividuKeringanan" aria-controls="perIndividu"
-                                            aria-selected="false">Berdasarkan Siswa</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane fade" id="perKelasKeringanan" role="tabpanel">
-                                        <div>
-                                            <label for="kelasKeringananSelect" class="form-label">berdasarkan
-                                                kelas</label>
-                                            <input id="kelasKeringananSelect" name="kelasKeringananSelect"
-                                                class="form-control" placeholder="Pilih kelas ...">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade show active" id="perIndividuKeringanan" role="tabpanel">
-                                        <div>
-                                            <label for="siswaKelas1Keringanan" class="form-label">Pilih Siswa Kelas
-                                                I</label>
-                                            <input id="siswaKelas1Keringanan" name="siswaKelas1"
-                                                class="form-control mb-3" placeholder="pilih siswa ..." value="Nur Hasanah, Abbas Hamzah, Sharim Yazid Al-Ayubi" />
-                                            <label for="siswaKelas2Keringanan" class="form-label">Pilih Siswa Kelas
-                                                II</label>
-                                            <input id="siswaKelas2Keringanan" name="siswaKelas1Keringanan"
-                                                class="form-control mb-3" placeholder="pilih siswa ..." />
-                                            <label for="siswaKelas3Keringanan" class="form-label">Pilih Siswa Kelas
-                                                III</label>
-                                            <input id="siswaKelas3Keringanan" name="siswaKelas3Keringanan"
-                                                class="form-control mb-3" placeholder="pilih siswa ..." />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-label-white text-black d-flex justify-content-center pt-4">
-                                <p class=" mb-0"> <span class="badge badge-center rounded-pill bg-danger">3</span>&nbsp;
-                                    Siswa telah dipilih</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        Batal
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        Tutup
                     </button>
-                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                        data-bs-dismiss="modal">Simpan</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal Tambah Transaksi Keringanan Pembayaran Siswa-->
-    <div class="modal fade" id="modal-tambah-keringanan-siswa" tabindex="-1" data-bs-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Keringanan Pembayaran Siswa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Periode Transaksi <b
-                                    class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1" selected>TA 2019 / 2020</option>
-                                <option value="2">TA 2018 / 2019</option>
-                                <option value="3">TA 2017 / 2018</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Pos Dana <b class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1">Pos SPP Rutin</option>
-                                <option value="2">Pos DU Lanjut</option>
-                                <option value="3">Pos PSB Awal</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Keringanan <b
-                                    class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1">Alumni SDIQU</option>
-                                <option value="2">Memiliki Saudara Kandung di Pondok</option>
-                                <option value="3">Santri Berprestasi</option>
-                            </select>
-                        </div>
 
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Deskripsi keringanan</label>
-                            <input type="text" id="nameBasic" class="form-control"
-                                placeholder="Tuliskan deskripsi jika perlu" required />
-                        </div>
-
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Keringanan Pembayaran <b
-                                    class="text-danger">*</b></label>
-                            <select id="tagihanPembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
-                                <option value="1">Sekali Saja</option>
-                                <option value="2">Tiap Bulan</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Mulai Keringanan Penagihan pada</label>
-                            <input class="form-control" type="date" id="waktu-penagihan">
-                        </div>
-
-                        <div class="col-12 mb-3">
-
-                            <label for="nameBasic" class="form-label">Pilih Nominal <b class="text-danger">*</b></label>
-                            <div class="nav-align-top">
-                                <ul class="nav nav-pills" role="tablist">
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#satuKomponenKeringanan"
-                                            aria-controls="satuKomponenKeringanan" aria-selected="true">Satu
-                                            Komponen</button>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#banyakKomponenKeringanan"
-                                            aria-controls="banyakKomponenKeringanan" aria-selected="false">Banyak
-                                            Komponen</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane fade active show" id="satuKomponenKeringanan" role="tabpanel">
-                                        <div>
-                                            <div class="input-group input-group-merge">
-                                                <span class="input-group-text" id="basic-default-email2">Rp</span>
-                                                <input type="text" id="basic-default-email" class="form-control"
-                                                    placeholder="0">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="banyakKomponenKeringanan" role="tabpanel">
-                                        <div class="row">
-                                            <div class="col-6 col-md-6 mb-3">
-                                                <input type="text" id="Keringanan1" class="form-control"
-                                                    placeholder="Nama komponen keringanan pembayaran ...">
-                                            </div>
-                                            <div class="col-6 col-md-4 mb-3">
-                                                <div class="input-group input-group-merge" name="item-tagihan">
-                                                    <span class="input-group-text">Rp</span>
-                                                    <input type="text" id="Keringanan1" class="form-control"
-                                                        placeholder="0">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-2 d-flex justify-content-between">
-                                                <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                    <span class="tf-icons bx bx-x bx-sm"></span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                                    <span class="tf-icons bx bx-plus bx-sm"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 col-md-6 mb-3">
-                                                <input type="text" id="Keringanan2" class="form-control"
-                                                    placeholder="Nama komponen keringanan pembayaran ...">
-                                            </div>
-                                            <div class="col-6 col-md-4 mb-3">
-                                                <div class="input-group input-group-merge" name="item-tagihan">
-                                                    <span class="input-group-text">Rp</span>
-                                                    <input type="text" id="Keringanan1" class="form-control"
-                                                        placeholder="0">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-2 d-flex justify-content-between">
-                                                <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                    <span class="tf-icons bx bx-x bx-sm"></span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-icon ms-2 me-1 btn-outline-success">
-                                                    <span class="tf-icons bx bx-plus bx-sm"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-label-danger me-1 mb-1" data-bs-toggle="tooltip"
-                                            data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title=""
-                                            data-bs-original-title="Total tagihan pembayaran">Total</span> <span
-                                            class="fw-bold">Rp 0</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-3 col-12">
-                            <label for="nameBasic" class="form-label">Pilih Status <b class="text-danger">*</b></label>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1" checked>
-                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
-                                    <small class="text-secondary">(<i>Tagihan transaksi ini tidak ditampilkan
-                                            pada
-                                            siswa</i>)</small></label>
-                            </div>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2" />
-                                <label class="form-check-label text-info" for="inlineRadio2">Proses
-                                    <small class="text-secondary">(<i>Tagihan transaksi ini ditampilkan pada
-                                            siswa</i>)</small></label>
-                            </div>
-                            <br>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                        Batal
-                    </button>
-                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                        data-bs-dismiss="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Master Transaksi Siswa -->
-    <div class="modal fade" id="modal-master-transaksi-siswa" tabindex="-1" aria-modal="true" role="dialog">
-        <div class="modal-dialog modal-fullscreen" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalFullTitle">Master Transaksi Siswa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac
-                        facilisis in,
-                        egestas
-                        eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                        data-bs-dismiss="modal">Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
@@ -2102,6 +799,9 @@
 
     <script src="../assets/js/sweetalert.min.js"></script>
 
+    <!-- TAMBAHAN -->
+    <script src="../assets/vendor/libs/clipboard/clipboard.js"> </script>
+
     <script>
         function sweet() {
             swal({
@@ -2111,6 +811,7 @@
                 button: false,
                 timer: 2000,
             });
+
         }
     </script>
     <script>
@@ -2124,6 +825,36 @@
         });
     </script> -->
 
+    <script>
+        const clipboardList = [].slice.call(document.querySelectorAll('.clipboard-btn'));
+
+        if (ClipboardJS) {
+            clipboardList.map(function (clipboardEl) {
+                const clipboard = new ClipboardJS(clipboardEl);
+                clipboard.on('success', function (e) {
+                    if (e.action == 'copy') {
+                        toastr['success']('', 'Copied to Clipboard!!');
+                    }
+                });
+            });
+        } else {
+            clipboardList.map(function (clipboardEl) {
+                clipboardEl.setAttribute('disabled', true);
+            });
+        }
+    </script>
+
+    <script>
+        const toastTrigger = document.getElementById('testToast')
+        const toastLiveExample = document.getElementById('previewToast')
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastLiveExample)
+
+                toast.show()
+            })
+        }
+    </script>
 
 </body>
 
