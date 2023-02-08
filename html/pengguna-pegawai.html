@@ -236,14 +236,14 @@
                                         <a class="dropdown-item" selected href="#">
                                             <span
                                                 class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Admin Instansi</span>
+                                            <span class="align-middle pb-2">Pengawas</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item active" selected href="#">
                                             <span
                                                 class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Admin TU</span>
+                                            <span class="align-middle pb-2">Operator</span>
                                         </a>
                                     </li>
                                     <li>
@@ -334,7 +334,7 @@
                                                     </a>
                                                 </div>
 
-                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold">Semua Penugasan, Semua Jabatan</span>
+                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold">Semua Peran, Semua Penugasan</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -432,8 +432,8 @@
                                             <thead>
                                                 <tr>
                                                     <th class="text-primary">
-                                                        Nama Pegawai</th>
-                                                    <th class="text-primary">Penugasan dan Jabatan</th>
+                                                        Nama Lengkap</th>
+                                                    <th class="text-primary">Peran dan Penugasan</th>
                                                     <th class="text-primary">Status</th>
                                                     <th class="text-primary text-center">Aksi</th>
                                                 </tr>
@@ -450,7 +450,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td>Guru Mapel
+                                                    <td><b>Guru</b>, Guru Mapel
                                                     </td>
                                                     <td><span class="badge bg-label-danger me-1">Tidak Aktif</span></td>
                                                     </td>
@@ -492,7 +492,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td>Admin TU dan Bendahara
+                                                    <td><b>Operator</b>, Admin TU dan Bendahara
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
                                                     </td>
@@ -534,7 +534,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td>Guru Mapel dan Sekretaris
+                                                    <td><b>Guru</b>, Guru Mapel dan Sekretaris
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
                                                     </td>
@@ -576,7 +576,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td>Guru Mapel dan Ketua Instansi
+                                                    <td><b>Pengawas dan Guru</b>, Guru Mapel dan Ketua Instansi
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
                                                     </td>
@@ -618,7 +618,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td>Guru Mapel dan Bendahara
+                                                    <td><b>Pengawas dan Guru</b>, Guru Mapel dan Bendahara
                                                     </td>
                                                     <td><span class="badge bg-label-danger me-1">Tidak Aktif</span></td>
                                                     </td>
@@ -728,15 +728,15 @@
                                         <div class="col-12 col-md-6 mb-3">
                                             <div class="row">
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    <label for="selectTingkat" class="form-label">Penugasan</label>
+                                                    <label for="selectTingkat" class="form-label">Peran</label>
                                                     <select id="selectTingkat" class="form-select form-select-md ">
                                                         <option value="1" selected>Guru</option>
-                                                        <option value="2">Admin TU</option>
+                                                        <option value="2">Operator</option>
                                                         <option value="3">Pengawas</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    <label for="selectNamaKelas" class="form-label">Jabatan</label>
+                                                    <label for="selectNamaKelas" class="form-label">Penugasan</label>
                                                     <select id="selectNamaKelas" class="form-select form-select-md ">
                                                         <option value="0">...</option>
                                                         <option value="1">Guru Mapel</option>
@@ -792,23 +792,23 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
+                                            <label for="selectPenugasan" class="form-label">Pilih Peran</label>
                                             <select id="selectPenugasan" class="form-select form-select-md ">
                                                 <option value="1">Guru</option>
-                                                <option value="2">Admin TU</option>
+                                                <option value="2">Operator</option>
                                                 <option value="2">Pengawas</option>
-                                                <option value="3" selected>Semua Penugasan</option>
+                                                <option value="3" selected>Semua Peran</option>
                                             </select>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="selectJabatan" class="form-label">Pilih Jabatan</label>
-                                            <select id="selectJabatan" class="form-select form-select-md ">
+                                            <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
+                                            <select id="selectPenugasan" class="form-select form-select-md ">
                                                 <option value="1">Guru Mapel</option>
                                                 <option value="2">Admin TU</option>
                                                 <option value="3">Bendahara</option>
                                                 <option value="4">Sekretaris</option>
                                                 <option value="5">Kepala Instansi</option>
-                                                <option value="6" selected>Semua Jabatan</option>
+                                                <option value="6" selected>Semua Penugasan</option>
                                             </select>
                                         </div>
                                     </div>

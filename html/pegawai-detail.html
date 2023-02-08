@@ -274,14 +274,14 @@
                                         <a class="dropdown-item" selected href="#">
                                             <span
                                                 class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Admin Instansi</span>
+                                            <span class="align-middle pb-2">Pengawas</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item active" selected href="#">
                                             <span
                                                 class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Admin TU</span>
+                                            <span class="align-middle pb-2">Operator</span>
                                         </a>
                                     </li>
                                     <li>
@@ -423,16 +423,18 @@
                                                         <span class="badge mb-1 bg-label-success"
                                                             data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
                                                             data-bs-original-title="Status akun">Aktif</span>&nbsp;
+                                                        <span class="badge mb-1 bg-label-warning"
+                                                            data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
+                                                            data-bs-original-title="Peran">Operator</span>&nbsp;
                                                         <span class="badge mb-1 bg-label-primary"
                                                             data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                            data-bs-original-title="Penugasan saat ini">Admin
-                                                            TU</span>&nbsp;
-                                                        <span class="badge mb-1 bg-label-primary"
+                                                            data-bs-original-title="Penugasan">Admin TU</span>&nbsp;
+                                                            <span class="badge mb-1 bg-label-primary"
                                                             data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                            data-bs-original-title="Penugasan saat ini">Bendahara</span>&nbsp;
+                                                            data-bs-original-title="Penugasan">Bendahara</span>&nbsp;
                                                         <i class='bx bx-male-sign text-info' data-bs-toggle="tooltip"
                                                             data-bs-placement="bottom" title=""
-                                                            data-bs-original-title="Laki-laki"></i>
+                                                            data-bs-original-title="Kelamin"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -445,10 +447,9 @@
                                                 </span>
                                                 &emsp;
                                                 <div>
-
                                                     <ul class="list-unstyled mb-0">
                                                         <li class="mb-2">
-                                                            <span class="fw-semibold me-2 small">ID Pegawai </span> <br>
+                                                            <span class="fw-semibold me-2 small">ID Akun </span> <br>
                                                             <span>2019827318920</span>
                                                         </li>
                                                         <li class="mb-2">
@@ -644,15 +645,7 @@
                                                                     <div class="row ps-sm-4 ps-0">
                                                                         <div class="col-12 col-md-6">
                                                                             <p class="fw-normal"><span
-                                                                                    class="fw-normal small">Hubungan
-                                                                                    dengan Pegawai</span> <br>Pasangan
-                                                                            </p>
-                                                                        </div>
-                                                                        <div class="col-12 col-md-6">
-                                                                            <p class="fw-normal"><span
-                                                                                    class="fw-normal small">No Telpon /
-                                                                                    WA Aktif</span> <br>
-                                                                                085128737162
+                                                                                    class="fw-normal small">Hubungan</span> <br>Pasangan
                                                                             </p>
                                                                         </div>
                                                                         <div class="col-12 col-md-6">
@@ -663,10 +656,16 @@
                                                                             </p>
                                                                         </div>
                                                                         <div class="col-12 col-md-6">
+                                                                            <p class="fw-normal"><span class="fw-normal small">Domisili saat ini</span> <br>
+                                                                                Jl. Bandung Gg.5H No 45
+                                                                                Lowokwaru Malang Jawa Timur
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="col-12 col-md-6">
                                                                             <p class="fw-normal"><span
-                                                                                    class="fw-normal small">NIK (Nomor
-                                                                                    Induk Kependudukan)</span> <br>
-                                                                                240918271018203
+                                                                                    class="fw-normal small">No Telpon /
+                                                                                    WA Aktif</span> <br>
+                                                                                085128737162
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -720,7 +719,7 @@
                                                                     aria-expanded="false"
                                                                     aria-controls="accordionIcon-3"> <i
                                                                         class="bx bx-info-circle text-info">&nbsp;</i>
-                                                                    Informasi Penugasan
+                                                                    Informasi Kepegawaian
                                                                 </button>
                                                             </h2>
                                                             <div id="accordionIcon-3"
@@ -728,8 +727,41 @@
                                                                 data-bs-parent="#accordionIcon">
                                                                 <div class="accordion-body">
                                                                     <hr class="mt-0">
-                                                                    <div class="row ps-sm-4 ps-0 mb-3">
-                                                                        <div class="col-12 col-md-6">
+                                                                    <div class="row ps-0 ps-sm-4 mb-3">
+                                                                        <p class="fw-bold my-3">Latar Belakang
+                                                                        </p>
+                                                                        <div class="col-12 col-sm-6 mb-3">
+                                                                            <div class="d-flex justify-content-start">
+                                                                                <span
+                                                                                    class="btn-icon rounded-pill bg-label-primary">
+                                                                                    <i
+                                                                                        class="bx bxs-calendar-star bx-sm bx-tada-hover"></i>
+                                                                                </span>
+                                                                                <div class="ms-2">
+                                                                                    <p class="mb-0 small fw-normal">
+                                                                                        Mulai masuk</p>
+                                                                                    <span>20 Januari 2018
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-6 mb-3">
+                                                                            <div class="d-flex justify-content-start">
+                                                                                <span
+                                                                                    class="btn-icon rounded-pill bg-label-primary">
+                                                                                    <i
+                                                                                        class="bx bxs-star bx-sm bx-tada-hover"></i>
+                                                                                </span>
+                                                                                <div class="ms-2">
+                                                                                    <p class="mb-0 small fw-normal">
+                                                                                        Status Pegawai</p>
+                                                                                    <span> <span
+                                                                                            class="badge bg-label-info me-1 mb-1">Tetap</span>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 col-sm-6 mb-3">
                                                                             <div class="d-flex justify-content-start">
                                                                                 <span
                                                                                     class="btn-icon rounded-pill bg-label-primary">
@@ -738,25 +770,14 @@
                                                                                 </span>
                                                                                 <div class="ms-2">
                                                                                     <p class="mb-0 small fw-normal">
-                                                                                        Periode</p>
-                                                                                    <span>TA 2019 / 2020
+                                                                                        Pendidikan Terakhir</p>
+                                                                                    <span> S1 - Universitas Negeri
+                                                                                        Malang
                                                                                     </span>
                                                                                 </div>
-
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-12 col-md-6">
-                                                                            <div>
-                                                                                <p class="mb-0 small fw-normal">
-                                                                                    Penugasan</p>
-                                                                                <span>Admin TU dan Bendahara
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="row ps-sm-4 ps-0 mb-3">
-                                                                        <div class="col-12 col-md-6">
+                                                                        <div class="col-12 col-sm-6 mb-3">
                                                                             <div class="d-flex justify-content-start">
                                                                                 <span
                                                                                     class="btn-icon rounded-pill bg-label-primary">
@@ -765,948 +786,957 @@
                                                                                 </span>
                                                                                 <div class="ms-2">
                                                                                     <p class="mb-0 small fw-normal">
-                                                                                        Periode</p>
-                                                                                    <span>TA 2018 / 2019
+                                                                                        Jurusan / Prodi</p>
+                                                                                    <span>Matematika
                                                                                     </span>
                                                                                 </div>
-
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-12 col-md-6">
-                                                                            <div>
-                                                                                <p class="mb-0 small fw-normal">
-                                                                                    Penugasan</p>
-                                                                                <span>Admin TU dan Bendahara
-                                                                                </span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-
-                                                                    <div class="row ps-sm-4 ps-0 mb-3">
-                                                                        <div class="col-12 col-md-6">
-                                                                            <div class="d-flex justify-content-start">
-                                                                                <span
-                                                                                    class="btn-icon rounded-pill bg-label-primary">
-                                                                                    <i
-                                                                                        class="bx bxs-graduation bx-sm bx-tada-hover"></i>
-                                                                                </span>
-                                                                                <div class="ms-2">
-                                                                                    <p class="mb-0 small fw-normal">
-                                                                                        Periode</p>
-                                                                                    <span>TA 2017 / 2018
-                                                                                    </span>
-                                                                                </div>
-
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-12 col-md-6">
-                                                                            <div>
-                                                                                <p class="mb-0 small fw-normal">
-                                                                                    Penugasan</p>
-                                                                                <span>Admin TU
-                                                                                </span>
+                                                                    <div class="row ps-0">
+                                                                        <div class="col-12">
+                                                                            <p class="fw-bold my-3 ps-0 ps-sm-4 ">
+                                                                                Informasi Penugasan
+                                                                            </p>
+                                                                            <div class="table-responsive">
+                                                                                <table
+                                                                                    class="table table-hover card-table table-striped table-borderless">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th class="text-primary">
+                                                                                                Penugasan Sebagai</th>
+                                                                                            <th class="text-primary">
+                                                                                                Mulai
+                                                                                            </th>
+                                                                                            <th class="text-primary">
+                                                                                                Sampai
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <td>
+                                                                                            Bendahara
+                                                                                        </td>
+                                                                                        <td class="fw-normal"> 2 Jan
+                                                                                            2020
+                                                                                        </td>
+                                                                                        <td>Sekarang</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                Guru Mapel Matematika
+                                                                                            </td>
+                                                                                            <td class="fw-normal"> 20
+                                                                                                Feb
+                                                                                                2019
+                                                                                            </td>
+                                                                                            <td>31 Des 2019</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                Admin TU
+                                                                                            </td>
+                                                                                            <td class="fw-normal"> 20
+                                                                                                Jan
+                                                                                                2016
+                                                                                            </td>
+                                                                                            <td>Sekarang</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
-
                                             </div>
+
                                         </div>
 
-                                        <div class="tab-pane fade" id="navs-pills-justified-transaksi" role="tabpanel">
-                                            <div class="tab-content p-0">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <h5 class="mb-0">Informasi Transaksi</h5>
-                                                        <span class="small">
-                                                            Bagian ini berisikan informasi riwayat transaksi
-                                                        </span>
+
+                                <div class="tab-pane fade" id="navs-pills-justified-transaksi" role="tabpanel">
+                                    <div class="tab-content p-0">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5 class="mb-0">Informasi Transaksi</h5>
+                                                <span class="small">
+                                                    Bagian ini berisikan informasi riwayat transaksi
+                                                </span>
+                                            </div>
+                                            <div class="text-end">
+                                                <a type="button" class="btn btn-icon btn-primary"
+                                                    href="transaksi-pegawai-detail.html">
+                                                    <span class="tf-icons bx bx-transfer-alt bx-sm"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-12 mt-2 mb-4">
+                                                <select id="largeSelect" class="form-select form-select-md my-3">
+                                                    <option value="3">TA 2019 / 2020
+                                                    </option>
+                                                    <option value="2">TA 2018 / 2019</option>
+                                                    <option value="1">TA 2017 / 2018</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-hover card-table table-striped table-borderless">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-primary">
+                                                            Waktu transaksi</th>
+                                                        <th class="text-primary">Jenis Transaksi</th>
+                                                        <th class="text-primary">Nominal</th>
+                                                        <th class="text-primary">Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            Belum dilakukan
+                                                        </td>
+                                                        <td class="fw-normal"> Pembayaran bulanan
+                                                        </td>
+                                                        <td>2.250.000</td>
+                                                        <td>
+                                                            <span class="badge bg-label-danger me-1 mb-1"
+                                                                data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                data-bs-placement="right" data-bs-html="true" title=""
+                                                                data-bs-original-title="Status pembayaran">Belum</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            14 Des 2019 12:45
+                                                        </td>
+                                                        <td class="fw-normal"> Pembayaran bulanan
+                                                        </td>
+                                                        <td>2.250.000</td>
+                                                        <td>
+                                                            <span class="badge bg-label-success me-1 mb-1"
+                                                                data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                data-bs-placement="right" data-bs-html="true" title=""
+                                                                data-bs-original-title="Status pembayaran">Berhasil</span>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            13 Des 2019 10:40
+                                                        </td>
+                                                        <td class="fw-normal"> Pembayaran bulanan
+                                                        </td>
+                                                        <td>42.250.000</td>
+                                                        <td>
+                                                            <span class="badge bg-label-secondary me-1 mb-1"
+                                                                data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                data-bs-placement="right" data-bs-html="true" title=""
+                                                                data-bs-original-title="Status pembayaran">Dibatalkan</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            14 Nov 2019 12:45
+                                                        </td>
+                                                        <td class="fw-normal"> Pembayaran bulanan
+                                                        </td>
+                                                        <td>42.250.000</td>
+                                                        <td>
+                                                            <span class="badge bg-label-success me-1 mb-1"
+                                                                data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                data-bs-placement="right" data-bs-html="true" title=""
+                                                                data-bs-original-title="Status pembayaran">Berhasil</span>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            14 Okt 2019 12:45
+                                                        </td>
+                                                        <td class="fw-normal"> Pembayaran bulanan
+                                                        </td>
+                                                        <td>2.250.000</td>
+                                                        <td>
+                                                            <span class="badge bg-label-success me-1 mb-1"
+                                                                data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                data-bs-placement="right" data-bs-html="true" title=""
+                                                                data-bs-original-title="Status pembayaran">Berhasil</span>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            14 Sep 2019 12:45
+                                                        </td>
+                                                        <td class="fw-normal"> Pembayaran bulanan
+                                                        </td>
+                                                        <td>2.250.000</td>
+                                                        <td>
+                                                            <span class="badge bg-label-success me-1 mb-1"
+                                                                data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                data-bs-placement="right" data-bs-html="true" title=""
+                                                                data-bs-original-title="Status pembayaran">Berhasil</span>
+                                                        </td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav aria-label="Page navigation" class="my-4">
+                                            <ul class="pagination justify-content-center">
+                                                <li class="page-item prev">
+                                                    <a class="page-link" href="javascript:void(0);"><i
+                                                            class="tf-icon bx bx-chevrons-left"></i></a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="javascript:void(0);">1</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="javascript:void(0);">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="javascript:void(0);">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="javascript:void(0);">4</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="javascript:void(0);">5</a>
+                                                </li>
+                                                <li class="page-item next">
+                                                    <a class="page-link" href="javascript:void(0);"><i
+                                                            class="tf-icon bx bx-chevrons-right"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div></div>
+                                        </nav>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane fade" id="navs-pills-justified-riwayat" role="tabpanel">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h5 class="mb-0">Riwayat Aktivitas</h5>
+                                                <span class="small">
+                                                    Bagian ini berisikan informasi riwayat aktivitas pada akun
+                                                </span>
+                                            </div>
+                                            <div class="text-end">
+                                                <button type="button" class="btn btn-icon btn-outline-primary">
+                                                    <span class="tf-icons bx bx-refresh bx-sm"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-8 col-md-8 col-12">
+                                                <div class="row py-4">
+                                                    <div class="col-12 col-md-4 pb-3">
+                                                        <select id="largeSelect" class="form-select form-select-md ">
+                                                            <option value="1">Hari ini</option>
+                                                            <option value="2" selected>Minggu ini</option>
+                                                            <option value="3">Bulan ini</option>
+                                                            <option value="4">Periode ini</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="text-end">
-                                                        <a type="button" class="btn btn-icon btn-primary"
-                                                            href="transaksi-pegawai-detail.html">
-                                                            <span class="tf-icons bx bx-transfer-alt bx-sm"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-4 col-md-4 col-12 mt-2 mb-4">
-                                                        <select id="largeSelect"
-                                                            class="form-select form-select-md my-3">
-                                                            <option value="3">TA 2019 / 2020
+                                                    <div class="col-12 col-md-8 pb-3">
+                                                        <select id="largeSelect" class="form-select form-select-md ">
+                                                            <option value="1">Perubahan kata sandi</option>
+                                                            <option value="2">Perubahan data utama</option>
+                                                            <option value="3">Penulisan catatan</option>
+                                                            <option value="4">Perubahan penugasan
                                                             </option>
-                                                            <option value="2">TA 2018 / 2019</option>
-                                                            <option value="1">TA 2017 / 2018</option>
+                                                            <option value="5">Perubahan foto</option>
+                                                            <option value="6">Status akun (Aktif / Non-aktif))
+                                                            </option>
+                                                            <option value="7" selected>Semua aktivitas
+                                                            </option>
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="table-responsive">
-                                                    <table
-                                                        class="table table-hover card-table table-striped table-borderless">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="text-primary">
-                                                                    Waktu transaksi</th>
-                                                                <th class="text-primary">Jenis Transaksi</th>
-                                                                <th class="text-primary">Nominal</th>
-                                                                <th class="text-primary">Status</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    Belum dilakukan
-                                                                </td>
-                                                                <td class="fw-normal"> Pembayaran bulanan
-                                                                </td>
-                                                                <td>2.250.000</td>
-                                                                <td>
-                                                                    <span class="badge bg-label-danger me-1 mb-1"
-                                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                        data-bs-placement="right" data-bs-html="true"
-                                                                        title=""
-                                                                        data-bs-original-title="Status pembayaran">Belum</span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    14 Des 2019 12:45
-                                                                </td>
-                                                                <td class="fw-normal"> Pembayaran bulanan
-                                                                </td>
-                                                                <td>2.250.000</td>
-                                                                <td>
-                                                                    <span class="badge bg-label-success me-1 mb-1"
-                                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                        data-bs-placement="right" data-bs-html="true"
-                                                                        title=""
-                                                                        data-bs-original-title="Status pembayaran">Berhasil</span>
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    13 Des 2019 10:40
-                                                                </td>
-                                                                <td class="fw-normal"> Pembayaran bulanan
-                                                                </td>
-                                                                <td>42.250.000</td>
-                                                                <td>
-                                                                    <span class="badge bg-label-secondary me-1 mb-1"
-                                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                        data-bs-placement="right" data-bs-html="true"
-                                                                        title=""
-                                                                        data-bs-original-title="Status pembayaran">Dibatalkan</span>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    14 Nov 2019 12:45
-                                                                </td>
-                                                                <td class="fw-normal"> Pembayaran bulanan
-                                                                </td>
-                                                                <td>42.250.000</td>
-                                                                <td>
-                                                                    <span class="badge bg-label-success me-1 mb-1"
-                                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                        data-bs-placement="right" data-bs-html="true"
-                                                                        title=""
-                                                                        data-bs-original-title="Status pembayaran">Berhasil</span>
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    14 Okt 2019 12:45
-                                                                </td>
-                                                                <td class="fw-normal"> Pembayaran bulanan
-                                                                </td>
-                                                                <td>2.250.000</td>
-                                                                <td>
-                                                                    <span class="badge bg-label-success me-1 mb-1"
-                                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                        data-bs-placement="right" data-bs-html="true"
-                                                                        title=""
-                                                                        data-bs-original-title="Status pembayaran">Berhasil</span>
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    14 Sep 2019 12:45
-                                                                </td>
-                                                                <td class="fw-normal"> Pembayaran bulanan
-                                                                </td>
-                                                                <td>2.250.000</td>
-                                                                <td>
-                                                                    <span class="badge bg-label-success me-1 mb-1"
-                                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                                        data-bs-placement="right" data-bs-html="true"
-                                                                        title=""
-                                                                        data-bs-original-title="Status pembayaran">Berhasil</span>
-                                                                </td>
-
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <nav aria-label="Page navigation" class="my-4">
-                                                    <ul class="pagination justify-content-center">
-                                                        <li class="page-item prev">
-                                                            <a class="page-link" href="javascript:void(0);"><i
-                                                                    class="tf-icon bx bx-chevrons-left"></i></a>
-                                                        </li>
-                                                        <li class="page-item active">
-                                                            <a class="page-link" href="javascript:void(0);">1</a>
-                                                        </li>
-                                                        <li class="page-item">
-                                                            <a class="page-link" href="javascript:void(0);">2</a>
-                                                        </li>
-                                                        <li class="page-item">
-                                                            <a class="page-link" href="javascript:void(0);">3</a>
-                                                        </li>
-                                                        <li class="page-item">
-                                                            <a class="page-link" href="javascript:void(0);">4</a>
-                                                        </li>
-                                                        <li class="page-item">
-                                                            <a class="page-link" href="javascript:void(0);">5</a>
-                                                        </li>
-                                                        <li class="page-item next">
-                                                            <a class="page-link" href="javascript:void(0);"><i
-                                                                    class="tf-icon bx bx-chevrons-right"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                    <div></div>
-                                                </nav>
                                             </div>
                                         </div>
+                                        <div id="riwayat">
+                                            <div class="table-responsive">
+                                                <table
+                                                    class="table table-hover card-table table-striped table-borderless">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-primary">
+                                                                Waktu</th>
+                                                            <th class="text-primary">Jenis Aktivitas</th>
+                                                            <th class="text-primary">Aktor</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                17 Des 2019 12:55
+                                                            </td>
+                                                            <td class="fw-normal"> Perubahan kata sandi
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge bg-label-warning me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Aktor pelaksana">Operator</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                14 Des 2019 12:45
+                                                            </td>
+                                                            <td class="fw-normal"> Perubahan data utama
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge bg-label-primary me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Aktor pelaksana">Guru</span>
+                                                            </td>
 
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                13 Des 2019 10:40
+                                                            </td>
+                                                            <td class="fw-normal"> Perubahan kata sandi
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge bg-label-warning me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Aktor pelaksana">Operator</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                14 Nov 2019 12:45
+                                                            </td>
+                                                            <td class="fw-normal">Penulisan catatan
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge bg-label-warning me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Aktor pelaksana">Operator</span>
+                                                            </td>
 
-                                        <div class="tab-pane fade" id="navs-pills-justified-riwayat" role="tabpanel">
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <h5 class="mb-0">Riwayat Aktivitas</h5>
-                                                        <span class="small">
-                                                            Bagian ini berisikan informasi riwayat aktivitas pada akun
-                                                        </span>
-                                                    </div>
-                                                    <div class="text-end">
-                                                        <button type="button" class="btn btn-icon btn-outline-primary">
-                                                            <span class="tf-icons bx bx-refresh bx-sm"></span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-lg-8 col-md-8 col-12">
-                                                        <div class="row py-4">
-                                                            <div class="col-12 col-md-4 pb-3">
-                                                                <select id="largeSelect"
-                                                                    class="form-select form-select-md ">
-                                                                    <option value="1">Hari ini</option>
-                                                                    <option value="2" selected>Minggu ini</option>
-                                                                    <option value="3">Bulan ini</option>
-                                                                    <option value="4">Periode ini</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-12 col-md-8 pb-3">
-                                                                <select id="largeSelect"
-                                                                    class="form-select form-select-md ">
-                                                                    <option value="1">Perubahan kata sandi</option>
-                                                                    <option value="2">Perubahan data utama</option>
-                                                                    <option value="3">Penulisan catatan</option>
-                                                                    <option value="4">Perubahan penugasan
-                                                                    </option>
-                                                                    <option value="5">Perubahan foto</option>
-                                                                    <option value="6" selected>Semua aktivitas
-                                                                    </option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div id="riwayat">
-                                                    <div class="table-responsive">
-                                                        <table
-                                                            class="table table-hover card-table table-striped table-borderless">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="text-primary">
-                                                                        Waktu</th>
-                                                                    <th class="text-primary">Jenis Aktivitas</th>
-                                                                    <th class="text-primary">Aktor</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        17 Des 2019 12:55
-                                                                    </td>
-                                                                    <td class="fw-normal"> Perubahan kata sandi
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="badge bg-label-warning me-1 mb-1"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-offset="0,4"
-                                                                            data-bs-placement="right"
-                                                                            data-bs-html="true" title=""
-                                                                            data-bs-original-title="Aktor pelaksana">Admin
-                                                                            TU</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        14 Des 2019 12:45
-                                                                    </td>
-                                                                    <td class="fw-normal"> Perubahan data utama
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="badge bg-label-primary me-1 mb-1"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-offset="0,4"
-                                                                            data-bs-placement="right"
-                                                                            data-bs-html="true" title=""
-                                                                            data-bs-original-title="Aktor pelaksana">Pegawai</span>
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        13 Des 2019 10:40
-                                                                    </td>
-                                                                    <td class="fw-normal"> Perubahan kata sandi
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="badge bg-label-warning me-1 mb-1"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-offset="0,4"
-                                                                            data-bs-placement="right"
-                                                                            data-bs-html="true" title=""
-                                                                            data-bs-original-title="Aktor pelaksana">Admin
-                                                                            Tu</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        14 Nov 2019 12:45
-                                                                    </td>
-                                                                    <td class="fw-normal"> Penulisan catatan
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="badge bg-label-warning me-1 mb-1"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-offset="0,4"
-                                                                            data-bs-placement="right"
-                                                                            data-bs-html="true" title=""
-                                                                            data-bs-original-title="Aktor pelaksana">Admin
-                                                                            TU</span>
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        14 Okt 2019 12:45
-                                                                    </td>
-                                                                    <td class="fw-normal"> Merubah penugasan
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="badge bg-label-warning me-1 mb-1"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-offset="0,4"
-                                                                            data-bs-placement="right"
-                                                                            data-bs-html="true" title=""
-                                                                            data-bs-original-title="Aktor pelaksana">Admin
-                                                                            TU</span>
-                                                                    </td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        14 Sep 2019 12:45
-                                                                    </td>
-                                                                    <td class="fw-normal"> Perubahan foto profil
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="badge bg-label-primary me-1 mb-1"
-                                                                            data-bs-toggle="tooltip"
-                                                                            data-bs-offset="0,4"
-                                                                            data-bs-placement="right"
-                                                                            data-bs-html="true" title=""
-                                                                            data-bs-original-title="Aktor pelaksana">Pegawai</span>
-                                                                    </td>
-
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-
-                                                    <nav aria-label="Page navigation" class="my-4">
-                                                        <ul class="pagination justify-content-center">
-                                                            <li class="page-item prev">
-                                                                <a class="page-link" href="javascript:void(0);"><i
-                                                                        class="tf-icon bx bx-chevrons-left"></i></a>
-                                                            </li>
-                                                            <li class="page-item active">
-                                                                <a class="page-link" href="javascript:void(0);">1</a>
-                                                            </li>
-                                                            <li class="page-item">
-                                                                <a class="page-link" href="javascript:void(0);">2</a>
-                                                            </li>
-                                                            <li class="page-item">
-                                                                <a class="page-link" href="javascript:void(0);">3</a>
-                                                            </li>
-                                                            <li class="page-item">
-                                                                <a class="page-link" href="javascript:void(0);">4</a>
-                                                            </li>
-                                                            <li class="page-item">
-                                                                <a class="page-link" href="javascript:void(0);">5</a>
-                                                            </li>
-                                                            <li class="page-item next">
-                                                                <a class="page-link" href="javascript:void(0);"><i
-                                                                        class="tf-icon bx bx-chevrons-right"></i></a>
-                                                            </li>
-                                                        </ul>
-                                                        <div></div>
-                                                    </nav>
-                                                </div>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <td>
+                                                                14 Okt 2019 12:55
+                                                            </td>
+                                                            <td class="fw-normal">Akun di aktifkan </td>
+                                                            <td>
+                                                                <span class="badge bg-label-warning me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Aktor pelaksana">Operator</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                14 Okt 2019 12:49
+                                                            </td>
+                                                            <td class="fw-normal">Akun di non-aktifkan dengan alasan <i>'terdapat pelanggaran'</i>
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge bg-label-warning me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Aktor pelaksana">Operator</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                14 Okt 2019 12:45
+                                                            </td>
+                                                            <td class="fw-normal">Perubahan penugasan
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge bg-label-warning me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Aktor pelaksana">Operator</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                14 Sep 2019 12:45
+                                                            </td>
+                                                            <td class="fw-normal"> Perubahan foto
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge bg-label-primary me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Aktor pelaksana">Guru</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
+
+                                            <nav aria-label="Page navigation" class="my-4">
+                                                <ul class="pagination justify-content-center">
+                                                    <li class="page-item prev">
+                                                        <a class="page-link" href="javascript:void(0);"><i
+                                                                class="tf-icon bx bx-chevrons-left"></i></a>
+                                                    </li>
+                                                    <li class="page-item active">
+                                                        <a class="page-link" href="javascript:void(0);">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">3</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">4</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">5</a>
+                                                    </li>
+                                                    <li class="page-item next">
+                                                        <a class="page-link" href="javascript:void(0);"><i
+                                                                class="tf-icon bx bx-chevrons-right"></i></a>
+                                                    </li>
+                                                </ul>
+                                                <div></div>
+                                            </nav>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
+                </div>
 
-                    <!-- Modal Ubah Data Pegawai-->
-                    <div class="modal fade" id="modal-data-utama" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Ubah Data Utama Pegawai</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+
+            </div>
+
+            <!-- Modal Ubah Data Pegawai-->
+            <div class="modal fade" id="modal-data-utama" tabindex="-1" data-bs-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel1">Ubah Data Utama Pegawai</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-12 mb-3">
+                                    <label for="nameBasic" class="form-label">Nama Lengkap <b
+                                            class="text-danger">*</b></label>
+                                    <input type="text" id="nameBasic" class="form-control"
+                                        placeholder="Tuliskan nama lengkap pegawai" required value="Bani Huda" />
                                 </div>
-                                <div class="modal-body">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="nameBasic" class="form-label">Tempat Lahir <b
+                                            class="text-danger">*</b></label>
+                                    <input class="form-control" type="text" id="nama-pengguna"
+                                        placeholder="Masukkan Nama Pengguna" value="Blitar">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="nameBasic" class="form-label">Tanggal Lahir <b
+                                            class="text-danger">*</b></label>
+                                    <input class="form-control" type="date" id="nama-pengguna"
+                                        placeholder="Masukkan Nama Pengguna" value="1987-06-18">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="nameBasic" class="form-label">ID Akun</label>
+                                    <input class="form-control" type="text" id="id-akun"
+                                        placeholder="Digenerate oleh sistem" disabled value="2019827318920">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="nameBasic" class="form-label">Nama Pengguna</label>
+                                    <input class="form-control" type="text" id="nama-pengguna"
+                                        placeholder="Masukkan Nama Pengguna" value="banihuda@albahjah.id">
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
                                     <div class="row">
-                                        <div class="col-12 col-md-12 mb-3">
-                                            <label for="nameBasic" class="form-label">Nama Lengkap <b
-                                                    class="text-danger">*</b></label>
-                                            <input type="text" id="nameBasic" class="form-control"
-                                                placeholder="Tuliskan nama lengkap pegawai" required
-                                                value="Bani Huda" />
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label for="selectTingkat" class="form-label">Peran</label>
+                                            <select id="selectTingkat" class="form-select form-select-md ">
+                                                <option value="1">Guru</option>
+                                                <option value="2" selected>Operator</option>
+                                                <option value="3">Pengawas</option>
+                                            </select>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">Tempat Lahir <b
-                                                    class="text-danger">*</b></label>
-                                            <input class="form-control" type="text" id="nama-pengguna"
-                                                placeholder="Masukkan Nama Pengguna" value="Blitar">
+                                            <label for="selectNamaKelas" class="form-label">Penugasan</label>
+                                            <select id="selectNamaKelas" class="form-select form-select-md ">
+                                                <option value="1">Guru Mapel</option>
+                                                <option value="2">Admin TU</option>
+                                                <option value="3" selected>Bendahara</option>
+                                                <option value="4">Sekretaris</option>
+                                                <option value="3">Kepala Instansi</option>
+                                            </select>
                                         </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">Tanggal Lahir <b
-                                                    class="text-danger">*</b></label>
-                                            <input class="form-control" type="date" id="nama-pengguna"
-                                                placeholder="Masukkan Nama Pengguna" value="1987-06-18">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
+                                            class="text-danger">*</b></label>
+                                    <div class="form-check form-check-inline form-check-primary mt-2">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1" checked />
+                                        <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2" />
+                                        <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="sweet()"
+                                data-bs-dismiss="modal">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Ubah Kata Sandi-->
+            <div class="modal fade" id="modal-kata-sandi" tabindex="-1" data-bs-backdrop="static">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel1">Ubah Kata Sandi</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="alert alert-warning d-flex" role="alert">
+                                        <span
+                                            class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
+                                                class="bx bx-key bx-sm"></i></span>
+                                        <div class="d-flex flex-column ps-1">
+                                            <span class="text-black small">Kata sandi bersifat privasi, mohon
+                                                lakukan pengaturan dengan bijak
                                         </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">ID Pegawai</label>
-                                            <input class="form-control" type="text" id="id-pegawai"
-                                                placeholder="Digenerate oleh sistem" disabled value="2019827318920">
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3 form-password-toggle">
+                                    <label for="nameBasic" class="form-label">Kata Sandi Lama<b
+                                            class="text-danger">*</b></label>
+                                    <div class="input-group input-group-merge">
+                                        <input type="password" id="password" class="form-control" name="password"
+                                            aria-describedby="password" placeholder="Masukkan kata sandi ..."
+                                            value="12345678">
+                                        <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3 form-password-toggle">
+                                    <label for="nameBasic" class="form-label">Kata Sandi Baru<b
+                                            class="text-danger">*</b></label>
+                                    <div class="input-group input-group-merge">
+                                        <input type="password" id="password" class="form-control" name="password"
+                                            aria-describedby="password" placeholder="Masukkan kata sandi baru ...">
+                                        <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="sweet()"
+                                data-bs-dismiss="modal">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Ubah Foto-->
+            <div class="modal fade" id="modal-foto" tabindex="-1" data-bs-backdrop="static">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel1">Ubah Foto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="image-preview-container ">
+                                        <div class="preview">
+                                            <img id="preview-selected-image" />
                                         </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">Nama Pengguna</label>
-                                            <input class="form-control" type="text" id="nama-pengguna"
-                                                placeholder="Masukkan Nama Pengguna" value="banihuda@albahjah.id">
+                                        <label for="file-upload">Upload Image</label>
+                                        <input type="file" id="file-upload" accept="image/*"
+                                            onchange="previewImage(event);" />
+                                        <p class="text-muted mt-3 mb-0 text-center">Silakan pilih file JPG atau
+                                            PNG dengan ukuran maksimal 1 MB
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="sweet()"
+                                data-bs-dismiss="modal">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Non Aktifkan Akun-->
+            <div class="modal fade" id="modal-non-aktifkan" tabindex="-1" data-bs-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Konfirmasi Non Aktifkan Akun</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="alert alert-warning d-flex" role="alert">
+                                        <span
+                                            class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
+                                                class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                        <div class="d-flex flex-column ps-1">
+                                            <span class="text-black">Apakah Anda yakin <span
+                                                    class="fw-semibold">Bani Huda </span>
+                                                yang memiliki peran sebagai <span class="fw-semibold">Operator</span> dan penugasan sebagai <span class="fw-semibold">Admin
+                                                    TU dan Bendahara</span> akan di <span class="fw-semibold">
+                                                    Non Aktifkan </span> dari
+                                                sistem?
                                         </div>
-                                        <div class="col-12 col-md-6 mb-3">
+                                    </div>
+
+                                    <label for="nameSmall" class="form-label">Tuliskan alasan di Non
+                                        Aktifkan <span class="text-danger">*</span></label>
+                                    <input type="text" id="nameSmall" class="form-control"
+                                        placeholder="Tulis keterangan ">
+                                    <small class="text-muted"><i>(Keterangan di atas akan ditampilkan pada akun
+                                            terkait)</i></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <button type="button" class="btn btn-danger" onclick="sweet()"
+                                data-bs-dismiss="modal">Ya</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Aktifkan Akun-->
+            <div class="modal fade" id="modal-aktifkan" tabindex="-1" data-bs-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Konfirmasi Aktifkan Akun</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="alert alert-warning d-flex" role="alert">
+                                        <span
+                                            class="badge badge-center rounded-pill bg-warning border-label-warning p-3 me-2"><i
+                                                class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                        <div class="d-flex flex-column ps-1">
+                                            <span class="text-black">Apakah Anda yakin <span
+                                                    class="fw-semibold">Faeshal Ramdhan</span>
+                                                    yang memiliki peran sebagai <span class="fw-semibold">Guru</span> dan penugasan sebagai <span class="fw-semibold">Guru Mapel</span> akan di <span class="fw-semibold"> Aktifkan
+                                                </span> pada
+                                                sistem?
+                                        </div>
+                                    </div>
+
+                                    <label for="nameSmall" class="form-label">Tuliskan alasan di
+                                        Aktifkan</label>
+                                    <input type="text" id="nameSmall" class="form-control"
+                                        placeholder="Tulis keterangan ">
+                                    <small class="text-muted"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <button type="button" class="btn btn-warning" onclick="sweet()"
+                                data-bs-dismiss="modal">Ya</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Ubah Data Profil-->
+            <div class="modal fade" id="modal-data-profil" tabindex="-1" data-bs-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel1">Ubah Informasi Profil</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="accordion accordion-without-arrow" id="accordionStyle1">
+                                <div class="accordion-item card">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button text-primary"
+                                            data-bs-toggle="collapse" data-bs-target="#accordionStyle1-1"
+                                            aria-expanded="true"><i
+                                                class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
+                                            Informasi Lanjutan Profil
+                                        </button>
+                                    </h2>
+
+                                    <div id="accordionStyle1-1" class="accordion-collapse collapse "
+                                        data-bs-parent="#accordionStyle1">
+                                        <div class="accordion-body">
                                             <div class="row">
+                                                <div class="col-12 col-md-6 mb-3">
+                                                    <label for="namaBasic" class="form-label">NIK</label>
+                                                    <input type="text" id="namaBasic" class="form-control"
+                                                        placeholder="Tuliskan NIK (jika sudah punya)" required
+                                                        value="230918721973 " />
+                                                </div>
+                                                <div class="col-12 col-md-6 mb-3">
+                                                    <label for="telpBasic" class="form-label">No Telp / WA
+                                                        Aktif</label>
+                                                    <input type="text" id="telpBasic" class="form-control"
+                                                        placeholder="Tuliskan No telp aktif" required
+                                                        value="0868712683345" />
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <label for="bakatHobiBasic" class="form-label">Bakat dan
+                                                        Hobi</label>
+                                                    <input type="text" id="bakatHobiBasic" class="form-control"
+                                                        placeholder="Tuliskan bakat dan hobi (bisa lebih dari 1)"
+                                                        required value="Membaca dan olahraga fisik ringan " />
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <label for="sosmedBasic" class="form-label">Sosial
+                                                        Media</label>
+                                                    <input type="text" id="sosmedBasic" class="form-control"
+                                                        placeholder="Tuliskan sosial media (bisa lebih dari 1)" required
+                                                        value="IG : @banihuda, Twitter : @banihuda01 " />
+                                                </div>
 
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    <label for="selectTingkat" class="form-label">Penugasan</label>
-                                                    <select id="selectTingkat" class="form-select form-select-md ">
-                                                        <option value="1">Guru</option>
-                                                        <option value="2" selected>Admin TU</option>
+                                                    <label for="jumlahTanggungan" class="form-label">Jumlah
+                                                        Tanggungan</label>
+                                                    <div class="input-group input-group-merge">
+                                                        <select id="jumlahTanggungan"
+                                                            class="form-select form-select-md">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5" selected>5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7"> > 6</option>
+                                                        </select>
+                                                        <span class="input-group-text" id="dataOrang">Orang</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 mb-3">
+                                                    <label for="tempatTinggal" class="form-label">Domisili
+                                                        Sekarang</label>
+                                                    <select id="tempatTinggal" class="form-select form-select-md">
+                                                        <option value="1">Rumah Sendiri</option>
+                                                        <option value="2">Kontrakan</option>
+                                                        <option value="3">Rumah Saudara</option>
+                                                        <option value="4">Lainnya</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12 col-md-12 mb-3">
+                                                    <label for="almaatDomisili" class="form-label">Alamat
+                                                        Lengkap
+                                                        Domisili</label>
+                                                    <input type="text" id="alamatDomisili" class="form-control"
+                                                        placeholder="Tuliskan alamat lengkap domisisli saat ini"
+                                                        required
+                                                        value="Jl. Bandung Gg.5H No 45 Lowokwaru Malang Jawa Timur" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item card">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button collapsed text-primary"
+                                            data-bs-toggle="collapse" data-bs-target="#accordionStyle1-2"
+                                            aria-expanded="false"><i
+                                                class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
+                                            Informasi Orang Terpercaya
+                                        </button>
+                                    </h2>
+                                    <div id="accordionStyle1-2" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionStyle1">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6 mb-3">
+                                                    <label for="hubunganWali" class="form-label">Hubungan</label>
+                                                    <select id="hubunganWali" class="form-select form-select-md ">
+                                                        <option value="8" selected>Pasangan</option>
+                                                        <option value="1">Ayah</option>
+                                                        <option value="2">Ibu</option>
+                                                        <option value="3">Saudara Kandung</option>
+                                                        <option value="4">Kakek / Nenek</option>
+                                                        <option value="5">Paman / Bibi</option>
+                                                        <option value="6">Saudara Jauh</option>
+                                                        <option value="7">Orang lain di luar keluarga</option>
+                                                        <option value="9">Anak</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-12 col-md-6 mb-3">
-                                                    <label for="selectNamaKelas" class="form-label">Jabatan</label>
-                                                    <select id="selectNamaKelas" class="form-select form-select-md ">
-                                                        <option value="1">Guru Mapel</option>
-                                                        <option value="2">Admin TU</option>
-                                                        <option value="3" selected>Bendahara</option>
-                                                        <option value="4">Sekretaris</option>
-                                                        <option value="3">Kepala Instansi</option>
-                                                    </select>
+                                                    <label for="namaWali" class="form-label">Nama Lengkap
+                                                    </label>
+                                                    <input type="text" id="namaWali" class="form-control"
+                                                        placeholder="Tuliskan nama lengkap orang terpercaya" required
+                                                        value="Nur Miftah" />
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
-                                                    class="text-danger">*</b></label>
-                                            <div class="form-check form-check-inline form-check-primary mt-2">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio1" value="option1" checked />
-                                                <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio2" value="option2" />
-                                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                                        data-bs-dismiss="modal">Simpan</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal Ubah Kata Sandi-->
-                    <div class="modal fade" id="modal-kata-sandi" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Ubah Kata Sandi</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="alert alert-warning d-flex" role="alert">
-                                                <span
-                                                    class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
-                                                        class="bx bx-key bx-sm"></i></span>
-                                                <div class="d-flex flex-column ps-1">
-                                                    <span class="text-black small">Kata sandi bersifat privasi, mohon
-                                                        lakukan pengaturan dengan bijak
+                                                <div class="col-12 col-md-6 mb-3">
+                                                    <label for="noTelp" class="form-label">No Telpon / WA Aktif
+                                                    </label>
+                                                    <input type="text" id="noTelp" class="form-control"
+                                                        placeholder="Tuliskan nomor Telpon / WA" required
+                                                        value="085128737162" />
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 mb-3 form-password-toggle">
-                                            <label for="nameBasic" class="form-label">Kata Sandi Lama<b
-                                                    class="text-danger">*</b></label>
-                                            <div class="input-group input-group-merge">
-                                                <input type="password" id="password" class="form-control"
-                                                    name="password" aria-describedby="password"
-                                                    placeholder="Masukkan kata sandi ..." value="12345678">
-                                                <span class="input-group-text cursor-pointer"><i
-                                                        class="bx bx-hide"></i></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 mb-3 form-password-toggle">
-                                            <label for="nameBasic" class="form-label">Kata Sandi Baru<b
-                                                    class="text-danger">*</b></label>
-                                            <div class="input-group input-group-merge">
-                                                <input type="password" id="password" class="form-control"
-                                                    name="password" aria-describedby="password"
-                                                    placeholder="Masukkan kata sandi baru ...">
-                                                <span class="input-group-text cursor-pointer"><i
-                                                        class="bx bx-hide"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                                        data-bs-dismiss="modal">Simpan</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal Ubah Foto-->
-                    <div class="modal fade" id="modal-foto" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Ubah Foto</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <div class="image-preview-container ">
-                                                <div class="preview">
-                                                    <img id="preview-selected-image" />
+                                                <div class="col-12 col-md-12 mb-3">
+                                                    <label for="almaatDomisili" class="form-label">Alamat
+                                                        Lengkap
+                                                        Domisili</label>
+                                                    <input type="text" id="alamatDomisili" class="form-control"
+                                                        placeholder="Tuliskan alamat lengkap domisisli saat ini"
+                                                        required
+                                                        value="Jl. Bandung Gg.5H No 45 Lowokwaru Malang Jawa Timur" />
                                                 </div>
-                                                <label for="file-upload">Upload Image</label>
-                                                <input type="file" id="file-upload" accept="image/*"
-                                                    onchange="previewImage(event);" />
-                                                <p class="text-muted mt-3 mb-0 text-center">Silakan pilih file JPG atau
-                                                    PNG dengan ukuran maksimal 1 MB
-                                                </p>
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                                        data-bs-dismiss="modal">Simpan</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Modal Non Aktifkan Pegawai-->
-                    <div class="modal fade" id="modal-non-aktifkan" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Konfirmasi Non Aktifkan Pegawai</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <div class="alert alert-warning d-flex" role="alert">
-                                                <span
-                                                    class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
-                                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
-                                                <div class="d-flex flex-column ps-1">
-                                                    <span class="text-black">Apakah Anda yakin pegawai <span
-                                                            class="fw-semibold">Bani Huda </span>
-                                                        yang memiliki penugasan sebagai <span class="fw-semibold">Admin
-                                                            TU dan Bendahara</span> akan di <span class="fw-semibold">
-                                                            Non Aktifkan </span> dari
-                                                        sistem?
-                                                </div>
-                                            </div>
-
-                                            <label for="nameSmall" class="form-label">Tuliskan alasan pegawai di Non
-                                                Aktifkan <span class="text-danger">*</span></label>
-                                            <input type="text" id="nameSmall" class="form-control"
-                                                placeholder="Tulis keterangan ">
-                                            <small class="text-muted"><i>(Keterangan di atas akan ditampilkan pada akun
-                                                    pegawai terkait)</i></small>
+                                <div class="accordion-item card">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button collapsed text-primary"
+                                            data-bs-toggle="collapse" data-bs-target="#accordionStyle1-3"
+                                            aria-expanded="false"><i
+                                                class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
+                                            Catatan dari Pegawai dan Instansi
+                                        </button>
+                                    </h2>
+                                    <div id="accordionStyle1-3" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionStyle1">
+                                        <div class="accordion-body">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Catatan
+                                                Pribadi dari Pegawai</label>
+                                            <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows=""
+                                                disabled>Merupakan pribadi yang aktif dan memiliki sifat yang baik nan ramah.  </textarea>
+                                            <label for="exampleFormControlTextarea1" class="form-label">Catatan
+                                                dari Instansi</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="3">Merupakan cerminan pegawai teladan dan favorit  </textarea>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-danger" onclick="sweet()"
-                                        data-bs-dismiss="modal">Ya</button>
 
+                                <div class="card mb-2">
+                                    <h2 class="accordion-header">
+                                        <button type="button" class="accordion-button text-muted"><i
+                                                class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
+                                            Informasi Kepegawaian (<i>otomatis dari sistem</i>)
+                                        </button>
+                                    </h2>
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                Batal
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick="sweet()"
+                                data-bs-dismiss="modal">Simpan</button>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Modal Aktifkan Pegawai-->
-                    <div class="modal fade" id="modal-aktifkan" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Konfirmasi Aktifkan Pegawai</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <div class="alert alert-warning d-flex" role="alert">
-                                                <span
-                                                    class="badge badge-center rounded-pill bg-warning border-label-warning p-3 me-2"><i
-                                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
-                                                <div class="d-flex flex-column ps-1">
-                                                    <span class="text-black">Apakah Anda yakin pegawai <span
-                                                            class="fw-semibold">Faeshal Ramdhan</span>
-                                                        yang memiliki penugasan sebagai <span class="fw-semibold">Guru
-                                                            Mapel </span> akan di <span class="fw-semibold"> Aktifkan
-                                                        </span> pada
-                                                        sistem?
-                                                </div>
-                                            </div>
+            <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+            <script src="../assets/vendor/libs/popper/popper.js"></script>
+            <script src="../assets/vendor/js/bootstrap.js"></script>
+            <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-                                            <label for="nameSmall" class="form-label">Tuliskan alasan pegawai di
-                                                Aktifkan</label>
-                                            <input type="text" id="nameSmall" class="form-control"
-                                                placeholder="Tulis keterangan ">
-                                            <small class="text-muted"></small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-warning" onclick="sweet()"
-                                        data-bs-dismiss="modal">Ya</button>
+            <script src="../assets/vendor/js/menu.js"></script>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-                    <!-- Modal Ubah Data Profil-->
-                    <div class="modal fade" id="modal-data-profil" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Ubah Informasi Profil</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="accordion accordion-without-arrow" id="accordionStyle1">
-                                        <div class="accordion-item card">
-                                            <h2 class="accordion-header">
-                                                <button type="button" class="accordion-button text-primary"
-                                                    data-bs-toggle="collapse" data-bs-target="#accordionStyle1-1"
-                                                    aria-expanded="true"><i
-                                                        class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
-                                                    Informasi Lanjutan Pegawai
-                                                </button>
-                                            </h2>
+            <script src="../assets/js/main.js"></script>
 
-                                            <div id="accordionStyle1-1" class="accordion-collapse collapse "
-                                                data-bs-parent="#accordionStyle1">
-                                                <div class="accordion-body">
-                                                    <div class="row">
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <label for="namaBasic" class="form-label">NIK</label>
-                                                            <input type="text" id="namaBasic" class="form-control"
-                                                                placeholder="Tuliskan NIK (jika sudah punya)" required
-                                                                value="230918721973 " />
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <label for="telpBasic" class="form-label">No Telp / WA
-                                                                Aktif</label>
-                                                            <input type="text" id="telpBasic" class="form-control"
-                                                                placeholder="Tuliskan No telp aktif" required
-                                                                value="0868712683345" />
-                                                        </div>
-                                                        <div class="col-12 mb-3">
-                                                            <label for="bakatHobiBasic" class="form-label">Bakat dan
-                                                                Hobi</label>
-                                                            <input type="text" id="bakatHobiBasic" class="form-control"
-                                                                placeholder="Tuliskan bakat dan hobi (bisa lebih dari 1)"
-                                                                required value="Membaca dan olahraga fisik ringan " />
-                                                        </div>
-                                                        <div class="col-12 mb-3">
-                                                            <label for="sosmedBasic" class="form-label">Sosial
-                                                                Media</label>
-                                                            <input type="text" id="sosmedBasic" class="form-control"
-                                                                placeholder="Tuliskan sosial media (bisa lebih dari 1)"
-                                                                required
-                                                                value="IG : @banihuda, Twitter : @banihuda01 " />
-                                                        </div>
+            <script src="../assets/js/dashboards-analytics.js"></script>
 
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <label for="jumlahTanggungan" class="form-label">Jumlah
-                                                                Tanggungan Pegawai</label>
-                                                            <div class="input-group input-group-merge">
-                                                                <select id="jumlahTanggungan"
-                                                                    class="form-select form-select-md">
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                    <option value="5" selected>5</option>
-                                                                    <option value="6">6</option>
-                                                                    <option value="7"> > 6</option>
-                                                                </select>
-                                                                <span class="input-group-text"
-                                                                    id="dataOrang">Orang</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <label for="tempatTinggal" class="form-label">Domisili
-                                                                Sekarang</label>
-                                                            <select id="tempatTinggal"
-                                                                class="form-select form-select-md">
-                                                                <option value="1">Rumah Sendiri</option>
-                                                                <option value="2">Kontrakan</option>
-                                                                <option value="3">Rumah Saudara</option>
-                                                                <option value="4">Lainnya</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-12 col-md-12 mb-3">
-                                                            <label for="almaatDomisili" class="form-label">Alamat
-                                                                Lengkap
-                                                                Domisili</label>
-                                                            <input type="text" id="alamatDomisili" class="form-control"
-                                                                placeholder="Tuliskan alamat lengkap domisisli saat ini"
-                                                                required
-                                                                value="Jl. Bandung Gg.5H No 45 Lowokwaru Malang Jawa Timur" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+            <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-                                        <div class="accordion-item card">
-                                            <h2 class="accordion-header">
-                                                <button type="button" class="accordion-button collapsed text-primary"
-                                                    data-bs-toggle="collapse" data-bs-target="#accordionStyle1-2"
-                                                    aria-expanded="false"><i
-                                                        class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
-                                                    Informasi Orang Terpercaya
-                                                </button>
-                                            </h2>
-                                            <div id="accordionStyle1-2" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordionStyle1">
-                                                <div class="accordion-body">
-                                                    <div class="row">
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <label for="hubunganWali" class="form-label">Hubungan dengan
-                                                                Pegawai</label>
-                                                            <select id="hubunganWali"
-                                                                class="form-select form-select-md ">
-                                                                <option value="1">Ayah</option>
-                                                                <option value="2">Ibu</option>
-                                                                <option value="3">Saudara Kandung</option>
-                                                                <option value="4">Kakek / Nenek</option>
-                                                                <option value="5">Paman / Bibi</option>
-                                                                <option value="6">Saudara Jauh</option>
-                                                                <option value="7">Orang lain di luar keluarga</option>
-                                                                <option value="8" selected>Pasangan</option>
-                                                                <option value="9">Anak</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <label for="namaWali" class="form-label">Nama Lengkap
-                                                            </label>
-                                                            <input type="text" id="namaWali" class="form-control"
-                                                                placeholder="Tuliskan nama lengkap orang terpercaya"
-                                                                required value="Nur Miftah" />
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <label for="noNIKwali" class="form-label">NIK Orang
-                                                                Terpercaya
-                                                            </label>
-                                                            <input type="text" id="noNIKwali" class="form-control"
-                                                                placeholder="Tuliskan nomor NIK" required
-                                                                value="240918271018203" />
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <label for="noTelp" class="form-label">No Telpon / WA Aktif
-                                                            </label>
-                                                            <input type="text" id="noTelp" class="form-control"
-                                                                placeholder="Tuliskan nomor Telpon / WA" required
-                                                                value="085128737162" />
-                                                        </div>
-                                                    </div>
+            <script src="../assets/js/sweetalert.min.js"></script>
 
-                                                </div>
-                                            </div>
-                                        </div>
+            <!-- tambahan -->
+            <script src="../libs/select/select.js"></script>
 
-                                        <div class="accordion-item card">
-                                            <h2 class="accordion-header">
-                                                <button type="button" class="accordion-button collapsed text-primary"
-                                                    data-bs-toggle="collapse" data-bs-target="#accordionStyle1-3"
-                                                    aria-expanded="false"><i
-                                                        class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
-                                                    Catatan dari Pegawai dan Instansi
-                                                </button>
-                                            </h2>
-                                            <div id="accordionStyle1-3" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordionStyle1">
-                                                <div class="accordion-body">
-                                                    <label for="exampleFormControlTextarea1" class="form-label">Catatan
-                                                        Pribadi dari Pegawai</label>
-                                                    <textarea class="form-control mb-3" id="exampleFormControlTextarea1"
-                                                        rows=""
-                                                        disabled>Merupakan pribadi yang aktif dan memiliki sifat yang baik nan ramah.  </textarea>
-                                                    <label for="exampleFormControlTextarea1" class="form-label">Catatan
-                                                        dari Instansi</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                        rows="3">Merupakan cerminan pegawai teladan dan favorit  </textarea>
-                                                </div>
-                                            </div>
-                                        </div>
+            <script>
+                function sweet() {
+                    swal({
+                        title: "Data berhasil disimpan!",
+                        // text: "You clicked the button!",
+                        icon: "success",
+                        button: false,
+                        timer: 2000,
+                    });
+                }
+            </script>
 
-                                        <div class="card mb-2">
-                                            <h2 class="accordion-header">
-                                                <button type="button" class="accordion-button text-muted"><i
-                                                        class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
-                                                    Informasi Penugasan(<i>otomatis dari sistem</i>)
-                                                </button>
-                                            </h2>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                                        data-bs-dismiss="modal">Simpan</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-                    <script src="../assets/vendor/libs/popper/popper.js"></script>
-                    <script src="../assets/vendor/js/bootstrap.js"></script>
-                    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-                    <script src="../assets/vendor/js/menu.js"></script>
-
-                    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
-
-                    <script src="../assets/js/main.js"></script>
-
-                    <script src="../assets/js/dashboards-analytics.js"></script>
-
-                    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-                    <script src="../assets/js/sweetalert.min.js"></script>
-
-                    <!-- tambahan -->
-                    <script src="../libs/select/select.js"></script>
-
-                    <script>
-                        function sweet() {
-                            swal({
-                                title: "Data berhasil disimpan!",
-                                // text: "You clicked the button!",
-                                icon: "success",
-                                button: false,
-                                timer: 2000,
-                            });
-                        }
-                    </script>
-
-                    <script>
-                        const previewImage = (event) => {
-                            const imageFiles = event.target.files;
-                            const imageFilesLength = imageFiles.length;
-                            if (imageFilesLength > 0) {
-                                const imageSrc = URL.createObjectURL(imageFiles[0]);
-                                const imagePreviewElement = document.querySelector("#preview-selected-image");
-                                imagePreviewElement.src = imageSrc;
-                                imagePreviewElement.style.display = "block";
-                            }
-                        };
-                    </script>
+            <script>
+                const previewImage = (event) => {
+                    const imageFiles = event.target.files;
+                    const imageFilesLength = imageFiles.length;
+                    if (imageFilesLength > 0) {
+                        const imageSrc = URL.createObjectURL(imageFiles[0]);
+                        const imagePreviewElement = document.querySelector("#preview-selected-image");
+                        imagePreviewElement.src = imageSrc;
+                        imagePreviewElement.style.display = "block";
+                    }
+                };
+            </script>
 
 </body>
 
