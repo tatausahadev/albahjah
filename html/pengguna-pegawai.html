@@ -320,6 +320,168 @@
                 <div class="content-wrapper">
 
                     <div class="container-xxl flex-grow-1 container-p-y">
+
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-12">
+                                <div class="card h-100">
+                                    <div class="row">
+                                        <div class="col-12 col-md-10">
+                                            <div class="card-body">
+                                                <span class="badge bg-label-secondary me-1 mb-3">Pengaturan
+                                                    Umum</span>
+                                                <h4 class="card-title text-primary">
+                                                    <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                                                    Pengguna Pegawai
+                                                </h4>
+                                                <p>
+                                                    Berisikan semua informasi terkait pengguna pegawai (pihak / orang
+                                                    yang terlibat dalam instansi)
+                                                </p>
+                                                <div class="btn-group dropend">
+                                                    <a class="btn btn-outline-primary" data-bs-toggle="collapse"
+                                                        href="#master-peran-penugasan" role="button"
+                                                        aria-expanded="false" aria-controls="master-peran-penugasan">
+                                                        Master Data <span
+                                                            class="badge badge-center rounded-pill bg-label-warning">3</span>
+                                                        <span
+                                                            class="badge badge-center rounded-pill bg-label-primary me-1">5</span></a>
+                                                    <button type="button"
+                                                        class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <span class="visually-hidden"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><button class="dropdown-item" type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#master-peran-penugasan"
+                                                                aria-expanded="false"
+                                                                aria-controls="master-peran-penugasan">Lihat
+                                                                Detail</button>
+                                                        </li>
+                                                        <li>
+                                                        </li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#modal-tambah-master-peran-penugasan">Ubah /
+                                                                Tambah</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="master-peran-penugasan" class="collapse">
+                                                    <div class="pt-4">
+                                                        <h6><i class="bx bxs-lock text-secondary"></i> Daftar Peran</h6>
+                                                        <span class="badge bg-label-warning me-1 mb-2">Pegawai</span>
+                                                        <span class="badge bg-label-warning me-1 mb-2">Operator</span>
+                                                        <span class="badge bg-label-warning me-1 mb-2">Pengawas</span>
+                                                        <br><br>
+                                                        <h6>Daftar Penugasan</h6>
+                                                        <span class="badge bg-label-primary me-1 mb-2">Guru Mapel</span>
+                                                        <span class="badge bg-label-primary me-1 mb-2">Admin TU</span>
+                                                        <span class="badge bg-label-primary me-1 mb-2">Bendahara</span>
+                                                        <span class="badge bg-label-primary me-1 mb-2">Sekretaris</span>
+                                                        <span class="badge bg-label-primary me-1 mb-2">Kepala
+                                                            Sekolah</span>
+
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-2 ">
+                                            <div class="card-body h-100 bg-label-primary">
+                                                <img class="img-fluid d-none d-md-block"
+                                                    src="../assets/img/illustrations/girl-muslim-with-laptop-light.png">
+                                                <button class="btn btn-primary btn-sm w-100" type="button"
+                                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart"
+                                                    aria-controls="offcanvasStart">Bantuan</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStart"
+                                data-bs-scroll="true" data-bs-backdrop="true" aria-labelledby="offcanvasStartLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasStartLabel" class="offcanvas-title">Bantuan
+                                    </h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                                    <div class="alert alert-info" role="alert">Berikut informasi
+                                        terkait pada
+                                        laman ini</div>
+
+                                    <div id="accordionIcon" class="accordion mt-3 accordion-without-arrow">
+                                        <div class="accordion-item my-4">
+                                            <h2 class="accordion-header text-body d-flex justify-content-between"
+                                                id="accordionIconOne">
+                                                <button type="button" class="accordion-button collapsed"
+                                                    data-bs-toggle="collapse" data-bs-target="#accordionIcon-1"
+                                                    aria-controls="accordionIcon-1" aria-expanded="false"><i
+                                                        class="bx bx-info-circle text-info">&nbsp;</i>
+                                                    Informasi laman 1
+                                                </button>
+                                            </h2>
+
+                                            <div id="accordionIcon-1" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionIcon">
+                                                <div class="accordion-body">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aut
+                                                    ea nemo reiciendis enim. Quidem corporis blanditiis provident,
+                                                    incidunt, asperiores repellendus itaque quos consectetur ut,
+                                                    aspernatur et. Quas, dolorem eius?
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item my-4">
+                                            <h2 class="accordion-header text-body d-flex justify-content-between"
+                                                id="accordionIconTwo">
+                                                <button type="button" class="accordion-button collapsed"
+                                                    data-bs-toggle="collapse" data-bs-target="#accordionIcon-2"
+                                                    aria-controls="accordionIcon-2" aria-expanded="false"><i
+                                                        class="bx bx-info-circle text-info">&nbsp;</i>
+                                                    Informasi laman 2
+                                                </button>
+                                            </h2>
+                                            <div id="accordionIcon-2" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionIcon">
+                                                <div class="accordion-body">
+                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+                                                    voluptas quae suscipit sint adipisci, voluptatibus itaque cum,
+                                                    nesciunt assumenda voluptatum labore doloribus dolorem, odit totam
+                                                    perspiciatis nulla est ullam? Ea.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item my-4 ">
+                                            <h2 class="accordion-header text-body d-flex justify-content-between"
+                                                id="accordionIconThree">
+                                                <button type="button" class="accordion-button collapsed"
+                                                    data-bs-toggle="collapse" data-bs-target="#accordionIcon-3"
+                                                    aria-expanded="false" aria-controls="accordionIcon-3"> <i
+                                                        class="bx bx-info-circle text-info">&nbsp;</i>
+                                                    Informasi laman 3
+                                                </button>
+                                            </h2>
+                                            <div id="accordionIcon-3" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionIcon">
+                                                <div class="accordion-body">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                                                    fugiat hic deserunt nesciunt recusandae qui nulla, neque asperiores
+                                                    repellat quisquam! Tempora corporis fuga, inventore cumque esse
+                                                    numquam voluptates et harum.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary mb-2 d-grid w-100"
+                                        data-bs-dismiss="offcanvas">Tutup</button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-12 mb-2">
                                 <div class="row g-4 mb-4">
@@ -401,6 +563,7 @@
 
                                 </div>
                             </div>
+
                             <div class="col-lg-12 mb-4">
                                 <div class="card">
                                     <div class="row card-header ">
@@ -590,7 +753,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td><b> Pegawai, Pengawas</b>, Guru Mapel, Ketua Instansi
+                                                    <td><b> Pegawai, Pengawas</b>, Guru Mapel, Kepala Sekolah
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
                                                     </td>
@@ -774,7 +937,8 @@
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="inlineRadioStatus"
                                                     id="inlineRadioTidakAktif" value="Tidak Aktif" checked />
-                                                <label class="form-check-label text-danger" for="inlineRadioTidakAktif">Tidak
+                                                <label class="form-check-label text-danger"
+                                                    for="inlineRadioTidakAktif">Tidak
                                                     Aktif
                                                     <small class="text-secondary">(<i>Akun terkait dapat mengakses
                                                             sistem dengan batasan</i>)</small></label>
@@ -783,7 +947,8 @@
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="inlineRadioStatus"
                                                     id="inlineRadioAktif" value="Aktif" />
-                                                <label class="form-check-label text-success" for="inlineRadioAktif">Aktif
+                                                <label class="form-check-label text-success"
+                                                    for="inlineRadioAktif">Aktif
                                                     <small class="text-secondary">(<i>Akun terkait dapat mengakses
                                                             sistem secara normal</i>)</small></label>
                                             </div>
@@ -828,7 +993,7 @@
                                                 <option value="2">Admin TU</option>
                                                 <option value="3">Bendahara</option>
                                                 <option value="4">Sekretaris</option>
-                                                <option value="5">Kepala Instansi</option>
+                                                <option value="5">Kepala Sekolah</option>
                                                 <option value="6" selected>Semua Penugasan</option>
                                             </select>
                                         </div>
@@ -933,6 +1098,197 @@
                                     <button type="button" class="btn btn-warning" onclick="sweet()"
                                         data-bs-dismiss="modal">Ya</button>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Tambah Master Peran dan Penugasan-->
+                    <div class="modal fade" id="modal-tambah-master-peran-penugasan" tabindex="-1" data-bs-backdrop="static">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Master Data Peran dan Penugasan</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                    <label class="form-label text-warning ">Daftar Peran</label>
+                                    <div class="row" class="form-group">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text"><i class="bx bxs-lock text-seccondary"></i></span>
+                                                <input type="text" id="peran1" class="form-control"
+                                                    placeholder="Nama peran ..." value="Pegawai" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 mb-3">
+                                            <input type="text" id="deskrispsiPeran1" class="form-control"
+                                                    placeholder="Deskripsi Peran ..." value="Mendapatkan info kepegawaian pribadi">
+                                        </div>
+                                    </div>
+                                    <div class="row" class="form-group">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text"><i class="bx bxs-lock text-seccondary"></i></span>
+                                                <input type="text" id="peran1" class="form-control"
+                                                    placeholder="Nama peran ..." value="Operator" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 mb-3">
+                                            <input type="text" id="deskrispsiPeran1" class="form-control"
+                                                    placeholder="Deskripsi Peran ..." value="Mengelola semua data">
+                                        </div>
+                                    </div>
+                                    <div class="row" class="form-group">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text"><i class="bx bxs-lock text-seccondary"></i></span>
+                                                <input type="text" id="peran1" class="form-control"
+                                                    placeholder="Nama peran ..." value="Pengawas" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 mb-3">
+                                            <input type="text" id="deskrispsiPeran1" class="form-control"
+                                                    placeholder="Deskripsi Peran ..." value="Melihat semua data tanpa bisa mengubah data tersebut">
+                                        </div>
+                                    </div>
+
+                                    <label class="form-label text-primary mt-4">Daftar Penugasan</label>
+                                    <div class="row" class="form-group">
+                                        <div class="col-12 col-sm-9 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">1</span>
+                                                <input type="text" id="penugasan1" class="form-control"
+                                                    placeholder="Nama penugasan ..." value="Guru Mapel">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
+                                            <button type="button" class="btn btn-icon btn-outline-danger ">
+                                                <span class="tf-icons bx bx-x bx-sm"></span>
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
+                                                <span class="tf-icons bx bx-plus bx-sm"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">&nbsp;</span>
+                                                <input type="text" id="deskripsiPenugasan1" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..." value="Guru pengampu mata pelajaran">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" class="form-group">
+                                        <div class="col-12 col-sm-9 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">2</span>
+                                                <input type="text" id="penugasan2" class="form-control"
+                                                    placeholder="Nama penugasan ..." value="Admin TU">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
+                                            <button type="button" class="btn btn-icon btn-outline-danger ">
+                                                <span class="tf-icons bx bx-x bx-sm"></span>
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
+                                                <span class="tf-icons bx bx-plus bx-sm"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">&nbsp;</span>
+                                                <input type="text" id="deskripsiPenugasan2" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..." value="Petugas administrasi dan pengelolaan data instansi">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" class="form-group">
+                                        <div class="col-12 col-sm-9 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">3</span>
+                                                <input type="text" id="penugasan3" class="form-control"
+                                                    placeholder="Nama penugasan ..." value="Bendahara">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
+                                            <button type="button" class="btn btn-icon btn-outline-danger ">
+                                                <span class="tf-icons bx bx-x bx-sm"></span>
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
+                                                <span class="tf-icons bx bx-plus bx-sm"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">&nbsp;</span>
+                                                <input type="text" id="deskripsiPenugasan3" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..." value="Petugas pengelolaan data instansi">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" class="form-group">
+                                        <div class="col-12 col-sm-9 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">4</span>
+                                                <input type="text" id="penugasan4" class="form-control"
+                                                    placeholder="Nama penugasan ..." value="Sekretaris">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
+                                            <button type="button" class="btn btn-icon btn-outline-danger ">
+                                                <span class="tf-icons bx bx-x bx-sm"></span>
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
+                                                <span class="tf-icons bx bx-plus bx-sm"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">&nbsp;</span>
+                                                <input type="text" id="deskripsiPenugasan4" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..." value="Petugas pengelolaan informasi dan kebijakan instansi">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" class="form-group">
+                                        <div class="col-12 col-sm-9 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">5</span>
+                                                <input type="text" id="penugasan5" class="form-control"
+                                                    placeholder="Nama penugasan ..." value="Kepala Sekolah">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
+                                            <button type="button" class="btn btn-icon btn-outline-danger ">
+                                                <span class="tf-icons bx bx-x bx-sm"></span>
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-icon ms-2 me-1 btn-outline-success">
+                                                <span class="tf-icons bx bx-plus bx-sm"></span>
+                                            </button>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                                <span class="input-group-text">&nbsp;</span>
+                                                <input type="text" id="deskripsiPenugasan5" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..." value="Sebagai pemimpin dan pembuat kebijakan instansi">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                        Batal
+                                    </button>
+                                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                                        data-bs-dismiss="modal">Simpan</button>
                                 </div>
                             </div>
                         </div>
@@ -1137,7 +1493,7 @@
                             },
                             {
                                 value: 4,
-                                name: "Kepala Instansi",
+                                name: "Kepala Sekolah",
                                 avatar: "../assets/img/icons/thumbnail/icon-star-danger.jpg",
                                 email: "Sebagai pemimpin dan pembuat kebijakan instansi"
                             }
@@ -1161,26 +1517,26 @@
                         </div>
                         </tag>
                         `;
-                                            }
+                        }
 
-                                            function suggestionItemTemplate(tagData) {
-                                                return `
+                        function suggestionItemTemplate(tagData) {
+                            return `
                         <div ${this.getAttributes(tagData)}
                         class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
                         tabindex="0"
                         role="option"
                         >
                         ${tagData.avatar ?
-                                                        `<div class='tagify__dropdown__item__avatar-wrap'>
+                                    `<div class='tagify__dropdown__item__avatar-wrap'>
                         <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
                         </div>`
-                                                        : ''
-                                                    }
+                                    : ''
+                                }
                         <strong>${tagData.name}</strong>
                         <span>${tagData.email}</span>
                         </div>
                         `;
-                                            }
+                        }
 
                         // initialize Tagify on the above input node reference
                         let TagifyUserListselectPenugasan = new Tagify(TagifyUserListElselectPenugasan, {
@@ -1240,4 +1596,4 @@
 
 </body>
 
-</html> 
+</html>
