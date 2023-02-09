@@ -35,6 +35,9 @@
 
     <script src="../assets/js/config.js"></script>
 
+    <link rel="stylesheet" href="../assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/tagify/tagify.css" />
+
     <!-- Tambahan -->
     <link rel="stylesheet" href="../libs/select/select.css" />
     <link rel="stylesheet" href="../assets/css/page-instansi.css">
@@ -250,7 +253,7 @@
                                         <a class="dropdown-item" href="#">
                                             <span
                                                 class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Guru</span>
+                                            <span class="align-middle pb-2">Pegawai</span>
                                         </a>
                                     </li>
                                     <li>
@@ -334,7 +337,8 @@
                                                     </a>
                                                 </div>
 
-                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold">Semua Peran, Semua Penugasan</span>
+                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold">Semua
+                                                        Peran, Semua Penugasan</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -407,8 +411,10 @@
                                             <div class="row">
                                                 <div class="col-12 col-md-5 pb-3">
                                                     <div class="input-group">
-                                                        <span class="input-group-text"><i class="tf-icons bx bx-search"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Cari nama pegawai...">
+                                                        <span class="input-group-text"><i
+                                                                class="tf-icons bx bx-search"></i></span>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Cari nama pegawai...">
                                                     </div>
                                                 </div>
                                                 <div class="col-6 col-md-4 pb-3 ms-auto">
@@ -420,7 +426,8 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-6 col-md-3 ms-auto">
-                                                    <a type="button" class="btn btn-primary text-white w-100" data-bs-toggle="modal" data-bs-target="#modal-tambah-pegawai">
+                                                    <a type="button" class="btn btn-primary text-white w-100"
+                                                        data-bs-toggle="modal" data-bs-target="#modal-tambah-pegawai">
                                                         <i class="bx bx-plus"></i> Pegawai
                                                     </a>
                                                 </div>
@@ -441,7 +448,8 @@
                                             <tbody class="table-border-bottom-0">
                                                 <tr>
                                                     <td>
-                                                        <a class="d-flex mt-1 text-secondary" href="pegawai-detail.html">
+                                                        <a class="d-flex mt-1 text-secondary"
+                                                            href="pegawai-detail.html">
                                                             <img src="../assets/img/avatars/default.jpg" alt=""
                                                                 class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
                                                             <div>
@@ -450,7 +458,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td><b>Guru</b>, Guru Mapel
+                                                    <td><b>Pegawai</b>, Guru Mapel
                                                     </td>
                                                     <td><span class="badge bg-label-danger me-1">Tidak Aktif</span></td>
                                                     </td>
@@ -465,7 +473,8 @@
                                                                 <span class="visually-hidden"></span>
                                                             </button>
                                                             <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="pegawai-detail.html"><i
+                                                                <li><a class="dropdown-item"
+                                                                        href="pegawai-detail.html"><i
                                                                             class="bx bx-user me-1"></i> Lihat
                                                                         Detail</a></a></li>
                                                                 <li>
@@ -483,7 +492,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a class="d-flex mt-1 text-secondary" href="pegawai-detail.html">
+                                                        <a class="d-flex mt-1 text-secondary"
+                                                            href="pegawai-detail.html">
                                                             <img src="../assets/img/avatars/muslim-1.jpg" alt=""
                                                                 class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
                                                             <div>
@@ -492,7 +502,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td><b>Operator</b>, Admin TU dan Bendahara
+                                                    <td><b>Pegawai, Operator</b>, Admin TU, Bendahara
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
                                                     </td>
@@ -507,7 +517,8 @@
                                                                 <span class="visually-hidden"></span>
                                                             </button>
                                                             <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="pegawai-detail.html"><i
+                                                                <li><a class="dropdown-item"
+                                                                        href="pegawai-detail.html"><i
                                                                             class="bx bx-user me-1"></i> Lihat
                                                                         Detail</a></a></li>
                                                                 <li>
@@ -525,7 +536,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a class="d-flex mt-1 text-secondary" href="pegawai-detail.html">
+                                                        <a class="d-flex mt-1 text-secondary"
+                                                            href="pegawai-detail.html">
                                                             <img src="../assets/img/avatars/muslimah-1.png" alt=""
                                                                 class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
                                                             <div>
@@ -534,7 +546,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td><b>Guru</b>, Guru Mapel dan Sekretaris
+                                                    <td><b>Pegawai</b>, Guru Mapel, Sekretaris
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
                                                     </td>
@@ -549,7 +561,8 @@
                                                                 <span class="visually-hidden"></span>
                                                             </button>
                                                             <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="pegawai-detail.html"><i
+                                                                <li><a class="dropdown-item"
+                                                                        href="pegawai-detail.html"><i
                                                                             class="bx bx-user me-1"></i> Lihat
                                                                         Detail</a></a></li>
                                                                 <li>
@@ -567,7 +580,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a class="d-flex mt-1 text-secondary" href="pegawai-detail.html">
+                                                        <a class="d-flex mt-1 text-secondary"
+                                                            href="pegawai-detail.html">
                                                             <img src="../assets/img/avatars/muslim-2.jpg" alt=""
                                                                 class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
                                                             <div>
@@ -576,7 +590,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td><b>Pengawas dan Guru</b>, Guru Mapel dan Ketua Instansi
+                                                    <td><b> Pegawai, Pengawas</b>, Guru Mapel, Ketua Instansi
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
                                                     </td>
@@ -591,7 +605,8 @@
                                                                 <span class="visually-hidden"></span>
                                                             </button>
                                                             <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="pegawai-detail.html"><i
+                                                                <li><a class="dropdown-item"
+                                                                        href="pegawai-detail.html"><i
                                                                             class="bx bx-user me-1"></i> Lihat
                                                                         Detail</a></a></li>
                                                                 <li>
@@ -609,7 +624,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a class="d-flex mt-1 text-secondary" href="pegawai-detail.html">
+                                                        <a class="d-flex mt-1 text-secondary"
+                                                            href="pegawai-detail.html">
                                                             <img src="../assets/img/avatars/muslimah-2.png" alt=""
                                                                 class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
                                                             <div>
@@ -618,7 +634,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td><b>Pengawas dan Guru</b>, Guru Mapel dan Bendahara
+                                                    <td><b>Pegawai, Pengawas</b>, Guru Mapel, Bendahara
                                                     </td>
                                                     <td><span class="badge bg-label-danger me-1">Tidak Aktif</span></td>
                                                     </td>
@@ -633,7 +649,8 @@
                                                                 <span class="visually-hidden"></span>
                                                             </button>
                                                             <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="pegawai-detail.html"><i
+                                                                <li><a class="dropdown-item"
+                                                                        href="pegawai-detail.html"><i
                                                                             class="bx bx-user me-1"></i> Lihat
                                                                         Detail</a></a></li>
                                                                 <li>
@@ -699,18 +716,34 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-12 col-md-12 mb-3">
-                                            <label for="nameBasic" class="form-label">Nama Lengkap <b
+                                            <label for="nameBasic" class="form-label">Nama Lengkap Pegawai <b
                                                     class="text-danger">*</b></label>
                                             <input type="text" id="nameBasic" class="form-control"
                                                 placeholder="Tuliskan nama lengkap pegawai" required />
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">ID pegawai</label>
+                                            <label for="nameBasic" class="form-label">ID pegawai <b
+                                                    class="text-danger">*</b></label>
                                             <input class="form-control" type="text" id="id-pegawai"
                                                 placeholder="Digenerate oleh sistem" disabled value="2081029311">
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">Nama Pengguna</label>
+                                            <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
+                                                    class="text-danger">*</b></label>
+                                            <div class="form-check form-check-inline form-check-primary mt-2">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio1" value="option1" checked="">
+                                                <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio2" value="option2">
+                                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <label for="nameBasic" class="form-label">Nama Pengguna (opsi masuk
+                                                apps)</label>
                                             <input class="form-control" type="text" id="nama-pengguna"
                                                 placeholder="Masukkan Nama Pengguna">
                                         </div>
@@ -725,28 +758,16 @@
                                                         class="bx bx-hide"></i></span>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <div class="row">
-                                                <div class="col-12 col-md-6 mb-3">
-                                                    <label for="selectTingkat" class="form-label">Peran</label>
-                                                    <select id="selectTingkat" class="form-select form-select-md ">
-                                                        <option value="1" selected>Guru</option>
-                                                        <option value="2">Operator</option>
-                                                        <option value="3">Pengawas</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-12 col-md-6 mb-3">
-                                                    <label for="selectNamaKelas" class="form-label">Penugasan</label>
-                                                    <select id="selectNamaKelas" class="form-select form-select-md ">
-                                                        <option value="0">...</option>
-                                                        <option value="1">Guru Mapel</option>
-                                                        <option value="2">Admin TU</option>
-                                                        <option value="3">Bendahara</option>
-                                                        <option value="4">Sekretaris</option>
-                                                        <option value="5">Kepala Instansi</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="selectPeran" class="form-label">Pilih Peran <b
+                                                    class="text-danger">*</b></label>
+                                            <input id="selectPeran" name="selectPeran" class="form-control mb-3"
+                                                placeholder="pilih peran ..." />
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
+                                            <input id="selectPenugasan" name="selectPenugasan" class="form-control mb-3"
+                                                placeholder="pilih penugasan ..." />
                                         </div>
                                         <div class="mb-3 col-12">
                                             <label for="nameBasic" class="form-label">Pilih Status</label> <br>
@@ -794,7 +815,7 @@
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="selectPenugasan" class="form-label">Pilih Peran</label>
                                             <select id="selectPenugasan" class="form-select form-select-md ">
-                                                <option value="1">Guru</option>
+                                                <option value="1">Pegawai</option>
                                                 <option value="2">Operator</option>
                                                 <option value="2">Pengawas</option>
                                                 <option value="3" selected>Semua Peran</option>
@@ -818,7 +839,7 @@
                                         Batal
                                     </button>
                                     <button type="button" class="btn btn-primary" onclick="sweet()"
-                                    data-bs-dismiss="modal">Terakpan Filter</button>
+                                        data-bs-dismiss="modal">Terakpan Filter</button>
                                 </div>
                             </div>
                         </div>
@@ -843,8 +864,9 @@
                                                 <div class="d-flex flex-column ps-1">
                                                     <span class="text-black">Apakah Anda yakin pegawai <span
                                                             class="fw-semibold">Bani Huda </span>
-                                                        yang memiliki penugasan sebagai <span
-                                                        class="fw-semibold">Admin TU dan Bendahara</span> akan di <span class="fw-semibold"> Non Aktifkan </span> dari
+                                                        yang memiliki penugasan sebagai <span class="fw-semibold">Admin
+                                                            TU dan Bendahara</span> akan di <span class="fw-semibold">
+                                                            Non Aktifkan </span> dari
                                                         sistem?
                                                 </div>
                                             </div>
@@ -888,9 +910,10 @@
                                                         class="bx bx-question-mark bx-sm pt-1"></i></span>
                                                 <div class="d-flex flex-column ps-1">
                                                     <span class="text-black">Apakah Anda yakin pegawai <span
-                                                            class="fw-semibold">Faeshal Ramdhan</span> 
-                                                            yang memiliki penugasan sebagai <span
-                                                            class="fw-semibold">Guru Mapel </span> akan di <span class="fw-semibold"> Aktifkan </span> pada
+                                                            class="fw-semibold">Faeshal Ramdhan</span>
+                                                        yang memiliki penugasan sebagai <span class="fw-semibold">Guru
+                                                            Mapel </span> akan di <span class="fw-semibold"> Aktifkan
+                                                        </span> pada
                                                         sistem?
                                                 </div>
                                             </div>
@@ -936,6 +959,9 @@
                     <!-- tambahan -->
                     <script src="../libs/select/select.js"></script>
 
+                    <script src="../assets/vendor/libs/select2/select2.js"></script>
+                    <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+
                     <script>
                         function sweet() {
                             swal({
@@ -959,6 +985,259 @@
                         });
                     </script>
 
+                    <script>
+                        const TagifyUserListElselectPeran = document.querySelector("#selectPeran");
+                        const usersListselectPeran = [
+                            {
+                                value: 1,
+                                name: "Pengawas",
+                                avatar: "../assets/img/icons/thumbnail/icon-user-danger.jpg",
+                                email: "Melihat semua data tanpa bisa mengubah data tersebut"
+                            },
+                            {
+                                value: 2,
+                                name: "Operator",
+                                avatar: "../assets/img/icons/thumbnail/icon-user-warning.jpg",
+                                email: "Mengelola semua data"
+                            },
+                            {
+                                value: 3,
+                                name: "Pegawai",
+                                avatar: "../assets/img/icons/thumbnail/icon-user-info.jpg",
+                                email: "Mendapatkan info kepegawaian pribadi"
+                            },
+                            {
+                                value: 4,
+                                name: "Siswa",
+                                avatar: "../assets/img/icons/thumbnail/icon-user-primary.jpg",
+                                email: "Mendapatkan info kesiswaan pribadi"
+                            }
+                        ];
+
+                        function tagTemplate(tagData) {
+                            return `
+                        <tag title="${tagData.title || tagData.email}"
+                        contenteditable='false'
+                        spellcheck='false'
+                        tabIndex="-1"
+                        class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+                        ${this.getAttributes(tagData)}
+                        >
+                        <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+                        <div>
+                        <div class='tagify__tag__avatar-wrap'>
+                        <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                        </div>
+                        <span class='tagify__tag-text'>${tagData.name}</span>
+                        </div>
+                        </tag>
+                        `;
+                        }
+
+                        function suggestionItemTemplate(tagData) {
+                            return `
+                        <div ${this.getAttributes(tagData)}
+                        class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+                        tabindex="0"
+                        role="option"
+                        >
+                        ${tagData.avatar ?
+                                    `<div class='tagify__dropdown__item__avatar-wrap'>
+                        <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                        </div>`
+                                    : ''
+                                }
+                        <strong>${tagData.name}</strong>
+                        <span>${tagData.email}</span>
+                        </div>
+                        `;
+                        }
+
+                        // initialize Tagify on the above input node reference
+                        let TagifyUserListselectPeran = new Tagify(TagifyUserListElselectPeran, {
+                            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+                            enforceWhitelist: true,
+                            skipInvalid: true, // do not remporarily add invalid tags
+                            dropdown: {
+                                closeOnSelect: false,
+                                enabled: 0,
+                                classname: "users-list",
+                                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+                            },
+                            templates: {
+                                tag: tagTemplate,
+                                dropdownItem: suggestionItemTemplate
+                            },
+                            whitelist: usersListselectPeran
+                        });
+
+                        TagifyUserListselectPeran.on("dropdown:show dropdown:updated", onDropdownShow);
+                        TagifyUserListselectPeran.on("dropdown:select", onSelectSuggestion);
+
+                        let addAllSuggestionsElselectPeran;
+
+                        function onDropdownShow(e) {
+                            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+                            if (TagifyUserListselectPeran.suggestedListItems.length > 1) {
+                                addAllSuggestionsElselectPeran = getAddAllSuggestionsElselectPeran();
+
+                                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                                dropdownContentEl.insertBefore(addAllSuggestionsElselectPeran, dropdownContentEl.firstChild);
+                            }
+                        }
+
+                        function onSelectSuggestion(e) {
+                            if (e.detail.elm == addAllSuggestionsElselectPeran) TagifyUserListselectPeran.dropdown.selectAll.call(TagifyUserListselectPeran);
+                        }
+
+                        // create an "add all" custom suggestion element every time the dropdown changes
+
+                        // function getAddAllSuggestionsElselectPeran() {
+                        //     // suggestions items should be based on "dropdownItem" template
+                        //     return TagifyUserListselectPeran.parseTemplate("dropdownItem", [
+                        //         {
+                        //             class: "addAll",
+                        //             name: "Tambahkan semua",
+                        //             email:
+                        //                 TagifyUserListselectPeran.settings.whitelist.reduce(function (remainingSuggestions, item) {
+                        //                     return TagifyUserListselectPeran.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+                        //                 }, 0) + " Siswa"
+                        //         }
+                        //     ]);
+                        // }
+                    </script>
+
+                    <script>
+                        const TagifyUserListElselectPenugasan = document.querySelector("#selectPenugasan");
+                        const usersListselectPenugasan = [
+                            {
+                                value: 1,
+                                name: "Guru Mapel",
+                                avatar: "../assets/img/icons/thumbnail/icon-star-primary.jpg",
+                                email: "Guru pengampu mata pelajaran tertentu"
+                            },
+                            {
+                                value: 2,
+                                name: "Admin TU",
+                                avatar: "../assets/img/icons/thumbnail/icon-star-warning.jpg",
+                                email: "Petugas administrasi dan pengelolaan dat instansi"
+                            },
+                            {
+                                value: 3,
+                                name: "Bendahara",
+                                avatar: "../assets/img/icons/thumbnail/icon-star-info.jpg",
+                                email: "Petugas pengelolaan keuangan instansi"
+                            },
+                            {
+                                value: 3,
+                                name: "Sekretaris",
+                                avatar: "../assets/img/icons/thumbnail/icon-star-info.jpg",
+                                email: "Petugas pengelolan informasi dan kebijkan instansi"
+                            },
+                            {
+                                value: 4,
+                                name: "Kepala Instansi",
+                                avatar: "../assets/img/icons/thumbnail/icon-star-danger.jpg",
+                                email: "Sebagai pemimpin dan pembuat kebijakan instansi"
+                            }
+                        ];
+
+                        function tagTemplate(tagData) {
+                            return `
+                        <tag title="${tagData.title || tagData.email}"
+                        contenteditable='false'
+                        spellcheck='false'
+                        tabIndex="-1"
+                        class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+                        ${this.getAttributes(tagData)}
+                        >
+                        <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+                        <div>
+                        <div class='tagify__tag__avatar-wrap'>
+                        <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                        </div>
+                        <span class='tagify__tag-text'>${tagData.name}</span>
+                        </div>
+                        </tag>
+                        `;
+                                            }
+
+                                            function suggestionItemTemplate(tagData) {
+                                                return `
+                        <div ${this.getAttributes(tagData)}
+                        class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+                        tabindex="0"
+                        role="option"
+                        >
+                        ${tagData.avatar ?
+                                                        `<div class='tagify__dropdown__item__avatar-wrap'>
+                        <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                        </div>`
+                                                        : ''
+                                                    }
+                        <strong>${tagData.name}</strong>
+                        <span>${tagData.email}</span>
+                        </div>
+                        `;
+                                            }
+
+                        // initialize Tagify on the above input node reference
+                        let TagifyUserListselectPenugasan = new Tagify(TagifyUserListElselectPenugasan, {
+                            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+                            enforceWhitelist: true,
+                            skipInvalid: true, // do not remporarily add invalid tags
+                            dropdown: {
+                                closeOnSelect: false,
+                                enabled: 0,
+                                classname: "users-list",
+                                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+                            },
+                            templates: {
+                                tag: tagTemplate,
+                                dropdownItem: suggestionItemTemplate
+                            },
+                            whitelist: usersListselectPenugasan
+                        });
+
+                        TagifyUserListselectPenugasan.on("dropdown:show dropdown:updated", onDropdownShow);
+                        TagifyUserListselectPenugasan.on("dropdown:select", onSelectSuggestion);
+
+                        let addAllSuggestionsElselectPenugasan;
+
+                        function onDropdownShow(e) {
+                            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+                            if (TagifyUserListselectPenugasan.suggestedListItems.length > 1) {
+                                addAllSuggestionsElselectPenugasan = getAddAllSuggestionsElselectPenugasan();
+
+                                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                                dropdownContentEl.insertBefore(addAllSuggestionsElselectPenugasan, dropdownContentEl.firstChild);
+                            }
+                        }
+
+                        function onSelectSuggestion(e) {
+                            if (e.detail.elm == addAllSuggestionsElselectPenugasan) TagifyUserListselectPenugasan.dropdown.selectAll.call(TagifyUserListselectPenugasan);
+                        }
+
+    // create an "add all" custom suggestion element every time the dropdown changes
+
+    // function getAddAllSuggestionsElselectselectPenugasan() {
+    //     // suggestions items should be based on "dropdownItem" template
+    //     return TagifyUserListselectPenugasan.parseTemplate("dropdownItem", [
+    //         {
+    //             class: "addAll",
+    //             name: "Tambahkan semua",
+    //             email:
+    //                 TagifyUserListselectPenugasan.settings.whitelist.reduce(function (remainingSuggestions, item) {
+    //                     return TagifyUserListselectPenugasan.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+    //                 }, 0) + " Siswa"
+    //         }
+    //     ]);
+    // }
+                    </script>
+
+
 </body>
 
-</html>''
+</html>
