@@ -362,7 +362,8 @@
                                                         <li>
                                                         </li>
                                                         <li><a class="dropdown-item" data-bs-toggle="modal"
-                                                                data-bs-target="#modal-tambah-master-peran-penugasan">Ubah /
+                                                                data-bs-target="#modal-tambah-master-peran-penugasan">Ubah
+                                                                /
                                                                 Tambah</a>
                                                         </li>
                                                     </ul>
@@ -1104,184 +1105,168 @@
                     </div>
 
                     <!-- Modal Tambah Master Peran dan Penugasan-->
-                    <div class="modal fade" id="modal-tambah-master-peran-penugasan" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal fade" id="modal-tambah-master-peran-penugasan" tabindex="-1"
+                        data-bs-backdrop="static">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Master Data Peran dan Penugasan</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Master Data Peran dan
+                                        Penugasan</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    
+
                                     <label class="form-label text-warning ">Daftar Peran</label>
-                                    <div class="row" class="form-group">
+                                    <div class="row form-group mb-3 mb-sm-0">
                                         <div class="col-12 col-sm-4 mb-3">
                                             <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text"><i class="bx bxs-lock text-seccondary"></i></span>
-                                                <input type="text" id="peran1" class="form-control"
+                                                <span class="input-group-text"><i
+                                                        class="bx bxs-lock text-muted"></i></span>
+                                                <input type="text" id="peran1" class="form-control fw-bold"
                                                     placeholder="Nama peran ..." value="Pegawai" required>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-8 mb-3">
                                             <input type="text" id="deskrispsiPeran1" class="form-control"
-                                                    placeholder="Deskripsi Peran ..." value="Mendapatkan info kepegawaian pribadi">
+                                                placeholder="Deskripsi Peran ..."
+                                                value="Mendapatkan info kepegawaian pribadi">
                                         </div>
                                     </div>
-                                    <div class="row" class="form-group">
+                                    <div class="row form-group mb-3 mb-sm-0">
                                         <div class="col-12 col-sm-4 mb-3">
                                             <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text"><i class="bx bxs-lock text-seccondary"></i></span>
-                                                <input type="text" id="peran1" class="form-control"
+                                                <span class="input-group-text"><i
+                                                        class="bx bxs-lock text-muted"></i></span>
+                                                <input type="text" id="peran1" class="form-control fw-bold"
                                                     placeholder="Nama peran ..." value="Operator" required>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-8 mb-3">
                                             <input type="text" id="deskrispsiPeran1" class="form-control"
-                                                    placeholder="Deskripsi Peran ..." value="Mengelola semua data">
+                                                placeholder="Deskripsi Peran ..." value="Mengelola semua data">
                                         </div>
                                     </div>
-                                    <div class="row" class="form-group">
+
+                                    <div class="row form-group mb-3 mb-sm-0">
                                         <div class="col-12 col-sm-4 mb-3">
                                             <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text"><i class="bx bxs-lock text-seccondary"></i></span>
-                                                <input type="text" id="peran1" class="form-control"
+                                                <span class="input-group-text"><i
+                                                        class="bx bxs-lock text-muted"></i></span>
+                                                <input type="text" id="peran1" class="form-control fw-bold"
                                                     placeholder="Nama peran ..." value="Pengawas" required>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-8 mb-3">
                                             <input type="text" id="deskrispsiPeran1" class="form-control"
-                                                    placeholder="Deskripsi Peran ..." value="Melihat semua data tanpa bisa mengubah data tersebut">
+                                                placeholder="Deskripsi Peran ..."
+                                                value="Melihat semua data tanpa bisa mengubah data tersebut">
                                         </div>
                                     </div>
 
                                     <label class="form-label text-primary mt-4">Daftar Penugasan</label>
-                                    <div class="row" class="form-group">
-                                        <div class="col-12 col-sm-9 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
+                                    
+                                    <div class="row form-group mb-3 mb-sm-0">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <div class="input-group input-group-merge" name="namaPenugasan1">
                                                 <span class="input-group-text">1</span>
-                                                <input type="text" id="penugasan1" class="form-control"
+                                                <input type="text" id="penugasan1" class="form-control fw-bold"
                                                     placeholder="Nama penugasan ..." value="Guru Mapel">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
-                                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                <span class="tf-icons bx bx-x bx-sm"></span>
-                                            </button>
-                                            <button type="button"
-                                                class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                                            </button>
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text">&nbsp;</span>
-                                                <input type="text" id="deskripsiPenugasan1" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..." value="Guru pengampu mata pelajaran">
+                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                                            <div class="input-group input-group-merge" name="deskripsiPenugasan1">
+                                                <input type="text" id="penugasan1" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..."
+                                                    value="Guru pengampu mata pelajaran">
+                                                <button class="btn btn-outline-danger" type="button"
+                                                    id="hapusPenugasan1"><i class="bx bx-trash"></i></button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row" class="form-group">
-                                        <div class="col-12 col-sm-9 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
+
+                                    <div class="row form-group mb-3 mb-sm-0">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <div class="input-group input-group-merge" name="namaPenugasan2">
                                                 <span class="input-group-text">2</span>
-                                                <input type="text" id="penugasan2" class="form-control"
+                                                <input type="text" id="penugasan2" class="form-control fw-bold"
                                                     placeholder="Nama penugasan ..." value="Admin TU">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
-                                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                <span class="tf-icons bx bx-x bx-sm"></span>
-                                            </button>
-                                            <button type="button"
-                                                class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                                            </button>
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text">&nbsp;</span>
-                                                <input type="text" id="deskripsiPenugasan2" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..." value="Petugas administrasi dan pengelolaan data instansi">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" class="form-group">
-                                        <div class="col-12 col-sm-9 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text">3</span>
-                                                <input type="text" id="penugasan3" class="form-control"
-                                                    placeholder="Nama penugasan ..." value="Bendahara">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
-                                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                <span class="tf-icons bx bx-x bx-sm"></span>
-                                            </button>
-                                            <button type="button"
-                                                class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                                            </button>
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text">&nbsp;</span>
-                                                <input type="text" id="deskripsiPenugasan3" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..." value="Petugas pengelolaan data instansi">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" class="form-group">
-                                        <div class="col-12 col-sm-9 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text">4</span>
-                                                <input type="text" id="penugasan4" class="form-control"
-                                                    placeholder="Nama penugasan ..." value="Sekretaris">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
-                                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                <span class="tf-icons bx bx-x bx-sm"></span>
-                                            </button>
-                                            <button type="button"
-                                                class="btn btn-icon ms-2 me-1 btn-outline-success d-none">
-                                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                                            </button>
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text">&nbsp;</span>
-                                                <input type="text" id="deskripsiPenugasan4" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..." value="Petugas pengelolaan informasi dan kebijakan instansi">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" class="form-group">
-                                        <div class="col-12 col-sm-9 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text">5</span>
-                                                <input type="text" id="penugasan5" class="form-control"
-                                                    placeholder="Nama penugasan ..." value="Kepala Sekolah">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-3 d-flex justify-content-between">
-                                            <button type="button" class="btn btn-icon btn-outline-danger ">
-                                                <span class="tf-icons bx bx-x bx-sm"></span>
-                                            </button>
-                                            <button type="button"
-                                                class="btn btn-icon ms-2 me-1 btn-outline-success">
-                                                <span class="tf-icons bx bx-plus bx-sm"></span>
-                                            </button>
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <div class="input-group input-group-merge" name="item-tagihan">
-                                                <span class="input-group-text">&nbsp;</span>
-                                                <input type="text" id="deskripsiPenugasan5" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..." value="Sebagai pemimpin dan pembuat kebijakan instansi">
+                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                                            <div class="input-group input-group-merge" name="deskripsiPenugasan2">
+                                                <input type="text" id="penugasan2" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..."
+                                                    value="Petugas administrasi dan pengelolaan data instansi">
+                                                <button class="btn btn-outline-danger" type="button"
+                                                    id="hapusPenugasan2"><i class="bx bx-trash"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                     
+                                    <div class="row form-group mb-3 mb-sm-0">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <div class="input-group input-group-merge" name="namaPenugasan3">
+                                                <span class="input-group-text">3</span>
+                                                <input type="text" id="penugasan3" class="form-control fw-bold"
+                                                    placeholder="Nama penugasan ..." value="Bendahara">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                                            <div class="input-group input-group-merge" name="deskripsiPenugasan3">
+                                                <input type="text" id="penugasan3" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..."
+                                                    value="Petugas pengelolaan data instansi">
+                                                <button class="btn btn-outline-danger" type="button"
+                                                    id="hapusPenugasan3"><i class="bx bx-trash"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group mb-3 mb-sm-0">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <div class="input-group input-group-merge" name="namaPenugasan4">
+                                                <span class="input-group-text">4</span>
+                                                <input type="text" id="penugasan4" class="form-control fw-bold"
+                                                    placeholder="Nama penugasan ..." value="Sekretaris">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                                            <div class="input-group input-group-merge" name="deskripsiPenugasan4">
+                                                <input type="text" id="penugasan4" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..."
+                                                    value="Petugas pengelolaan informasi dan kebijakan instansi">
+                                                <button class="btn btn-outline-danger" type="button"
+                                                    id="hapusPenugasan4"><i class="bx bx-trash"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group mb-3">
+                                        <div class="col-12 col-sm-4 mb-3">
+                                            <div class="input-group input-group-merge" name="namaPenugasan5">
+                                                <span class="input-group-text">5</span>
+                                                <input type="text" id="penugasan5" class="form-control fw-bold"
+                                                    placeholder="Nama penugasan ..." value="Kepala Sekolah">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-8 mb-3">
+                                            <div class="input-group input-group-merge" name="deskripsiPenugasan5">
+                                                <input type="text" id="penugasan5" class="form-control"
+                                                    placeholder="Deskripsi penugasan ..."
+                                                    value="Sebagai pemimpin dan pembuat kebijkan instansi">
+                                                <button class="btn btn-outline-danger" type="button"
+                                                    id="hapusPenugasan5"><i class="bx bx-trash"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <button type="button" class="btn btn-outline-success mb-3"><i class="bx bx-plus mt-2"></i> Penugasan</button>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
