@@ -39,6 +39,9 @@
     <link rel="stylesheet" href="../libs/select/select.css" />
     <link rel="stylesheet" href="../assets/css/page-instansi.css">
 
+    <link rel="stylesheet" href="../assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/tagify/tagify.css" />
+
     <style>
         .bg-pattern-pegawai {
             background-color: #75FA74;
@@ -1800,12 +1803,12 @@
                                 avatar: "../assets/img/icons/thumbnail/icon-user-info.jpg",
                                 email: "Mendapatkan info kepegawaian pribadi"
                             },
-                            {
-                                value: 4,
-                                name: "Siswa",
-                                avatar: "../assets/img/icons/thumbnail/icon-user-primary.jpg",
-                                email: "Mendapatkan info kesiswaan pribadi"
-                            }
+                            // {
+                            //     value: 4,
+                            //     name: "Siswa",
+                            //     avatar: "../assets/img/icons/thumbnail/icon-user-primary.jpg",
+                            //     email: "Mendapatkan info kesiswaan pribadi"
+                            // }
                         ];
 
                         function tagTemplate(tagData) {
@@ -1836,11 +1839,11 @@
                         role="option"
                         >
                         ${tagData.avatar ?
-                                                        `<div class='tagify__dropdown__item__avatar-wrap'>
+                                    `<div class='tagify__dropdown__item__avatar-wrap'>
                         <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
                         </div>`
-                                                        : ''
-                                                    }
+                                    : ''
+                                }
                         <strong>${tagData.name}</strong>
                         <span>${tagData.email}</span>
                         </div>
@@ -1965,16 +1968,16 @@
                         role="option"
                         >
                         ${tagData.avatar ?
-                                                        `<div class='tagify__dropdown__item__avatar-wrap'>
+                                    `<div class='tagify__dropdown__item__avatar-wrap'>
                         <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
                         </div>`
-                                                        : ''
-                                                    }
+                                    : ''
+                                }
                         <strong>${tagData.name}</strong>
                         <span>${tagData.email}</span>
                         </div>
                         `;
-                                            }
+                        }
 
                         // initialize Tagify on the above input node reference
                         let TagifyUserListselectPenugasan = new Tagify(TagifyUserListElselectPenugasan, {
