@@ -51,7 +51,7 @@
 </head>
 
 <body>
-    
+
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
 
@@ -741,15 +741,12 @@
                                     <span class="text-black">Silakan lakukan pembayaran ke rekening atas nama SMPIQU Al
                                         Bahjah Blitar. <br> Bank <span class="fw-semibold">BSI</span> No. Rekening<span
                                             class="fw-semibold"> 23847234 </span>
-
-                                        <div class="d-none">
-                                            <input class="form-control " id="no-rekening" type="text"
-                                                value="23847234" />
-                                        </div>
+                                        <input class="" id="no-rek" type="text" style="opacity: 0; width: 1%;" readonly
+                                            value="23847234" />
                                         <br>
-                                        <button class="clipboard-btn btn btn-outline-primary btn-sm mt-2" id="testToast"
-                                            data-clipboard-action="copy" data-clipboard-target="#no-rekening"><i
-                                                class="bx bx-copy">&nbsp;</i> Salin No
+                                        <button class="clipboard-btn btn btn-primary btn-sm mt-2" id="testToast"
+                                            data-clipboard-action="copy" data-clipboard-target="#no-rekening"
+                                            onclick="copyNoRekening()"><i class="bx bx-copy">&nbsp;</i> Salin No
                                             Rekening</button>
                                     </span>
                                 </div>
@@ -853,6 +850,24 @@
                 toast.show()
             })
         }
+    </script>
+
+    <script>
+        function copyNoRekening() {
+            /* Get the text field */
+            let copyText = document.getElementById("no-rek");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            // alert(copyText.value + " Berhasil disalin");
+        }
+
     </script>
 
 </body>
