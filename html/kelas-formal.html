@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
+    <link rel="stylesheet" href="../assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/tagify/tagify.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+
     <script src="../assets/vendor/js/helpers.js"></script>
 
     <script src="../assets/js/config.js"></script>
@@ -1057,7 +1061,7 @@
 
         <!-- Modal Penempatan Siswa-->
         <div class="modal fade" id="modal-penempatan-siswa" tabindex="-1" data-bs-backdrop="static">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel1">Penempatan Siswa pada Kelas Formal
@@ -1076,7 +1080,9 @@
                                         </span>
                                     </div>
                                 </div>
+                            </div>
 
+                            <div class="col-12 col-md-6">
                                 <div class="nav-align-top mb">
                                     <ul class="nav nav-pills mx-auto" role="tablist">
                                         <li class="nav-item">
@@ -1092,6 +1098,19 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div class="tab-pane fade show active" id="perKelas" role="tabpanel">
+                                            <div class="mb-3">
+                                                <label for="selectpickerBasic" class="form-label">Pilih kelas asal</label>
+                                                <select id="selectpickerBasic" class="selectpicker w-100" data-style="btn-default">
+                                                  <option>Kelas I - A</option>
+                                                  <option>Kelas I - B</option>
+                                                  <option>Kelas I - C</option>
+                                                  <option>Kelas II - A</option>
+                                                  <option>Kelas II - B</option>
+                                                  <option>Kelas III - A</option>
+                                                  <option>Kelas III - B</option>
+                                                  <option>Kelas III - C</option>
+                                                </select>
+                                              </div>
                                             <div>
                                                 <label for="kelasSelect" class="form-label">berdasarkan kelas</label>
                                                 <input id="kelasSelect" name="kelasSelect" class="form-control"
@@ -1150,12 +1169,17 @@
 
         <script src="../assets/vendor/libs/select2/select2.js"></script>
         <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+        <script src="../assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script> 
 
         <script src="../assets/js/dashboards-analytics.js"></script>
 
         <script async defer src="https://buttons.github.io/buttons.js"></script>
 
         <script src="../assets/js/sweetalert.min.js"></script>
+
+        <script>
+            $(".selectpicker").selectpicker();
+        </script>
 
         <script>
             function sweet() {
@@ -1166,6 +1190,506 @@
                     button: false,
                     timer: 2000,
                 });
+            }
+        </script>
+
+        <script>
+            const TagifyCustomListSuggestionEl = document.querySelector("#kelasSelect");
+
+            const whitelist = [
+                "Kelas I-A",
+                "Kelas I-B",
+                "Kelas I-C",
+                "Kelas II-A",
+                "Kelas II-B",
+                "Kelas II-C",
+                "Kelas III-A",
+                "Kelas III-B",
+                "Kelas III-C",
+
+            ];
+            // List
+            let TagifyCustomListSuggestion = new Tagify(TagifyCustomListSuggestionEl, {
+                whitelist: whitelist,
+                dropdown: {
+                    classname: "text-black", // Custom inline class
+                    enabled: 0,
+                    closeOnSelect: false
+                }
+            });
+        </script>
+
+        <script>
+            const TagifyUserListEl = document.querySelector("#siswaKelas1");
+            const usersList = [
+                {
+                    value: 1,
+                    name: "Nur Hasanah",
+                    avatar: "https://images.tokopedia.net/img/cache/250-square/hDjmkQ/2021/5/31/c4580a9d-99bc-428e-b0ca-9141b73f02c1.jpg",
+                    email: "Kelas I - A | 20182039812"
+                },
+                {
+                    value: 2,
+                    name: "Abbas Hamzah",
+                    avatar: "https://i.pinimg.com/474x/e5/66/15/e566150dfdb429ed3ec39002e1f92fda.jpg",
+                    email: "Kelas I - B | 20182039432"
+                },
+                {
+                    value: 3,
+                    name: "Sulthan Sayyaf Arshaq",
+                    avatar: "https://i.pinimg.com/564x/f1/64/1c/f1641c26e6b3242f31901033bf5c04e0.jpg",
+                    email: "Kelas I - C | 20182039234"
+                },
+                {
+                    value: 4,
+                    name: "Shifan Alfarezel Khairan",
+                    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL4vGeOTMttdvzvFSkyw6WQDelEK2gcpij010OFTtAzABkpLH6Bs89wmQYBWgF6xaQSQs&usqp=CAU",
+                    email: "Kelas I - B | 20182039123"
+                },
+                {
+                    value: 5,
+                    name: "Afina Mawaddah",
+                    avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q5Ny8zMjcvNzY1Mjk3OTAxMC8xMDQ3NjkvZDQ4NTc0ZS82MjFkYjE0MU43MjAyYTZkZQ.jpg.dpg.webp",
+                    email: "Kelas I - A | 20182039342"
+                },
+                {
+                    value: 6,
+                    name: "Sharim Yazid Al-Ayubi ",
+                    avatar: "https://lh6.googleusercontent.com/-XkZeLnIiEUA/AAAAAAAAAAI/AAAAAAAAGac/nSiwjC1tYm8/photo.jpg",
+                    email: "Kelas I - C | 20182039787"
+                },
+                {
+                    value: 7,
+                    name: "Adzkiya Naila Taleetha",
+                    avatar: "https://s3.bukalapak.com/bukalapak-kontenz-production/content_attachments/72308/original/merk_hijab_terkenal_asli_indonesia_11.jpg",
+                    email: "Kelas I - A | 20182039345"
+                },
+                {
+                    value: 8,
+                    name: "Sami Yafi Alfatih",
+                    avatar: "https://a.wattpad.com/useravatar/vhoNaaaa.256.767468.jpg",
+                    email: "Kelas I - C | 20182039567"
+                },
+                {
+                    value: 9,
+                    name: "Akifah Nailah",
+                    avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q4NS8yODcvNzM2MjcxMzE1Ni80NzA5NS8zMTU5MjE4ZS82MjMzZTAxZk5lYTZiZTQyMQ.jpg.dpg.webp",
+                    email: "Kelas I - A | 20182033456"
+                },
+                {
+                    value: 10,
+                    name: "Shabir Abrar Khairan",
+                    avatar: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDw8PDw8PDQ4PDw8PDw0NDQ8NDQ4NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi4lIB8tLS0tLS0wLS0rNystLSstLy0tNS0tKysrLS0tLS0tLS03Ky0tLS0tLSstKy0tLS0tN//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAACAAEDBAUGB//EAEYQAAIBAgIGBwYBCAcJAAAAAAABAgMRBCEFEjFBUXEGImGBkaGxEzJScrLB0TM0QmJjc4LwFCMkkqLh8QcWRFNkdLPC4v/EABkBAQEAAwEAAAAAAAAAAAAAAAABAgMEBf/EACURAQEAAgIBAwMFAAAAAAAAAAABAhEDMSEEEkEiMlETIzNxgf/aAAwDAQACEQMRAD8A+goSCho2IsuxEWBCWIWBRCyAQhdigKIWQCiFmOVeCdnOCfBzimAyEi0807risyAVYoRVgCRisVYAlCKYAYWNhYAYWNhYQGFiYWASEIBvISChIKSEUiwIWiFgQhCwKIWUBAzkopttRik223ZJLa2M4fTelVno3GRo3dR0XlHa4XWulzhrID510y6f1MRUlRwc5UsNG6dWDcalftvtjHglm9/A8ZTpTqN6sJTe9qLkjq9EtBPEVG5q1OOez33wvwPqeD0XSpwSjGKtuSsc+fLqujj4fdN18n0fpvG4CUZUZVqSi05UpqfsZ8VKDyz47T7T0V6QUtIYeNaFoz2VaWspSpz4O257V2HF0no+EotNJpp3TVzzf+zTBToaUr07uNN4epLV3SSqQ1X3XZePl93hOXi9vmPqxCyje0KKYigCymIpgBhY2FgY2FjYWVAYGNgYBIWUQbyEgIaCmhIKLQCIQtAQshAJYliyAE1dJ1Ywozc7qMo6jsr5z6q9TbNfSFD2lKcFtcW4/Ms15pEu9eGWOtzb5roynOhhqerqRdNzjOUlKytJrcrs6+h9LVKstWSp6udpwVSOzLPWtvRkwUdV6sltbbvnfM3MQlGcXZ2bV2ouXocF8vRmOvDh6Rxtdz1XPUpu9tTDyqu64yvkbOhpOji6M2teUqTot+6uvVp9a3dsOhhbf1mTyb2xtkDR+GnUr05Ri9WnUjKTSySve192zyMsLdzSZ4zV29eUWQ7nmiRllAUFjCwgMLGwMAsDGwMoDCxMLAJCEA3ENAQ0RSQkFCQCQkESAhZCAWQhAISxZAOF0mppKnU4ScPFXXo/E5FWNadpU5qKSz6mtJ9/DuO70linRS/ax9JHmqVStSbjG0k9mvdHLyz63bwZawZVCpBN1JuV9nVUfQ7/AEcpWouXxzk1yXV9UzzVX21SSU7K26Ow9N0dqp0dT9KEpJrsb1rrxHDPqTntuP8ArplCKZ1ONRRZACUxMLALMbGwMqCwMTAwCwsTCwCQhANxCTAhIimhoxoaYDLQUy7gItBQkAiEMVWtbJZvyQk2W6ZWzDUxCWzrPcl+IHFvbnz2eBPZd3LI2TCfLXc/w1q0HVdqiVt0eH+Zr1tFvbDrpbnlK33OgoZinV1Fe19xc+PHPxYuHLlh1Xn4UnJtU46zvq5e7F3s9Z7reJ0aWF9mkou0trklv3s6MM1sSzexWzbuCUTHj4ceP+15efLk/pjhiJLKSv2x2+BnjWi9+fB5Mx6gHTvkZXCMJlWyUasZyg7e8uH4GzCSautjMLjYzllRhYmFmLIGFiYGVBZjZkYGAGBjYWASEIBtFpguWmRWRMaZiTEmBlTEmY0xJgZEJGNMSYFzlZPyNamsn3mats/naY6WSvzT8DdhPDVnfLMneKZbMeCkpRaveza/nxMi2Pii1jFJGHExvqfOjJOduG8xVpN+yla15wfZZyt9xL5LPDM0BMzsxNZlqQblRefcNmKm/eYUVtl2SyFQecl+szHh5Xcub8bkhK15dqb5PJjKbhjdVssLEws528GBjYGVAYWJhYAYWJhYBIQgGZMsJYU0xJmNCTIMqYkzEmNMDKhIxoXYWTaW6hyXV55mvrWi/mRt1F1TnYp2hPss/BnRGilorqyqRezWuuTRuzW3tRpYR3m5bnBeNzbqSyJlPKy+FVKWtvtmw1KWUEv0ZQv29dMzRBWeS+aH1Iknkt8MkjHUTs7Wbs7JuyvbK/YNvIpGXynwxy2Z5O2dnfM15PKxmm82uBrNmWmO2PDTzmuC82zajDK3FM5uiG5KtL9rKK5Qy9bnV+EXsnQ0ZXiuKyfNCbMEXqza3S9TKznymq6MbuKYGJsDZiqmBiYGAWFiYGBLkKIBlLCWFJMSAJANDRjQ0QZImWCMKM0amy/iszPDW2Ge2apsOfjYdSXbFo6DaaummuKd0aWPdoPkbZ21Vq6Fqa0e23ob1bcu04vRmpf2i+GbXkjsTd5JGWc+pMemcFZ5L54fUhmLEu2r88PqRjO1vTM9hSI3kUi/KfDXqu0+aMEnmzNi9z7jWbzM2LBoSScJpf8ANq+OuzqT2I8/0cr3daPw1qvnNs7eMxEKcNaclFLftbfBLe+RMvFXHzNQcXHY+DGpXRjVSU1nB04/rta77ls733DtY052NuEsUwtlsDNbYphZbCwKYWWwsCiwlgZSFEIpISAhIoaGjGhogyIaMcRoDnaTxMoVqShJwvGblb9LNJJ8d5oaZ024q0o9W13KLt5C0xO+KhHhRXnOX4HI6Rfkr70aP1sseTxXXODDLjm473RWmlRhU319arnts3ZLy8zrwzmc3o8rYbCr/pqT8Vf7nRw+1s75bZuvOskuoztmLEvKPzR9TJfMw419RvhZ+BZ2xvTPfIKYKc77P9CxUgYlXi+zM0WzoS2M5zLKunmsTiHRxtenTfs1KNKrdWvrSjeW3tM+PqN0nduUtV3bd34mpp2NsfGXx4ai3zvJfY2cS/6t/KeX6jPK5atev6XDGY7keqoz1oQl8UYy8VctmroeV8NQf7KHlFGyzqnTgs1VMDEwsqCwsthYFMLLYWBCFFgZSFEuRVoSCJANCQENANDQENAec0y7YxdtCH1TNDTqvQnyub/SSFsTQlxpyT/hl/8ARo6Zi5UZRW2S1VzeSOPP+R6PH/FHodDq2Hw/ZhqF/wC4joYbY32mvJKLcVsjaK5KKRs0co9x6ePTyMuyQK/u5/FFf4kKnvMeIfVfzR+pGU7Y3pncUtgWi29ud9gbikQ0MQrS5m82amMWx8GB5npRStWwtTdKk6b5wd//AGMeJl1HyN/pNDWw1Ke+niEnyesvvE52I/Jy7Inl+oms3seku8HptDK2GofuoehtMw4CGrRpR4Uqa/wozM68enBl3RYWWwsrFTCy2FgUwsthYFEIQDKQhZFWhIKEgEhoCGgGhIKGgOD0qVnhp7lOcH/Ek19LNfU1p0Y8atN9ykm/Q3ulsL4dcVVg1ztJfc1dHK9TDv8AW89V2OXOfuR3cV/Zv+u1U96XzfY2XkjSp1NZt8ZytyTsbU3kelOnl3tkp7AV1k+71Q4bDFiJ2i77repZ2xvTL3FMT358AtipFGGvG8WZWypvIK4GLkqmFxcN9Kd33atRP+eBxMZJ+z+bI9LiYQjRxFklOpG0nvk2tWJ57GwyhBZybSXO3+h53qfuer6P7K9la2XDIplsLOlwqYGJhYBZTLYQCymWwsCiEIBmLKLRFWhIIkAkNBQkA0NAQkBo6fp62Fq77JSXNST/ABORo+erGDW1Wkn2nZ05+a1/3cjzeArdRv4Y7X2XObm+6O303nGx1tCSah7OTvOnlJ/Enmpd/wCJ2JvYeS0VpDWq0KifVqp05WeV9sfNNfxHq45s7uLP3Y7cHPx+zOxsRQMSlqPkXcFd9SXJmydtN6NWz37CAoyul8qfoJlvaRTBLYxs09IVnTpzmldqOSW1y2JeJFk3dPOTxGvVnJvq67hBPZaDavbtes+RrYyrapTfCpF+aOX/AEqX9Kw9FbIwm6l92WT55eZtVqjnNRirvXUYLc5Nr72PJ5Lblu/L3MMZjh7Z8PesLEws7nlCwMbABTCy2FgUwsthYEIUQDOWii0RViRSEgEhIKGgEhoKEiA1qMakJQkrxnFxlyaseDwsnSqunUus3Tnu6yyv3n0BHH030cpYq8lKVKq0k5xzUrKy1l91Zmvkw93TfwcvsvnqvFaHouMq9HVqt0ZOVJQtJvrXg/R959HpLefNKeLxFCuoJXrUpOn7SKupU1JqSlfJrK638j0k+kuLpbcLSrL4oVZUX4NS9TbxZ4yeWvnxuVmvMj1qQa8epL5X6Hiq3Tuov+Alf/ucv/Ga8v8AaDWs08FFJqzvXk9uXwI3fqYz5c948r8PcYfYvlj6IzHjMZ0xrYeGGlLBL+0U5TSeIaaUZW+DetV/xAwvTetUvq4KCtvliZPy1BeXH8pOPL8PaNmppNU1TlKrP2dOHWc9bVtbPaeb/wB4sXJ5Qo0771Cc5Lld28g1teqm603Vutk11bdi2I15c+Mnjy2Y8OW99ODWrRjWqSpXqVar1Yw2yjH7vsPSaA0LUUoVaq9moWlGm/flPjL4c8+OzYZ+jGGp05VXGMYuSi7pK+13PQM0TH3X3V1ZctmPsxEplhZtcwsLEwsoLCxMDApgYmBgQhVyAbRaChEVaEgoaASEgoSAaGgISIGiFIsDxumaChiqll7zUv7yTfncqpe3+Rt9JF/aY9tOP1SNSRoy7b8emliad+PckaM8OmmnmdSXaa8KetUjH4pRjbm7E2rrdMsAnQwsrZ0X7P8AhlTV/OETz2iaVtbtZ7jpNR18NUt+g4z8Hn5NnjMDvM8+2GDeUbGxOXVNabsjJrXia2bp9HX1p/KvU7hwejb681+p6SX4neZvw6ac+xYWJgZmxUwMTCyoLAxsDALAxMLAohRZRtISIQxVaEiyAIaIQBIRCECRZCAeZ6SfnEP3UfrkaS3kIaM+2/Hpry2rkyYH8vS/fU/rRCGMW9PXaY/N6/7qf0s8Hg9j5MhDZyMMG2/cXMyx90ohrZul0a9+fyP6kd9kIb8OmnPtTAyyGbAGFkIUFgZCABhZCAUQhCj/2Q==",
+                    email: "Kelas I - B | 2018203567"
+                }
+            ];
+
+            function tagTemplate(tagData) {
+                return `
+<tag title="${tagData.title || tagData.email}"
+  contenteditable='false'
+  spellcheck='false'
+  tabIndex="-1"
+  class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+  ${this.getAttributes(tagData)}
+>
+  <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+  <div>
+    <div class='tagify__tag__avatar-wrap'>
+      <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+    </div>
+    <span class='tagify__tag-text'>${tagData.name}</span>
+  </div>
+</tag>
+`;
+            }
+
+            function suggestionItemTemplate(tagData) {
+                return `
+<div ${this.getAttributes(tagData)}
+  class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+  tabindex="0"
+  role="option"
+>
+  ${tagData.avatar ?
+                        `<div class='tagify__dropdown__item__avatar-wrap'>
+      <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+    </div>`
+                        : ''
+                    }
+  <strong>${tagData.name}</strong>
+  <span>${tagData.email}</span>
+</div>
+`;
+            }
+
+            // initialize Tagify on the above input node reference
+            let TagifyUserList = new Tagify(TagifyUserListEl, {
+                tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+                enforceWhitelist: true,
+                skipInvalid: true, // do not remporarily add invalid tags
+                dropdown: {
+                    closeOnSelect: false,
+                    enabled: 0,
+                    classname: "users-list",
+                    searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+                },
+                templates: {
+                    tag: tagTemplate,
+                    dropdownItem: suggestionItemTemplate
+                },
+                whitelist: usersList
+            });
+
+            TagifyUserList.on("dropdown:show dropdown:updated", onDropdownShow);
+            TagifyUserList.on("dropdown:select", onSelectSuggestion);
+
+            let addAllSuggestionsEl;
+
+            function onDropdownShow(e) {
+                let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+                if (TagifyUserList.suggestedListItems.length > 1) {
+                    addAllSuggestionsEl = getAddAllSuggestionsEl();
+
+                    // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                    dropdownContentEl.insertBefore(addAllSuggestionsEl, dropdownContentEl.firstChild);
+                }
+            }
+
+            function onSelectSuggestion(e) {
+                if (e.detail.elm == addAllSuggestionsEl) TagifyUserList.dropdown.selectAll.call(TagifyUserList);
+            }
+
+            // create an "add all" custom suggestion element every time the dropdown changes
+            function getAddAllSuggestionsEl() {
+                // suggestions items should be based on "dropdownItem" template
+                return TagifyUserList.parseTemplate("dropdownItem", [
+                    {
+                        class: "addAll",
+                        name: "Tambahkan semua",
+                        email:
+                            TagifyUserList.settings.whitelist.reduce(function (remainingSuggestions, item) {
+                                return TagifyUserList.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+                            }, 0) + " Siswa"
+                    }
+                ]);
+            }
+        </script>
+
+        <script>
+            const TagifyUserListEl2 = document.querySelector("#siswaKelas2");
+            const usersList2 = [
+                {
+                    value: 1,
+                    name: "Nur Hasanah",
+                    avatar: "https://images.tokopedia.net/img/cache/250-square/hDjmkQ/2021/5/31/c4580a9d-99bc-428e-b0ca-9141b73f02c1.jpg",
+                    email: "Kelas II - A | 20182039812"
+                },
+                {
+                    value: 2,
+                    name: "Abbas Hamzah",
+                    avatar: "https://i.pinimg.com/474x/e5/66/15/e566150dfdb429ed3ec39002e1f92fda.jpg",
+                    email: "Kelas II - B | 20182039432"
+                },
+                {
+                    value: 3,
+                    name: "Sulthan Sayyaf Arshaq",
+                    avatar: "https://i.pinimg.com/564x/f1/64/1c/f1641c26e6b3242f31901033bf5c04e0.jpg",
+                    email: "Kelas II - C | 20182039234"
+                },
+                {
+                    value: 4,
+                    name: "Shifan Alfarezel Khairan",
+                    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL4vGeOTMttdvzvFSkyw6WQDelEK2gcpij010OFTtAzABkpLH6Bs89wmQYBWgF6xaQSQs&usqp=CAU",
+                    email: "Kelas II - B | 20182039123"
+                },
+                {
+                    value: 5,
+                    name: "Afina Mawaddah",
+                    avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q5Ny8zMjcvNzY1Mjk3OTAxMC8xMDQ3NjkvZDQ4NTc0ZS82MjFkYjE0MU43MjAyYTZkZQ.jpg.dpg.webp",
+                    email: "Kelas II - A | 20182039342"
+                },
+                {
+                    value: 6,
+                    name: "Sharim Yazid Al-Ayubi ",
+                    avatar: "https://lh6.googleusercontent.com/-XkZeLnIiEUA/AAAAAAAAAAI/AAAAAAAAGac/nSiwjC1tYm8/photo.jpg",
+                    email: "Kelas II - C | 20182039787"
+                },
+                {
+                    value: 7,
+                    name: "Adzkiya Naila Taleetha",
+                    avatar: "https://s3.bukalapak.com/bukalapak-kontenz-production/content_attachments/72308/original/merk_hijab_terkenal_asli_indonesia_11.jpg",
+                    email: "Kelas II - A | 20182039345"
+                },
+                {
+                    value: 8,
+                    name: "Sami Yafi Alfatih",
+                    avatar: "https://a.wattpad.com/useravatar/vhoNaaaa.256.767468.jpg",
+                    email: "Kelas II - C | 20182039567"
+                },
+                {
+                    value: 9,
+                    name: "Akifah Nailah",
+                    avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q4NS8yODcvNzM2MjcxMzE1Ni80NzA5NS8zMTU5MjE4ZS82MjMzZTAxZk5lYTZiZTQyMQ.jpg.dpg.webp",
+                    email: "Kelas II - A | 20182033456"
+                },
+                {
+                    value: 10,
+                    name: "Shabir Abrar Khairan",
+                    avatar: "data:image/jpeg;base64,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",
+                    email: "Kelas II - B | 2018203567"
+                }
+            ];
+
+            function tagTemplate(tagData) {
+                return `
+<tag title="${tagData.title || tagData.email}"
+contenteditable='false'
+spellcheck='false'
+tabIndex="-1"
+class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+${this.getAttributes(tagData)}
+>
+<x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+<div>
+<div class='tagify__tag__avatar-wrap'>
+  <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+</div>
+<span class='tagify__tag-text'>${tagData.name}</span>
+</div>
+</tag>
+`;
+            }
+
+            function suggestionItemTemplate(tagData) {
+                return `
+<div ${this.getAttributes(tagData)}
+class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+tabindex="0"
+role="option"
+>
+${tagData.avatar ?
+                        `<div class='tagify__dropdown__item__avatar-wrap'>
+  <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+</div>`
+                        : ''
+                    }
+<strong>${tagData.name}</strong>
+<span>${tagData.email}</span>
+</div>
+`;
+            }
+
+            // initialize Tagify on the above input node reference
+            let TagifyUserList2 = new Tagify(TagifyUserListEl2, {
+                tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+                enforceWhitelist: true,
+                skipInvalid: true, // do not remporarily add invalid tags
+                dropdown: {
+                    closeOnSelect: false,
+                    enabled: 0,
+                    classname: "users-list",
+                    searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+                },
+                templates: {
+                    tag: tagTemplate,
+                    dropdownItem: suggestionItemTemplate
+                },
+                whitelist: usersList2
+            });
+
+            TagifyUserList2.on("dropdown:show dropdown:updated", onDropdownShow);
+            TagifyUserList2.on("dropdown:select", onSelectSuggestion);
+
+            let addAllSuggestionsEl2;
+
+            function onDropdownShow(e) {
+                let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+                if (TagifyUserList2.suggestedListItems.length > 1) {
+                    addAllSuggestionsEl2 = getAddAllSuggestionsEl2();
+
+                    // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                    dropdownContentEl.insertBefore(addAllSuggestionsEl2, dropdownContentEl.firstChild);
+                }
+            }
+
+            function onSelectSuggestion(e) {
+                if (e.detail.elm == addAllSuggestionsEl2) TagifyUserList2.dropdown.selectAll.call(TagifyUserList2);
+            }
+
+            // create an "add all" custom suggestion element every time the dropdown changes
+            function getAddAllSuggestionsEl2() {
+                // suggestions items should be based on "dropdownItem" template
+                return TagifyUserList2.parseTemplate("dropdownItem", [
+                    {
+                        class: "addAll",
+                        name: "Tambahkan semua",
+                        email:
+                            TagifyUserList2.settings.whitelist.reduce(function (remainingSuggestions, item) {
+                                return TagifyUserList2.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+                            }, 0) + " Siswa"
+                    }
+                ]);
+            }
+        </script>
+
+        <script>
+            const TagifyUserListEl3 = document.querySelector("#siswaKelas3");
+            const usersList3 = [
+                {
+                    value: 1,
+                    name: "Nur Hasanah",
+                    avatar: "https://images.tokopedia.net/img/cache/250-square/hDjmkQ/2021/5/31/c4580a9d-99bc-428e-b0ca-9141b73f02c1.jpg",
+                    email: "Kelas III - A | 20182039812"
+                },
+                {
+                    value: 2,
+                    name: "Abbas Hamzah",
+                    avatar: "https://i.pinimg.com/474x/e5/66/15/e566150dfdb429ed3ec39002e1f92fda.jpg",
+                    email: "Kelas III - B | 20182039432"
+                },
+                {
+                    value: 3,
+                    name: "Sulthan Sayyaf Arshaq",
+                    avatar: "https://i.pinimg.com/564x/f1/64/1c/f1641c26e6b3242f31901033bf5c04e0.jpg",
+                    email: "Kelas III - C | 20182039234"
+                },
+                {
+                    value: 4,
+                    name: "Shifan Alfarezel Khairan",
+                    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL4vGeOTMttdvzvFSkyw6WQDelEK2gcpij010OFTtAzABkpLH6Bs89wmQYBWgF6xaQSQs&usqp=CAU",
+                    email: "Kelas II - B | 20182039123"
+                },
+                {
+                    value: 5,
+                    name: "Afina Mawaddah",
+                    avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q5Ny8zMjcvNzY1Mjk3OTAxMC8xMDQ3NjkvZDQ4NTc0ZS82MjFkYjE0MU43MjAyYTZkZQ.jpg.dpg.webp",
+                    email: "Kelas III - A | 20182039342"
+                },
+                {
+                    value: 6,
+                    name: "Sharim Yazid Al-Ayubi ",
+                    avatar: "https://lh6.googleusercontent.com/-XkZeLnIiEUA/AAAAAAAAAAI/AAAAAAAAGac/nSiwjC1tYm8/photo.jpg",
+                    email: "Kelas III - C | 20182039787"
+                },
+                {
+                    value: 7,
+                    name: "Adzkiya Naila Taleetha",
+                    avatar: "https://s3.bukalapak.com/bukalapak-kontenz-production/content_attachments/72308/original/merk_hijab_terkenal_asli_indonesia_11.jpg",
+                    email: "Kelas III - A | 20182039345"
+                },
+                {
+                    value: 8,
+                    name: "Sami Yafi Alfatih",
+                    avatar: "https://a.wattpad.com/useravatar/vhoNaaaa.256.767468.jpg",
+                    email: "Kelas III - C | 20182039567"
+                },
+                {
+                    value: 9,
+                    name: "Akifah Nailah",
+                    avatar: "https://img20.jd.id/Indonesia/s128x128_/amZzL3Q4NS8yODcvNzM2MjcxMzE1Ni80NzA5NS8zMTU5MjE4ZS82MjMzZTAxZk5lYTZiZTQyMQ.jpg.dpg.webp",
+                    email: "Kelas III - A | 20182033456"
+                },
+                {
+                    value: 10,
+                    name: "Shabir Abrar Khairan",
+                    avatar: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDw8PDw8PDQ4PDw8PDw0NDQ8NDQ4NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi4lIB8tLS0tLS0wLS0rNystLSstLy0tNS0tKysrLS0tLS0tLS03Ky0tLS0tLSstKy0tLS0tN//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAACAAEDBAUGB//EAEYQAAIBAgIGBwYBCAcJAAAAAAABAgMRBCEFEjFBUXEGImGBkaGxEzJScrLB0TM0QmJjc4LwFCMkkqLh8QcWRFNkdLPC4v/EABkBAQEAAwEAAAAAAAAAAAAAAAABAgMEBf/EACURAQEAAgIBAwMFAAAAAAAAAAABAhEDMSEEEkEiMlETIzNxgf/aAAwDAQACEQMRAD8A+goSCho2IsuxEWBCWIWBRCyAQhdigKIWQCiFmOVeCdnOCfBzimAyEi0807risyAVYoRVgCRisVYAlCKYAYWNhYAYWNhYQGFiYWASEIBvISChIKSEUiwIWiFgQhCwKIWUBAzkopttRik223ZJLa2M4fTelVno3GRo3dR0XlHa4XWulzhrID510y6f1MRUlRwc5UsNG6dWDcalftvtjHglm9/A8ZTpTqN6sJTe9qLkjq9EtBPEVG5q1OOez33wvwPqeD0XSpwSjGKtuSsc+fLqujj4fdN18n0fpvG4CUZUZVqSi05UpqfsZ8VKDyz47T7T0V6QUtIYeNaFoz2VaWspSpz4O257V2HF0no+EotNJpp3TVzzf+zTBToaUr07uNN4epLV3SSqQ1X3XZePl93hOXi9vmPqxCyje0KKYigCymIpgBhY2FgY2FjYWVAYGNgYBIWUQbyEgIaCmhIKLQCIQtAQshAJYliyAE1dJ1Ywozc7qMo6jsr5z6q9TbNfSFD2lKcFtcW4/Ms15pEu9eGWOtzb5roynOhhqerqRdNzjOUlKytJrcrs6+h9LVKstWSp6udpwVSOzLPWtvRkwUdV6sltbbvnfM3MQlGcXZ2bV2ouXocF8vRmOvDh6Rxtdz1XPUpu9tTDyqu64yvkbOhpOji6M2teUqTot+6uvVp9a3dsOhhbf1mTyb2xtkDR+GnUr05Ri9WnUjKTSySve192zyMsLdzSZ4zV29eUWQ7nmiRllAUFjCwgMLGwMAsDGwMoDCxMLAJCEA3ENAQ0RSQkFCQCQkESAhZCAWQhAISxZAOF0mppKnU4ScPFXXo/E5FWNadpU5qKSz6mtJ9/DuO70linRS/ax9JHmqVStSbjG0k9mvdHLyz63bwZawZVCpBN1JuV9nVUfQ7/AEcpWouXxzk1yXV9UzzVX21SSU7K26Ow9N0dqp0dT9KEpJrsb1rrxHDPqTntuP8ArplCKZ1ONRRZACUxMLALMbGwMqCwMTAwCwsTCwCQhANxCTAhIimhoxoaYDLQUy7gItBQkAiEMVWtbJZvyQk2W6ZWzDUxCWzrPcl+IHFvbnz2eBPZd3LI2TCfLXc/w1q0HVdqiVt0eH+Zr1tFvbDrpbnlK33OgoZinV1Fe19xc+PHPxYuHLlh1Xn4UnJtU46zvq5e7F3s9Z7reJ0aWF9mkou0trklv3s6MM1sSzexWzbuCUTHj4ceP+15efLk/pjhiJLKSv2x2+BnjWi9+fB5Mx6gHTvkZXCMJlWyUasZyg7e8uH4GzCSautjMLjYzllRhYmFmLIGFiYGVBZjZkYGAGBjYWASEIBtFpguWmRWRMaZiTEmBlTEmY0xJgZEJGNMSYFzlZPyNamsn3mats/naY6WSvzT8DdhPDVnfLMneKZbMeCkpRaveza/nxMi2Pii1jFJGHExvqfOjJOduG8xVpN+yla15wfZZyt9xL5LPDM0BMzsxNZlqQblRefcNmKm/eYUVtl2SyFQecl+szHh5Xcub8bkhK15dqb5PJjKbhjdVssLEws528GBjYGVAYWJhYAYWJhYBIQgGZMsJYU0xJmNCTIMqYkzEmNMDKhIxoXYWTaW6hyXV55mvrWi/mRt1F1TnYp2hPss/BnRGilorqyqRezWuuTRuzW3tRpYR3m5bnBeNzbqSyJlPKy+FVKWtvtmw1KWUEv0ZQv29dMzRBWeS+aH1Iknkt8MkjHUTs7Wbs7JuyvbK/YNvIpGXynwxy2Z5O2dnfM15PKxmm82uBrNmWmO2PDTzmuC82zajDK3FM5uiG5KtL9rKK5Qy9bnV+EXsnQ0ZXiuKyfNCbMEXqza3S9TKznymq6MbuKYGJsDZiqmBiYGAWFiYGBLkKIBlLCWFJMSAJANDRjQ0QZImWCMKM0amy/iszPDW2Ge2apsOfjYdSXbFo6DaaummuKd0aWPdoPkbZ21Vq6Fqa0e23ob1bcu04vRmpf2i+GbXkjsTd5JGWc+pMemcFZ5L54fUhmLEu2r88PqRjO1vTM9hSI3kUi/KfDXqu0+aMEnmzNi9z7jWbzM2LBoSScJpf8ANq+OuzqT2I8/0cr3daPw1qvnNs7eMxEKcNaclFLftbfBLe+RMvFXHzNQcXHY+DGpXRjVSU1nB04/rta77ls733DtY052NuEsUwtlsDNbYphZbCwKYWWwsCiwlgZSFEIpISAhIoaGjGhogyIaMcRoDnaTxMoVqShJwvGblb9LNJJ8d5oaZ024q0o9W13KLt5C0xO+KhHhRXnOX4HI6Rfkr70aP1sseTxXXODDLjm473RWmlRhU319arnts3ZLy8zrwzmc3o8rYbCr/pqT8Vf7nRw+1s75bZuvOskuoztmLEvKPzR9TJfMw419RvhZ+BZ2xvTPfIKYKc77P9CxUgYlXi+zM0WzoS2M5zLKunmsTiHRxtenTfs1KNKrdWvrSjeW3tM+PqN0nduUtV3bd34mpp2NsfGXx4ai3zvJfY2cS/6t/KeX6jPK5atev6XDGY7keqoz1oQl8UYy8VctmroeV8NQf7KHlFGyzqnTgs1VMDEwsqCwsthYFMLLYWBCFFgZSFEuRVoSCJANCQENANDQENAec0y7YxdtCH1TNDTqvQnyub/SSFsTQlxpyT/hl/8ARo6Zi5UZRW2S1VzeSOPP+R6PH/FHodDq2Hw/ZhqF/wC4joYbY32mvJKLcVsjaK5KKRs0co9x6ePTyMuyQK/u5/FFf4kKnvMeIfVfzR+pGU7Y3pncUtgWi29ud9gbikQ0MQrS5m82amMWx8GB5npRStWwtTdKk6b5wd//AGMeJl1HyN/pNDWw1Ke+niEnyesvvE52I/Jy7Inl+oms3seku8HptDK2GofuoehtMw4CGrRpR4Uqa/wozM68enBl3RYWWwsrFTCy2FgUwsthYFEIQDKQhZFWhIKEgEhoCGgGhIKGgOD0qVnhp7lOcH/Ek19LNfU1p0Y8atN9ykm/Q3ulsL4dcVVg1ztJfc1dHK9TDv8AW89V2OXOfuR3cV/Zv+u1U96XzfY2XkjSp1NZt8ZytyTsbU3kelOnl3tkp7AV1k+71Q4bDFiJ2i77repZ2xvTL3FMT358AtipFGGvG8WZWypvIK4GLkqmFxcN9Kd33atRP+eBxMZJ+z+bI9LiYQjRxFklOpG0nvk2tWJ57GwyhBZybSXO3+h53qfuer6P7K9la2XDIplsLOlwqYGJhYBZTLYQCymWwsCiEIBmLKLRFWhIIkAkNBQkA0NAQkBo6fp62Fq77JSXNST/ABORo+erGDW1Wkn2nZ05+a1/3cjzeArdRv4Y7X2XObm+6O303nGx1tCSah7OTvOnlJ/Enmpd/wCJ2JvYeS0VpDWq0KifVqp05WeV9sfNNfxHq45s7uLP3Y7cHPx+zOxsRQMSlqPkXcFd9SXJmydtN6NWz37CAoyul8qfoJlvaRTBLYxs09IVnTpzmldqOSW1y2JeJFk3dPOTxGvVnJvq67hBPZaDavbtes+RrYyrapTfCpF+aOX/AEqX9Kw9FbIwm6l92WT55eZtVqjnNRirvXUYLc5Nr72PJ5Lblu/L3MMZjh7Z8PesLEws7nlCwMbABTCy2FgUwsthYEIUQDOWii0RViRSEgEhIKGgEhoKEiA1qMakJQkrxnFxlyaseDwsnSqunUus3Tnu6yyv3n0BHH030cpYq8lKVKq0k5xzUrKy1l91Zmvkw93TfwcvsvnqvFaHouMq9HVqt0ZOVJQtJvrXg/R959HpLefNKeLxFCuoJXrUpOn7SKupU1JqSlfJrK638j0k+kuLpbcLSrL4oVZUX4NS9TbxZ4yeWvnxuVmvMj1qQa8epL5X6Hiq3Tuov+Alf/ucv/Ga8v8AaDWs08FFJqzvXk9uXwI3fqYz5c948r8PcYfYvlj6IzHjMZ0xrYeGGlLBL+0U5TSeIaaUZW+DetV/xAwvTetUvq4KCtvliZPy1BeXH8pOPL8PaNmppNU1TlKrP2dOHWc9bVtbPaeb/wB4sXJ5Qo0771Cc5Lld28g1teqm603Vutk11bdi2I15c+Mnjy2Y8OW99ODWrRjWqSpXqVar1Yw2yjH7vsPSaA0LUUoVaq9moWlGm/flPjL4c8+OzYZ+jGGp05VXGMYuSi7pK+13PQM0TH3X3V1ZctmPsxEplhZtcwsLEwsoLCxMDApgYmBgQhVyAbRaChEVaEgoaASEgoSAaGgISIGiFIsDxumaChiqll7zUv7yTfncqpe3+Rt9JF/aY9tOP1SNSRoy7b8emliad+PckaM8OmmnmdSXaa8KetUjH4pRjbm7E2rrdMsAnQwsrZ0X7P8AhlTV/OETz2iaVtbtZ7jpNR18NUt+g4z8Hn5NnjMDvM8+2GDeUbGxOXVNabsjJrXia2bp9HX1p/KvU7hwejb681+p6SX4neZvw6ac+xYWJgZmxUwMTCyoLAxsDALAxMLAohRZRtISIQxVaEiyAIaIQBIRCECRZCAeZ6SfnEP3UfrkaS3kIaM+2/Hpry2rkyYH8vS/fU/rRCGMW9PXaY/N6/7qf0s8Hg9j5MhDZyMMG2/cXMyx90ohrZul0a9+fyP6kd9kIb8OmnPtTAyyGbAGFkIUFgZCABhZCAUQhCj/2Q==",
+                    email: "Kelas III - B | 2018203567"
+                }
+            ];
+
+            function tagTemplate(tagData) {
+                return `
+<tag title="${tagData.title || tagData.email}"
+contenteditable='false'
+spellcheck='false'
+tabIndex="-1"
+class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+${this.getAttributes(tagData)}
+>
+<x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+<div>
+<div class='tagify__tag__avatar-wrap'>
+<img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+</div>
+<span class='tagify__tag-text'>${tagData.name}</span>
+</div>
+</tag>
+`;
+            }
+
+            function suggestionItemTemplate(tagData) {
+                return `
+<div ${this.getAttributes(tagData)}
+class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+tabindex="0"
+role="option"
+>
+${tagData.avatar ?
+                        `<div class='tagify__dropdown__item__avatar-wrap'>
+<img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+</div>`
+                        : ''
+                    }
+<strong>${tagData.name}</strong>
+<span>${tagData.email}</span>
+</div>
+`;
+            }
+
+            // initialize Tagify on the above input node reference
+            let TagifyUserList3 = new Tagify(TagifyUserListEl3, {
+                tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+                enforceWhitelist: true,
+                skipInvalid: true, // do not remporarily add invalid tags
+                dropdown: {
+                    closeOnSelect: false,
+                    enabled: 0,
+                    classname: "users-list",
+                    searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+                },
+                templates: {
+                    tag: tagTemplate,
+                    dropdownItem: suggestionItemTemplate
+                },
+                whitelist: usersList3
+            });
+
+            TagifyUserList3.on("dropdown:show dropdown:updated", onDropdownShow);
+            TagifyUserList3.on("dropdown:select", onSelectSuggestion);
+
+            let addAllSuggestionsEl3;
+
+            function onDropdownShow(e) {
+                let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+                if (TagifyUserList3.suggestedListItems.length > 1) {
+                    addAllSuggestionsEl3 = getAddAllSuggestionsEl3();
+
+                    // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                    dropdownContentEl.insertBefore(addAllSuggestionsEl3, dropdownContentEl.firstChild);
+                }
+            }
+
+            function onSelectSuggestion(e) {
+                if (e.detail.elm == addAllSuggestionsEl3) TagifyUserList3.dropdown.selectAll.call(TagifyUserList3);
+            }
+
+            // create an "add all" custom suggestion element every time the dropdown changes
+            function getAddAllSuggestionsEl3() {
+                // suggestions items should be based on "dropdownItem" template
+                return TagifyUserList3.parseTemplate("dropdownItem", [
+                    {
+                        class: "addAll",
+                        name: "Tambahkan semua",
+                        email:
+                            TagifyUserList3.settings.whitelist.reduce(function (remainingSuggestions, item) {
+                                return TagifyUserList3.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+                            }, 0) + " Siswa"
+                    }
+                ]);
             }
         </script>
 </body>
