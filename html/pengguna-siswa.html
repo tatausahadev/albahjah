@@ -227,37 +227,41 @@
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                  class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                  href="#" data-bs-toggle="dropdown">Operator
-                  <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
-                  <li>
-                    <a class="dropdown-item" selected href="#">
-                      <span class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pengawas</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item active" selected href="#">
-                      <span class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Operator</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pegawai</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Siswa</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">Operator
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pengawas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Operator</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pegawai</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Siswa</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
@@ -697,293 +701,299 @@
                         </div>
                     </div>
 
-                    <!-- Modal Tambah Siswa-->
-                    <div class="modal fade" id="modal-tambah-siswa" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Data Siswa Baru</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal Tambah Siswa-->
+    <div class="modal fade" id="modal-tambah-siswa" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Data Siswa Baru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Lengkap Siswa<b
+                                    class="text-danger">*</b></label>
+                            <input type="text" id="nameBasic" class="form-control"
+                                placeholder="Tuliskan nama lengkap siswa" required />
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">ID Siswa</label>
+                            <input class="form-control" type="text" id="id-siswa" placeholder="Digenerate oleh sistem"
+                                disabled value="2081029311">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
+                                    class="text-danger">*</b></label>
+                            <div class="form-check form-check-inline form-check-primary mt-2">
+                                <input class="form-check-input" type="radio" name="inlineRadioKelamin" id="inlineRadio1"
+                                    value="option1" checked="">
+                                <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioKelamin" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Pengguna (Opsi Masuk Apps)</label>
+                            <input class="form-control" type="text" id="nama-pengguna"
+                                placeholder="Masukkan Nama Pengguna">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3 form-password-toggle">
+                            <label for="nameBasic" class="form-label">Kata Sandi <b class="text-danger">*</b></label>
+                            <div class="input-group input-group-merge">
+                                <input type="password" id="password" class="form-control" name="password"
+                                    aria-describedby="password" placeholder="Masukkan kata sandi ..."
+                                    value="12345678" />
+                                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="selectTingkat" class="form-label">Tingkat Kelas</label>
+                                    <select id="selectTingkat" class="form-select form-select-md ">
+                                        <option value="0" selected>...</option>
+                                        <option value="1">Kelas I</option>
+                                        <option value="2">Kelas II</option>
+                                        <option value="3">Kelas III</option>
+                                    </select>
                                 </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 col-md-12 mb-3">
-                                            <label for="nameBasic" class="form-label">Nama Lengkap Siswa<b
-                                                    class="text-danger">*</b></label>
-                                            <input type="text" id="nameBasic" class="form-control"
-                                                placeholder="Tuliskan nama lengkap siswa" required />
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">ID Siswa</label>
-                                            <input class="form-control" type="text" id="id-siswa"
-                                                placeholder="Digenerate oleh sistem" disabled value="2081029311">
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
-                                                    class="text-danger">*</b></label>
-                                            <div class="form-check form-check-inline form-check-primary mt-2">
-                                                <input class="form-check-input" type="radio" name="inlineRadioKelamin"
-                                                    id="inlineRadio1" value="option1" checked="">
-                                                <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioKelamin"
-                                                    id="inlineRadio2" value="option2">
-                                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">Nama Pengguna (Opsi Masuk Apps)</label>
-                                            <input class="form-control" type="text" id="nama-pengguna"
-                                                placeholder="Masukkan Nama Pengguna">
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3 form-password-toggle">
-                                            <label for="nameBasic" class="form-label">Kata Sandi <b
-                                                    class="text-danger">*</b></label>
-                                            <div class="input-group input-group-merge">
-                                                <input type="password" id="password" class="form-control"
-                                                    name="password" aria-describedby="password"
-                                                    placeholder="Masukkan kata sandi ..." value="12345678" />
-                                                <span class="input-group-text cursor-pointer"><i
-                                                        class="bx bx-hide"></i></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <div class="row">
-                                                <div class="col-12 col-md-6 mb-3">
-                                                    <label for="selectTingkat" class="form-label">Tingkat Kelas</label>
-                                                    <select id="selectTingkat" class="form-select form-select-md ">
-                                                        <option value="0" selected>...</option>
-                                                        <option value="1">Kelas I</option>
-                                                        <option value="2">Kelas II</option>
-                                                        <option value="3">Kelas III</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-12 col-md-6 mb-3">
-                                                    <label for="selectNamaKelas" class="form-label">Nama Kelas</label>
-                                                    <select id="selectNamaKelas" class="form-select form-select-md ">
-                                                        <option value="0" selected>...</option>
-                                                        <option value="1">A</option>
-                                                        <option value="2">B</option>
-                                                        <option value="3">C</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 col-12">
-                                            <label for="nameBasic" class="form-label">Pilih Status</label> <br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
-                                                    id="inlineRadioTidakAktif" value="Tidak Aktif" checked />
-                                                <label class="form-check-label text-danger" for="inlineRadioTidakAktif">Tidak
-                                                    Aktif
-                                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
-                                                            sistem dengan batasan</i>)</small></label>
-                                            </div>
-                                            <br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
-                                                    id="inlineRadioAktif" value="Aktif" />
-                                                <label class="form-check-label text-success" for="inlineRadioAktif">Aktif
-                                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
-                                                            sistem secara normal</i>)</small></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                                        data-bs-dismiss="modal">Simpan</button>
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="selectNamaKelas" class="form-label">Nama Kelas</label>
+                                    <select id="selectNamaKelas" class="form-select form-select-md ">
+                                        <option value="0" selected>...</option>
+                                        <option value="1">A</option>
+                                        <option value="2">B</option>
+                                        <option value="3">C</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Modal Filter Data-->
-                    <div class="modal fade" id="modal-filter-data" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Filter Data yang Ditampilkan</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <label for="selectTahunAjaran" class="form-label">Pilih Tahun Ajaran</label>
-                                            <select id="selectTahunAjaran" class="form-select form-select-md ">
-                                                <option value="1">TA 2019 / 2020</option>
-                                                <option value="2">TA 2018 / 2019</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="selectTingkat" class="form-label">Pilih Tingkat Kelas</label>
-                                            <select id="selectTingkat" class="form-select form-select-md ">
-                                                <option value="1">Kelas I</option>
-                                                <option value="2">Kelas II</option>
-                                                <option value="3">Kelas III</option>
-                                                <option value="4" selected>Semua Tingkat</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="selectNamaKelas" class="form-label">Pilih Nama Kelas</label>
-                                            <select id="selectNamaKelas" class="form-select form-select-md ">
-                                                <option value="1">A</option>
-                                                <option value="2">B</option>
-                                                <option value="3">C</option>
-                                                <option value="4" selected>Semua Kelas</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary"onclick="sweet()"
-                                    data-bs-dismiss="modal">Terakpan Filter</button>
-                                </div>
+                        <div class="mb-3 col-12">
+                            <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
+                                    id="inlineRadioTidakAktif" value="Tidak Aktif" checked />
+                                <label class="form-check-label text-danger" for="inlineRadioTidakAktif">Tidak
+                                    Aktif
+                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                            sistem dengan batasan</i>)</small></label>
+                            </div>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
+                                    id="inlineRadioAktif" value="Aktif" />
+                                <label class="form-check-label text-success" for="inlineRadioAktif">Aktif
+                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                            sistem secara normal</i>)</small></label>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                        data-bs-dismiss="modal">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Modal Non Aktifkan Siswa-->
-                    <div class="modal fade" id="modal-non-aktifkan" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Konfirmasi Non Aktifkan Siswa</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <div class="alert alert-warning d-flex" role="alert">
-                                                <span
-                                                    class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
-                                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
-                                                <div class="d-flex flex-column ps-1">
-                                                    <span class="text-black">Apakah Anda yakin siswa <span
-                                                            class="fw-semibold">Agus Fakhriz Kelas III - C</span>
-                                                        akan di<span class="fw-semibold"> Non Aktifkan </span> dari
-                                                        sistem?
-                                                </div>
-                                            </div>
-
-                                            <label for="nameSmall" class="form-label">Tuliskan alasan siswa di Non
-                                                Aktifkan <span class="text-danger">*</span></label>
-                                            <input type="text" id="nameSmall" class="form-control"
-                                                placeholder="Tulis keterangan ">
-                                            <small class="text-muted"><i>(Keterangan di atas akan ditampilkan pada akun
-                                                    siswa terkait)</i></small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-danger" onclick="sweet()"
-                                        data-bs-dismiss="modal">Ya</button>
-
-                                </div>
-                            </div>
+    <!-- Modal Filter Data-->
+    <div class="modal fade" id="modal-filter-data" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Filter Data yang Ditampilkan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <label for="selectTahunAjaran" class="form-label">Pilih Tahun Ajaran</label>
+                            <select id="selectTahunAjaran" class="form-select form-select-md ">
+                                <option value="1">TA 2019 / 2020</option>
+                                <option value="2">TA 2018 / 2019</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="selectTingkat" class="form-label">Pilih Tingkat Kelas</label>
+                            <select id="selectTingkat" class="form-select form-select-md ">
+                                <option value="1">Kelas I</option>
+                                <option value="2">Kelas II</option>
+                                <option value="3">Kelas III</option>
+                                <option value="4" selected>Semua Tingkat</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="selectNamaKelas" class="form-label">Pilih Nama Kelas</label>
+                            <select id="selectNamaKelas" class="form-select form-select-md ">
+                                <option value="1">A</option>
+                                <option value="2">B</option>
+                                <option value="3">C</option>
+                                <option value="4" selected>Semua Kelas</option>
+                            </select>
                         </div>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet_filter()"
+                        data-bs-dismiss="modal">Terapkan Filter</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Modal Aktifkan Siswa-->
-                    <div class="modal fade" id="modal-aktifkan" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Konfirmasi Aktifkan Siswa</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <div class="alert alert-warning d-flex" role="alert">
-                                                <span
-                                                    class="badge badge-center rounded-pill bg-warning border-label-warning p-3 me-2"><i
-                                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
-                                                <div class="d-flex flex-column ps-1">
-                                                    <span class="text-black">Apakah Anda yakin siswa <span
-                                                            class="fw-semibold">Agus Fakhriz Kelas III - C</span>
-                                                        akan di<span class="fw-semibold"> Aktifkan </span> pada
-                                                        sistem?
-                                                </div>
-                                            </div>
-
-                                            <label for="nameSmall" class="form-label">Tuliskan alasan siswa di
-                                                Aktifkan</label>
-                                            <input type="text" id="nameSmall" class="form-control"
-                                                placeholder="Tulis keterangan ">
-                                            <small class="text-muted"></small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-warning" onclick="sweet()"
-                                        data-bs-dismiss="modal">Ya</button>
-
+    <!-- Modal Non Aktifkan Siswa-->
+    <div class="modal fade" id="modal-non-aktifkan" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Konfirmasi Non Aktifkan Siswa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="alert alert-warning d-flex" role="alert">
+                                <span class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
+                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                <div class="d-flex flex-column ps-1">
+                                    <span class="text-black">Apakah Anda yakin siswa <span class="fw-semibold">Agus
+                                            Fakhriz Kelas III - C</span>
+                                        akan di<span class="fw-semibold"> Non Aktifkan </span> dari
+                                        sistem?
                                 </div>
                             </div>
+
+                            <label for="nameSmall" class="form-label">Tuliskan alasan siswa di Non
+                                Aktifkan <span class="text-danger">*</span></label>
+                            <input type="text" id="nameSmall" class="form-control" placeholder="Tulis keterangan ">
+                            <small class="text-muted"><i>(Keterangan di atas akan ditampilkan pada akun
+                                    siswa terkait)</i></small>
                         </div>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Aktifkan Siswa-->
+    <div class="modal fade" id="modal-aktifkan" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Konfirmasi Aktifkan Siswa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="alert alert-warning d-flex" role="alert">
+                                <span
+                                    class="badge badge-center rounded-pill bg-warning border-label-warning p-3 me-2"><i
+                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                <div class="d-flex flex-column ps-1">
+                                    <span class="text-black">Apakah Anda yakin siswa <span class="fw-semibold">Agus
+                                            Fakhriz Kelas III - C</span>
+                                        akan di<span class="fw-semibold"> Aktifkan </span> pada
+                                        sistem?
+                                </div>
+                            </div>
+
+                            <label for="nameSmall" class="form-label">Tuliskan alasan siswa di
+                                Aktifkan</label>
+                            <input type="text" id="nameSmall" class="form-control" placeholder="Tulis keterangan ">
+                            <small class="text-muted"></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-warning" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-                    <script src="../assets/vendor/libs/popper/popper.js"></script>
-                    <script src="../assets/vendor/js/bootstrap.js"></script>
-                    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-                    <script src="../assets/vendor/js/menu.js"></script>
+    <script src="../assets/vendor/js/menu.js"></script>
 
-                    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-                    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 
-                    <script src="../assets/js/dashboards-analytics.js"></script>
+    <script src="../assets/js/dashboards-analytics.js"></script>
 
-                    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-                    <script src="../assets/js/sweetalert.min.js"></script>
+    <script src="../assets/js/sweetalert.min.js"></script>
 
-                    <!-- tambahan -->
-                    <script src="../libs/select/select.js"></script>
+    <!-- tambahan -->
+    <script src="../libs/select/select.js"></script>
 
-                    <script>
-                        function sweet() {
-                            swal({
-                                title: "Data berhasil disimpan!",
-                                // text: "You clicked the button!",
-                                icon: "success",
-                                button: false,
-                                timer: 2000,
-                            });
-                        }
-                    </script>
+    <script>
+        function sweet() {
+            swal({
+                title: "Data berhasil disimpan!",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: false,
+                timer: 2000,
+            });
+        }
+        function sweet_filter() {
+            swal({
+                title: "Filter data berhasil diterapkan!",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: false,
+                timer: 2000,
+            });
+        }
+    </script>
 
-                    <script>
-                        $("#namaBulanSelect").select2({
-                            placeholder: "Pilih bulan pembayaran",
-                            allowClear: true
-                        });
-                        $("#namaKelasSelect").select2({
-                            placeholder: "Pilih kelas",
-                            allowClear: true
-                        });
-                    </script>
+    <script>
+        $("#namaBulanSelect").select2({
+            placeholder: "Pilih bulan pembayaran",
+            allowClear: true
+        });
+        $("#namaKelasSelect").select2({
+            placeholder: "Pilih kelas",
+            allowClear: true
+        });
+    </script>
 
 </body>
 

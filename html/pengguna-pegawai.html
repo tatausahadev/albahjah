@@ -230,37 +230,41 @@
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                  class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                  href="#" data-bs-toggle="dropdown">Operator
-                  <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
-                  <li>
-                    <a class="dropdown-item" selected href="#">
-                      <span class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pengawas</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item active" selected href="#">
-                      <span class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Operator</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pegawai</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Siswa</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">Operator
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pengawas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Operator</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pegawai</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Siswa</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
@@ -864,565 +868,556 @@
                         </div>
                     </div>
 
-                    <!-- Modal Tambah Pegawai-->
-                    <div class="modal fade" id="modal-tambah-pegawai" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Data Pegawai Baru</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal Tambah Pegawai-->
+    <div class="modal fade" id="modal-tambah-pegawai" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Data Pegawai Baru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Lengkap Pegawai <b
+                                    class="text-danger">*</b></label>
+                            <input type="text" id="nameBasic" class="form-control"
+                                placeholder="Tuliskan nama lengkap pegawai" required />
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">ID pegawai <b class="text-danger">*</b></label>
+                            <input class="form-control" type="text" id="id-pegawai" placeholder="Digenerate oleh sistem"
+                                disabled value="2081029311">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
+                                    class="text-danger">*</b></label>
+                            <div class="form-check form-check-inline form-check-primary mt-2">
+                                <input class="form-check-input" type="radio" name="inlineRadioKelamin" id="inlineRadio1"
+                                    value="option1" checked="">
+                                <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioKelamin" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nameBasic" class="form-label">Nama Pengguna (opsi masuk
+                                apps)</label>
+                            <input class="form-control" type="text" id="nama-pengguna"
+                                placeholder="Masukkan Nama Pengguna">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3 form-password-toggle">
+                            <label for="nameBasic" class="form-label">Kata Sandi <b class="text-danger">*</b></label>
+                            <div class="input-group input-group-merge">
+                                <input type="password" id="password" class="form-control" name="password"
+                                    aria-describedby="password" placeholder="Masukkan kata sandi ..."
+                                    value="12345678" />
+                                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="selectPeran" class="form-label">Pilih Peran <b class="text-danger">*</b></label>
+                            <input id="selectPeran" name="selectPeran" class="form-control mb-3"
+                                placeholder="pilih peran ..." />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
+                            <input id="selectPenugasan" name="selectPenugasan" class="form-control mb-3"
+                                placeholder="pilih penugasan ..." />
+                        </div>
+                        <div class="mb-3 col-12">
+                            <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
+                                    id="inlineRadioTidakAktif" value="Tidak Aktif" checked />
+                                <label class="form-check-label text-danger" for="inlineRadioTidakAktif">Tidak
+                                    Aktif
+                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                            sistem dengan batasan</i>)</small></label>
+                            </div>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
+                                    id="inlineRadioAktif" value="Aktif" />
+                                <label class="form-check-label text-success" for="inlineRadioAktif">Aktif
+                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                            sistem secara normal</i>)</small></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                        data-bs-dismiss="modal">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Filter Data-->
+    <div class="modal fade" id="modal-filter-data" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Filter Data yang Ditampilkan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="selectPenugasan" class="form-label">Pilih Peran</label>
+                            <select id="selectPenugasan" class="form-select form-select-md ">
+                                <option value="1">Pegawai</option>
+                                <option value="2">Operator</option>
+                                <option value="2">Pengawas</option>
+                                <option value="3" selected>Semua Peran</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
+                            <select id="selectPenugasan" class="form-select form-select-md ">
+                                <option value="1">Guru Mapel</option>
+                                <option value="2">Admin TU</option>
+                                <option value="3">Bendahara</option>
+                                <option value="4">Sekretaris</option>
+                                <option value="5">Kepala Sekolah</option>
+                                <option value="6" selected>Semua Penugasan</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet_filter()"
+                        data-bs-dismiss="modal">Terapkan Filter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Non Aktifkan Pegawai-->
+    <div class="modal fade" id="modal-non-aktifkan" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Konfirmasi Non Aktifkan Pegawai</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="alert alert-warning d-flex" role="alert">
+                                <span class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
+                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                <div class="d-flex flex-column ps-1">
+                                    <span class="text-black">Apakah Anda yakin pegawai <span class="fw-semibold">Bani
+                                            Huda </span>
+                                        yang memiliki penugasan sebagai <span class="fw-semibold">Admin
+                                            TU dan Bendahara</span> akan di <span class="fw-semibold">
+                                            Non Aktifkan </span> dari
+                                        sistem?
                                 </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 col-md-12 mb-3">
-                                            <label for="nameBasic" class="form-label">Nama Lengkap Pegawai <b
-                                                    class="text-danger">*</b></label>
-                                            <input type="text" id="nameBasic" class="form-control"
-                                                placeholder="Tuliskan nama lengkap pegawai" required />
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">ID pegawai <b
-                                                    class="text-danger">*</b></label>
-                                            <input class="form-control" type="text" id="id-pegawai"
-                                                placeholder="Digenerate oleh sistem" disabled value="2081029311">
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
-                                                    class="text-danger">*</b></label>
-                                            <div class="form-check form-check-inline form-check-primary mt-2">
-                                                <input class="form-check-input" type="radio" name="inlineRadioKelamin"
-                                                    id="inlineRadio1" value="option1" checked="">
-                                                <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioKelamin"
-                                                    id="inlineRadio2" value="option2">
-                                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="nameBasic" class="form-label">Nama Pengguna (opsi masuk
-                                                apps)</label>
-                                            <input class="form-control" type="text" id="nama-pengguna"
-                                                placeholder="Masukkan Nama Pengguna">
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3 form-password-toggle">
-                                            <label for="nameBasic" class="form-label">Kata Sandi <b
-                                                    class="text-danger">*</b></label>
-                                            <div class="input-group input-group-merge">
-                                                <input type="password" id="password" class="form-control"
-                                                    name="password" aria-describedby="password"
-                                                    placeholder="Masukkan kata sandi ..." value="12345678" />
-                                                <span class="input-group-text cursor-pointer"><i
-                                                        class="bx bx-hide"></i></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="selectPeran" class="form-label">Pilih Peran <b
-                                                    class="text-danger">*</b></label>
-                                            <input id="selectPeran" name="selectPeran" class="form-control mb-3"
-                                                placeholder="pilih peran ..." />
-                                        </div>
-                                        <div class="col-12 mb-3">
-                                            <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
-                                            <input id="selectPenugasan" name="selectPenugasan" class="form-control mb-3"
-                                                placeholder="pilih penugasan ..." />
-                                        </div>
-                                        <div class="mb-3 col-12">
-                                            <label for="nameBasic" class="form-label">Pilih Status</label> <br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
-                                                    id="inlineRadioTidakAktif" value="Tidak Aktif" checked />
-                                                <label class="form-check-label text-danger"
-                                                    for="inlineRadioTidakAktif">Tidak
-                                                    Aktif
-                                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
-                                                            sistem dengan batasan</i>)</small></label>
-                                            </div>
-                                            <br>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
-                                                    id="inlineRadioAktif" value="Aktif" />
-                                                <label class="form-check-label text-success"
-                                                    for="inlineRadioAktif">Aktif
-                                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
-                                                            sistem secara normal</i>)</small></label>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+
+                            <label for="nameSmall" class="form-label">Tuliskan alasan pegawai di Non
+                                Aktifkan <span class="text-danger">*</span></label>
+                            <input type="text" id="nameSmall" class="form-control" placeholder="Tulis keterangan ">
+                            <small class="text-muted"><i>(Keterangan di atas akan ditampilkan pada akun
+                                    pegawai terkait)</i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Aktifkan Pegawai-->
+    <div class="modal fade" id="modal-aktifkan" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Konfirmasi Aktifkan Pegawai</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="alert alert-warning d-flex" role="alert">
+                                <span
+                                    class="badge badge-center rounded-pill bg-warning border-label-warning p-3 me-2"><i
+                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                <div class="d-flex flex-column ps-1">
+                                    <span class="text-black">Apakah Anda yakin pegawai <span class="fw-semibold">Faeshal
+                                            Ramdhan</span>
+                                        yang memiliki penugasan sebagai <span class="fw-semibold">Guru
+                                            Mapel </span> akan di <span class="fw-semibold"> Aktifkan
+                                        </span> pada
+                                        sistem?
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                                        data-bs-dismiss="modal">Simpan</button>
-                                </div>
+                            </div>
+
+                            <label for="nameSmall" class="form-label">Tuliskan alasan pegawai di
+                                Aktifkan</label>
+                            <input type="text" id="nameSmall" class="form-control" placeholder="Tulis keterangan ">
+                            <small class="text-muted"></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-warning" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tambah Master Peran dan Penugasan-->
+    <div class="modal fade" id="modal-tambah-master-peran-penugasan" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Master Data Peran dan
+                        Penugasan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <label class="form-label text-warning ">Daftar Peran</label>
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="item-peran1">
+                                <span class="input-group-text"><i class="bx bxs-lock text-muted"></i></span>
+                                <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
+                                    value="Pegawai" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3">
+                            <div class="input-group input-group-merge">
+                                <input type="text" id="deskrispsiPeran1" class="form-control"
+                                    placeholder="Deskripsi Peran ..." value="Mendapatkan info kepegawaian pribadi">
+                                <span class="input-group-text"><span class="badge bg-label-secondary "
+                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                        data-bs-html="true" title=""
+                                        data-bs-original-title="Total penggunaan master data ini"><i
+                                            class="bx bx-user"></i> 23</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="item-peran2">
+                                <span class="input-group-text"><i class="bx bxs-lock text-muted"></i></span>
+                                <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
+                                    value="Operator" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3">
+                            <div class="input-group input-group-merge">
+                                <input type="text" id="deskrispsiPeran1" class="form-control"
+                                    placeholder="Deskripsi Peran ..." value="Mengelola semua data">
+                                <span class="input-group-text"><span class="badge bg-label-secondary "
+                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                        data-bs-html="true" title=""
+                                        data-bs-original-title="Total penggunaan master data ini"><i
+                                            class="bx bx-user"></i> 1</span></span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Modal Filter Data-->
-                    <div class="modal fade" id="modal-filter-data" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Filter Data yang Ditampilkan</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="selectPenugasan" class="form-label">Pilih Peran</label>
-                                            <select id="selectPenugasan" class="form-select form-select-md ">
-                                                <option value="1">Pegawai</option>
-                                                <option value="2">Operator</option>
-                                                <option value="2">Pengawas</option>
-                                                <option value="3" selected>Semua Peran</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-md-6 mb-3">
-                                            <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
-                                            <select id="selectPenugasan" class="form-select form-select-md ">
-                                                <option value="1">Guru Mapel</option>
-                                                <option value="2">Admin TU</option>
-                                                <option value="3">Bendahara</option>
-                                                <option value="4">Sekretaris</option>
-                                                <option value="5">Kepala Sekolah</option>
-                                                <option value="6" selected>Semua Penugasan</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                                        data-bs-dismiss="modal">Terakpan Filter</button>
-                                </div>
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="item-peran3">
+                                <span class="input-group-text"><i class="bx bxs-lock text-muted"></i></span>
+                                <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
+                                    value="Pengawas" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3">
+                            <div class="input-group input-group-merge">
+                                <input type="text" id="deskrispsiPeran1" class="form-control"
+                                    placeholder="Deskripsi Peran ..."
+                                    value="Melihat semua data tanpa bisa mengubah data tersebut">
+                                <span class="input-group-text"><span class="badge bg-label-secondary "
+                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                        data-bs-html="true" title=""
+                                        data-bs-original-title="Total penggunaan master data ini"><i
+                                            class="bx bx-user"></i> 2</span></span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Modal Non Aktifkan Pegawai-->
-                    <div class="modal fade" id="modal-non-aktifkan" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Konfirmasi Non Aktifkan Pegawai</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <div class="alert alert-warning d-flex" role="alert">
-                                                <span
-                                                    class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
-                                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
-                                                <div class="d-flex flex-column ps-1">
-                                                    <span class="text-black">Apakah Anda yakin pegawai <span
-                                                            class="fw-semibold">Bani Huda </span>
-                                                        yang memiliki penugasan sebagai <span class="fw-semibold">Admin
-                                                            TU dan Bendahara</span> akan di <span class="fw-semibold">
-                                                            Non Aktifkan </span> dari
-                                                        sistem?
-                                                </div>
-                                            </div>
+                    <label class="form-label text-primary mt-4">Daftar Penugasan</label>
 
-                                            <label for="nameSmall" class="form-label">Tuliskan alasan pegawai di Non
-                                                Aktifkan <span class="text-danger">*</span></label>
-                                            <input type="text" id="nameSmall" class="form-control"
-                                                placeholder="Tulis keterangan ">
-                                            <small class="text-muted"><i>(Keterangan di atas akan ditampilkan pada akun
-                                                    pegawai terkait)</i></small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-danger" onclick="sweet()"
-                                        data-bs-dismiss="modal">Ya</button>
-
-                                </div>
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="namaPenugasan1">
+                                <span class="input-group-text">1</span>
+                                <input type="text" id="penugasan1" class="form-control fw-bold"
+                                    placeholder="Nama penugasan ..." value="Guru Mapel">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                            <div class="input-group input-group-merge" name="deskripsiPenugasan1">
+                                <input type="text" id="penugasan1" class="form-control"
+                                    placeholder="Deskripsi penugasan ..." value="Guru pengampu mata pelajaran">
+                                <span class="input-group-text"><span class="badge bg-label-secondary"
+                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                        data-bs-html="true" title=""
+                                        data-bs-original-title="Total penggunaan master data ini"><i
+                                            class="bx bx-transfer-alt"></i> 20</span></span>
+                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan1"><i
+                                        class="bx bx-trash"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Modal Aktifkan Pegawai-->
-                    <div class="modal fade" id="modal-aktifkan" tabindex="-1" data-bs-backdrop="static">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Konfirmasi Aktifkan Pegawai</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-12 mb-3">
-                                            <div class="alert alert-warning d-flex" role="alert">
-                                                <span
-                                                    class="badge badge-center rounded-pill bg-warning border-label-warning p-3 me-2"><i
-                                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
-                                                <div class="d-flex flex-column ps-1">
-                                                    <span class="text-black">Apakah Anda yakin pegawai <span
-                                                            class="fw-semibold">Faeshal Ramdhan</span>
-                                                        yang memiliki penugasan sebagai <span class="fw-semibold">Guru
-                                                            Mapel </span> akan di <span class="fw-semibold"> Aktifkan
-                                                        </span> pada
-                                                        sistem?
-                                                </div>
-                                            </div>
-
-                                            <label for="nameSmall" class="form-label">Tuliskan alasan pegawai di
-                                                Aktifkan</label>
-                                            <input type="text" id="nameSmall" class="form-control"
-                                                placeholder="Tulis keterangan ">
-                                            <small class="text-muted"></small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-warning" onclick="sweet()"
-                                        data-bs-dismiss="modal">Ya</button>
-
-                                </div>
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="namaPenugasan2">
+                                <span class="input-group-text">2</span>
+                                <input type="text" id="penugasan2" class="form-control fw-bold"
+                                    placeholder="Nama penugasan ..." value="Admin TU">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                            <div class="input-group input-group-merge" name="deskripsiPenugasan2">
+                                <input type="text" id="penugasan2" class="form-control"
+                                    placeholder="Deskripsi penugasan ..."
+                                    value="Petugas administrasi dan pengelolaan data instansi">
+                                <span class="input-group-text"><span class="badge bg-label-secondary"
+                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                        data-bs-html="true" title=""
+                                        data-bs-original-title="Total penggunaan master data ini"><i
+                                            class="bx bx-transfer-alt"></i> 1</span></span>
+                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan2"><i
+                                        class="bx bx-trash"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Modal Tambah Master Peran dan Penugasan-->
-                    <div class="modal fade" id="modal-tambah-master-peran-penugasan" tabindex="-1"
-                        data-bs-backdrop="static">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel1">Tambah Master Data Peran dan
-                                        Penugasan</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="namaPenugasan3">
+                                <span class="input-group-text">3</span>
+                                <input type="text" id="penugasan3" class="form-control fw-bold"
+                                    placeholder="Nama penugasan ..." value="Bendahara">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                            <div class="input-group input-group-merge" name="deskripsiPenugasan3">
+                                <input type="text" id="penugasan3" class="form-control"
+                                    placeholder="Deskripsi penugasan ..." value="Petugas pengelolaan data instansi">
+                                <span class="input-group-text"><span class="badge bg-label-secondary"
+                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                        data-bs-html="true" title=""
+                                        data-bs-original-title="Total penggunaan master data ini"><i
+                                            class="bx bx-transfer-alt"></i> 2</span></span>
+                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan3"><i
+                                        class="bx bx-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
 
-                                    <label class="form-label text-warning ">Daftar Peran</label>
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="item-peran1">
-                                                <span class="input-group-text"><i
-                                                        class="bx bxs-lock text-muted"></i></span>
-                                                <input type="text" id="peran1" class="form-control fw-bold"
-                                                    placeholder="Nama peran ..." value="Pegawai" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3">
-                                            <div class="input-group input-group-merge">
-                                                <input type="text" id="deskrispsiPeran1" class="form-control"
-                                                    placeholder="Deskripsi Peran ..."
-                                                    value="Mendapatkan info kepegawaian pribadi">
-                                                <span class="input-group-text"><span
-                                                        class="badge bg-label-secondary "
-                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                        data-bs-placement="right" data-bs-html="true" title=""
-                                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                                            class="bx bx-user"></i> 23</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="item-peran2">
-                                                <span class="input-group-text"><i
-                                                        class="bx bxs-lock text-muted"></i></span>
-                                                <input type="text" id="peran1" class="form-control fw-bold"
-                                                    placeholder="Nama peran ..." value="Operator" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3">
-                                            <div class="input-group input-group-merge">
-                                            <input type="text" id="deskrispsiPeran1" class="form-control"
-                                                placeholder="Deskripsi Peran ..." value="Mengelola semua data">
-                                                <span class="input-group-text"><span
-                                                    class="badge bg-label-secondary "
-                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                    data-bs-placement="right" data-bs-html="true" title=""
-                                                    data-bs-original-title="Total penggunaan master data ini"><i
-                                                        class="bx bx-user"></i> 1</span></span></div>
-                                        </div>
-                                    </div>
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="namaPenugasan4">
+                                <span class="input-group-text">4</span>
+                                <input type="text" id="penugasan4" class="form-control fw-bold"
+                                    placeholder="Nama penugasan ..." value="Sekretaris">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                            <div class="input-group input-group-merge" name="deskripsiPenugasan4">
+                                <input type="text" id="penugasan4" class="form-control"
+                                    placeholder="Deskripsi penugasan ..."
+                                    value="Petugas pengelolaan informasi dan kebijakan instansi">
+                                <span class="input-group-text"><span class="badge bg-label-secondary"
+                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                        data-bs-html="true" title=""
+                                        data-bs-original-title="Total penggunaan master data ini"><i
+                                            class="bx bx-transfer-alt"></i> 2</span></span>
+                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan4"><i
+                                        class="bx bx-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
 
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="item-peran3">
-                                                <span class="input-group-text"><i
-                                                        class="bx bxs-lock text-muted"></i></span>
-                                                <input type="text" id="peran1" class="form-control fw-bold"
-                                                    placeholder="Nama peran ..." value="Pengawas" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3">
-                                            <div class="input-group input-group-merge">
-                                            <input type="text" id="deskrispsiPeran1" class="form-control"
-                                                placeholder="Deskripsi Peran ..."
-                                                value="Melihat semua data tanpa bisa mengubah data tersebut">
-                                                <span class="input-group-text"><span
-                                                    class="badge bg-label-secondary "
-                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                    data-bs-placement="right" data-bs-html="true" title=""
-                                                    data-bs-original-title="Total penggunaan master data ini"><i
-                                                        class="bx bx-user"></i> 2</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <label class="form-label text-primary mt-4">Daftar Penugasan</label>
-
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="namaPenugasan1">
-                                                <span class="input-group-text">1</span>
-                                                <input type="text" id="penugasan1" class="form-control fw-bold"
-                                                    placeholder="Nama penugasan ..." value="Guru Mapel">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
-                                            <div class="input-group input-group-merge" name="deskripsiPenugasan1">
-                                                <input type="text" id="penugasan1" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..."
-                                                    value="Guru pengampu mata pelajaran">
-                                                    <span class="input-group-text"><span class="badge bg-label-secondary"
-                                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                                        data-bs-html="true" title=""
-                                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                                            class="bx bx-transfer-alt"></i> 20</span></span>
-                                                <button class="btn btn-outline-danger d-none" type="button"
-                                                    id="hapusPenugasan1"><i class="bx bx-trash"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="namaPenugasan2">
-                                                <span class="input-group-text">2</span>
-                                                <input type="text" id="penugasan2" class="form-control fw-bold"
-                                                    placeholder="Nama penugasan ..." value="Admin TU">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
-                                            <div class="input-group input-group-merge" name="deskripsiPenugasan2">
-                                                <input type="text" id="penugasan2" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..."
-                                                    value="Petugas administrasi dan pengelolaan data instansi">
-                                                    <span class="input-group-text"><span class="badge bg-label-secondary"
-                                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                                        data-bs-html="true" title=""
-                                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                                            class="bx bx-transfer-alt"></i> 1</span></span>
-                                                <button class="btn btn-outline-danger d-none" type="button"
-                                                    id="hapusPenugasan2"><i class="bx bx-trash"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="namaPenugasan3">
-                                                <span class="input-group-text">3</span>
-                                                <input type="text" id="penugasan3" class="form-control fw-bold"
-                                                    placeholder="Nama penugasan ..." value="Bendahara">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
-                                            <div class="input-group input-group-merge" name="deskripsiPenugasan3">
-                                                <input type="text" id="penugasan3" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..."
-                                                    value="Petugas pengelolaan data instansi">
-                                                    <span class="input-group-text"><span class="badge bg-label-secondary"
-                                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                                        data-bs-html="true" title=""
-                                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                                            class="bx bx-transfer-alt"></i> 2</span></span>
-                                                <button class="btn btn-outline-danger d-none" type="button"
-                                                    id="hapusPenugasan3"><i class="bx bx-trash"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="namaPenugasan4">
-                                                <span class="input-group-text">4</span>
-                                                <input type="text" id="penugasan4" class="form-control fw-bold"
-                                                    placeholder="Nama penugasan ..." value="Sekretaris">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
-                                            <div class="input-group input-group-merge" name="deskripsiPenugasan4">
-                                                <input type="text" id="penugasan4" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..."
-                                                    value="Petugas pengelolaan informasi dan kebijakan instansi">
-                                                    <span class="input-group-text"><span class="badge bg-label-secondary"
-                                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                                        data-bs-html="true" title=""
-                                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                                            class="bx bx-transfer-alt"></i> 2</span></span>
-                                                <button class="btn btn-outline-danger d-none" type="button"
-                                                    id="hapusPenugasan4"><i class="bx bx-trash"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="namaPenugasan5">
-                                                <span class="input-group-text">5</span>
-                                                <input type="text" id="penugasan5" class="form-control fw-bold"
-                                                    placeholder="Nama penugasan ..." value="Kepala Sekolah">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
-                                            <div class="input-group input-group-merge" name="deskripsiPenugasan5">
-                                                <input type="text" id="penugasan5" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..."
-                                                    value="Sebagai pemimpin dan pembuat kebijkan instansi">
-                                                    <span class="input-group-text"><span class="badge bg-label-secondary"
-                                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                                        data-bs-html="true" title=""
-                                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                                            class="bx bx-transfer-alt"></i> 1</span></span>
-                                                <button class="btn btn-outline-danger d-none" type="button"
-                                                    id="hapusPenugasan5"><i class="bx bx-trash"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-                                    <div class="row form-group mb-3 mb-sm-0">
-                                        <div class="col-12 col-sm-4 mb-3">
-                                            <div class="input-group input-group-merge" name="namaPenugasan6">
-                                                <span class="input-group-text">6</span>
-                                                <input type="text" id="penugasan6" class="form-control fw-bold"
-                                                    placeholder="Nama penugasan ..." value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
-                                            <div class="input-group input-group-merge" name="deskripsiPenugasan6">
-                                                <input type="text" id="penugasan6" class="form-control"
-                                                    placeholder="Deskripsi penugasan ..."
-                                                    value="">
-                                                   
-                                                <button class="btn btn-outline-danger" type="button"
-                                                    id="hapusPenugasan6"><i class="bx bx-trash"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-12 d-flex justify-content-end">
-                                            <button type="button" class="btn btn-outline-success mb-3"><i
-                                                    class="bx bx-plus"></i> Penugasan</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Batal
-                                    </button>
-                                    <button type="button" class="btn btn-primary" onclick="sweet()"
-                                        data-bs-dismiss="modal">Simpan</button>
-                                </div>
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="namaPenugasan5">
+                                <span class="input-group-text">5</span>
+                                <input type="text" id="penugasan5" class="form-control fw-bold"
+                                    placeholder="Nama penugasan ..." value="Kepala Sekolah">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                            <div class="input-group input-group-merge" name="deskripsiPenugasan5">
+                                <input type="text" id="penugasan5" class="form-control"
+                                    placeholder="Deskripsi penugasan ..."
+                                    value="Sebagai pemimpin dan pembuat kebijkan instansi">
+                                <span class="input-group-text"><span class="badge bg-label-secondary"
+                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                        data-bs-html="true" title=""
+                                        data-bs-original-title="Total penggunaan master data ini"><i
+                                            class="bx bx-transfer-alt"></i> 1</span></span>
+                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan5"><i
+                                        class="bx bx-trash"></i></button>
                             </div>
                         </div>
                     </div>
 
 
-                    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-                    <script src="../assets/vendor/libs/popper/popper.js"></script>
-                    <script src="../assets/vendor/js/bootstrap.js"></script>
-                    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <div class="input-group input-group-merge" name="namaPenugasan6">
+                                <span class="input-group-text">6</span>
+                                <input type="text" id="penugasan6" class="form-control fw-bold"
+                                    placeholder="Nama penugasan ..." value="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                            <div class="input-group input-group-merge" name="deskripsiPenugasan6">
+                                <input type="text" id="penugasan6" class="form-control"
+                                    placeholder="Deskripsi penugasan ..." value="">
 
-                    <script src="../assets/vendor/js/menu.js"></script>
+                                <button class="btn btn-outline-danger" type="button" id="hapusPenugasan6"><i
+                                        class="bx bx-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-end">
+                            <button type="button" class="btn btn-outline-success mb-3"><i class="bx bx-plus"></i>
+                                Penugasan</button>
+                        </div>
+                    </div>
 
-                    <script src="../assets/js/main.js"></script>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="sweet()"
+                        data-bs-dismiss="modal">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <script src="../assets/js/dashboards-analytics.js"></script>
 
-                    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-                    <script src="../assets/js/sweetalert.min.js"></script>
+    <script src="../assets/vendor/js/menu.js"></script>
 
-                    <!-- tambahan -->
-                    <script src="../libs/select/select.js"></script>
+    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-                    <script src="../assets/vendor/libs/select2/select2.js"></script>
-                    <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+    <script src="../assets/js/main.js"></script>
 
-                    <script>
-                        function sweet() {
-                            swal({
-                                title: "Data berhasil disimpan!",
-                                // text: "You clicked the button!",
-                                icon: "success",
-                                button: false,
-                                timer: 2000,
-                            });
-                        }
-                    </script>
+    <script src="../assets/js/dashboards-analytics.js"></script>
 
-                    <script>
-                        $("#namaBulanSelect").select2({
-                            placeholder: "Pilih bulan pembayaran",
-                            allowClear: true
-                        });
-                        $("#namaKelasSelect").select2({
-                            placeholder: "Pilih kelas",
-                            allowClear: true
-                        });
-                    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-                    <script>
-                        const TagifyUserListElselectPeran = document.querySelector("#selectPeran");
-                        const usersListselectPeran = [
-                            {
-                                value: 1,
-                                name: "Pengawas",
-                                avatar: "../assets/img/icons/thumbnail/icon-user-danger.jpg",
-                                email: "Melihat semua data tanpa bisa mengubah data tersebut"
-                            },
-                            {
-                                value: 2,
-                                name: "Operator",
-                                avatar: "../assets/img/icons/thumbnail/icon-user-warning.jpg",
-                                email: "Mengelola semua data"
-                            },
-                            {
-                                value: 3,
-                                name: "Pegawai",
-                                avatar: "../assets/img/icons/thumbnail/icon-user-info.jpg",
-                                email: "Mendapatkan info kepegawaian pribadi"
-                            },
-                            // {
-                            //     value: 4,
-                            //     name: "Siswa",
-                            //     avatar: "../assets/img/icons/thumbnail/icon-user-primary.jpg",
-                            //     email: "Mendapatkan info kesiswaan pribadi"
-                            // }
-                        ];
+    <script src="../assets/js/sweetalert.min.js"></script>
 
-                        function tagTemplate(tagData) {
-                            return `
+    <!-- tambahan -->
+    <script src="../libs/select/select.js"></script>
+
+    <script src="../assets/vendor/libs/select2/select2.js"></script>
+    <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+
+    <script>
+        function sweet() {
+            swal({
+                title: "Data berhasil disimpan!",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: false,
+                timer: 2000,
+            });
+        }
+        function sweet_filter() {
+            swal({
+                title: "Filter data berhasil diterapkan!",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: false,
+                timer: 2000,
+            });
+        }
+    </script>
+
+    <script>
+        $("#namaBulanSelect").select2({
+            placeholder: "Pilih bulan pembayaran",
+            allowClear: true
+        });
+        $("#namaKelasSelect").select2({
+            placeholder: "Pilih kelas",
+            allowClear: true
+        });
+    </script>
+
+    <script>
+        const TagifyUserListElselectPeran = document.querySelector("#selectPeran");
+        const usersListselectPeran = [
+            {
+                value: 1,
+                name: "Pengawas",
+                avatar: "../assets/img/icons/thumbnail/icon-user-danger.jpg",
+                email: "Melihat semua data tanpa bisa mengubah data tersebut"
+            },
+            {
+                value: 2,
+                name: "Operator",
+                avatar: "../assets/img/icons/thumbnail/icon-user-warning.jpg",
+                email: "Mengelola semua data"
+            },
+            {
+                value: 3,
+                name: "Pegawai",
+                avatar: "../assets/img/icons/thumbnail/icon-user-info.jpg",
+                email: "Mendapatkan info kepegawaian pribadi"
+            },
+            // {
+            //     value: 4,
+            //     name: "Siswa",
+            //     avatar: "../assets/img/icons/thumbnail/icon-user-primary.jpg",
+            //     email: "Mendapatkan info kesiswaan pribadi"
+            // }
+        ];
+
+        function tagTemplate(tagData) {
+            return `
                         <tag title="${tagData.title || tagData.email}"
                         contenteditable='false'
                         spellcheck='false'
@@ -1439,64 +1434,64 @@
                         </div>
                         </tag>
                         `;
-                        }
+        }
 
-                        function suggestionItemTemplate(tagData) {
-                            return `
+        function suggestionItemTemplate(tagData) {
+            return `
                         <div ${this.getAttributes(tagData)}
                         class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
                         tabindex="0"
                         role="option"
                         >
                         ${tagData.avatar ?
-                                    `<div class='tagify__dropdown__item__avatar-wrap'>
+                    `<div class='tagify__dropdown__item__avatar-wrap'>
                         <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
                         </div>`
-                                    : ''
-                                }
+                    : ''
+                }
                         <strong>${tagData.name}</strong>
                         <span>${tagData.email}</span>
                         </div>
                         `;
-                        }
+        }
 
-                        // initialize Tagify on the above input node reference
-                        let TagifyUserListselectPeran = new Tagify(TagifyUserListElselectPeran, {
-                            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
-                            enforceWhitelist: true,
-                            skipInvalid: true, // do not remporarily add invalid tags
-                            dropdown: {
-                                closeOnSelect: false,
-                                enabled: 0,
-                                classname: "users-list",
-                                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
-                            },
-                            templates: {
-                                tag: tagTemplate,
-                                dropdownItem: suggestionItemTemplate
-                            },
-                            whitelist: usersListselectPeran
-                        });
+        // initialize Tagify on the above input node reference
+        let TagifyUserListselectPeran = new Tagify(TagifyUserListElselectPeran, {
+            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            enforceWhitelist: true,
+            skipInvalid: true, // do not remporarily add invalid tags
+            dropdown: {
+                closeOnSelect: false,
+                enabled: 0,
+                classname: "users-list",
+                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+            },
+            templates: {
+                tag: tagTemplate,
+                dropdownItem: suggestionItemTemplate
+            },
+            whitelist: usersListselectPeran
+        });
 
-                        TagifyUserListselectPeran.on("dropdown:show dropdown:updated", onDropdownShow);
-                        TagifyUserListselectPeran.on("dropdown:select", onSelectSuggestion);
+        TagifyUserListselectPeran.on("dropdown:show dropdown:updated", onDropdownShow);
+        TagifyUserListselectPeran.on("dropdown:select", onSelectSuggestion);
 
-                        let addAllSuggestionsElselectPeran;
+        let addAllSuggestionsElselectPeran;
 
-                        function onDropdownShow(e) {
-                            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+        function onDropdownShow(e) {
+            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
 
-                            if (TagifyUserListselectPeran.suggestedListItems.length > 1) {
-                                addAllSuggestionsElselectPeran = getAddAllSuggestionsElselectPeran();
+            if (TagifyUserListselectPeran.suggestedListItems.length > 1) {
+                addAllSuggestionsElselectPeran = getAddAllSuggestionsElselectPeran();
 
-                                // insert "addAllSuggestionsEl" as the first element in the suggestions list
-                                dropdownContentEl.insertBefore(addAllSuggestionsElselectPeran, dropdownContentEl.firstChild);
-                            }
-                        }
+                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                dropdownContentEl.insertBefore(addAllSuggestionsElselectPeran, dropdownContentEl.firstChild);
+            }
+        }
 
-                        function onSelectSuggestion(e) {
-                            if (e.detail.elm == addAllSuggestionsElselectPeran) TagifyUserListselectPeran.dropdown.selectAll.call(TagifyUserListselectPeran);
-                        }
+        function onSelectSuggestion(e) {
+            if (e.detail.elm == addAllSuggestionsElselectPeran) TagifyUserListselectPeran.dropdown.selectAll.call(TagifyUserListselectPeran);
+        }
 
                         // create an "add all" custom suggestion element every time the dropdown changes
 
@@ -1513,45 +1508,45 @@
                         //         }
                         //     ]);
                         // }
-                    </script>
+    </script>
 
-                    <script>
-                        const TagifyUserListElselectPenugasan = document.querySelector("#selectPenugasan");
-                        const usersListselectPenugasan = [
-                            {
-                                value: 1,
-                                name: "Guru Mapel",
-                                avatar: "../assets/img/icons/thumbnail/icon-star-primary.jpg",
-                                email: "Guru pengampu mata pelajaran tertentu"
-                            },
-                            {
-                                value: 2,
-                                name: "Admin TU",
-                                avatar: "../assets/img/icons/thumbnail/icon-star-warning.jpg",
-                                email: "Petugas administrasi dan pengelolaan dat instansi"
-                            },
-                            {
-                                value: 3,
-                                name: "Bendahara",
-                                avatar: "../assets/img/icons/thumbnail/icon-star-info.jpg",
-                                email: "Petugas pengelolaan keuangan instansi"
-                            },
-                            {
-                                value: 3,
-                                name: "Sekretaris",
-                                avatar: "../assets/img/icons/thumbnail/icon-star-info.jpg",
-                                email: "Petugas pengelolan informasi dan kebijkan instansi"
-                            },
-                            {
-                                value: 4,
-                                name: "Kepala Sekolah",
-                                avatar: "../assets/img/icons/thumbnail/icon-star-danger.jpg",
-                                email: "Sebagai pemimpin dan pembuat kebijakan instansi"
-                            }
-                        ];
+    <script>
+        const TagifyUserListElselectPenugasan = document.querySelector("#selectPenugasan");
+        const usersListselectPenugasan = [
+            {
+                value: 1,
+                name: "Guru Mapel",
+                avatar: "../assets/img/icons/thumbnail/icon-star-primary.jpg",
+                email: "Guru pengampu mata pelajaran tertentu"
+            },
+            {
+                value: 2,
+                name: "Admin TU",
+                avatar: "../assets/img/icons/thumbnail/icon-star-warning.jpg",
+                email: "Petugas administrasi dan pengelolaan dat instansi"
+            },
+            {
+                value: 3,
+                name: "Bendahara",
+                avatar: "../assets/img/icons/thumbnail/icon-star-info.jpg",
+                email: "Petugas pengelolaan keuangan instansi"
+            },
+            {
+                value: 3,
+                name: "Sekretaris",
+                avatar: "../assets/img/icons/thumbnail/icon-star-info.jpg",
+                email: "Petugas pengelolan informasi dan kebijkan instansi"
+            },
+            {
+                value: 4,
+                name: "Kepala Sekolah",
+                avatar: "../assets/img/icons/thumbnail/icon-star-danger.jpg",
+                email: "Sebagai pemimpin dan pembuat kebijakan instansi"
+            }
+        ];
 
-                        function tagTemplate(tagData) {
-                            return `
+        function tagTemplate(tagData) {
+            return `
                         <tag title="${tagData.title || tagData.email}"
                         contenteditable='false'
                         spellcheck='false'
@@ -1568,64 +1563,64 @@
                         </div>
                         </tag>
                         `;
-                        }
+        }
 
-                        function suggestionItemTemplate(tagData) {
-                            return `
+        function suggestionItemTemplate(tagData) {
+            return `
                         <div ${this.getAttributes(tagData)}
                         class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
                         tabindex="0"
                         role="option"
                         >
                         ${tagData.avatar ?
-                                    `<div class='tagify__dropdown__item__avatar-wrap'>
+                    `<div class='tagify__dropdown__item__avatar-wrap'>
                         <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
                         </div>`
-                                    : ''
-                                }
+                    : ''
+                }
                         <strong>${tagData.name}</strong>
                         <span>${tagData.email}</span>
                         </div>
                         `;
-                        }
+        }
 
-                        // initialize Tagify on the above input node reference
-                        let TagifyUserListselectPenugasan = new Tagify(TagifyUserListElselectPenugasan, {
-                            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
-                            enforceWhitelist: true,
-                            skipInvalid: true, // do not remporarily add invalid tags
-                            dropdown: {
-                                closeOnSelect: false,
-                                enabled: 0,
-                                classname: "users-list",
-                                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
-                            },
-                            templates: {
-                                tag: tagTemplate,
-                                dropdownItem: suggestionItemTemplate
-                            },
-                            whitelist: usersListselectPenugasan
-                        });
+        // initialize Tagify on the above input node reference
+        let TagifyUserListselectPenugasan = new Tagify(TagifyUserListElselectPenugasan, {
+            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            enforceWhitelist: true,
+            skipInvalid: true, // do not remporarily add invalid tags
+            dropdown: {
+                closeOnSelect: false,
+                enabled: 0,
+                classname: "users-list",
+                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+            },
+            templates: {
+                tag: tagTemplate,
+                dropdownItem: suggestionItemTemplate
+            },
+            whitelist: usersListselectPenugasan
+        });
 
-                        TagifyUserListselectPenugasan.on("dropdown:show dropdown:updated", onDropdownShow);
-                        TagifyUserListselectPenugasan.on("dropdown:select", onSelectSuggestion);
+        TagifyUserListselectPenugasan.on("dropdown:show dropdown:updated", onDropdownShow);
+        TagifyUserListselectPenugasan.on("dropdown:select", onSelectSuggestion);
 
-                        let addAllSuggestionsElselectPenugasan;
+        let addAllSuggestionsElselectPenugasan;
 
-                        function onDropdownShow(e) {
-                            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+        function onDropdownShow(e) {
+            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
 
-                            if (TagifyUserListselectPenugasan.suggestedListItems.length > 1) {
-                                addAllSuggestionsElselectPenugasan = getAddAllSuggestionsElselectPenugasan();
+            if (TagifyUserListselectPenugasan.suggestedListItems.length > 1) {
+                addAllSuggestionsElselectPenugasan = getAddAllSuggestionsElselectPenugasan();
 
-                                // insert "addAllSuggestionsEl" as the first element in the suggestions list
-                                dropdownContentEl.insertBefore(addAllSuggestionsElselectPenugasan, dropdownContentEl.firstChild);
-                            }
-                        }
+                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                dropdownContentEl.insertBefore(addAllSuggestionsElselectPenugasan, dropdownContentEl.firstChild);
+            }
+        }
 
-                        function onSelectSuggestion(e) {
-                            if (e.detail.elm == addAllSuggestionsElselectPenugasan) TagifyUserListselectPenugasan.dropdown.selectAll.call(TagifyUserListselectPenugasan);
-                        }
+        function onSelectSuggestion(e) {
+            if (e.detail.elm == addAllSuggestionsElselectPenugasan) TagifyUserListselectPenugasan.dropdown.selectAll.call(TagifyUserListselectPenugasan);
+        }
 
     // create an "add all" custom suggestion element every time the dropdown changes
 
@@ -1642,7 +1637,7 @@
     //         }
     //     ]);
     // }
-                    </script>
+    </script>
 
 
 </body>
