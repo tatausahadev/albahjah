@@ -1251,7 +1251,7 @@
                                                             <div class="input-group input-group-merge"
                                                                 name="komponen-tagihan">
                                                                 <span class="input-group-text">Rp</span>
-                                                                <input type="number"
+                                                                <input type="text"
                                                                     class="form-control numeral-mask nominal-komponen"
                                                                     id="form-repeater-komponen-tagihan-pembayaran-1-2"
                                                                     placeholder="0" value="">
@@ -1270,18 +1270,19 @@
                                                         data-repeater-create><i class="bx bx-plus bx-sm"></i></button>
                                                 </div>
                                                 <div class="col-12 col-md-6">
-                                                    <div class="input-group input-group-merge"
-                                                                name="komponen-tagihan">
-                                                                <span class="input-group-text fw-bold border-0" style="background-color: #ECEEF1;">Rp</span>
-                                                                <input type="text"
-                                                                    class="form-control fw-bold border-0 numeral-mask-total total-komponen" disabled value="">
-                                                                
-                                                    <span class="badge bg-label-danger py-3 ps-3 pe-2"
-                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                    data-bs-placement="right" data-bs-html="true" title=""
-                                                    data-bs-original-title="Total tagihan pembayaran">Total</span>
-                                                            </div>
-                                                   
+                                                    <div class="input-group input-group-merge" name="komponen-tagihan">
+                                                        <span class="input-group-text fw-bold border-0"
+                                                            style="background-color: #ECEEF1;">Rp</span>
+                                                        <input type="text"
+                                                            class="form-control fw-bold border-0 numeral-mask-total total-komponen"
+                                                            disabled value="">
+
+                                                        <span class="badge bg-label-danger py-3 ps-3 pe-2"
+                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Total tagihan pembayaran">Total</span>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </form>
@@ -2231,10 +2232,14 @@
     </script>
 
     <script>
-        new Cleave(".form-control.numeral-mask", {
+        document.querySelectorAll('.numeral-mask').forEach(inp => new Cleave(inp, {
             numeral: true,
-            numeralThousandsGroupStyle: "thousand"
-        });
+            numeralThousandsGroupStyle: 'thousand'
+        }));
+        // new Cleave(".numeral-mask", {
+        //     numeral: true,
+        //     numeralThousandsGroupStyle: "thousand"
+        // });
     </script>
 
     <script>
@@ -2246,6 +2251,8 @@
             $(".total-komponen").val(sum);
         });
     </script>
+
+
 
     <script>
         const TagifyUserListEl = document.querySelector("#siswaKelas1");

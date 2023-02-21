@@ -42,6 +42,12 @@
             position: sticky;
             top: 25px;
         }
+
+        .form-check-info .form-check-input:checked {
+            background-color: #03c3ec !important;
+            border-color: #03c3ec !important;
+            box-shadow: 0 2px 4px 0 rgba(3, 195, 236, .4) !important;
+        }
     </style>
 </head>
 
@@ -222,37 +228,41 @@
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                  class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                  href="#" data-bs-toggle="dropdown">Operator
-                  <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
-                  <li>
-                    <a class="dropdown-item" selected href="#">
-                      <span class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pengawas</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item active" selected href="#">
-                      <span class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Operator</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pegawai</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Siswa</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">Operator
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pengawas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Operator</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pegawai</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Siswa</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
@@ -1001,7 +1011,9 @@
                                                                 aria-label="Centang pada semua pembayaran"
                                                                 data-bs-original-title="Centang pada semua tagihan pembayaran"></i>
                                                         </label>
-                                                        <input class="form-check-input" type="checkbox" id="selectAll">
+                                                        <input class="form-check-input" type="checkbox" id="selectAll"
+                                                            name="tagihan-bulan-ini"
+                                                            onclick="checkUncheckTagihanBulanIni(this)">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -1012,7 +1024,7 @@
                                                             SPP Bulanan (Januari 2023)
                                                         </label>
                                                         <input class="form-check-input" type="checkbox" checked
-                                                            id="spp-januari">
+                                                            id="spp-januari" name="tagihan-bulan-ini" value="125000">
                                                     </div>
                                                 </td>
                                                 <td class="text-end">
@@ -1026,7 +1038,7 @@
                                                             Buku Paket / LKS Semester Ganjil
                                                         </label>
                                                         <input class="form-check-input" type="checkbox" id="buku-paket"
-                                                            checked>
+                                                            checked name="tagihan-bulan-ini" value="200000">
                                                     </div>
                                                 </td>
                                                 <td class="text-end">
@@ -1040,7 +1052,8 @@
                                                             Seragam Sekolah (Laki - laki)
                                                         </label>
                                                         <input class="form-check-input" type="checkbox"
-                                                            id="seragam-sekolah">
+                                                            id="seragam-sekolah" name="tagihan-bulan-ini"
+                                                            value="200000">
                                                     </div>
                                                 </td>
                                                 <td class="text-end">
@@ -1049,8 +1062,13 @@
                                             </tr>
                                             <tr>
                                                 <td class="fw-normal">
-                                                    <i class="bx bx-wallet text-info"></i>&nbsp; Uang tabungan
-                                                    yang digunakan
+                                                    <div class="form-check form-check-info">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="uang-tabungan" name="uang-tabungan-digunakan"
+                                                            value="50000" checked>
+                                                            <label class="form-check-label" for="uang-tabungan">Uang tabungan
+                                                                yang digunakan</label>
+                                                    </div>
                                                 </td>
                                                 <td class="text-end">- 50.000
                                                 </td>
@@ -1838,6 +1856,15 @@
                 placeholder: "Pilih Periode",
                 allowClear: false
             });
+        </script>
+
+        <script>
+            function checkUncheckTagihanBulanIni(checkBox) {
+                get = document.getElementsByName('tagihan-bulan-ini');
+                for (var i = 0; i < get.length; i++) {
+                    get[i].checked = checkBox.checked;
+                }
+            }
         </script>
 
 
