@@ -268,37 +268,41 @@
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                  class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                  href="#" data-bs-toggle="dropdown">Operator
-                  <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
-                  <li>
-                    <a class="dropdown-item" selected href="#">
-                      <span class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pengawas</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item active" selected href="#">
-                      <span class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Operator</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pegawai</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Siswa</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">Operator
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pengawas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Operator</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pegawai</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Siswa</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
@@ -791,8 +795,8 @@
                                                                                 </span>
                                                                                 <div class="ms-2">
                                                                                     <p class="mb-0 small fw-normal">
-                                                                                        Jurusan / Prodi</p>
-                                                                                    <span>Matematika
+                                                                                        Jurusan - Prodi</p>
+                                                                                    <span>MIPA - Matematika
                                                                                     </span>
                                                                                 </div>
                                                                             </div>
@@ -1707,13 +1711,91 @@
                                             </div>
                                         </div>
 
-                                        <div class="card mb-2">
+                                        <div class="accordion-item card mb-2">
                                             <h2 class="accordion-header">
-                                                <button type="button" class="accordion-button text-muted"><i
+                                                <button type="button" class="accordion-button text-primary"
+                                                    data-bs-toggle="collapse" data-bs-target="#accordionStyle1-4"
+                                                    aria-expanded="true"><i
                                                         class="bx bx-info-circle text-info bx-sm pt-1">&nbsp;</i>
-                                                    Informasi Kepegawaian (<i>otomatis dari sistem</i>)
+                                                    Informasi Kepegawaian
                                                 </button>
                                             </h2>
+                                            <div id="accordionStyle1-4" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionStyle1">
+                                                <div class="accordion-body">
+                                                    <p class="fw-bold">LATAR BELAKANG</p>
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <label for="mulaiMasuk" class="form-label">Mulai
+                                                                Masuk
+                                                            </label>
+                                                            <input class="form-control" type="date"
+                                                                id="mulai-masuk" placeholder="tanggal mulai masuk"
+                                                                value="2018-01-20">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <label for="statusPegawai"
+                                                                class="form-label">Status Pegawai </label>
+                                                            <select id="statusPegawai"
+                                                                class="form-select form-select-md ">
+                                                                <option value="1" selected="">Tetap</option>
+                                                                <option value="2">Honorer</option>
+                                                                <option value="3">PNS</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <label for="pendidikanTerakhir"
+                                                                class="form-label">Pendidikan Terakhir </label>
+                                                            <select id="pendidikanTerakhir"
+                                                                class="form-select form-select-md ">
+                                                                <option value="0">SMA / SLTA</option>
+                                                                <option value="1">D I</option>
+                                                                <option value="2">D II</option>
+                                                                <option value="3">D III</option>
+                                                                <option value="4">D IV</option>
+                                                                <option value="5" selected>S I</option>
+                                                                <option value="6">S II</option>
+                                                                <option value="7">S III</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <label for="instansiPendidikan" class="form-label">Instansi Pendidikan
+                                                            </label>
+                                                            <input class="form-control" type="text"
+                                                                id="instansiPendidikan" placeholder="Nama instansi pendidikan"
+                                                                value="Universitas Negeri Malang">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <label for="jurusanProdi" class="form-label">Jurusan - Prodi
+                                                            </label>
+                                                            <input class="form-control" type="text"
+                                                                id="jurusanProdi" placeholder="Nama instansi pendidikan"
+                                                                value="MIPA - Matematika">
+                                                        </div>
+                                                    </div>
+                                                    <p class="fw-bold">INFORMASI PENUGASAN</p>
+                                                    <div class="row mb-4">
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <label for="namaSekolahSebelumnya" class="form-label">Nama
+                                                                Sekolah Sebelumnya
+                                                            </label>
+                                                            <input type="text" id="namaSekolahSebelumnya"
+                                                                class="form-control"
+                                                                placeholder="Tuliskan nama lengkap wali" required=""
+                                                                value="MI Negeri 1 Cirebon">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <label for="catatanSekolahSebelumnya"
+                                                                class="form-label">Informasi Tambahan
+                                                            </label>
+                                                            <input type="text" id="catatanSekolahSebelumnya"
+                                                                class="form-control"
+                                                                placeholder="Tuliskan nama lengkap wali" required=""
+                                                                value="Tidak ada">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -2029,6 +2111,7 @@
                         //     ]);
 // }
                     </script>
+
 
 </body>
 
