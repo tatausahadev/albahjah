@@ -331,7 +331,9 @@
                                             <div class="card-body">
                                                 <div class="d-flex align-items-start justify-content-between">
                                                     <div class="">
-                                                        <span>Data berdasarkan</span>
+                                                        <span>Data berdasarkan</span><br>
+                                                        <small> TA 2019 /
+                                                            2020</small>
                                                     </div>
                                                     <a type="button"
                                                         class="btn btn-primary btn-icon bg-white text-primary"
@@ -340,9 +342,8 @@
                                                     </a>
                                                 </div>
 
-                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold">TA 2019 /
-                                                        2020, Semua tingkat, Semua
-                                                        kelas</span>
+                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold"> Semua tingkat, Semua
+                                                        kelas, Semua status</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -407,35 +408,20 @@
                             </div>
                             <div class="col-lg-12 mb-4">
                                 <div class="card">
-                                    <div class="row card-header ">
-                                        <div class="col-md-5 col-12">
-                                            <h5 class="pt-2">Daftar Siswa</h5>
-                                        </div>
-                                        <div class="col-md-7 col-12">
-                                            <div class="row">
-                                                <div class="col-12 col-md-5 pb-3">
-                                                    <div class="input-group">
-                                                        <span class="input-group-text"><i
-                                                                class="tf-icons bx bx-search"></i></span>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Cari nama siswa...">
-                                                    </div>
+                                    <div class="card-header ">
+                                        <div class="card-title header-elements">
+                                            <h5 class="mb-3 me-2">Daftar Siswa</h5>
+                                            <div class="card-title-elements ms-auto ">
+                                                <div class="input-group w-auto me-0 me-sm-3 mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="tf-icons bx bx-search"></i></span>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Cari nama siswa...">
                                                 </div>
-                                                <div class="col-6 col-md-4 pb-3 ms-auto">
-                                                    <select id="largeSelect" class="form-select form-select-md w-100">
-                                                        <option value="1">Aktif</option>
-                                                        <option value="2">Tidak aktif</option>
-                                                        <option value="3">Alumni</option>
-                                                        <option value="4" selected>Semua status
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-3 ms-auto">
-                                                    <a type="button" class="btn btn-primary text-white w-100"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-tambah-siswa">
-                                                        <i class="bx bx-plus"></i> Siswa
-                                                    </a>
-                                                </div>
+                                                <a type="button" class="btn btn-primary text-white mb-3"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-tambah-siswa">
+                                                    <i class="bx bx-plus"></i> Siswa
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -453,7 +439,8 @@
                                             <tbody class="table-border-bottom-0">
                                                 <tr>
                                                     <td>
-                                                        <a class="d-flex mt-1 text-secondary" href="siswa-detail-non-aktif.html">
+                                                        <a class="d-flex mt-1 text-secondary"
+                                                            href="siswa-detail-non-aktif.html">
                                                             <img src="../assets/img/avatars/default.jpg" alt=""
                                                                 class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
                                                             <div>
@@ -462,7 +449,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td>Kelas I
+                                                    <td>Kelas I - A
                                                     </td>
                                                     <td><span class="badge bg-label-danger me-1">Tidak Aktif</span></td>
                                                     </td>
@@ -630,7 +617,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <a class="d-flex mt-1 text-secondary" href="siswa-detail-alumni.html">
+                                                        <a class="d-flex mt-1 text-secondary"
+                                                            href="siswa-detail-alumni.html">
                                                             <img src="../assets/img/avatars/siswi-2.jpg" alt=""
                                                                 class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
                                                             <div>
@@ -745,20 +733,22 @@
                                     <i class="bx bx-user-check bx-sm btn-icon rounded bg-label-primary"></i>
                                     <span class="custom-option-body">
                                         <span class="custom-option-title text-primary">Alumni yayasan </span>
-                                        <small> Siswa baru, merupakan alumni dari salah satu intansi naungan yayasan</small>
-                                        </span>    <input name="customRadioIcon" class="form-check-input" type="radio" value=""
-                                                id="customRadioIcon2">
+                                        <small> Siswa baru, merupakan alumni dari salah satu intansi naungan
+                                            yayasan</small>
+                                    </span> <input name="customRadioIcon" class="form-check-input" type="radio" value=""
+                                        id="customRadioIcon2">
                                 </label>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <hr>
                         </div>
                     </div>
                     <div-detail>
                         <div class="row">
                             <div class="col-12">
-                                <h5 class="mb-3">BUKAN ALUMNI YAYASAN</h5>
+                                <div class="divider divider-primary mt-0">
+                                <div class="divider-text fw-semibold text-primary">
+                                    Bukan alumni yayasan
+                                  </div>
+                                </div>
                             </div>
                             <div class="col-12 col-md-12 mb-3">
                                 <label for="nameBasic" class="form-label">Nama Lengkap Siswa <b
@@ -850,7 +840,11 @@
                     <div-detail>
                         <div class="row">
                             <div class="col-12">
-                                <h5 class="mb-3">ALUMNI YAYASAN</h5>
+                                <div class="divider divider-primary mt-0">
+                                <div class="divider-text fw-semibold text-primary">
+                                    Alumni yayasan
+                                  </div>
+                                </div>
                             </div>
                             <div class="col-12 mb-3">
                                 <div class="row">
@@ -886,33 +880,38 @@
                                     </div>
                                     <div class="col-12 mb-3">
                                         <div class="d-flex mt-2 text-secondary bg-label-success p-3 rounded">
-                                            <img src="../assets/img/avatars/default.jpg" alt="" class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                            <img src="../assets/img/avatars/default.jpg" alt=""
+                                                class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
                                             <div>
                                                 <strong class="text-black">Fatih Lilmuslihin</strong> <br>
                                                 <span class="small text-black">20198273182134</span>
                                             </div>
                                         </div>
                                     </div>
-                                    
-                            <div class="mb-3 col-12">
-                                <label for="nameBasic" class="form-label">Pilih Status</label> <br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioStatusAlumniYayasan"
-                                        id="inlineRadioTidakAktifAlumniYayasan" value="Tidak Aktif" checked />
-                                    <label class="form-check-label text-danger" for="inlineRadioTidakAktifAlumniYayasan">Tidak
-                                        Aktif
-                                        <small class="text-secondary">(<i>Akun terkait dapat mengakses
-                                                sistem dengan batasan</i>)</small></label>
-                                </div>
-                                <br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioStatusAlumniYayasan"
-                                        id="inlineRadioAktifAlumniYayasan" value="Aktif" />
-                                    <label class="form-check-label text-success" for="inlineRadioAktifAlumniYayasan">Aktif
-                                        <small class="text-secondary">(<i>Akun terkait dapat mengakses
-                                                sistem secara normal</i>)</small></label>
-                                </div>
-                            </div>
+
+                                    <div class="mb-3 col-12">
+                                        <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio"
+                                                name="inlineRadioStatusAlumniYayasan"
+                                                id="inlineRadioTidakAktifAlumniYayasan" value="Tidak Aktif" checked />
+                                            <label class="form-check-label text-danger"
+                                                for="inlineRadioTidakAktifAlumniYayasan">Tidak
+                                                Aktif
+                                                <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                                        sistem dengan batasan</i>)</small></label>
+                                        </div>
+                                        <br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio"
+                                                name="inlineRadioStatusAlumniYayasan" id="inlineRadioAktifAlumniYayasan"
+                                                value="Aktif" />
+                                            <label class="form-check-label text-success"
+                                                for="inlineRadioAktifAlumniYayasan">Aktif
+                                                <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                                        sistem secara normal</i>)</small></label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -920,7 +919,7 @@
                     </div-detail>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-primary" onclick="sweet()"
@@ -947,22 +946,32 @@
                                 <option value="2">TA 2018 / 2019</option>
                             </select>
                         </div>
-                        <div class="col-12 col-md-6 mb-3">
+                        <div class="col-12 mb-3">
                             <label for="selectTingkat" class="form-label">Pilih Tingkat Kelas</label>
-                            <select id="selectTingkat" class="form-select form-select-md ">
+                            <select id="selectTingkat" class="form-select form-select-md">
                                 <option value="1">Kelas I</option>
                                 <option value="2">Kelas II</option>
                                 <option value="3">Kelas III</option>
-                                <option value="4" selected>Semua Tingkat</option>
+                                <option value="4" selected>Semua tingkat</option>
+                                <option value="0">Belum masuk kelas</option>
                             </select>
                         </div>
-                        <div class="col-12 col-md-6 mb-3">
+                        <div class="col-12 mb-3">
                             <label for="selectNamaKelas" class="form-label">Pilih Nama Kelas</label>
                             <select id="selectNamaKelas" class="form-select form-select-md ">
                                 <option value="1">A</option>
                                 <option value="2">B</option>
                                 <option value="3">C</option>
-                                <option value="4" selected>Semua Kelas</option>
+                                <option value="4" selected>Semua kelas</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="selectNamaKelas" class="form-label">Pilih Status Siswa</label>
+                            <select id="selectNamaKelas" class="form-select form-select-md ">
+                                <option value="1">Aktif</option>
+                                <option value="2">Tidak Aktif</option>
+                                <option value="3">Alumni</option>
+                                <option value="4" selected>Semua status</option>
                             </select>
                         </div>
                     </div>
