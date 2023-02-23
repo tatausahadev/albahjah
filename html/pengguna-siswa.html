@@ -342,7 +342,8 @@
                                                     </a>
                                                 </div>
 
-                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold"> Semua tingkat, Semua
+                                                <div class="d-flex align-items-end mt-2"><span class="fw-bold"> Semua
+                                                        tingkat, Semua
                                                         kelas, Semua status</span>
                                                 </div>
                                             </div>
@@ -467,10 +468,6 @@
                                                                 <li><a class="dropdown-item" href="siswa-detail.html"><i
                                                                             class="bx bx-user me-1"></i> Lihat
                                                                         Detail</a></a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="penempatan-kelas.html"><i
-                                                                            class="bx bxs-graduation me-1"></i>
-                                                                        Penempatan Kelas</a></a></li>
                                                                 <li>
                                                                     <div class="dropdown-divider"></div>
                                                                 </li>
@@ -479,6 +476,12 @@
                                                                         data-bs-toggle="modal"><i
                                                                             class="bx bx-user-check me-1"></i>
                                                                         Aktifkan</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-hapus"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-trash me-1"></i>
+                                                                        Hapus</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -523,6 +526,12 @@
                                                                             class="bx bx-user-x me-1"></i>
                                                                         Non Aktifkan</a>
                                                                 </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-set-alumni"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-user-minus me-1"></i>
+                                                                        Set Sebagai Alumni</a>
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </td>
@@ -565,6 +574,12 @@
                                                                             class="bx bx-user-x me-1"></i>
                                                                         Non Aktifkan</a>
                                                                 </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-set-alumni"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-user-minus me-1"></i>
+                                                                        Set Sebagai Alumni</a>
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </td>
@@ -580,7 +595,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td><span>Belum&nbsp;masuk&nbsp;kelas</span>
+                                                    <td>Belum masuk kelas
                                                     </td>
                                                     <td><span class="badge bg-label-success me-1">Aktif</span></td>
                                                     </td>
@@ -598,8 +613,7 @@
                                                                 <li><a class="dropdown-item" href="siswa-detail.html"><i
                                                                             class="bx bx-user me-1"></i> Lihat
                                                                         Detail</a></a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="penempatan-kelas.html"><i
+                                                                <li><a class="dropdown-item" href="kelas-formal.html"><i
                                                                             class="bx bxs-graduation me-1"></i>
                                                                         Penempatan Kelas</a></a></li>
                                                                 <li>
@@ -610,6 +624,12 @@
                                                                         data-bs-toggle="modal"><i
                                                                             class="bx bx-user-x me-1"></i>
                                                                         Non Aktifkan</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-set-alumni"
+                                                                        data-bs-toggle="modal"><i
+                                                                            class="bx bx-user-minus me-1"></i>
+                                                                        Set Sebagai Alumni</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -627,7 +647,7 @@
                                                             </div>
                                                         </a>
                                                     </td>
-                                                    <td><span>Sudah&nbsp;lulus</span>
+                                                    <td>Kelas III - A
                                                     </td>
                                                     <td><span class="badge bg-label-secondary me-1">Alumni</span></td>
                                                     </td>
@@ -745,9 +765,9 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="divider divider-primary mt-0">
-                                <div class="divider-text fw-semibold text-primary">
-                                    Bukan alumni yayasan
-                                  </div>
+                                    <div class="divider-text fw-semibold text-primary">
+                                        Bukan alumni yayasan
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-12 mb-3">
@@ -841,9 +861,9 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="divider divider-primary mt-0">
-                                <div class="divider-text fw-semibold text-primary">
-                                    Alumni yayasan
-                                  </div>
+                                    <div class="divider-text fw-semibold text-primary">
+                                        Alumni yayasan
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 mb-3">
@@ -977,11 +997,94 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-primary" onclick="sweet_filter()"
                         data-bs-dismiss="modal">Terapkan Filter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Hapus Siswa-->
+    <div class="modal fade" id="modal-hapus" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Konfirmasi Hapus Siswa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="alert alert-warning d-flex" role="alert">
+                                <span class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
+                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                <div class="d-flex flex-column ps-1">
+                                    <span class="text-black">Apakah Anda yakin siswa <span class="fw-semibold">Agus
+                                            Fakhriz Kelas III - C</span>
+                                        akan di<span class="fw-semibold"> Hapus </span> dari
+                                        sistem?
+                                </div>
+                            </div>
+                            <div class="form-check form-check-danger">
+                                <input class="form-check-input" type="checkbox" value="" id="customCheckDanger"
+                                    checked="">
+                                <label class="form-check-label" for="customCheckDanger">Saya dengan sadar akan menghapus
+                                    data ini dengan konsekuensi semua data terkait tidak akan dapat dikembalikan
+                                    lagi</label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="sweet_hapus()"
+                        data-bs-dismiss="modal">Ya</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Set Sebagai Alumni -->
+    <div class="modal fade" id="modal-set-alumni" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Konfirmasi Siswa Sebagai Alumni</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="alert alert-warning d-flex" role="alert">
+                                <span class="badge badge-center rounded-pill bg-danger border-label-danger p-3 me-2"><i
+                                        class="bx bx-question-mark bx-sm pt-1"></i></span>
+                                <div class="d-flex flex-column ps-1">
+                                    <span class="text-black">Apakah Anda yakin siswa <span class="fw-semibold">Agus
+                                            Fakhriz Kelas III - C</span>
+                                        akan di<span class="fw-semibold"> Set Sebagai Alumni </span>?
+                                </div>
+                            </div>
+
+                            <label for="nameSmall" class="form-label">Tuliskan informasi tambahan (jika perlu)</label>
+                            <input type="text" id="nameSmall" class="form-control" placeholder="Tulis keterangan ">
+                            <small class="text-muted"><i>(Keterangan di atas akan ditampilkan pada akun
+                                    siswa terkait)</i></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                        Batal
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
                 </div>
             </div>
         </div>
@@ -1018,7 +1121,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-danger" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
@@ -1059,7 +1162,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-warning" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
@@ -1104,6 +1207,15 @@
         function sweet_filter() {
             swal({
                 title: "Filter data berhasil diterapkan!",
+                // text: "You clicked the button!",
+                icon: "success",
+                button: false,
+                timer: 2000,
+            });
+        }
+        function sweet_hapus() {
+            swal({
+                title: "Data berhasil dihapus!",
                 // text: "You clicked the button!",
                 icon: "success",
                 button: false,
