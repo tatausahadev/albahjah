@@ -42,15 +42,23 @@
     <link rel="stylesheet" href="../assets/vendor/libs/select2/select2.css" />
     <link rel="stylesheet" href="../assets/vendor/libs/tagify/tagify.css" />
 
+    <link rel="stylesheet" href="../assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+
+    <!-- UPDATE -->
+    <link rel="stylesheet" href="../assets/new/core.css" />
+    <link rel="stylesheet" href="../assets/new/demo.css" />
+    <link rel="stylesheet" href="../assets/new/theme-default.css" />
+
     <style>
-        .bg-pattern-siswa {
-            background-color: #9396FF;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%239396FF'/%3E%3Cstop offset='1' stop-color='%237B57FA'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='500' height='200' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-            background-attachment: fixed;
-            background-size: cover;
-            height: 120px;
+        div-detail {
+            display: none;
+        }
+
+        div-detail.on {
+            display: block;
         }
     </style>
+
 </head>
 
 <body>
@@ -160,11 +168,7 @@
                                     <div>Kelas Non-Formal</div>
                                 </a>
                             </li>
-                            <li class="menu-item">
-                                <a href="pindah-kelas.html" class="menu-link">
-                                    <div>Penempatan Siswa</div>
-                                </a>
-                            </li>
+                            
                         </ul>
                     </li>
                     <li class="menu-item">
@@ -223,47 +227,82 @@
 
                         <div class="navbar-nav align-items-center">
                             <div class="nav-item d-flex align-items-center">
-                                <img style="height: 50px;" src="../assets/img/logo/logo-sekolah-header.png" alt="">
+                              <img style="height: 50px;" class="d-none d-md-block" src="../assets/img/logo/logo-sekolah-header.png"
+                                alt="">
                             </div>
-                        </div>
+                          </div>
 
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                                    href="#" data-bs-toggle="dropdown">Operator
-                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
-                                    <li>
-                                        <a class="dropdown-item" selected href="#">
-                                            <span
-                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Pengawas</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item active" selected href="#">
-                                            <span
-                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Operator</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <span
-                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Pegawai</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <span
-                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Siswa</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                class="fw-semibold bg-label-primary small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                href="#" data-bs-toggle="dropdown">SMP
+                                <span class="bx bxs-bank text-white bg-primary rounded-pill p-1"></span></a>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li><span class="dropdown-item-text small text-muted">Instansi Anda</span></li>
+                                <li>
+                                  <a class="dropdown-item" selected href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">RA</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" selected href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">PAUD</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">MI</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item active" href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">SMP</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Yayasan</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
+                                class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                href="#" data-bs-toggle="dropdown">Operator
+                                <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                <li>
+                                  <a class="dropdown-item" selected href="#">
+                                    <span class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Pengawas</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item active" selected href="#">
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Operator</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">
+                                    <span class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Pegawai</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">
+                                    <span class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Siswa</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </li>
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
@@ -342,7 +381,7 @@
                                                         href="#master-peran-penugasan" role="button"
                                                         aria-expanded="false" aria-controls="master-peran-penugasan">
                                                         Master Data <span
-                                                            class="badge badge-center rounded-pill bg-label-warning">3</span>
+                                                            class="badge badge-center rounded-pill bg-label-warning mx-1">3</span>
                                                         <span
                                                             class="badge badge-center rounded-pill bg-label-primary me-1">5</span></a>
                                                     <button type="button"
@@ -501,7 +540,7 @@
                                                 </div>
 
                                                 <div class="d-flex align-items-end mt-2"><span class="fw-bold">Semua
-                                                        Peran, Semua Penugasan</span>
+                                                        Peran, Semua Penugasan, Semua Status</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -567,34 +606,20 @@
 
                             <div class="col-lg-12 mb-4">
                                 <div class="card">
-                                    <div class="row card-header ">
-                                        <div class="col-md-5 col-12">
-                                            <h5 class="pt-2">Daftar Pegawai</h5>
-                                        </div>
-                                        <div class="col-md-7 col-12">
-                                            <div class="row">
-                                                <div class="col-12 col-md-5 pb-3">
-                                                    <div class="input-group">
-                                                        <span class="input-group-text"><i
-                                                                class="tf-icons bx bx-search"></i></span>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Cari nama pegawai...">
-                                                    </div>
+                                    <div class="card-header ">
+                                        <div class="card-title header-elements">
+                                            <h5 class="mb-3 me-2">Daftar Pegawai</h5>
+                                            <div class="card-title-elements ms-auto ">
+                                                <div class="input-group w-auto me-0 me-sm-3 mb-3">
+                                                    <span class="input-group-text"><i
+                                                            class="tf-icons bx bx-search"></i></span>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Cari nama pegawai...">
                                                 </div>
-                                                <div class="col-6 col-md-4 pb-3 ms-auto">
-                                                    <select id="largeSelect" class="form-select form-select-md w-100">
-                                                        <option value="1">Aktif</option>
-                                                        <option value="2">Tidak aktif</option>
-                                                        <option value="3" selected="">Semua status
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-md-3 ms-auto">
-                                                    <a type="button" class="btn btn-primary text-white w-100"
-                                                        data-bs-toggle="modal" data-bs-target="#modal-tambah-pegawai">
-                                                        <i class="bx bx-plus"></i> Pegawai
-                                                    </a>
-                                                </div>
+                                                <a type="button" class="btn btn-primary text-white mb-3"
+                                                    data-bs-toggle="modal" data-bs-target="#modal-tambah-pegawai">
+                                                    <i class="bx bx-plus"></i> Pegawai
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -885,80 +910,199 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 col-md-12 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Lengkap Pegawai <b
-                                    class="text-danger">*</b></label>
-                            <input type="text" id="nameBasic" class="form-control"
-                                placeholder="Tuliskan nama lengkap pegawai" required />
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">ID pegawai <b class="text-danger">*</b></label>
-                            <input class="form-control" type="text" id="id-pegawai" placeholder="Digenerate oleh sistem"
-                                disabled value="2081029311">
-                        </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
-                                    class="text-danger">*</b></label>
-                            <div class="form-check form-check-inline form-check-primary mt-2">
-                                <input class="form-check-input" type="radio" name="inlineRadioKelamin" id="inlineRadio1"
-                                    value="option1" checked="">
-                                <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioKelamin" id="inlineRadio2"
-                                    value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                    <div class="row mb-3">
+                        <div class="col-md mb-md-0 mb-2">
+                            <div class="form-check custom-option custom-option-icon border-0" name="tab-pegawai-baru">
+                                <label class="form-check-label custom-option-content" for="customRadioIcon1">
+                                    <i class="bx bx-user-plus bx-sm btn-icon rounded bg-label-primary"></i>
+                                    <span class="custom-option-body">
+                                        <span class="custom-option-title text-primary">Pegawai baru</span>
+                                        <small> Pegawai baru, belum terdata pada salah satu intansi naungan
+                                            yayasan</small>
+                                    </span>
+                                    <input name="customRadioIcon" class="form-check-input" type="radio" value=""
+                                        id="customRadioIcon1">
+                                </label>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Pengguna (opsi masuk
-                                apps)</label>
-                            <input class="form-control" type="text" id="nama-pengguna"
-                                placeholder="Masukkan Nama Pengguna">
-                        </div>
-                        <div class="col-12 col-md-6 mb-3 form-password-toggle">
-                            <label for="nameBasic" class="form-label">Kata Sandi <b class="text-danger">*</b></label>
-                            <div class="input-group input-group-merge">
-                                <input type="password" id="password" class="form-control" name="password"
-                                    aria-describedby="password" placeholder="Masukkan kata sandi ..."
-                                    value="12345678" />
-                                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="selectPeran" class="form-label">Pilih Peran <b class="text-danger">*</b></label>
-                            <input id="selectPeran" name="selectPeran" class="form-control mb-3"
-                                placeholder="pilih peran ..." />
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
-                            <input id="selectPenugasan" name="selectPenugasan" class="form-control mb-3"
-                                placeholder="pilih penugasan ..." />
-                        </div>
-                        <div class="mb-3 col-12">
-                            <label for="nameBasic" class="form-label">Pilih Status</label> <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
-                                    id="inlineRadioTidakAktif" value="Tidak Aktif" checked />
-                                <label class="form-check-label text-danger" for="inlineRadioTidakAktif">Tidak
-                                    Aktif
-                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
-                                            sistem dengan batasan</i>)</small></label>
-                            </div>
-                            <br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioStatus"
-                                    id="inlineRadioAktif" value="Aktif" />
-                                <label class="form-check-label text-success" for="inlineRadioAktif">Aktif
-                                    <small class="text-secondary">(<i>Akun terkait dapat mengakses
-                                            sistem secara normal</i>)</small></label>
+                        <div class="col-md mb-md-0 mb-2">
+                            <div class="form-check custom-option custom-option-icon border-0" name="tab-pegawai-baru">
+                                <label class="form-check-label custom-option-content" for="customRadioIcon2">
+                                    <i class="bx bx-user-check bx-sm btn-icon rounded bg-label-primary"></i>
+                                    <span class="custom-option-body">
+                                        <span class="custom-option-title text-primary">Pegawai dalam yayasan </span>
+                                        <small> Data pegawai sudah ada pada salah satu intansi naungan
+                                            yayasan</small>
+                                    </span> <input name="customRadioIcon" class="form-check-input" type="radio" value=""
+                                        id="customRadioIcon2">
+                                </label>
                             </div>
                         </div>
                     </div>
+                    <div-detail>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="divider divider-primary mt-0">
+                                    <div class="divider-text fw-semibold text-primary">
+                                        Pegawai baru
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 mb-3">
+                                <label for="nameBasic" class="form-label">Nama Lengkap Pegawai <b
+                                        class="text-danger">*</b></label>
+                                <input type="text" id="nameBasic" class="form-control"
+                                    placeholder="Tuliskan nama lengkap pegawai" required />
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nameBasic" class="form-label">ID pegawai <b
+                                        class="text-danger">*</b></label>
+                                <input class="form-control" type="text" id="id-pegawai"
+                                    placeholder="Digenerate oleh sistem" disabled value="2081029311">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="jenisKelamin" class="form-label d-block mt-1">Jenis Kelamin <b
+                                        class="text-danger">*</b></label>
+                                <div class="form-check form-check-inline form-check-primary mt-2">
+                                    <input class="form-check-input" type="radio" name="inlineRadioKelamin"
+                                        id="inlineRadio1" value="option1" checked="">
+                                    <label class="form-check-label" for="inlineRadio1">Laki - laki</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioKelamin"
+                                        id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nameBasic" class="form-label">Nama Pengguna (opsi masuk
+                                    apps)</label>
+                                <input class="form-control" type="text" id="nama-pengguna"
+                                    placeholder="Masukkan Nama Pengguna">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3 form-password-toggle">
+                                <label for="nameBasic" class="form-label">Kata Sandi <b
+                                        class="text-danger">*</b></label>
+                                <div class="input-group input-group-merge">
+                                    <input type="password" id="password" class="form-control" name="password"
+                                        aria-describedby="password" placeholder="Masukkan kata sandi ..."
+                                        value="12345678" />
+                                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="selectPeran" class="form-label">Pilih Peran <b
+                                        class="text-danger">*</b></label>
+                                <input id="selectPeran" name="selectPeran" class="form-control mb-3"
+                                    placeholder="pilih peran ..." />
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
+                                <input id="selectPenugasan" name="selectPenugasan" class="form-control mb-3"
+                                    placeholder="pilih penugasan ..." />
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioStatus"
+                                        id="inlineRadioTidakAktif" value="Tidak Aktif" checked />
+                                    <label class="form-check-label text-danger" for="inlineRadioTidakAktif">Tidak
+                                        Aktif
+                                        <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                                sistem dengan batasan</i>)</small></label>
+                                </div>
+                                <br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioStatus"
+                                        id="inlineRadioAktif" value="Aktif" />
+                                    <label class="form-check-label text-success" for="inlineRadioAktif">Aktif
+                                        <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                                sistem secara normal</i>)</small></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div-detail>
+                    <div-detail>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="divider divider-primary mt-0">
+                                    <div class="divider-text fw-semibold text-primary">
+                                        Pegawai dalam yayasan
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label for="selectTingkat" class="form-label">Pilih instansi data pegawai <b
+                                                class="text-danger">*</b></label>
+                                        <select id="selectTingkat" class="form-select form-select-md ">
+                                            <option value="1">RA</option>
+                                            <option value="2">PAUD</option>
+                                            <option value="3">MI</option>
+                                            <option value="4">SMP</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label for="selectpickerPegawai" class="form-label">Cari nama pegawai <b
+                                                class="text-danger">*</b></label>
+                                        <select id="selectpickerPegawai" class="selectpicker w-100"
+                                            data-style="btn-default" data-live-search="true">
+                                            <option>Pilih pegawai</option>
+                                            <option>Nur Hasanah</option>
+                                            <option selected>Fatih Lilmuslihin</option>
+                                            <option>Yazin Bustomi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="d-flex mt-2 text-secondary bg-label-success p-3 rounded">
+                                            <img src="../assets/img/avatars/default.jpg" alt=""
+                                                class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                            <div>
+                                                <strong class="text-black">Fatih Lilmuslihin</strong> <br>
+                                                <span class="small text-black">20198273182134</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="selectPeran" class="form-label">Pilih Peran <b
+                                                class="text-danger">*</b></label>
+                                        <input id="selectPeranPegawaiInstansi" name="selectPeranPegawaiInstansi"
+                                            class="form-control mb-3" placeholder="pilih peran ..." />
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
+                                        <input id="selectPenugasanPegawaiInstansi" name="selectPenugasanPegawaiInstansi"
+                                            class="form-control mb-3" placeholder="pilih penugasan ..." />
+                                    </div>
+                                    <div class="mb-3 col-12">
+                                        <label for="nameBasic" class="form-label">Pilih Status</label> <br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioPegawaiStatus"
+                                                id="inlineRadioPegawaiTidakAktif" value="Tidak Aktif" checked />
+                                            <label class="form-check-label text-danger"
+                                                for="inlineRadioPegawaiTidakAktif">Tidak
+                                                Aktif
+                                                <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                                        sistem dengan batasan</i>)</small></label>
+                                        </div>
+                                        <br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="inlineRadioPegawaiStatus"
+                                                id="inlineRadioPegawaiAktif" value="Aktif" />
+                                            <label class="form-check-label text-success"
+                                                for="inlineRadioPegawaiAktif">Aktif
+                                                <small class="text-secondary">(<i>Akun terkait dapat mengakses
+                                                        sistem secara normal</i>)</small></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div-detail>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-primary" onclick="sweet()"
@@ -978,7 +1122,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-12 col-md-6 mb-3">
+                        <div class="col-12 mb-3">
                             <label for="selectPenugasan" class="form-label">Pilih Peran</label>
                             <select id="selectPenugasan" class="form-select form-select-md ">
                                 <option value="1">Pegawai</option>
@@ -987,7 +1131,7 @@
                                 <option value="3" selected>Semua Peran</option>
                             </select>
                         </div>
-                        <div class="col-12 col-md-6 mb-3">
+                        <div class="col-12 mb-3">
                             <label for="selectPenugasan" class="form-label">Pilih Penugasan</label>
                             <select id="selectPenugasan" class="form-select form-select-md ">
                                 <option value="1">Guru Mapel</option>
@@ -998,10 +1142,18 @@
                                 <option value="6" selected>Semua Penugasan</option>
                             </select>
                         </div>
+                        <div class="col-12 mb-3">
+                            <label for="selectStatus" class="form-label">Pilih Status</label>
+                            <select id="selectStatus" class="form-select form-select-md ">
+                                <option value="1">Aktif</option>
+                                <option value="2">Tidak aktif</option>
+                                <option value="3" selected>Semua status</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-primary" onclick="sweet_filter()"
@@ -1044,7 +1196,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-danger" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
@@ -1087,7 +1239,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-warning" onclick="sweet()" data-bs-dismiss="modal">Ya</button>
@@ -1111,63 +1263,52 @@
                     <label class="form-label text-warning ">Daftar Peran</label>
                     <div class="row form-group mb-3 mb-sm-0">
                         <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="item-peran1">
-                                <span class="input-group-text"><i class="bx bxs-lock text-muted"></i></span>
-                                <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
-                                    value="Pegawai" required>
-                            </div>
+                            <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
+                                value="Pegawai" required>
                         </div>
                         <div class="col-12 col-sm-8 mb-3">
-                            <div class="input-group input-group-merge">
+                            <div class="input-group input-group-merge" name="deskripsi-item-peran1">
                                 <input type="text" id="deskrispsiPeran1" class="form-control"
                                     placeholder="Deskripsi Peran ..." value="Mendapatkan info kepegawaian pribadi">
-                                <span class="input-group-text"><span class="badge bg-label-secondary "
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                            class="bx bx-user"></i> 23</span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row form-group mb-3 mb-sm-0">
-                        <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="item-peran2">
-                                <span class="input-group-text"><i class="bx bxs-lock text-muted"></i></span>
-                                <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
-                                    value="Operator" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-8 mb-3">
-                            <div class="input-group input-group-merge">
-                                <input type="text" id="deskrispsiPeran1" class="form-control"
-                                    placeholder="Deskripsi Peran ..." value="Mengelola semua data">
-                                <span class="input-group-text"><span class="badge bg-label-secondary "
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                            class="bx bx-user"></i> 1</span></span>
+                                <span class="input-group-text" data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                    data-bs-placement="right" data-bs-html="true" title=""
+                                    data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                        class="bx bxs-lock text-muted"></i></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="row form-group mb-3 mb-sm-0">
                         <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="item-peran3">
-                                <span class="input-group-text"><i class="bx bxs-lock text-muted"></i></span>
-                                <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
-                                    value="Pengawas" required>
-                            </div>
+                            <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
+                                value="Operator" required>
                         </div>
                         <div class="col-12 col-sm-8 mb-3">
-                            <div class="input-group input-group-merge">
-                                <input type="text" id="deskrispsiPeran1" class="form-control"
+                            <div class="input-group input-group-merge" name="deskripsi-item-peran2">
+                                <input type="text" id="deskrispsiPeran2" class="form-control"
+                                    placeholder="Deskripsi Peran ..." value="Mengelola semua data">
+                                <span class="input-group-text" data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                    data-bs-placement="right" data-bs-html="true" title=""
+                                    data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                        class="bx bxs-lock text-muted"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group mb-3 mb-sm-0">
+                        <div class="col-12 col-sm-4 mb-3">
+                            <input type="text" id="peran1" class="form-control fw-bold" placeholder="Nama peran ..."
+                                value="Pengawas" required>
+                        </div>
+                        <div class="col-12 col-sm-8 mb-3">
+                            <div class="input-group input-group-merge" name="deskripsi-item-peran3">
+                                <input type="text" id="deskrispsiPeran3" class="form-control"
                                     placeholder="Deskripsi Peran ..."
                                     value="Melihat semua data tanpa bisa mengubah data tersebut">
-                                <span class="input-group-text"><span class="badge bg-label-secondary "
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                            class="bx bx-user"></i> 2</span></span>
+                                <span class="input-group-text" data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                    data-bs-placement="right" data-bs-html="true" title=""
+                                    data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                        class="bx bxs-lock text-muted"></i></span>
                             </div>
                         </div>
                     </div>
@@ -1176,152 +1317,122 @@
 
                     <div class="row form-group mb-3 mb-sm-0">
                         <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="namaPenugasan1">
-                                <span class="input-group-text">1</span>
-                                <input type="text" id="penugasan1" class="form-control fw-bold"
-                                    placeholder="Nama penugasan ..." value="Guru Mapel">
-                            </div>
+                            <input type="text" id="penugasan1" class="form-control fw-bold"
+                                placeholder="Nama penugasan ..." value="Guru Mapel">
                         </div>
                         <div class="col-12 col-sm-8 mb-3 mb-sm-0">
                             <div class="input-group input-group-merge" name="deskripsiPenugasan1">
                                 <input type="text" id="penugasan1" class="form-control"
                                     placeholder="Deskripsi penugasan ..." value="Guru pengampu mata pelajaran">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                            class="bx bx-transfer-alt"></i> 20</span></span>
-                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan1"><i
-                                        class="bx bx-trash"></i></button>
+                                <span class="input-group-text"><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                        data-bs-placement="right" data-bs-html="true" title=""
+                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                            class="bx bxs-lock text-muted"></i></span></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="row form-group mb-3 mb-sm-0">
                         <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="namaPenugasan2">
-                                <span class="input-group-text">2</span>
-                                <input type="text" id="penugasan2" class="form-control fw-bold"
-                                    placeholder="Nama penugasan ..." value="Admin TU">
-                            </div>
+                            <input type="text" id="penugasan2" class="form-control fw-bold"
+                                placeholder="Nama penugasan ..." value="Admin TU">
                         </div>
                         <div class="col-12 col-sm-8 mb-3 mb-sm-0">
                             <div class="input-group input-group-merge" name="deskripsiPenugasan2">
                                 <input type="text" id="penugasan2" class="form-control"
                                     placeholder="Deskripsi penugasan ..."
                                     value="Petugas administrasi dan pengelolaan data instansi">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                            class="bx bx-transfer-alt"></i> 1</span></span>
-                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan2"><i
-                                        class="bx bx-trash"></i></button>
+                                <span class="input-group-text"><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                        data-bs-placement="right" data-bs-html="true" title=""
+                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                            class="bx bxs-lock text-muted"></i></span></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="row form-group mb-3 mb-sm-0">
                         <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="namaPenugasan3">
-                                <span class="input-group-text">3</span>
-                                <input type="text" id="penugasan3" class="form-control fw-bold"
-                                    placeholder="Nama penugasan ..." value="Bendahara">
-                            </div>
+                            <input type="text" id="penugasan3" class="form-control fw-bold"
+                                placeholder="Nama penugasan ..." value="Bendahara">
                         </div>
                         <div class="col-12 col-sm-8 mb-3 mb-sm-0">
                             <div class="input-group input-group-merge" name="deskripsiPenugasan3">
                                 <input type="text" id="penugasan3" class="form-control"
                                     placeholder="Deskripsi penugasan ..." value="Petugas pengelolaan data instansi">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                            class="bx bx-transfer-alt"></i> 2</span></span>
-                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan3"><i
-                                        class="bx bx-trash"></i></button>
+                                <span class="input-group-text"><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                        data-bs-placement="right" data-bs-html="true" title=""
+                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                            class="bx bxs-lock text-muted"></i></span></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="row form-group mb-3 mb-sm-0">
                         <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="namaPenugasan4">
-                                <span class="input-group-text">4</span>
-                                <input type="text" id="penugasan4" class="form-control fw-bold"
-                                    placeholder="Nama penugasan ..." value="Sekretaris">
-                            </div>
+                            <input type="text" id="penugasan4" class="form-control fw-bold"
+                                placeholder="Nama penugasan ..." value="Sekretaris">
                         </div>
                         <div class="col-12 col-sm-8 mb-3 mb-sm-0">
                             <div class="input-group input-group-merge" name="deskripsiPenugasan4">
                                 <input type="text" id="penugasan4" class="form-control"
                                     placeholder="Deskripsi penugasan ..."
                                     value="Petugas pengelolaan informasi dan kebijakan instansi">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                            class="bx bx-transfer-alt"></i> 2</span></span>
-                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan4"><i
-                                        class="bx bx-trash"></i></button>
+                                <span class="input-group-text"><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                        data-bs-placement="right" data-bs-html="true" title=""
+                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                            class="bx bxs-lock text-muted"></i></span></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="row form-group mb-3 mb-sm-0">
                         <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="namaPenugasan5">
-                                <span class="input-group-text">5</span>
-                                <input type="text" id="penugasan5" class="form-control fw-bold"
-                                    placeholder="Nama penugasan ..." value="Kepala Sekolah">
-                            </div>
+                            <input type="text" id="penugasan5" class="form-control fw-bold"
+                                placeholder="Nama penugasan ..." value="Kepala Sekolah">
                         </div>
                         <div class="col-12 col-sm-8 mb-3 mb-sm-0">
                             <div class="input-group input-group-merge" name="deskripsiPenugasan5">
                                 <input type="text" id="penugasan5" class="form-control"
                                     placeholder="Deskripsi penugasan ..."
-                                    value="Sebagai pemimpin dan pembuat kebijkan instansi">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Total penggunaan master data ini"><i
-                                            class="bx bx-transfer-alt"></i> 1</span></span>
-                                <button class="btn btn-outline-danger d-none" type="button" id="hapusPenugasan5"><i
-                                        class="bx bx-trash"></i></button>
+                                    value="Sebagai pemimpin dan pembuat kebijkan instansi"><span
+                                    class="input-group-text"><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                        data-bs-placement="right" data-bs-html="true" title=""
+                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                            class="bx bxs-lock text-muted"></i></span></span>
                             </div>
                         </div>
                     </div>
 
+                    <form class="form-repeater-penugasan">
+                        <div data-repeater-list="group-penugasan">
+                            <div data-repeater-item="">
 
-                    <div class="row form-group mb-3 mb-sm-0">
-                        <div class="col-12 col-sm-4 mb-3">
-                            <div class="input-group input-group-merge" name="namaPenugasan6">
-                                <span class="input-group-text">6</span>
-                                <input type="text" id="penugasan6" class="form-control fw-bold"
-                                    placeholder="Nama penugasan ..." value="">
+                                <div class="row form-group mb-3 mb-sm-0">
+                                    <div class="col-12 col-sm-4 mb-3">
+                                        <input type="text" id="nama-penugasan" class="form-control fw-bold"
+                                            placeholder="Nama penugasan ..." value="">
+                                    </div>
+                                    <div class="col-12 col-sm-8 mb-3 mb-sm-0">
+                                        <div class="input-group input-group-merge" name="deskripsiPenugasan">
+                                            <input type="text" id="deskripsi-penugasan" class="form-control"
+                                                placeholder="Deskripsi penugasan ..." value="">
+
+                                            <button class="btn btn-outline-danger" type="button"
+                                                data-repeater-delete=""><i class="bx bx-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-8 mb-3 mb-sm-0">
-                            <div class="input-group input-group-merge" name="deskripsiPenugasan6">
-                                <input type="text" id="penugasan6" class="form-control"
-                                    placeholder="Deskripsi penugasan ..." value="">
-
-                                <button class="btn btn-outline-danger" type="button" id="hapusPenugasan6"><i
-                                        class="bx bx-trash"></i></button>
-                            </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-icon btn-primary mb-3" data-repeater-create=""><i
+                                    class="bx bx-plus bx-sm"></i></button>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-end">
-                            <button type="button" class="btn btn-outline-success mb-3"><i class="bx bx-plus"></i>
-                                Penugasan</button>
-                        </div>
-                    </div>
+                    </form>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-primary" onclick="sweet()"
@@ -1355,6 +1466,12 @@
     <script src="../assets/vendor/libs/select2/select2.js"></script>
     <script src="../assets/vendor/libs/tagify/tagify.js"></script>
 
+    <script src="../assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+
+    <script src="../assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+    <script src="../assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+
     <script>
         function sweet() {
             swal({
@@ -1386,6 +1503,64 @@
             allowClear: true
         });
     </script>
+
+    <script>
+        $('[name=tab]').each(function (i, d) {
+            var p = $(this).prop('checked');
+            //   console.log(p);
+            if (p) {
+                $('div-detail').eq(i)
+                    .addClass('on');
+            }
+        });
+
+        $('[name=tab-pegawai-baru]').on('change', function () {
+            var p = $(this).prop('checked');
+
+            // $(type).index(this) == nth-of-type
+            var i = $('[name=tab-pegawai-baru]').index(this);
+
+            $('div-detail').removeClass('on');
+            $('div-detail').eq(i).addClass('on');
+        });
+    </script>
+
+    <script>
+        $(".selectpicker").selectpicker();
+    </script>
+
+
+    <script>
+        // Form Repeater
+        var formRepeater = $(".form-repeater-penugasan");
+
+        var row = 2;
+        var col = 1;
+        formRepeater.on('submit', function (e) {
+            e.preventDefault();
+        });
+        formRepeater.repeater({
+            show: function () {
+                var fromControl = $(this).find('.form-control');
+                var formLabel = $(this).find('.form-label');
+
+                fromControl.each(function (i) {
+                    var id = 'form-repeater-penuagsan-' + row + '-' + col;
+                    $(fromControl[i]).attr('id', id);
+                    $(formLabel[i]).attr('for', id);
+                    col++;
+                });
+
+                row++;
+
+                $(this).slideDown();
+            },
+            hide: function (e) {
+                $(this).slideUp(e);
+            }
+        });
+    </script>
+
 
     <script>
         const TagifyUserListElselectPeran = document.querySelector("#selectPeran");
@@ -1638,6 +1813,259 @@
     //     ]);
     // }
     </script>
+
+    <script>
+        const TagifyUserListElselectPeranPegawaiInstansi = document.querySelector("#selectPeranPegawaiInstansi");
+        const usersListselectPeranPegawaiInstansi = [
+            {
+                value: 1,
+                name: "Pengawas",
+                avatar: "../assets/img/icons/thumbnail/icon-user-danger.jpg",
+                email: "Melihat semua data tanpa bisa mengubah data tersebut"
+            },
+            {
+                value: 2,
+                name: "Operator",
+                avatar: "../assets/img/icons/thumbnail/icon-user-warning.jpg",
+                email: "Mengelola semua data"
+            },
+            {
+                value: 3,
+                name: "Pegawai",
+                avatar: "../assets/img/icons/thumbnail/icon-user-info.jpg",
+                email: "Mendapatkan info kepegawaian pribadi"
+            },
+            // {
+            //     value: 4,
+            //     name: "Siswa",
+            //     avatar: "../assets/img/icons/thumbnail/icon-user-primary.jpg",
+            //     email: "Mendapatkan info kesiswaan pribadi"
+            // }
+        ];
+
+        function tagTemplate(tagData) {
+            return `
+                    <tag title="${tagData.title || tagData.email}"
+                    contenteditable='false'
+                    spellcheck='false'
+                    tabIndex="-1"
+                    class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+                    ${this.getAttributes(tagData)}
+                    >
+                    <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+                    <div>
+                    <div class='tagify__tag__avatar-wrap'>
+                    <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                    </div>
+                    <span class='tagify__tag-text'>${tagData.name}</span>
+                    </div>
+                    </tag>
+                    `;
+        }
+
+        function suggestionItemTemplate(tagData) {
+            return `
+                    <div ${this.getAttributes(tagData)}
+                    class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+                    tabindex="0"
+                    role="option"
+                    >
+                    ${tagData.avatar ?
+                    `<div class='tagify__dropdown__item__avatar-wrap'>
+                    <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                    </div>`
+                    : ''
+                }
+                    <strong>${tagData.name}</strong>
+                    <span>${tagData.email}</span>
+                    </div>
+                    `;
+        }
+
+        // initialize Tagify on the above input node reference
+        let TagifyUserListselectPeranPegawaiInstansi = new Tagify(TagifyUserListElselectPeranPegawaiInstansi, {
+            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            enforceWhitelist: true,
+            skipInvalid: true, // do not remporarily add invalid tags
+            dropdown: {
+                closeOnSelect: false,
+                enabled: 0,
+                classname: "users-list",
+                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+            },
+            templates: {
+                tag: tagTemplate,
+                dropdownItem: suggestionItemTemplate
+            },
+            whitelist: usersListselectPeran
+        });
+
+        TagifyUserListselectPeranPegawaiInstansi.on("dropdown:show dropdown:updated", onDropdownShow);
+        TagifyUserListselectPeranPegawaiInstansi.on("dropdown:select", onSelectSuggestion);
+
+        let addAllSuggestionsElselectPeranPegawaiInstansi;
+
+        function onDropdownShow(e) {
+            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+            if (TagifyUserListselectPeranPegawaiInstansi.suggestedListItems.length > 1) {
+                addAllSuggestionsElselectPeraPegawaiInstansin = getAddAllSuggestionsElselectPeranPegawaiInstansi();
+
+                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                dropdownContentEl.insertBefore(addAllSuggestionsElselectPeranPegawaiInstansi, dropdownContentEl.firstChild);
+            }
+        }
+
+        function onSelectSuggestion(e) {
+            if (e.detail.elm == addAllSuggestionsElselectPeranPegawaiInstansi) TagifyUserListselectPeranPegawaiInstansi.dropdown.selectAll.call(TagifyUserListselectPeran);
+        }
+
+                    // create an "add all" custom suggestion element every time the dropdown changes
+
+                    // function getAddAllSuggestionsElselectPeran() {
+                    //     // suggestions items should be based on "dropdownItem" template
+                    //     return TagifyUserListselectPeran.parseTemplate("dropdownItem", [
+                    //         {
+                    //             class: "addAll",
+                    //             name: "Tambahkan semua",
+                    //             email:
+                    //                 TagifyUserListselectPeran.settings.whitelist.reduce(function (remainingSuggestions, item) {
+                    //                     return TagifyUserListselectPeran.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+                    //                 }, 0) + " Siswa"
+                    //         }
+                    //     ]);
+                    // }
+    </script>
+
+    <script>
+        const TagifyUserListElselectPenugasanPegawaiInstansi = document.querySelector("#selectPenugasanPegawaiInstansi");
+        const usersListselectPenugasanPegawaiInstansi = [
+            {
+                value: 1,
+                name: "Guru Mapel",
+                avatar: "../assets/img/icons/thumbnail/icon-star-primary.jpg",
+                email: "Guru pengampu mata pelajaran tertentu"
+            },
+            {
+                value: 2,
+                name: "Admin TU",
+                avatar: "../assets/img/icons/thumbnail/icon-star-warning.jpg",
+                email: "Petugas administrasi dan pengelolaan dat instansi"
+            },
+            {
+                value: 3,
+                name: "Bendahara",
+                avatar: "../assets/img/icons/thumbnail/icon-star-info.jpg",
+                email: "Petugas pengelolaan keuangan instansi"
+            },
+            {
+                value: 3,
+                name: "Sekretaris",
+                avatar: "../assets/img/icons/thumbnail/icon-star-info.jpg",
+                email: "Petugas pengelolan informasi dan kebijkan instansi"
+            },
+            {
+                value: 4,
+                name: "Kepala Sekolah",
+                avatar: "../assets/img/icons/thumbnail/icon-star-danger.jpg",
+                email: "Sebagai pemimpin dan pembuat kebijakan instansi"
+            }
+        ];
+
+        function tagTemplate(tagData) {
+            return `
+                    <tag title="${tagData.title || tagData.email}"
+                    contenteditable='false'
+                    spellcheck='false'
+                    tabIndex="-1"
+                    class="${this.settings.classNames.tag} ${tagData.class ? tagData.class : ''}"
+                    ${this.getAttributes(tagData)}
+                    >
+                    <x title='' class='tagify__tag__removeBtn' role='button' aria-label='remove tag'></x>
+                    <div>
+                    <div class='tagify__tag__avatar-wrap'>
+                    <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                    </div>
+                    <span class='tagify__tag-text'>${tagData.name}</span>
+                    </div>
+                    </tag>
+                    `;
+        }
+
+        function suggestionItemTemplate(tagData) {
+            return `
+                    <div ${this.getAttributes(tagData)}
+                    class='tagify__dropdown__item align-items-center ${tagData.class ? tagData.class : ''}'
+                    tabindex="0"
+                    role="option"
+                    >
+                    ${tagData.avatar ?
+                    `<div class='tagify__dropdown__item__avatar-wrap'>
+                    <img onerror="this.style.visibility='hidden'" src="${tagData.avatar}">
+                    </div>`
+                    : ''
+                }
+                    <strong>${tagData.name}</strong>
+                    <span>${tagData.email}</span>
+                    </div>
+                    `;
+        }
+
+        // initialize Tagify on the above input node reference
+        let TagifyUserListselectPenugasanPegawaiInstansi = new Tagify(TagifyUserListElselectPenugasanPegawaiInstansi, {
+            tagTextProp: "name", // very important since a custom template is used with this property as text. allows typing a "value" or a "name" to match input with whitelist
+            enforceWhitelist: true,
+            skipInvalid: true, // do not remporarily add invalid tags
+            dropdown: {
+                closeOnSelect: false,
+                enabled: 0,
+                classname: "users-list",
+                searchKeys: ["name", "email"] // very important to set by which keys to search for suggesttions when typing
+            },
+            templates: {
+                tag: tagTemplate,
+                dropdownItem: suggestionItemTemplate
+            },
+            whitelist: usersListselectPenugasanPegawaiInstansi
+        });
+
+        TagifyUserListselectPenugasanPegawaiInstansi.on("dropdown:show dropdown:updated", onDropdownShow);
+        TagifyUserListselectPenugasanPegawaiInstansi.on("dropdown:select", onSelectSuggestion);
+
+        let addAllSuggestionsElselectPenugasanPegawaiInstansi;
+
+        function onDropdownShow(e) {
+            let dropdownContentEl = e.detail.tagify.DOM.dropdown.content;
+
+            if (TagifyUserListselectPenugasanPegawaiInstansi.suggestedListItems.length > 1) {
+                addAllSuggestionsElselectPenugasanPegawaiInstansi = getAddAllSuggestionsElselectPenugasanPegawaiInstansi();
+
+                // insert "addAllSuggestionsEl" as the first element in the suggestions list
+                dropdownContentEl.insertBefore(addAllSuggestionsElselectPenugasanPegawaiInstansi, dropdownContentEl.firstChild);
+            }
+        }
+
+        function onSelectSuggestion(e) {
+            if (e.detail.elm == addAllSuggestionsElselectPenugasanPegawaiInstansi) TagifyUserListselectPenugasanPegawaiInstansi.dropdown.selectAll.call(TagifyUserListselectPenugasan);
+        }
+
+// create an "add all" custom suggestion element every time the dropdown changes
+
+// function getAddAllSuggestionsElselectselectPenugasan() {
+//     // suggestions items should be based on "dropdownItem" template
+//     return TagifyUserListselectPenugasan.parseTemplate("dropdownItem", [
+//         {
+//             class: "addAll",
+//             name: "Tambahkan semua",
+//             email:
+//                 TagifyUserListselectPenugasan.settings.whitelist.reduce(function (remainingSuggestions, item) {
+//                     return TagifyUserListselectPenugasan.isTagDuplicate(item.value) ? remainingSuggestions : remainingSuggestions + 1;
+//                 }, 0) + " Siswa"
+//         }
+//     ]);
+// }
+    </script>
+
 
 
 </body>

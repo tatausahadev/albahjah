@@ -21,7 +21,6 @@
         rel="stylesheet" />
 
     <link rel="stylesheet" href="../assets/boxicons-2.1.4/css/boxicons.min.css" />
-    <link rel="stylesheet" href="fonts/boxicons.scss" />
 
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -31,13 +30,26 @@
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
-    <link rel="stylesheet" href="../assets/vendor/libs/select2/select2.css" />
-    <link rel="stylesheet" href="../assets/vendor/libs/tagify/tagify.css" />
-    <link rel="stylesheet" href="../assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
-
     <script src="../assets/vendor/js/helpers.js"></script>
 
     <script src="../assets/js/config.js"></script>
+
+    <!-- Tambahan -->
+    <link rel="stylesheet" href="../libs/select/select.css" />
+    <link rel="stylesheet" href="../assets/css/page-instansi.css">
+
+    <link rel="stylesheet" href="../assets/vendor/libs/select2/select2.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/tagify/tagify.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+
+    <!-- UPDATE -->
+    <link rel="stylesheet" href="../assets/new/core.css" />
+    <link rel="stylesheet" href="../assets/new/demo.css" />
+    <link rel="stylesheet" href="../assets/new/theme-default.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/animate-css/animate.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/sweetalert2/sweetalert2.css" />
 
     <style>
         .bg-card-blue {
@@ -62,6 +74,49 @@
             background-attachment: fixed;
             background-size: contain;
             height: 120px;
+        }
+    </style>
+
+    <style>
+        .swal2-html-container {
+            margin: 0 1em 3em 1em;
+        }
+    </style>
+
+    <style>
+        .image-preview-container {
+            margin: 0 auto;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .image-preview-container img {
+            width: 50%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: none;
+            margin: 0 25% 10% 25%;
+        }
+
+        .image-preview-container input {
+            display: none;
+        }
+
+        .image-preview-container label {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #5f61e6;
+            color: #5f61e6;
+            font-size: 15px;
+            text-transform: Uppercase;
+            font-weight: 400;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -173,11 +228,7 @@
                                     <div>Kelas Non-Formal</div>
                                 </a>
                             </li>
-                            <li class="menu-item">
-                                <a href="pindah-kelas.html" class="menu-link">
-                                    <div>Penempatan Siswa</div>
-                                </a>
-                            </li>
+                            
                         </ul>
                     </li>
                     <li class="menu-item">
@@ -236,47 +287,82 @@
 
                         <div class="navbar-nav align-items-center">
                             <div class="nav-item d-flex align-items-center">
-                                <img style="height: 50px;" src="../assets/img/logo/logo-sekolah-header.png" alt="">
+                              <img style="height: 50px;" class="d-none d-md-block" src="../assets/img/logo/logo-sekolah-header.png"
+                                alt="">
                             </div>
-                        </div>
+                          </div>
 
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                                    href="#" data-bs-toggle="dropdown">Operator
-                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
-                                    <li>
-                                        <a class="dropdown-item" selected href="#">
-                                            <span
-                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Pengawas</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item active" selected href="#">
-                                            <span
-                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Operator</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <span
-                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Pegawai</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <span
-                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                                            <span class="align-middle pb-2">Siswa</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                class="fw-semibold bg-label-primary small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                href="#" data-bs-toggle="dropdown">SMP
+                                <span class="bx bxs-bank text-white bg-primary rounded-pill p-1"></span></a>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li><span class="dropdown-item-text small text-muted">Instansi Anda</span></li>
+                                <li>
+                                  <a class="dropdown-item" selected href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">RA</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" selected href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">PAUD</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">MI</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item active" href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">SMP</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Yayasan</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
+                                class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                href="#" data-bs-toggle="dropdown">Operator
+                                <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                <li>
+                                  <a class="dropdown-item" selected href="#">
+                                    <span class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Pengawas</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item active" selected href="#">
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Operator</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">
+                                    <span class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Pegawai</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">
+                                    <span class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                    <span class="align-middle pb-2">Siswa</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </li>
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
@@ -349,18 +435,36 @@
                                                     instansi. Tiap kelas berbeda pada tiap tahun
                                                     ajarannya, mohon teliti dalam melakukan manajemen datanya.
                                                 </p>
-                                                <a class="btn btn-outline-primary me-2 mt-2" data-bs-toggle="collapse"
-                                                    href="#master-kelas" role="button" aria-expanded="true"
-                                                    aria-controls="master-kelas">
-                                                    Master Data Kelas <span
-                                                        class="badge badge-center rounded-pill bg-label-primary">3</span></a>
-
-                                                <a class="btn btn-outline-primary me-2 mt-2" role="button" href="#"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#modal-penempatan-siswa">Penempatan Siswa</a>
+                                                <div class="btn-group dropend">
+                                                    <a class="btn btn-outline-primary " data-bs-toggle="collapse"
+                                                        href="#master-kelas" role="button" aria-expanded="true"
+                                                        aria-controls="master-kelas">
+                                                        Master Data Kelas <span
+                                                            class="badge badge-center rounded-pill bg-label-primary mx-1">3</span></a>
+                                                    <button type="button"
+                                                        class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <span class="visually-hidden"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><button class="dropdown-item" type="button"
+                                                                data-bs-toggle="collapse" data-bs-target="#master-kelas"
+                                                                aria-expanded="true"
+                                                                aria-controls="master-pembayaran">Lihat Detail</button>
+                                                        </li>
+                                                        <li>
+                                                        </li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#modal-master-data">Ubah /
+                                                                Tambah</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
 
                                                 <div id="master-kelas" class="collapse">
                                                     <div class="pt-4">
+                                                        <h6>Tingkat Kelas</h6>
                                                         <span class="badge bg-label-primary me-1 mb-2">Kelas
                                                             I</span><span class="badge bg-label-primary me-1 mb-2">Kelas
                                                             II</span><span
@@ -459,7 +563,7 @@
                                                 </button>
                                             </h2>
                                             <div id="accordionIcon-3" class="accordion-collapse collapse"
-                                                data-bs-parent="#accordionIcon" style="">
+                                                data-bs-parent="#accordionIcon">
                                                 <div class="accordion-body">
                                                     <span class="badge bg-label-secondary me-1" data-bs-toggle="tooltip"
                                                         data-bs-offset="0,4" data-bs-placement="right"
@@ -494,19 +598,17 @@
                             </div>
                         </div>
 
-                        <div class="row mb-4">
-                            <div class="d-flex justify-content-between">
-                                <div class="col-12 col-md-4">
-                                    <h5 class="mt-2">Daftar kelas formal</h5>
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <select id="largeSelect" class="form-select w-100">
-                                        <option value="0">TA 2019 / 2020
-                                        </option>
-                                        <option value="1">TA 2018 / 2019
-                                        </option>
-                                    </select>
-                                </div>
+                        <div class="row d-flex justify-content-between mb-4">
+                            <div class="col-12 col-sm-4 col-md-4">
+                                <h5 class="mt-2">Daftar kelas formal</h5>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-3">
+                                <select id="largeSelect" class="form-select w-100">
+                                    <option value="0">TA 2019 / 2020
+                                    </option>
+                                    <option value="1">TA 2018 / 2019
+                                    </option>
+                                </select>
                             </div>
                         </div>
 
@@ -549,7 +651,9 @@
                                                             data-bs-target="#modal-tambah-kelas-baru">Tambah
                                                             kelas</button>
                                                     </li>
-                                                    <li><button class="dropdown-item" type="button">Pengaturan</button>
+                                                    <li><button class="dropdown-item" type="button"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#modal-pengaturan-tingkat-kelas">Pengaturan</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -562,7 +666,8 @@
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <div class="ms-2 text-white">
-                                                    <h5 class="mb-1 text-white">Kelas I - A </h5>
+                                                    <h5 class="mb-1 text-white"><i class="bx bxs-lock text-white"></i>
+                                                        Kelas I - A </h5>
                                                     <small>Wali kelas : <b>Nur hasanah</b></small><br>
                                                     <h4 class="badge bg-light text-dark me-1 my-1 disabled"
                                                         data-bs-toggle="tooltip" data-bs-offset="0,4"
@@ -579,10 +684,14 @@
                                                             class="bx bx-dots-vertical-rounded bx-sm"></i>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><button class="dropdown-item" data-bs-toggle="collapse"
-                                                                href="#daftar-kelas" role="button" aria-expanded="true"
-                                                                aria-controls="daftar-kelas1">Lihat detail</button></li>
-                                                        <li><button class="dropdown-item" type="button">Ubah</button>
+                                                        <li><button class="dropdown-item" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-ubah-kelas">Ubah Info
+                                                                Kelas</button></li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-penempatan-siswa">Penempatan
+                                                                Siswa</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -610,10 +719,19 @@
                                                             class="bx bx-dots-vertical-rounded bx-sm"></i>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><button class="dropdown-item" data-bs-toggle="collapse"
-                                                                href="#daftar-kelas" role="button" aria-expanded="true"
-                                                                aria-controls="daftar-kelas1">Lihat detail</button></li>
-                                                        <li><button class="dropdown-item" type="button">Ubah</button>
+                                                        <li><button class="dropdown-item" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-ubah-kelas">Ubah Info
+                                                                Kelas</button></li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-penempatan-siswa">Penempatan
+                                                                Siswa</button>
+                                                        </li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-hapus-kelas"
+                                                                disabled>Hapus</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -641,10 +759,19 @@
                                                             class="bx bx-dots-vertical-rounded bx-sm"></i>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><button class="dropdown-item" data-bs-toggle="collapse"
-                                                                href="#daftar-kelas" role="button" aria-expanded="true"
-                                                                aria-controls="daftar-kelas1">Lihat detail</button></li>
-                                                        <li><button class="dropdown-item" type="button">Ubah</button>
+                                                        <li><button class="dropdown-item" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-ubah-kelas">Ubah Info
+                                                                Kelas</button></li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-penempatan-siswa">Penempatan
+                                                                Siswa</button>
+                                                        </li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-hapus-kelas"
+                                                                disabled>Hapus</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -665,7 +792,7 @@
                                         <h4 class="badge bg-label-primary me-1 mb-1" data-bs-toggle="tooltip"
                                             data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title=""
                                             data-bs-original-title="Jumlah kelas"><i
-                                                class="bx bxs-graduation">&nbsp</i>2 Kelas</h4>
+                                                class="bx bxs-graduation">&nbsp</i>3 Kelas</h4>
                                         <h4 class="badge bg-label-info me-1 mb-1" data-bs-toggle="tooltip"
                                             data-bs-offset="0,4" data-bs-placement="right" data-bs-html="true" title=""
                                             data-bs-original-title="Jumlah siswa"><i class="bx bxs-group">&nbsp</i>67
@@ -691,7 +818,9 @@
                                                             data-bs-target="#modal-tambah-kelas-baru">Tambah
                                                             kelas</button>
                                                     </li>
-                                                    <li><button class="dropdown-item" type="button">Pengaturan</button>
+                                                    <li><button class="dropdown-item" type="button"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#modal-pengaturan-tingkat-kelas">Pengaturan</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -704,7 +833,8 @@
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <div class="ms-2 text-white">
-                                                    <h5 class="mb-1 text-white">Kelas II - A </h5>
+                                                    <h5 class="mb-1 text-white"><i class="bx bxs-lock text-white"></i>
+                                                        Kelas II - A </h5>
                                                     <small>Wali kelas : <b>Nur hasanah</b></small> <br>
                                                     <h4 class="badge bg-light text-dark me-1 my-1 disabled"
                                                         data-bs-toggle="tooltip" data-bs-offset="0,4"
@@ -721,10 +851,14 @@
                                                             class="bx bx-dots-vertical-rounded bx-sm"></i>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><button class="dropdown-item" data-bs-toggle="collapse"
-                                                                href="#daftar-kelas" role="button" aria-expanded="true"
-                                                                aria-controls="daftar-kelas1">Lihat detail</button></li>
-                                                        <li><button class="dropdown-item" type="button">Ubah</button>
+                                                        <li><button class="dropdown-item" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-ubah-kelas">Ubah Info
+                                                                Kelas</button></li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-penempatan-siswa">Penempatan
+                                                                Siswa</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -752,10 +886,59 @@
                                                             class="bx bx-dots-vertical-rounded bx-sm"></i>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><button class="dropdown-item" data-bs-toggle="collapse"
-                                                                href="#daftar-kelas" role="button" aria-expanded="true"
-                                                                aria-controls="daftar-kelas1">Lihat detail</button></li>
-                                                        <li><button class="dropdown-item" type="button">Ubah</button>
+                                                        <li><button class="dropdown-item" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-ubah-kelas">Ubah Info
+                                                                Kelas</button></li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-penempatan-siswa">Penempatan
+                                                                Siswa</button>
+                                                        </li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-hapus-kelas"
+                                                                disabled>Hapus</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mt-2 bg-card-purple">
+                                        <div class="card-body">
+                                            <div class="d-flex">
+                                                <div class="ms-2 text-white">
+                                                    <h5 class="mb-1 text-white">Kelas II - C </h5>
+                                                    <small>Wali kelas : <b>Belum dipilih</b></small> <br>
+                                                    <h4 class="badge bg-light text-dark me-1 my-1 disabled"
+                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                        data-bs-placement="right" data-bs-html="true" title=""
+                                                        data-bs-original-title="Jumlah siswa"><i
+                                                            class="bx bxs-group">&nbsp</i>0
+                                                        Siswa</h4>
+                                                </div>
+                                                <div class="btn-group dropend ms-auto">
+                                                    <button type="button"
+                                                        class="btn btn-outline-light border-0 btn-icon dropdown-toggle hide-arrow"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false"><i
+                                                            class="bx bx-dots-vertical-rounded bx-sm"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li><button class="dropdown-item" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-ubah-kelas">Ubah Info
+                                                                Kelas</button></li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-penempatan-siswa">Penempatan
+                                                                Siswa</button>
+                                                        </li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-hapus-kelas"
+                                                                onclick="sweet_hapus_kelas()">Hapus</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -803,7 +986,9 @@
                                                             data-bs-target="#modal-tambah-kelas-baru">Tambah
                                                             kelas</button>
                                                     </li>
-                                                    <li><button class="dropdown-item" type="button">Pengaturan</button>
+                                                    <li><button class="dropdown-item" type="button"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#modal-pengaturan-tingkat-kelas">Pengaturan</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -816,7 +1001,8 @@
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <div class="ms-2 text-white">
-                                                    <h5 class="mb-1 text-white">Kelas III - A </h5>
+                                                    <h5 class="mb-1 text-white"><i class="bx bxs-lock text-white"></i>
+                                                        Kelas III - A </h5>
                                                     <small>Wali kelas : <b>Nur hasanah</b></small><br>
                                                     <h4 class="badge bg-light text-dark me-1 my-1 disabled"
                                                         data-bs-toggle="tooltip" data-bs-offset="0,4"
@@ -833,10 +1019,14 @@
                                                             class="bx bx-dots-vertical-rounded bx-sm"></i>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><button class="dropdown-item" data-bs-toggle="collapse"
-                                                                href="#daftar-kelas" role="button" aria-expanded="true"
-                                                                aria-controls="daftar-kelas1">Lihat detail</button></li>
-                                                        <li><button class="dropdown-item" type="button">Ubah</button>
+                                                        <li><button class="dropdown-item" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-ubah-kelas">Ubah Info
+                                                                Kelas</button></li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-penempatan-siswa">Penempatan
+                                                                Siswa</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -864,10 +1054,19 @@
                                                             class="bx bx-dots-vertical-rounded bx-sm"></i>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li><button class="dropdown-item" data-bs-toggle="collapse"
-                                                                href="#daftar-kelas" role="button" aria-expanded="true"
-                                                                aria-controls="daftar-kelas1">Lihat detail</button></li>
-                                                        <li><button class="dropdown-item" type="button">Ubah</button>
+                                                        <li><button class="dropdown-item" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-ubah-kelas">Ubah Info
+                                                                Kelas</button></li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-penempatan-siswa">Penempatan
+                                                                Siswa</button>
+                                                        </li>
+                                                        <li><button class="dropdown-item" type="button" href="#"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#modal-hapus-kelas"
+                                                                disabled>Hapus</button>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -902,21 +1101,19 @@
                                 <input type="text" id="nameBasic" class="form-control" value="Kelas I SMP" disabled />
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="nameBasic" class="form-label">Nama Jurusan</label>
-                                <input type="text" id="nameBasic" class="form-control"
-                                    placeholder="Data jurusan tidak tersedia" disabled />
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
                                 <label for="nameBasic" class="form-label">Label Kelas <b
                                         class="text-danger">*</b></label>
-                                <input type="text" id="nameBasic" class="form-control"
-                                    placeholder="Isikan inisial A / B / D / dst" required />
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text">Kelas I - </span>
+                                    <input type="text" id="nameBasic" class="form-control"
+                                        placeholder="Isikan inisial A / B / D / dst" required />
+                                </div>
                             </div>
-                            <div class="col-12 col-md-12 mb-3">
+                            <div class="col-12 col-md-6 mb-3">
                                 <label for="wali-kelas" class="form-label">Wali Kelas</label>
-                                <select class="form-select" id="wali-kelas">
-                                    <option disabled="" selected="" value="">Pilih Wali Kelas
-                                    </option>
+                                <select id="wali-kelas" class="selectpicker w-100" data-style="btn-default"
+                                    data-live-search="true">
+                                    <option value="0">Pilih wali kelas ...</option>
                                     <option value="1">Nur Hasanah</option>
                                     <option value="2">Agus Nur Hadi</option>
                                     <option value="3">Faeshal Amin</option>
@@ -927,7 +1124,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                             Batal
                         </button>
                         <button type="button" class="btn btn-primary" onclick="sweet()"
@@ -956,21 +1153,19 @@
                                 <input type="text" id="nameBasic" class="form-control" value="Kelas I SMP" disabled />
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="nameBasic" class="form-label">Nama Jurusan</label>
-                                <input type="text" id="nameBasic" class="form-control"
-                                    placeholder="Data jurusan tidak tersedia" disabled />
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
                                 <label for="nameBasic" class="form-label">Label Kelas <b
                                         class="text-danger">*</b></label>
-                                <input type="text" id="nameBasic" class="form-control"
-                                    placeholder="Isikan inisial A / B / D / dst" value="A" required />
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text">Kelas I - </span>
+                                    <input type="text" id="nameBasic" class="form-control"
+                                        placeholder="Isikan inisial A / B / D / dst" required value="A" />
+                                </div>
                             </div>
-                            <div class="col-12 col-md-12 mb-3">
+                            <div class="col-12 col-md-6 mb-3">
                                 <label for="wali-kelas" class="form-label">Wali Kelas</label>
-                                <select class="form-select" id="wali-kelas">
-                                    <option disabled="" selected="" value="">Pilih Wali Kelas
-                                    </option>
+                                <select id="wali-kelas" class="selectpicker w-100" data-style="btn-default"
+                                    data-live-search="true">
+                                    <option value="0">Pilih wali kelas ...</option>
                                     <option value="1" selected>Nur Hasanah</option>
                                     <option value="2">Agus Nur Hadi</option>
                                     <option value="3">Faeshal Amin</option>
@@ -981,75 +1176,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                            Batal
-                        </button>
-                        <button type="button" class="btn btn-primary" onclick="sweet()"
-                            data-bs-dismiss="modal">Simpan</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Tambah Tingkat Baru-->
-        <div class="modal fade" id="modal-ubah-kelas" tabindex="-1" data-bs-backdrop="static">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel1">Ubah Informasi Kelas</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="nameBasic" class="form-label">Periode Tahun Ajaran</label>
-                                <input type="text" id="nameBasic" class="form-control" value="2019 / 2020" disabled />
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="nameBasic" class="form-label">Tingkat Kelas</label>
-                                <input type="text" id="nameBasic" class="form-control" value="Kelas I SMP" disabled />
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="nameBasic" class="form-label">Nama Jurusan</label>
-                                <input type="text" id="nameBasic" class="form-control"
-                                    placeholder="Data jurusan tidak tersedia" disabled />
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="nameBasic" class="form-label">Label Kelas <b
-                                        class="text-danger">*</b></label>
-                                <input type="text" id="nameBasic" class="form-control"
-                                    placeholder="Isikan inisial A / B / D / dst" required />
-                            </div>
-                            <div class="mb-3 col-12">
-                                <label for="nameBasic" class="form-label">Pilih Status</label> <br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1" checked />
-                                    <label class="form-check-label text-secondary" for="inlineRadio1">Draft <small
-                                            class="text-secondary">(<i>Jika Tahun Ajaran masih belum
-                                                dimulai, data tidak ditampilkan</i>)</small></label>
-                                </div>
-                                <br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio2" value="option2" />
-                                    <label class="form-check-label text-info" for="inlineRadio2">Berlangsung <small
-                                            class="text-secondary">(<i>Jika Tahun Ajaran sedang berlangsung saat
-                                                ini, data ditampilkan</i>)</small></label>
-                                </div>
-                                <br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio3" value="option3" />
-                                    <label class="form-check-label text-success" for="inlineRadio2">Selesai <small
-                                            class="text-secondary">(<i>Jika Tahun Ajaran sudah
-                                                terlewati, data ditampilkan</i>)</small></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                             Batal
                         </button>
                         <button type="button" class="btn btn-primary" onclick="sweet()"
@@ -1061,6 +1188,302 @@
 
         <!-- Modal Penempatan Siswa-->
         <div class="modal fade" id="modal-penempatan-siswa" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel1">Penempatan Siswa
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-info d-flex" role="alert">
+                                    <span class="badge badge-center rounded-pill bg-info border-label-info p-3 me-2"><i
+                                            class="bx bxs-graduation bx-sm pt-1"></i></span>
+                                    <div class="d-flex flex-column ps-1">
+                                        <span class="text-black">Berikut adalah informasi penempatan siswa untuk
+                                            <b>Kelas I - A</b> periode <b>TA 2019 / 2020</b></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="selectpickerSelectDeselect" class="form-label">Tambah Siswa ke Kelas</label>
+                            </div>
+                            <div class="col-12 col-sm-3 mb-3">
+                                <select id="selectPeriode" class="form-select w-100">
+                                    <option value="0">TA 2019 / 2020
+                                    </option>
+                                    <option value="1">TA 2018 / 2019
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-3 mb-3">
+                                <select id="selectPeriode" class="form-select w-100">
+                                    <option value="1">Kelas I
+                                    </option>
+                                    <option value="2">Kelas II
+                                    </option>
+                                    <option value="3">Kelas III
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-3 mb-3">
+                                <select id="selectpickerSelectDeselect" class="selectpicker w-100"
+                                    aria-placeholder="Pilih siswa" data-style="btn-default" multiple
+                                    data-actions-box="true" data-live-search="true">
+                                    <optgroup label="Kelas I - A">
+                                        <option data-subtext="16239916823" selected>Abbad Nailun Nabhan</option>
+                                        <option data-subtext="16239916824">Abdiel Justin Gilbert</option>
+                                        <option data-subtext="16239916825">Abdilah Abqari Agam</option>
+                                        <option data-subtext="16239916826">Addar Quthni Poldi</option>
+                                        <option data-subtext="16239916827" selected>Afif Ahwal Said</option>
+                                        <option data-subtext="16239916828">Afnan Atma Purnama</option>
+                                        <option data-subtext="16239916829" selected>Akhdan Ziyad</option>
+                                        <option data-subtext="16239916830">Akhtar Farzan Wijaya</option>
+                                        <option data-subtext="16239916831">Alim Shafiyyur Rahman</option>
+                                        <option data-subtext="16239916832" selected>Ammar Fathee Karim</option>
+                                        <option data-subtext="16239916833">Aqlan Harith Ridauddin</option>
+                                        <option data-subtext="16239916834">Ararya Saguna Amrullah</option>
+                                        <option data-subtext="16239916835" selected>Arfadhia Riyu Kinza Alhanan</option>
+                                        <option data-subtext="16239916836">Arroyyan Dylan Alfarizqi</option>
+                                        <option data-subtext="16239916837">Bakir Ahsan Amal</option>
+                                        <option data-subtext="16239916838">Bari Abdul Jalil</option>
+                                        <option data-subtext="16239916839" selected>Basil Basyiruddin</option>
+                                        <option data-subtext="16239916840">Beryl Hamizan Rabbani</option>
+                                        <option data-subtext="16239916841" selected>Billal Hafizh Athaillah</option>
+                                    </optgroup>
+                                    <optgroup label="Kelas I - B">
+                                        <option data-subtext="16239916823">Abbad Nailun Nabhan</option>
+                                        <option data-subtext="16239916824">Abdiel Justin Gilbert</option>
+                                        <option data-subtext="16239916825" selected>Abdilah Abqari Agam</option>
+                                        <option data-subtext="16239916826">Addar Quthni Poldi</option>
+                                        <option data-subtext="16239916827">Afif Ahwal Said</option>
+                                        <option data-subtext="16239916828">Afnan Atma Purnama</option>
+                                        <option data-subtext="16239916829" selected>Akhdan Ziyad</option>
+                                        <option data-subtext="16239916830">Akhtar Farzan Wijaya</option>
+                                        <option data-subtext="16239916831">Alim Shafiyyur Rahman</option>
+                                        <option data-subtext="16239916832">Ammar Fathee Karim</option>
+                                        <option data-subtext="16239916833">Aqlan Harith Ridauddin</option>
+                                        <option data-subtext="16239916834">Ararya Saguna Amrullah</option>
+                                        <option data-subtext="16239916835">Arfadhia Riyu Kinza Alhanan</option>
+                                        <option data-subtext="16239916836">Arroyyan Dylan Alfarizqi</option>
+                                        <option data-subtext="16239916837">Bakir Ahsan Amal</option>
+                                        <option data-subtext="16239916838" selected>Bari Abdul Jalil</option>
+                                        <option data-subtext="16239916839">Basil Basyiruddin</option>
+                                        <option data-subtext="16239916840">Beryl Hamizan Rabbani</option>
+                                        <option data-subtext="16239916841">Billal Hafizh Athaillah</option>
+                                    </optgroup>
+                                    <optgroup label="Kelas I - C">
+                                        <option data-subtext="16239916823">Abbad Nailun Nabhan</option>
+                                        <option data-subtext="16239916824">Abdiel Justin Gilbert</option>
+                                        <option data-subtext="16239916825" selected>Abdilah Abqari Agam</option>
+                                        <option data-subtext="16239916826">Addar Quthni Poldi</option>
+                                        <option data-subtext="16239916827">Afif Ahwal Said</option>
+                                        <option data-subtext="16239916828">Afnan Atma Purnama</option>
+                                        <option data-subtext="16239916829" selected>Akhdan Ziyad</option>
+                                        <option data-subtext="16239916830">Akhtar Farzan Wijaya</option>
+                                        <option data-subtext="16239916831">Alim Shafiyyur Rahman</option>
+                                        <option data-subtext="16239916832">Ammar Fathee Karim</option>
+                                        <option data-subtext="16239916833">Aqlan Harith Ridauddin</option>
+                                        <option data-subtext="16239916834">Ararya Saguna Amrullah</option>
+                                        <option data-subtext="16239916835">Arfadhia Riyu Kinza Alhanan</option>
+                                        <option data-subtext="16239916836">Arroyyan Dylan Alfarizqi</option>
+                                        <option data-subtext="16239916837">Bakir Ahsan Amal</option>
+                                        <option data-subtext="16239916838">Bari Abdul Jalil</option>
+                                        <option data-subtext="16239916839">Basil Basyiruddin</option>
+                                        <option data-subtext="16239916840">Beryl Hamizan Rabbani</option>
+                                        <option data-subtext="16239916841">Billal Hafizh Athaillah</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-3 mb-3">
+                                <button class="btn btn-outline-primary" type="button" id="">Tambahkan<span
+                                        class="badge badge-center rounded-pill bg-label-primary ms-1">12</span></button>
+                            </div>
+                            <div class="col-12">
+                                <label for="selectpickerSelectDeselect" class="form-label">Daftar Anggota Kelas</label>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-hover card-table table-striped table-borderless mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-primary"><i class="bx bxs-group"></i> <b>41</b> Siswa
+                                                </th>
+                                                <th class="text-primary">Status</th>
+                                                <th class="text-primary text-center">Hapus</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-border-bottom-0">
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary"
+                                                        href="siswa-detail-non-aktif.html">
+                                                        <img src="../assets/img/avatars/default.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Faeshal Ramdhan</strong> <br>
+                                                            <span class="small">2019827318945</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td><select class="selectpicker w-100">
+                                                        <option
+                                                            data-content="<span class='badge bg-label-success'>Aktif</span>">
+                                                        </option>
+                                                        <option selected
+                                                            data-content="<span class='badge bg-label-danger'>Tidak aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-secondary'>Alumni</span>">
+                                                        </option>
+                                                    </select></td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-icon btn-outline-danger"
+                                                        onclick="sweet_hapus_siswa()">
+                                                        <span class="tf-icons bx bx-trash"></span>
+                                                    </button>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswa-1.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Agus
+                                                                Fakhriz</strong> <br>
+                                                            <span class="small">2019827318920</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td><select class="selectpicker w-100">
+                                                        <option selected
+                                                            data-content="<span class='badge bg-label-success'>Aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-danger'>Tidak aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-secondary'>Alumni</span>">
+                                                        </option>
+                                                    </select></td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-icon btn-outline-danger"
+                                                        onclick="sweet_hapus_siswa()">
+                                                        <span class="tf-icons bx bx-trash"></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswi-1.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Fatim Nur</strong> <br>
+                                                            <span class="small">2019827318923</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td><select class="selectpicker w-100">
+                                                        <option selected
+                                                            data-content="<span class='badge bg-label-success'>Aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-danger'>Tidak aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-secondary'>Alumni</span>">
+                                                        </option>
+                                                    </select></td>
+                                                <td class="text-center"><button type="button"
+                                                        class="btn btn-icon btn-outline-danger"
+                                                        onclick="sweet_hapus_siswa()">
+                                                        <span class="tf-icons bx bx-trash"></span>
+                                                    </button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswa-2.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Khoirul Huda</strong> <br>
+                                                            <span class="small">2019827318924</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td><select class="selectpicker w-100">
+                                                        <option selected
+                                                            data-content="<span class='badge bg-label-success'>Aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-danger'>Tidak aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-secondary'>Alumni</span>">
+                                                        </option>
+                                                    </select></td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-icon btn-outline-danger "
+                                                        onclick="sweet_hapus_siswa()">
+                                                        <span class="tf-icons bx bx-trash"></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary"
+                                                        href="siswa-detail-alumni.html">
+                                                        <img src="../assets/img/avatars/siswi-2.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Nur Hidayah</strong> <br>
+                                                            <span class="small">2019827318931</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td><select class="selectpicker w-100">
+                                                        <option selected
+                                                            data-content="<span class='badge bg-label-success'>Aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-danger'>Tidak aktif</span>">
+                                                        </option>
+                                                        <option
+                                                            data-content="<span class='badge bg-label-secondary'>Alumni</span>">
+                                                        </option>
+                                                    </select></td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-icon btn-outline-danger"
+                                                        onclick="sweet_hapus_siswa()">
+                                                        <span class="tf-icons bx bx-trash"></span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                            Batal
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="sweet()"
+                            data-bs-dismiss="modal">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Penempatan Siswa OLD-->
+        <div class="modal fade" id="modal-penempatan-siswa-old" tabindex="-1" data-bs-backdrop="static">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1085,26 +1508,26 @@
                             <div class="col-12 col-md-6">
                                 <div class="list-group">
                                     <label class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="">
-                                      First checkbox
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        First checkbox
                                     </label>
                                     <label class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="">
-                                      Second checkbox
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        Second checkbox
                                     </label>
                                     <label class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="">
-                                      Third checkbox
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        Third checkbox
                                     </label>
                                     <label class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="">
-                                      Fourth checkbox
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        Fourth checkbox
                                     </label>
                                     <label class="list-group-item">
-                                      <input class="form-check-input me-1" type="checkbox" value="">
-                                      Fifth checkbox
+                                        <input class="form-check-input me-1" type="checkbox" value="">
+                                        Fifth checkbox
                                     </label>
-                                  </div>
+                                </div>
                             </div>
 
                             <div class="col-12 col-md-6">
@@ -1172,7 +1595,118 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                            Batal
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="sweet()"
+                            data-bs-dismiss="modal">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Master Data Kelas-->
+        <div class="modal fade" id="modal-master-data" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel1">Master Data Kelas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label class="form-label text-primary">Tingkat Kelas</label>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <div class="input-group input-group-merge" name="tingkatKelas1">
+                                    <input type="text" id="tingkatKelas1" class="form-control"
+                                        placeholder="Nama tingat kelas ..." value="Kelas I">
+                                    <span class="input-group-text" data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                        data-bs-placement="right" data-bs-html="true" title=""
+                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                            class="bx bxs-lock text-muted"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="input-group input-group-merge" name="tingkatKelas1">
+                                    <input type="text" id="tingkatKelas1" class="form-control"
+                                        placeholder="Nama tingat kelas ..." value="Kelas II">
+                                    <span class="input-group-text" data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                        data-bs-placement="right" data-bs-html="true" title=""
+                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                            class="bx bxs-lock text-muted"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="input-group input-group-merge" name="tingkatKelas1">
+                                    <input type="text" id="tingkatKelas1" class="form-control"
+                                        placeholder="Nama tingat kelas ..." value="Kelas III">
+                                    <span class="input-group-text" data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                        data-bs-placement="right" data-bs-html="true" title=""
+                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                            class="bx bxs-lock text-muted"></i></span>
+                                </div>
+                            </div>
+                            <form class="form-repeater-tingkat-kelas">
+                                <div data-repeater-list="group-tingkat-kelas">
+                                    <div data-repeater-item>
+                                        <div class="col-12 mb-3">
+                                            <div class="input-group input-group-merge" name="tingkatKelas1">
+                                                <input type="text" id="tingkatKelas1" class="form-control"
+                                                    placeholder="Nama tingat kelas ..." value="">
+                                                <button class="btn btn-outline-danger" type="button"
+                                                    data-repeater-delete=""><i class="bx bx-trash"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-icon btn-primary mb-3" data-repeater-create><i
+                                            class="bx bx-plus bx-sm"></i></button>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                            Batal
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="sweet()"
+                            data-bs-dismiss="modal">Simpan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Pengaturan Tingkat Kelas-->
+        <div class="modal fade" id="modal-pengaturan-tingkat-kelas" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel1">Pengaturan Tingkat Kelas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <div class="image-preview-container ">
+                                    <div class="preview">
+                                        <img id="preview-selected-image" />
+                                    </div>
+                                    <label for="file-upload">Pilih Gambar Background</label>
+                                    <input type="file" id="file-upload" accept="image/*"
+                                        onchange="previewImage(event);" />
+                                    <p class="text-muted mt-3 mb-0 text-center">Silakan pilih file JPG atau
+                                        PNG dengan ukuran maksimal 1 MB
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                             Batal
                         </button>
                         <button type="button" class="btn btn-primary" onclick="sweet()"
@@ -1194,15 +1728,22 @@
 
         <script src="../assets/js/main.js"></script>
 
-        <script src="../assets/vendor/libs/select2/select2.js"></script>
-        <script src="../assets/vendor/libs/tagify/tagify.js"></script>
-        <script src="../assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
-
         <script src="../assets/js/dashboards-analytics.js"></script>
 
         <script async defer src="https://buttons.github.io/buttons.js"></script>
 
         <script src="../assets/js/sweetalert.min.js"></script>
+        <script src="../assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+
+        <!-- tambahan -->
+        <script src="../libs/select/select.js"></script>
+
+        <script src="../assets/vendor/libs/select2/select2.js"></script>
+        <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+
+        <script src="../assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+
+        <script src="../assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
 
         <script>
             $(".selectpicker").selectpicker();
@@ -1218,6 +1759,133 @@
                     timer: 2000,
                 });
             }
+
+        </script>
+
+        <script>
+            function sweet_hapus_siswa() {
+                Swal.fire({
+                    title: 'Apakah anda yakin?',
+                    text: "Akan menghapus data siswa dari kelas ini",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Ya, hapus',
+                    confirmButtonText: 'Batal',
+                    customClass: {
+                        cancelButton: 'btn btn-danger',
+                        confirmButton: 'btn btn-label-secondary me-1'
+                    },
+                    buttonsStyling: false
+                }).then(function (result) {
+                    if (result.value) {
+                        Swal.fire({
+                            title: 'Batal',
+                            text: 'Data siswa batal dihapus dari kelas ini',
+                            icon: 'error',
+                            customClass: {
+                                confirmButton: 'btn btn-label-secondary'
+                            }
+                        });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Yeay!',
+                            text: 'Siswa berhasil dihapus dari daftar kelas.',
+                            customClass: {
+                                confirmButton: 'btn btn-label-secondary'
+                            }
+                        });
+                    }
+                });
+            }
+        </script>
+
+        <script>
+            function sweet_hapus_kelas() {
+                Swal.fire({
+                    title: 'Apakah anda yakin?',
+                    text: "Akan menghapus kelas ini",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Ya, hapus',
+                    confirmButtonText: 'Batal',
+                    customClass: {
+                        cancelButton: 'btn btn-danger',
+                        confirmButton: 'btn btn-label-secondary me-1'
+                    },
+                    buttonsStyling: false
+                }).then(function (result) {
+                    if (result.value) {
+                        Swal.fire({
+                            title: 'Batal',
+                            text: 'Kelas batal dihapus',
+                            icon: 'error',
+                            customClass: {
+                                confirmButton: 'btn btn-label-secondary'
+                            }
+                        });
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Yeay!',
+                            text: 'Kelas berhasil dihapus.',
+                            customClass: {
+                                confirmButton: 'btn btn-label-secondary'
+                            }
+                        });
+                    }
+                });
+            }
+        </script>
+
+        <script>
+            const previewImage = (event) => {
+                const imageFiles = event.target.files;
+                const imageFilesLength = imageFiles.length;
+                if (imageFilesLength > 0) {
+                    const imageSrc = URL.createObjectURL(imageFiles[0]);
+                    const imagePreviewElement = document.querySelector("#preview-selected-image");
+                    imagePreviewElement.src = imageSrc;
+                    imagePreviewElement.style.display = "block";
+                }
+            };
+        </script>
+
+        <script>
+            // Form Repeater
+            var formRepeater = $(".form-repeater-tingkat-kelas");
+
+            var row = 2;
+            var col = 1;
+            formRepeater.on('submit', function (e) {
+                e.preventDefault();
+            });
+            formRepeater.repeater({
+                show: function () {
+                    var fromControl = $(this).find('.form-control');
+                    var formLabel = $(this).find('.form-label');
+
+                    fromControl.each(function (i) {
+                        var id = 'form-repeater-tingkat-kelas-' + row + '-' + col;
+                        $(fromControl[i]).attr('id', id);
+                        $(formLabel[i]).attr('for', id);
+                        col++;
+                    });
+
+                    row++;
+
+                    $(this).slideDown();
+                },
+                hide: function (e) {
+                    $(this).slideUp(e);
+                }
+            });
         </script>
 
         <script>

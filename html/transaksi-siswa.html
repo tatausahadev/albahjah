@@ -38,6 +38,11 @@
 
     <script src="../assets/js/config.js"></script>
 
+    <!-- UPDATE -->
+    <link rel="stylesheet" href="../assets/new/core.css" />
+    <link rel="stylesheet" href="../assets/new/demo.css" />
+    <link rel="stylesheet" href="../assets/new/theme-default.css" />
+
 </head>
 
 <body>
@@ -147,11 +152,7 @@
                                     <div>Kelas Non-Formal</div>
                                 </a>
                             </li>
-                            <li class="menu-item">
-                                <a href="pindah-kelas.html" class="menu-link">
-                                    <div>Penempatan Siswa</div>
-                                </a>
-                            </li>
+
                         </ul>
                     </li>
                     <li class="menu-item">
@@ -210,44 +211,92 @@
 
                         <div class="navbar-nav align-items-center">
                             <div class="nav-item d-flex align-items-center">
-                                <img style="height: 50px;" src="../assets/img/logo/logo-sekolah-header.png" alt="">
+                                <img style="height: 50px;" class="d-none d-md-block"
+                                    src="../assets/img/logo/logo-sekolah-header.png" alt="">
                             </div>
                         </div>
 
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                  class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                  href="#" data-bs-toggle="dropdown">Operator
-                  <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
-                  <li>
-                    <a class="dropdown-item" selected href="#">
-                      <span class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pengawas</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item active" selected href="#">
-                      <span class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Operator</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Pegawai</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      <span class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                      <span class="align-middle pb-2">Siswa</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+                                    class="fw-semibold bg-label-primary small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">SMP
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Instansi Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">RA</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">PAUD</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">MI</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">SMP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Yayasan</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
+                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">Operator
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pengawas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Operator</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pegawai</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Siswa</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
@@ -569,7 +618,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-primary" onclick="sweet()"
@@ -826,7 +875,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                         Batal
                     </button>
                     <button type="button" class="btn btn-primary" onclick="sweet()" data-bs-dismiss="modal">Konfirmasi

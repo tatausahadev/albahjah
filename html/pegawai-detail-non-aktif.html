@@ -436,8 +436,8 @@
                                                         <hr class="dropdown-divider">
                                                     </li>
                                                     <li><a class="dropdown-item" data-bs-toggle="modal"
-                                                            data-bs-target="#modal-non-aktifkan">Non
-                                                            aktifkan akun</a></li>
+                                                            data-bs-target="#modal-aktifkan">
+                                                            Aktifkan akun</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -459,9 +459,9 @@
                                                     class="p-3 text-center user-profile-header d-flex flex-column flex-sm-row text-sm-start text-center mt-5">
                                                     <div class="user-info text-center">
                                                         <h4 class="mb-3">Bani Huda</h4>
-                                                        <span class="badge mb-1 bg-label-success"
+                                                        <span class="badge mb-1 bg-label-danger"
                                                             data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
-                                                            data-bs-original-title="Status akun">Aktif</span>&nbsp;
+                                                            data-bs-original-title="Status akun">Non Aktif</span>&nbsp;
                                                         <span class="badge mb-1 bg-label-warning"
                                                             data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
                                                             data-bs-original-title="Peran">Pegawai</span>&nbsp;
@@ -478,6 +478,11 @@
                                                             data-bs-placement="bottom" title=""
                                                             data-bs-original-title="Kelamin"></i>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-warning" role="alert">
+                                                <div class="d-flex flex-column ps-1">
+                                                    <span class="text-black">Pegawai terkait memiliki pelanggaran terkait administrasi, silakan hubungi Kepala Sekolah untuk penyelesaian pelanggaran tersebut. Terima kasih</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1517,7 +1522,7 @@
                                     <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                                         Batal
                                     </button>
-                                    <a type="button" class="btn btn-danger" href="pegawai-detail-non-aktif.html">Ya</a>
+                                    <button type="button" class="btn btn-danger" href="pegawai-detail-non-aktif.html">Ya</button>
 
                                 </div>
                             </div>
@@ -1564,8 +1569,7 @@
                                     <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
                                         Batal
                                     </button>
-                                    <button type="button" class="btn btn-warning" onclick="sweet()"
-                                        data-bs-dismiss="modal">Ya</button>
+                                    <a type="button" class="btn btn-danger" href="pegawai-detail.html">Ya</a>
 
                                 </div>
                             </div>
@@ -2011,8 +2015,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
-                                                            <button type="button" class="btn btn-icon btn-primary mb-3"
-                                                                data-repeater-create=""><i
+                                                            <button type="button" class="btn btn-icon btn-primary mb-3" data-repeater-create=""><i
                                                                     class="bx bx-plus bx-sm"></i></button>
                                                         </div>
                                                     </form>
@@ -2084,7 +2087,7 @@
 
                     <script>
                         // Form Repeater
-                        var formRepeater = $(".form-repeater-penugasan,.form-repeater-penugasan2,.form-repeater-penugasan3");
+                        var formRepeater = $(".form-repeater-penugasan,.form-repeater-penugasan2,.form-repeater-penugasan3, .form-repeater-penugasan-tambah");
 
                         var row = 2;
                         var col = 1;
