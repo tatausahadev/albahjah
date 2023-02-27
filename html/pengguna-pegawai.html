@@ -912,7 +912,7 @@
                 <div class="modal-body">
                     <div class="row mb-3">
                         <div class="col-md mb-md-0 mb-2">
-                            <div class="form-check custom-option custom-option-icon border-0" name="tab-pegawai-baru">
+                            <div class="form-check custom-option custom-option-icon border-0">
                                 <label class="form-check-label custom-option-content" for="customRadioIcon1">
                                     <i class="bx bx-user-plus bx-sm btn-icon rounded bg-label-primary"></i>
                                     <span class="custom-option-body">
@@ -920,20 +920,20 @@
                                         <small> Pegawai baru, belum terdata pada salah satu intansi naungan
                                             yayasan</small>
                                     </span>
-                                    <input name="customRadioIcon" class="form-check-input" type="radio" value=""
+                                    <input name="tab-pegawai-baru" class="form-check-input" type="radio" value=""
                                         id="customRadioIcon1">
                                 </label>
                             </div>
                         </div>
                         <div class="col-md mb-md-0 mb-2">
-                            <div class="form-check custom-option custom-option-icon border-0" name="tab-pegawai-baru">
+                            <div class="form-check custom-option custom-option-icon border-0">
                                 <label class="form-check-label custom-option-content" for="customRadioIcon2">
                                     <i class="bx bx-user-check bx-sm btn-icon rounded bg-label-primary"></i>
                                     <span class="custom-option-body">
                                         <span class="custom-option-title text-primary">Pegawai dalam yayasan </span>
                                         <small> Data pegawai sudah ada pada salah satu intansi naungan
                                             yayasan</small>
-                                    </span> <input name="customRadioIcon" class="form-check-input" type="radio" value=""
+                                    </span> <input name="tab-pegawai-baru" class="form-check-input" type="radio" value=""
                                         id="customRadioIcon2">
                                 </label>
                             </div>
@@ -1505,7 +1505,7 @@
     </script>
 
     <script>
-        $('[name=tab]').each(function (i, d) {
+        $('[name=tab-pegawai-baru]').each(function (i, d) {
             var p = $(this).prop('checked');
             //   console.log(p);
             if (p) {

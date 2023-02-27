@@ -38,10 +38,45 @@
 
     <script src="../assets/js/config.js"></script>
 
+    <!-- Tambahan -->
+    <link rel="stylesheet" href="../libs/select/select.css" />
+    <link rel="stylesheet" href="../assets/css/page-instansi.css">
+    <link rel="stylesheet" href="../assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+
     <!-- UPDATE -->
     <link rel="stylesheet" href="../assets/new/core.css" />
     <link rel="stylesheet" href="../assets/new/demo.css" />
     <link rel="stylesheet" href="../assets/new/theme-default.css" />
+
+    <style>
+        div-detail {
+            display: none;
+        }
+
+        div-detail.on {
+            display: block;
+        }
+    </style>
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+    <style>
+        .light-style .bootstrap-select .filter-option-inner-inner {
+            color: #697a8d;
+        }
+    </style>
 
 </head>
 
@@ -154,7 +189,7 @@
                                     <div>Kelas Non-Formal</div>
                                 </a>
                             </li>
-                            
+
                         </ul>
                     </li>
                     <li class="menu-item open active">
@@ -227,74 +262,83 @@
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                                class="fw-semibold bg-label-primary small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                                href="#" data-bs-toggle="dropdown">SMP
-                                <span class="bx bxs-bank text-white bg-primary rounded-pill p-1"></span></a>
-                              <ul class="dropdown-menu dropdown-menu-end">
-                                <li><span class="dropdown-item-text small text-muted">Instansi Anda</span></li>
-                                <li>
-                                  <a class="dropdown-item" selected href="#">
-                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">RA</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" selected href="#">
-                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">PAUD</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="#">
-                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">MI</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item active" href="#">
-                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">SMP</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="#">
-                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">Yayasan</span>
-                                  </a>
-                                </li>
-                              </ul>
+                                    class="fw-semibold bg-label-primary small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">SMP
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Instansi Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">RA</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">PAUD</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">MI</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">SMP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Yayasan</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
-                                class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
-                                href="#" data-bs-toggle="dropdown">Operator
-                                <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
-                              <ul class="dropdown-menu dropdown-menu-end">
-                                <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
-                                <li>
-                                  <a class="dropdown-item" selected href="#">
-                                    <span class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">Pengawas</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item active" selected href="#">
-                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">Operator</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="#">
-                                    <span class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">Pegawai</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="#">
-                                    <span class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
-                                    <span class="align-middle pb-2">Siswa</span>
-                                  </a>
-                                </li>
-                              </ul>
+                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">Operator
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pengawas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Operator</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pegawai</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Siswa</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
@@ -1030,138 +1074,148 @@
         </div>
     </div>
 
-
-
     <!-- Modal Tambah Master Data Siswa-->
     <div class="modal fade" id="modal-tambah-master-data" tabindex="-1" data-bs-backdrop="static">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel1">Master Data Transaksi Siswa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <label class="form-label text-primary">Tagihan Pembayaran</label>
+
                     <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="input-group input-group-merge" name="Pembayaran1">
-                                <input type="text" id="Pembayaran1" class="form-control"
-                                    placeholder="Nama tagihan pembayaran ..." value="Penerimaan Santri Baru">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
-                                            class="bx bxs-lock"></i></span></span>
-                                <button class="btn btn-outline-danger d-none" type="button" id="hapuPembayaran1"
-                                    disabled><i class="bx bx-trash"></i></button>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="input-group input-group-merge" name="Pembayaran2">
-                                <input type="text" id="Pembayaran2" class="form-control"
-                                    placeholder="Nama tagihan pembayaran ..." value="Daftar Ulang">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
-                                            class="bx bxs-lock"></i></span></span>
-                                <button class="btn btn-outline-danger d-none" type="button" id="hapuPembayaran1"
-                                    disabled><i class="bx bx-trash"></i></button>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="input-group input-group-merge" name="Pembayaran3">
-                                <input type="text" id="Pembayaran3" class="form-control"
-                                    placeholder="Nama tagihan pembayaran ..." value="SPP Bulanan">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
-                                            class="bx bxs-lock"></i></span></span>
-                                <button class="btn btn-outline-danger d-none" type="button" id="hapuPembayaran1"
-                                    disabled><i class="bx bx-trash"></i></button>
-                            </div>
-                        </div>
-                        <form class="form-repeater-tagihan">
-                            <div data-repeater-list="group-tagihan">
-                                <div data-repeater-item>
-                                    <div class="col-12 mb-3">
-                                        <div class="input-group input-group-merge">
-                                            <input type="text" id="form-repeater-4" class="form-control"
-                                                placeholder="Nama tagihan pembayaran ..." value="">
-                                            <button class="btn btn-outline-danger" type="button" data-repeater-delete><i
-                                                    class="bx bx-trash"></i></button>
-                                        </div>
+                        <div class="col-12 col-sm-6">
+                            <label class="form-label text-primary">Tagihan Pembayaran</label>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="input-group input-group-merge" name="Pembayaran1">
+                                        <input type="text" id="Pembayaran1" class="form-control"
+                                            placeholder="Nama tagihan pembayaran ..." value="Penerimaan Santri Baru">
+                                        <span class="input-group-text"><span class="badge text-muted"
+                                                data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                                data-bs-html="true" title=""
+                                                data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                                    class="bx bxs-lock"></i></span></span>
+                                        <button class="btn btn-outline-danger d-none" type="button" id="hapuPembayaran1"
+                                            disabled><i class="bx bx-trash"></i></button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <button type="button" class="btn btn-icon btn-primary mb-3" data-repeater-create><i
-                                        class="bx bx-plus bx-sm"></i></button>
-                            </div>
-                        </form>
-
-                    </div>
-
-                    <label class="form-label text-warning mt-4">Keringanan Pembayaran</label>
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="input-group input-group-merge" name="KeringannaPembayaran1">
-                                <input type="text" id="KeringannaPembayaran1" class="form-control"
-                                    placeholder="Nama keringanan pembayaran ..." value="Alumni SDIQU">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
-                                            class="bx bxs-lock"></i></span></span>
-                                <button class="btn btn-outline-danger d-none" type="button"
-                                    id="hapusKeringananPembayaran1" disabled><i class="bx bx-trash"></i></button>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="input-group input-group-merge" name="KeringannaPembayaran2">
-                                <input type="text" id="KeringannaPembayaran2" class="form-control"
-                                    placeholder="Nama pembayaran ..." value="Memiliki Saudara Kandung di Pondok">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
-                                            class="bx bxs-lock"></i></span></span>
-                                <button class="btn btn-outline-danger d-none" type="button"
-                                    id="hapusKeringananPembayaran1" disabled><i class="bx bx-trash"></i></button>
-                            </div>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <div class="input-group input-group-merge" name="KeringannaPembayaran3">
-                                <input type="text" id="KeringannaPembayaran3" class="form-control"
-                                    placeholder="Nama keringanan pembayaran ..." value="Santri Berprestasi">
-                                <span class="input-group-text"><span class="badge bg-label-secondary"
-                                        data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
-                                        data-bs-html="true" title=""
-                                        data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
-                                            class="bx bxs-lock"></i></span></span>
-                                <button class="btn btn-outline-danger d-none" type="button"
-                                    id="hapusKeringananPembayaran1" disabled><i class="bx bx-trash"></i></button>
-                            </div>
-                        </div>
-                        <form class="form-repeater-keringanan">
-                            <div data-repeater-list="group-keringanan">
-                                <div data-repeater-item>
-                                    <div class="col-12 mb-3">
-                                        <div class="input-group input-group-merge">
-                                            <input type="text" id="form-repeater-keringanan-4" class="form-control"
-                                                placeholder="Nama keringanan pembayaran ..." value="">
-                                            <button class="btn btn-outline-danger" type="button" data-repeater-delete><i
-                                                    class="bx bx-trash"></i></button>
-                                        </div>
+                                <div class="col-12 mb-3">
+                                    <div class="input-group input-group-merge" name="Pembayaran2">
+                                        <input type="text" id="Pembayaran2" class="form-control"
+                                            placeholder="Nama tagihan pembayaran ..." value="Daftar Ulang">
+                                        <span class="input-group-text"><span class="badge text-muted"
+                                                data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                                data-bs-html="true" title=""
+                                                data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                                    class="bx bxs-lock"></i></span></span>
+                                        <button class="btn btn-outline-danger d-none" type="button" id="hapuPembayaran1"
+                                            disabled><i class="bx bx-trash"></i></button>
                                     </div>
                                 </div>
+                                <div class="col-12 mb-3">
+                                    <div class="input-group input-group-merge" name="Pembayaran3">
+                                        <input type="text" id="Pembayaran3" class="form-control"
+                                            placeholder="Nama tagihan pembayaran ..." value="SPP Bulanan">
+                                        <span class="input-group-text"><span class="badge text-muted"
+                                                data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                                data-bs-html="true" title=""
+                                                data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                                    class="bx bxs-lock"></i></span></span>
+                                        <button class="btn btn-outline-danger d-none" type="button" id="hapuPembayaran1"
+                                            disabled><i class="bx bx-trash"></i></button>
+                                    </div>
+                                </div>
+                                <form class="form-repeater-tagihan">
+                                    <div data-repeater-list="group-tagihan">
+                                        <div data-repeater-item>
+                                            <div class="col-12 mb-3">
+                                                <div class="input-group input-group-merge">
+                                                    <input type="text" id="form-repeater-4" class="form-control"
+                                                        placeholder="Nama tagihan pembayaran ..." value="">
+                                                    <button class="btn btn-outline-danger" type="button"
+                                                        data-repeater-delete><i class="bx bx-trash"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-icon btn-primary mb-3"
+                                            data-repeater-create><i class="bx bx-plus bx-sm"></i></button>
+                                    </div>
+                                </form>
+
                             </div>
-                            <div class="col-12">
-                                <button type="button" class="btn btn-icon btn-primary mb-3" data-repeater-create><i
-                                        class="bx bx-plus bx-sm"></i></button>
+                        </div>
+                        <div class="col-12 col-sm-6">
+
+                            <label class="form-label text-warning">Keringanan Pembayaran</label>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="input-group input-group-merge" name="KeringannaPembayaran1">
+                                        <input type="text" id="KeringannaPembayaran1" class="form-control"
+                                            placeholder="Nama keringanan pembayaran ..." value="Alumni SDIQU">
+                                        <span class="input-group-text"><span class="badge text-muted"
+                                                data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                                data-bs-html="true" title=""
+                                                data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                                    class="bx bxs-lock"></i></span></span>
+                                        <button class="btn btn-outline-danger d-none" type="button"
+                                            id="hapusKeringananPembayaran1" disabled><i
+                                                class="bx bx-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="input-group input-group-merge" name="KeringannaPembayaran2">
+                                        <input type="text" id="KeringannaPembayaran2" class="form-control"
+                                            placeholder="Nama pembayaran ..."
+                                            value="Memiliki Saudara Kandung di Pondok">
+                                        <span class="input-group-text"><span class="badge text-muted"
+                                                data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                                data-bs-html="true" title=""
+                                                data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                                    class="bx bxs-lock"></i></span></span>
+                                        <button class="btn btn-outline-danger d-none" type="button"
+                                            id="hapusKeringananPembayaran1" disabled><i
+                                                class="bx bx-trash"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="input-group input-group-merge" name="KeringannaPembayaran3">
+                                        <input type="text" id="KeringannaPembayaran3" class="form-control"
+                                            placeholder="Nama keringanan pembayaran ..." value="Santri Berprestasi">
+                                        <span class="input-group-text"><span class="badge text-muted"
+                                                data-bs-toggle="tooltip" data-bs-offset="0,4" data-bs-placement="right"
+                                                data-bs-html="true" title=""
+                                                data-bs-original-title="Master data ini digunakan (tidak bisa dihapus)"><i
+                                                    class="bx bxs-lock"></i></span></span>
+                                        <button class="btn btn-outline-danger d-none" type="button"
+                                            id="hapusKeringananPembayaran1" disabled><i
+                                                class="bx bx-trash"></i></button>
+                                    </div>
+                                </div>
+                                <form class="form-repeater-keringanan">
+                                    <div data-repeater-list="group-keringanan">
+                                        <div data-repeater-item>
+                                            <div class="col-12 mb-3">
+                                                <div class="input-group input-group-merge">
+                                                    <input type="text" id="form-repeater-keringanan-4"
+                                                        class="form-control"
+                                                        placeholder="Nama keringanan pembayaran ..." value="">
+                                                    <button class="btn btn-outline-danger" type="button"
+                                                        data-repeater-delete><i class="bx bx-trash"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="button" class="btn btn-icon btn-primary mb-3"
+                                            data-repeater-create><i class="bx bx-plus bx-sm"></i></button>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
 
                 </div>
@@ -1178,7 +1232,7 @@
 
     <!-- Modal Tambah Transaksi Tagihan Pembayaran Siswa-->
     <div class="modal fade" id="modal-tambah-transaksi-siswa" tabindex="-1" data-bs-backdrop="static">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel1">Tambah Tagihan Pembayaran Siswa</h5>
@@ -1187,32 +1241,30 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Periode Transaksi <b
+                            <label for="selectPeriode" class="form-label">Periode Pembayaran <b
                                     class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
+                            <select id="selectTransaksi" class="selectpicker w-100" data-style="btn-default"
+                                data-live-search="true">
                                 <option value="1" selected>TA 2019 / 2020</option>
                                 <option value="2">TA 2018 / 2019</option>
                                 <option value="3">TA 2017 / 2018</option>
                             </select>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Pos Dana <b class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
+                            <label for="selectPosDana" class="form-label">Pengumpulan Dana <b
+                                    class="text-danger">*</b></label>
+                            <select id="selectPosDana" class="selectpicker w-100" data-style="btn-default"
+                                data-live-search="true" title="Pilih pos dana ...">
                                 <option value="1">Pos SPP Rutin</option>
                                 <option value="2">Pos DU Lanjut</option>
                                 <option value="3">Pos PSB Awal</option>
                             </select>
                         </div>
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nama Transaksi <b
+                        <div class="col-12 mb-3">
+                            <label for="selectTransaksi" class="form-label">Nama Transaksi <b
                                     class="text-danger">*</b></label>
-                            <select id="pembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
+                            <select id="selectTransaksi" class="selectpicker w-100" data-style="btn-default"
+                                data-live-search="true" title="Pilih nama transaksi ...">
                                 <option value="1">Penerimaan Santri Baru</option>
                                 <option value="2">Daftar Ulang</option>
                                 <option value="3">SPP Bulanan</option>
@@ -1220,128 +1272,174 @@
                         </div>
 
                         <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Deskripsi transaksi</label>
-                            <input type="text" id="nameBasic" class="form-control"
-                                placeholder="Tuliskan deskripsi jika perlu" required />
-                        </div>
-                        <!-- <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Nominal <b class="text-danger">*</b></label>
-                            <div class="input-group input-group-merge">
-                                <span class="input-group-text" id="basic-default-email2">Rp</span>
-                                <input type="text" id="basic-default-email" class="form-control" placeholder="0">
-
-                            </div>
-                        </div> -->
-                        <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Tagihan Pembayaran <b
-                                    class="text-danger">*</b></label>
+                            <label for="nameBasic" class="form-label">Penagihan <b class="text-danger">*</b></label>
                             <select id="tagihanPembayaranSelect" class="form-select">
-                                <option disabled="" selected="" value="">Pilih ...
-                                </option>
                                 <option value="1">Sekali Saja</option>
                                 <option value="2">Tiap Bulan</option>
                             </select>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
-                            <label for="nameBasic" class="form-label">Mulai Penagihan pada</label>
+                            <label for="nameBasic" class="form-label">Mulai Penagihan pada <b
+                                    class="text-danger">*</b></label>
                             <input class="form-control" type="date" id="waktu-penagihan">
                         </div>
 
                         <div class="col-12 mb-3">
+                            <label for="nameBasic" class="form-label">Berapa Jumlah Komponen dalam Transaksi ini ? <b
+                                    class="text-danger">*</b></label>
+                        </div>
 
-                            <label for="nameBasic" class="form-label">Pilih Nominal <b class="text-danger">*</b></label>
-                            <div class="nav-align-top">
-                                <ul class="nav nav-pills" role="tablist">
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#satuKomponen" aria-controls="satuKomponen"
-                                            aria-selected="true">Satu Komponen</button>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
-                                            data-bs-target="#banyakKomponen" aria-controls="banyakKomponen"
-                                            aria-selected="false">Banyak Komponen</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane fade active show" id="satuKomponen" role="tabpanel">
-                                        <div>
-                                            <div class="input-group input-group-merge">
-                                                <span class="input-group-text">Rp</span>
-                                                <input type="text" class="form-control numeral-mask" placeholder="0">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="banyakKomponen" role="tabpanel">
-                                        <form class="form-repeater-komponen-tagihan-pembayaran">
-                                            <div data-repeater-list="group-komponen-tagihan">
-                                                <div data-repeater-item>
-                                                    <div class="row">
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <input type="text" class="form-control"
-                                                                id="form-repeater-komponen-tagihan-pembayaran-1-1"
-                                                                placeholder="Nama komponen tagihan pembayaran ...">
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-3">
-                                                            <div class="input-group input-group-merge"
-                                                                name="komponen-tagihan">
-                                                                <span class="input-group-text">Rp</span>
-                                                                <input type="text"
-                                                                    class="form-control numeral-mask nominal-komponen"
-                                                                    id="form-repeater-komponen-tagihan-pembayaran-1-2"
-                                                                    placeholder="0" value="">
-                                                                <button class="btn btn-outline-danger" type="button"
-                                                                    data-repeater-delete><i
-                                                                        class="bx bx-trash"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12 col-md-6">
-                                                    <button type="button" class="btn btn-icon btn-primary mb-3"
-                                                        data-repeater-create><i class="bx bx-plus bx-sm"></i></button>
-                                                </div>
-                                                <div class="col-12 col-md-6">
-                                                    <div class="input-group input-group-merge" name="komponen-tagihan">
-                                                        <span class="input-group-text fw-bold border-0"
-                                                            style="background-color: #ECEEF1;">Rp</span>
-                                                        <input type="text"
-                                                            class="form-control fw-bold border-0 numeral-mask-total total-komponen"
-                                                            disabled value="">
-
-                                                        <span class="badge bg-label-danger py-3 ps-3 pe-2"
-                                                            data-bs-toggle="tooltip" data-bs-offset="0,4"
-                                                            data-bs-placement="right" data-bs-html="true" title=""
-                                                            data-bs-original-title="Total tagihan pembayaran">Total</span>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                        <div class="row mb-3">
+                            <div class="col-md mb-md-0 mb-2">
+                                <div class="form-check custom-option custom-option-icon border-0">
+                                    <label class="form-check-label custom-option-content" for="customRadioIcon1">
+                                        <i class="bx bxs-coin bx-sm btn-icon rounded bg-label-primary"></i>
+                                        <span class="custom-option-body">
+                                            <span class="custom-option-title text-primary">Satu komponen</span>
+                                            <small>Transaksi yang hanya terdiri dari satu komponen</small>
+                                        </span>
+                                        <input name="tab-satu-komponen-pembayaran" class="form-check-input" type="radio"
+                                            value="" id="customRadioIcon1" checked>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md mb-md-0 mb-2">
+                                <div class="form-check custom-option custom-option-icon border-0">
+                                    <label class="form-check-label custom-option-content" for="customRadioIcon2">
+                                        <i class="bx bxs-coin-stack bx-sm btn-icon rounded bg-label-primary"></i>
+                                        <span class="custom-option-body">
+                                            <span class="custom-option-title text-primary">Banyak komponen </span>
+                                            <small>Transaksi yang terdiri dari banyak komponen dan saling
+                                                terikat</small>
+                                        </span> <input name="tab-satu-komponen-pembayaran" class="form-check-input"
+                                            type="radio" value="" id="customRadioIcon2">
+                                    </label>
                                 </div>
                             </div>
                         </div>
+                        <div-detail>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="divider divider-primary mt-0">
+                                        <div class="divider-text fw-semibold text-primary">
+                                            Satu Komponen
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-12 mb-3">
+                                    <div class="input-group input-group-merge">
+                                        <span class="input-group-text">Rp</span>
+                                        <input type="text" class="form-control numeral-mask" placeholder="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div-detail>
+
+                        <div-detail>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="divider divider-primary mt-0">
+                                        <div class="divider-text fw-semibold text-primary">
+                                            Banyak Komponen
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <input type="text" class="form-control"
+                                                placeholder="Nama komponen tagihan pembayaran ...">
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <div class="input-group input-group-merge" name="komponen-tagihan">
+                                                <span class="input-group-text">Rp</span>
+                                                <input class="form-control nominal-komponen" placeholder="0"
+                                                    type="number" min="0"
+                                                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <input type="text" class="form-control"
+                                                placeholder="Nama komponen tagihan pembayaran ...">
+                                        </div>
+                                        <div class="col-12 col-md-6 mb-3">
+                                            <div class="input-group input-group-merge" name="komponen-tagihan">
+                                                <span class="input-group-text">Rp</span>
+                                                <input class="form-control nominal-komponen" placeholder="0"
+                                                    type="number" min="0"
+                                                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form class="form-repeater-komponen-tagihan-pembayaran">
+                                        <div data-repeater-list="group-komponen-tagihan">
+                                            <div data-repeater-item>
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6 mb-3">
+                                                        <input type="text" class="form-control"
+                                                            id="form-repeater-komponen-tagihan-pembayaran-1-1"
+                                                            placeholder="Nama komponen tagihan pembayaran ...">
+                                                    </div>
+                                                    <div class="col-12 col-md-6 mb-3">
+                                                        <div class="input-group input-group-merge"
+                                                            name="komponen-tagihan">
+                                                            <span class="input-group-text">Rp</span>
+                                                            <input class="form-control nominal-komponen"
+                                                                id="form-repeater-komponen-tagihan-pembayaran-1-2"
+                                                                placeholder="0" type="number" min="0"
+                                                                onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                                                            <button class="btn btn-outline-danger" type="button"
+                                                                data-repeater-delete><i
+                                                                    class="bx bx-trash"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <button type="button" class="btn btn-icon btn-primary mb-3"
+                                                    data-repeater-create><i class="bx bx-plus bx-sm"></i></button>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="input-group input-group-merge" name="komponen-tagihan">
+                                                    <span class="input-group-text fw-bold border-0"
+                                                        style="background-color: #ECEEF1;">Rp</span>
+                                                    <input type="text"
+                                                        class="form-control fw-bold border-0 numeral-mask-total total-komponen"
+                                                        disabled value="">
+
+                                                    <span class="badge bg-label-danger py-3 ps-3 pe-2"
+                                                        data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                        data-bs-placement="right" data-bs-html="true" title=""
+                                                        data-bs-original-title="Total tagihan pembayaran">Total</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div-detail>
 
                         <div class="mb-3 col-12">
                             <label for="nameBasic" class="form-label">Pilih Status <b class="text-danger">*</b></label>
                             <br>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1" checked>
-                                <label class="form-check-label text-secondary" for="inlineRadio1">Draft
+                                <input class="form-check-input" type="radio" name="statusTagihanSiswa"
+                                    id="statusTagihanDraft" value="option1" checked>
+                                <label class="form-check-label text-secondary" for="statusTagihanDraft">Draft
                                     <small class="text-secondary">(<i>Tagihan transaksi ini tidak ditampilkan
                                             pada
                                             siswa</i>)</small></label>
                             </div>
                             <br>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2" />
-                                <label class="form-check-label text-info" for="inlineRadio2">Proses
+                                <input class="form-check-input" type="radio" name="statusTagihanSiswa"
+                                    id="statusTagihanProses" value="option2" />
+                                <label class="form-check-label text-info" for="statusTagihanProses">Proses
                                     <small class="text-secondary">(<i>Tagihan transaksi ini ditampilkan pada
                                             siswa</i>)</small></label>
                             </div>
@@ -2116,14 +2214,14 @@
 
     <script src="../assets/js/dashboards-analytics.js"></script>
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
     <script src="../assets/js/sweetalert.min.js"></script>
 
     <!-- Tambahan -->
     <script src="../assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
     <script src="../assets/vendor/libs/cleavejs/cleave.js"></script>
     <script src="../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="../libs/select/select.js"></script>
+    <script src="../assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
 
     <script>
         function sweet() {
@@ -2140,12 +2238,37 @@
         $(".select2").select2();
     </script>
 
+    <script>
+        $(".selectpicker").selectpicker();
+    </script>
+
     <!-- <script>
         $("#pembayaranSelect").select2({
             placeholder: "Pilih transaksi",
             allowClear: true
         });
     </script> -->
+
+    <script>
+        $('[name=tab-satu-komponen-pembayaran]').each(function (i, d) {
+            var p = $(this).prop('checked');
+            //   console.log(p);
+            if (p) {
+                $('div-detail').eq(i)
+                    .addClass('on');
+            }
+        });
+
+        $('[name=tab-satu-komponen-pembayaran]').on('change', function () {
+            var p = $(this).prop('checked');
+
+            // $(type).index(this) == nth-of-type
+            var i = $('[name=tab-satu-komponen-pembayaran]').index(this);
+
+            $('div-detail').removeClass('on');
+            $('div-detail').eq(i).addClass('on');
+        });
+    </script>
 
     <script>
         const TagifyCustomListSuggestionEl = document.querySelector("#kelasSelect");
