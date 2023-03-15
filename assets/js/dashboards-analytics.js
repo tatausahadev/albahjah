@@ -280,10 +280,10 @@
   // --------------------------------------------------------------------
   const growthChartEl = document.querySelector('#growthChart'),
     growthChartOptions = {
-      series: [78],
-      labels: ['Growth'],
+      series: [75],
+      labels: ['DANA SISA'],
       chart: {
-        height: 240,
+        height: 200,
         type: 'radialBar'
       },
       plotOptions: {
