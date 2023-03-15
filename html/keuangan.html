@@ -345,214 +345,477 @@
                 <div class="content-wrapper">
 
                     <div class="container-xxl flex-grow-1 container-p-y">
-                        <div class="row">
-
-                            <div class="col-12 col-lg-8 order-0 mb-4">
-
-                                <div class="row g-4">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header row ">
-                                                <div class="col-12 col-md-7">
-                                                    <h5 class="mt-2">Data transaksi</h5>
-                                                </div>
-                                                <div class="col-10 col-md-4">
-                                                    <select id="namaPeriodeSelect" class="form-select">
-                                                        <option disabled="" selected="" value="">Pilih periode
-                                                        </option>
-                                                        <option value="1">TA 2017 / 2018</option>
-                                                        <option value="2">TA 2018 / 2019</option>
-                                                        <option value="3" selected>TA 2019 / 2020</option>
-                                                        <option value="4">TA 2020 / 2021</option>
-
-                                                    </select>
-                                                </div>
-                                                <div class="col-2 col-md-1">
-                                                    <div class="btn-group">
-                                                        <button type="button"
-                                                            class="btn btn-primary btn-icon rounded-pill dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item"
-                                                                    href="javascript:void(0);">Lihat detail</a></li>
-                                                            <li><a class="dropdown-item"
-                                                                    href="javascript:void(0);">Unduh laporan</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div id="totalRevenueChart" class="px-2"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-4 col-12 mb-4">
-                                        <div class="card">
+                        <!-- <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="card h-100">
+                                    <div class="row">
+                                        <div class="col-12 col-md-10">
                                             <div class="card-body">
-                                                <div
-                                                    class="card-title d-flex align-items-start justify-content-between">
-                                                    <div class="avatar flex-shrink-0 me-3">
-                                                        <span class="avatar-initial rounded bg-label-primary"><i
-                                                                class="bx bx-wallet bx-sm"></i></span>
-                                                    </div>
-
-                                                </div>
-                                                <h5 class="card-title mb-1">Keuangan Instansi</h5> <br>
-                                                <a type="button" href="keuangan-instansi.html"
-                                                    class="btn btn-sm rounded-pill btn-primary">
-                                                    &nbsp; Selengkapnya <span
-                                                        class="tf-icons bx bx-chevron-right"></span>
-                                                </a>
+                                                <span class="badge bg-label-secondary me-1 mb-3">Menu
+                                                    Utama</span>
+                                                <h4 class="card-title text-primary">
+                                                    <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                                                    Keuangan
+                                                </h4>
+                                                <p class="mb-4">
+                                                    Berisikan semua rekap keuangan yang berada di lingkup instansi
+                                                    Anda
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-2">
+                                            <div class="card-body h-100 bg-label-primary">
+                                                <img class="img-fluid d-none d-md-block"
+                                                    src="../assets/img/illustrations/girl-muslim-with-laptop-light.png" />
+                                                <button class="btn btn-primary btn-sm w-100" type="button"
+                                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart"
+                                                    aria-controls="offcanvasStart">Bantuan</button>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-4 col-md-4 col-12 mb-4">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div
-                                                    class="card-title d-flex align-items-start justify-content-between">
-                                                    <div class="avatar flex-shrink-0 me-3">
-                                                        <span class="avatar-initial rounded bg-label-primary"><i
-                                                                class="bx bx-wallet bx-sm"></i></span>
-                                                    </div>
-
-                                                </div>
-                                                <h5 class="card-title mb-1">Keuangan Siswa</h5> <br>
-                                                <a type="button" href="keuangan-siswa.html"
-                                                    class="btn btn-sm rounded-pill btn-primary">
-                                                    &nbsp; Selengkapnya <span
-                                                        class="tf-icons bx bx-chevron-right"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-md-4 col-12 mb-4">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div
-                                                    class="card-title d-flex align-items-start justify-content-between">
-
-                                                    <div class="avatar flex-shrink-0 me-3">
-                                                        <span class="avatar-initial rounded bg-label-primary"><i
-                                                                class="bx bx-wallet bx-sm"></i></span>
-                                                    </div>
-
-                                                </div>
-                                                <h5 class="card-title mb-1">Keuangan Pegawai</h5> <br>
-                                                <a type="button" href="keuangan-pegawai.html"
-                                                    class="btn btn-sm rounded-pill btn-primary">
-                                                    &nbsp; Selengkapnya <span
-                                                        class="tf-icons bx bx-chevron-right"></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
                                 </div>
+                            </div>
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStart"
+                                data-bs-scroll="true" data-bs-backdrop="true" aria-labelledby="offcanvasStartLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasStartLabel" class="offcanvas-title">Bantuan
+                                    </h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                                    <div class="alert alert-info" role="alert">Berikut informasi terkait fitur pada
+                                        laman
+                                        ini</div>
+                                    <div id="accordionIcon" class="accordion mt-3 accordion-without-arrow">
+                                        <div class="accordion-item my-4">
+                                            <h2 class="accordion-header text-body d-flex justify-content-between"
+                                                id="accordionIconOne">
+                                                <button type="button" class="accordion-button collapsed"
+                                                    data-bs-toggle="collapse" data-bs-target="#accordionIcon-1"
+                                                    aria-controls="accordionIcon-1" aria-expanded="false"><i
+                                                        class='bx bx-info-circle text-info'>&nbsp;</i>
+                                                    Melakukan transaksi pegawai
+                                                </button>
+                                            </h2>
 
+                                            <div id="accordionIcon-1" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionIcon">
+                                                <div class="accordion-body">
+                                                    Pastikan Anda telah memilih filter data yang sesuai berdasarkan
+                                                    Jabatan dan
+                                                    masukkan nama pegawai, kemudian tekan tombol
+                                                    <span class="bx bx-search-alt text-primary h5 mb-0"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item my-4 ">
+                                            <h2 class="accordion-header text-body d-flex justify-content-between"
+                                                id="accordionIconThree">
+                                                <button type="button" class="accordion-button collapsed"
+                                                    data-bs-toggle="collapse" data-bs-target="#accordionIcon-3"
+                                                    aria-expanded="false" aria-controls="accordionIcon-3"> <i
+                                                        class='bx bx-info-circle text-info'>&nbsp;</i>
+                                                    Informasi status pembayaran
+                                                </button>
+                                            </h2>
+                                            <div id="accordionIcon-3" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionIcon">
+                                                <div class="accordion-body">
+                                                    <span class="badge bg-label-danger me-1" data-bs-toggle="tooltip"
+                                                        data-bs-offset="0,4" data-bs-placement="right"
+                                                        data-bs-html="true" title=""
+                                                        data-bs-original-title="Terdapat tagihan pembayaran">Belum
+                                                        Lunas</span>
+                                                    berarti pegawai yang bersangkutan memiliki tagihan pembayaran yang
+                                                    perlu dibayarankan pada bulan ini. <br><br>
+                                                    <span class="badge bg-label-success me-1" data-bs-toggle="tooltip"
+                                                        data-bs-offset="0,4" data-bs-placement="right"
+                                                        data-bs-html="true" title=""
+                                                        data-bs-original-title="Ditampilkan">Lunas</span>
+                                                    berarti pegawai yang bersangkutan tidak memiliki tagihan pembayaran
+                                                    yang
+                                                    perlu dibayarankan pada bulan ini.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary mb-2 d-grid w-100"
+                                        data-bs-dismiss="offcanvas">Tutup</button>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="row">
+                            <div class="col-12 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h5 class="fw-semibold">Informasi Dana Transaksi</h5>
+                                    </div>
+                                    <div id="chartTransaksi"></div>
+                                </div>
                             </div>
 
-                            <div class="col-12 col-lg-4 col-md-4 order-1">
-                                <div class="card">
-                                    <!-- <div class="card-header d-flex align-items-center justify-content-between pb-0">
-                                        <div class="card-title mb-0">   
-                                        </div>
-                                    </div> -->
-                                    <div class="card-body">
-                                        <h5 class="mb-4">Total Keuangan Saat Ini</h5>
-                                        <div
-                                            class="d-flex justify-content-between align-items-center mt-3 mb-2 rounded bg-label-primary">
-                                            <!-- <div id="orderStatisticsChart"></div> -->
-                                            <div class="p-4">
-                                                <h2 class="fw-normal text-primary mb-0"> Rp 1.292.012.000</h2>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <ul class="p-0 m-0">
-                                            <li class="d-flex mb-4 pb-1">
-                                                <div class="avatar flex-shrink-0 me-3">
-                                                    <span class="avatar-initial rounded bg-label-primary"><i
-                                                            class="bx bx-transfer-alt bx-sm"></i></span>
-                                                </div>
-                                                <div
-                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                                    <div class="me-2">
-                                                        <h6 class="mb-0">Transaksi Instansi</h6>
-                                                        <small class="text-muted">Keungan instansi</small>
-                                                    </div>
-                                                    <div class="user-progress">
-                                                        <h5 class="fw-semibold"> 1.208.890.000</h5>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="d-flex mb-4 pb-1">
-                                                <div class="avatar flex-shrink-0 me-3">
-                                                    <span class="avatar-initial rounded bg-label-primary"><i
-                                                            class="bx bx-transfer-alt bx-sm"></i></span>
-                                                </div>
-                                                <div
-                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                                    <div class="me-2">
-                                                        <h6 class="mb-0">Transaksi Siswa </h6>
-                                                        <small class="text-muted">Keuangan Siswa</small>
-                                                    </div>
-                                                    <div class="user-progress">
-                                                        <h5 class="fw-semibold"> 855.220.000</h5>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-
-                                            <li class="d-flex mb-4 pb-1">
-                                                <div class="avatar flex-shrink-0 me-3">
-                                                    <span class="avatar-initial rounded bg-label-primary"><i
-                                                            class="bx bx-transfer-alt bx-sm"></i></span>
-                                                </div>
-                                                <div
-                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                                    <div class="me-2">
-                                                        <h6 class="mb-0">Transaksi Pegawai</h6>
-                                                        <small class="text-muted">Keuangan Pegawai</small>
-                                                    </div>
-                                                    <div class="user-progress">
-                                                        <h5 class="fw-semibold"> - 408.890.000</h5>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="d-flex pb-1">
-                                                <div class="avatar flex-shrink-0 me-3">
-                                                    <span class="avatar-initial rounded bg-label-warning"><i
-                                                            class="bx bx-transfer-alt bx-sm"></i></span>
-                                                </div>
-                                                <div
-                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                                    <div class="me-2">
-                                                        <h6 class="mb-0">Tabungan Siswa </h6>
-                                                        <small class="text-muted">Keuangan Siswa</small>
-                                                    </div>
-                                                    <div class="user-progress">
-                                                        <h5 class="fw-semibold"> 109.220.000</h5>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                            <div class="col-12 col-sm-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h5 class="fw-semibold">Informasi Dana Sisa</h5>
                                     </div>
+                                    <div id="chartDanaSisa"></div>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="content-backdrop fade"></div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header row">
+                                        <div class="col-12">
+                                            <h5 class="mt-2 fw-semibold">Daftar Keuangan Tiap Periode</h5>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="table-responsive mx-4">
+                                        <table class="table table-hover card-table table-striped table-borderless mb-4">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-primary">
+                                                        Nama Periode</th>
+                                                    <th class="text-primary">Status Periode</th>
+                                                    <th class="text-primary">Dana Transaksi (Rp)</th>
+                                                    <th class="text-primary">Dana Sisa (Rp)</th>
+                                                    <th class="text-primary text-center">Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-border-bottom-0">
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary" href="#">
+                                                            <img src="../assets/img/icons/thumbnail/icon-label-ta.jpg"
+                                                                alt="" class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <b class="text-black my-auto">TA 2021 / 2022</b>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-info me-1" data-bs-toggle="tooltip"
+                                                            data-bs-offset="0,4" data-bs-placement="right"
+                                                            data-bs-html="true" title=""
+                                                            data-bs-original-title="Status Periode">Berlangsung</span>
+                                                    </td>
+                                                    <td><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Atas : Dana Masuk <br> Bawah : Dana Keluar "><i
+                                                                class="bx bx-transfer-alt text-success"></i> 900.000.000
+                                                            <br> <i class="bx bx-transfer-alt text-danger"></i>
+                                                            800.000.000 </span>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt text-primary"></i> 100.000.000
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="keuangan-detail.html" class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="keuangan-detail.html">Lihat
+                                                                        detail</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-laporan-keuangan-periode"
+                                                                        data-bs-toggle="modal">Unduh Laporan</a></li>
+                                                                <li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary" href="#">
+                                                            <img src="../assets/img/icons/thumbnail/icon-label-ta.jpg"
+                                                                alt="" class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <b class="text-black my-auto">TA 2020 / 2021</b>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-secondary me-1" data-bs-toggle="tooltip"
+                                                            data-bs-offset="0,4" data-bs-placement="right"
+                                                            data-bs-html="true" title=""
+                                                            data-bs-original-title="Status Periode">Selesai</span>
+                                                    </td>
+                                                    <td><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Atas : Dana Masuk <br> Bawah : Dana Keluar "><i
+                                                                class="bx bx-transfer-alt text-success"></i>
+                                                            1.200.000.000
+                                                            <br> <i class="bx bx-transfer-alt text-danger"></i>
+                                                            1.100.000.000 </span>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt text-primary"></i> 100.000.000
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="keuangan-detail.html" class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="keuangan-detail.html">Lihat
+                                                                        detail</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-laporan-keuangan-periode"
+                                                                        data-bs-toggle="modal">Unduh Laporan</a></li>
+                                                                <li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary" href="#">
+                                                            <img src="../assets/img/icons/thumbnail/icon-label-ta.jpg"
+                                                                alt="" class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <b class="text-black my-auto">TA 2019 / 2020</b>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-secondary me-1" data-bs-toggle="tooltip"
+                                                        data-bs-offset="0,4" data-bs-placement="right"
+                                                        data-bs-html="true" title=""
+                                                        data-bs-original-title="Status Periode">Selesai</span>
+                                                    </td>
+                                                    <td><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Atas : Dana Masuk <br> Bawah : Dana Keluar "><i
+                                                                class="bx bx-transfer-alt text-success"></i>
+                                                            1.800.000.000
+                                                            <br> <i class="bx bx-transfer-alt text-danger"></i>
+                                                            1.000.000.000 </span>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt text-primary"></i> 800.000.000
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="keuangan-detail.html" class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="keuangan-detail.html">Lihat
+                                                                        detail</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-laporan-keuangan-periode"
+                                                                        data-bs-toggle="modal">Unduh Laporan</a></li>
+                                                                <li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary" href="#">
+                                                            <img src="../assets/img/icons/thumbnail/icon-label-ta.jpg"
+                                                                alt="" class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <b class="text-black my-auto">TA 2018 / 2019</b>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-secondary me-1" data-bs-toggle="tooltip"
+                                                            data-bs-offset="0,4" data-bs-placement="right"
+                                                            data-bs-html="true" title=""
+                                                            data-bs-original-title="Status Periode">Selesai</span>
+                                                    </td>
+                                                    <td><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Atas : Dana Masuk <br> Bawah : Dana Keluar "><i
+                                                                class="bx bx-transfer-alt text-success"></i>
+                                                            1.900.000.000
+                                                            <br> <i class="bx bx-transfer-alt text-danger"></i>
+                                                            2.100.000.000 </span>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt text-primary"></i> - 200.000.000
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="keuangan-detail.html" class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="keuangan-detail.html">Lihat
+                                                                        detail</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-laporan-keuangan-periode"
+                                                                        data-bs-toggle="modal">Unduh Laporan</a></li>
+                                                                <li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary" href="#">
+                                                            <img src="../assets/img/icons/thumbnail/icon-label-ta.jpg"
+                                                                alt="" class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <b class="text-black my-auto">TA 2017 / 2018</b>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-secondary me-1" data-bs-toggle="tooltip"
+                                                        data-bs-offset="0,4" data-bs-placement="right"
+                                                        data-bs-html="true" title=""
+                                                        data-bs-original-title="Status Periode">Selesai</span>
+                                                    </td>
+                                                    <td><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Atas : Dana Masuk <br> Bawah : Dana Keluar "><i
+                                                                class="bx bx-transfer-alt text-success"></i>
+                                                            1.500.000.000
+                                                            <br> <i class="bx bx-transfer-alt text-danger"></i>
+                                                            1.300.000.000 </span>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt text-primary"></i> 200.000.000
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="keuangan-detail.html" class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="keuangan-detail.html">Lihat
+                                                                        detail</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-laporan-keuangan-periode"
+                                                                        data-bs-toggle="modal">Unduh Laporan</a></li>
+                                                                <li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary" href="#">
+                                                            <img src="../assets/img/icons/thumbnail/icon-label-ta.jpg"
+                                                                alt="" class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <b class="text-black my-auto">TA 2016 / 2017</b>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-secondary me-1" data-bs-toggle="tooltip"
+                                                            data-bs-offset="0,4" data-bs-placement="right"
+                                                            data-bs-html="true" title=""
+                                                            data-bs-original-title="Status Periode">Selesai</span>
+                                                    </td>
+                                                    <td><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Atas : Dana Masuk <br> Bawah : Dana Keluar "><i
+                                                                class="bx bx-transfer-alt text-success"></i>
+                                                            1.500.000.000
+                                                            <br> <i class="bx bx-transfer-alt text-danger"></i>
+                                                            1.400.000.000 </span>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt text-primary"></i> 100.000.000
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="keuangan-detail.html" class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="keuangan-detail.html">Lihat
+                                                                        detail</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-laporan-keuangan-periode"
+                                                                        data-bs-toggle="modal">Unduh Laporan</a></li>
+                                                                <li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a class="d-flex mt-1 text-secondary" href="#">
+                                                            <img src="../assets/img/icons/thumbnail/icon-label-ta.jpg"
+                                                                alt="" class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                            <b class="text-black my-auto">TA 2015 / 2016</b>
+                                                        </a>
+                                                    </td>
+                                                    <td> <span class="badge bg-label-secondary me-1" data-bs-toggle="tooltip"
+                                                        data-bs-offset="0,4" data-bs-placement="right"
+                                                        data-bs-html="true" title=""
+                                                        data-bs-original-title="Status Periode">Selesai</span>
+                                                    </td>
+                                                    <td><span data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                            data-bs-placement="right" data-bs-html="true" title=""
+                                                            data-bs-original-title="Atas : Dana Masuk <br> Bawah : Dana Keluar "><i
+                                                                class="bx bx-transfer-alt text-success"></i>
+                                                            1.800.000.000
+                                                            <br> <i class="bx bx-transfer-alt text-danger"></i>
+                                                            1.300.000.000 </span>
+                                                    </td>
+                                                    <td><i class="bx bx-transfer-alt text-primary"></i> 500.000.000
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="btn-group dropend">
+                                                            <a href="keuangan-detail.html" class="btn btn-outline-primary">Detail</a>
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                                                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                <span class="visually-hidden"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item"
+                                                                        href="keuangan-detail.html">Lihat
+                                                                        detail</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item"
+                                                                        data-bs-target="#modal-laporan-keuangan-periode"
+                                                                        data-bs-toggle="modal">Unduh Laporan</a></li>
+                                                                <li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-
-            <div class="layout-overlay layout-menu-toggle"></div>
         </div>
 
         <!-- Modal Tambah Transaksi Siswa-->

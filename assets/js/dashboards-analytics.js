@@ -14,19 +14,19 @@
 
   // Total Revenue Report Chart - Bar Chart
   // --------------------------------------------------------------------
-  const totalRevenueChartEl = document.querySelector('#totalRevenueChart'),
+  const totalRevenueChartEl = document.querySelector('#chartTransaksiBackup'),
     totalRevenueChartOptions = {
       series: [{
-          name: 'Pemasukan',
-          data: [18000000, 7000000, 15000000, 29000000, 18000000, 12000000, 9000000, 10000000, 12000000, 13000000, 15000000, 18000000]
+          name: 'Dana Masuk',
+          data: [1800000000, 1500000000, 1500000000, 1900000000, 1800000000, 1200000000, 900000000]
         },
         {
-          name: 'Pengeluaran',
-          data: [-13000000, -18000000, -9000000, -28000000, -5000000, -17000000, -15000000, -10000000, -12000000, -8000000, -11000000, -9000000]
+          name: 'Dana Keluar',
+          data: [-1300000000, -1400000000, -1300000000, -2100000000, -1000000000, -1100000000, -800000000]
         }
       ],
       chart: {
-        height: 300,
+        height: 200,
         stacked: true,
         type: 'bar',
         toolbar: {
@@ -42,7 +42,7 @@
           endingShape: 'rounded'
         }
       },
-      colors: [config.colors.primary, config.colors.info],
+      colors: [config.colors.success, config.colors.danger],
       dataLabels: {
         enabled: false
       },
@@ -57,10 +57,10 @@
         horizontalAlign: 'left',
         position: 'top',
         markers: {
-          height: 8,
-          width: 8,
+          height: 12,
+          width: 12,
           radius: 12,
-          offsetX: -3
+          offsetX: 0
         },
         labels: {
           colors: axisColor
@@ -79,12 +79,11 @@
         }
       },
       xaxis: {
-        categories: ['Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Des',
-          'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'
+        categories: ['TA 2015 / 2016', 'TA 2016 / 2017', 'TA 2017 / 2018', 'TA 2018 / 2019', 'TA 2019 / 2020', 'TA 2020 / 2021', 'TA 2021 / 2022'
         ],
         labels: {
           style: {
-            fontSize: '13px',
+            fontSize: '10px',
             colors: axisColor
           }
         },
@@ -96,9 +95,10 @@
         }
       },
       yaxis: {
+        show: false,
         labels: {
           style: {
-            fontSize: '13px',
+            fontSize: '10px',
             colors: axisColor
           }
         }
@@ -490,13 +490,14 @@
 
   // Income Chart - Area chart
   // --------------------------------------------------------------------
-  const incomeChartEl = document.querySelector('#incomeChart'),
+  const incomeChartEl = document.querySelector('#chartDanaSisa'),
     incomeChartConfig = {
       series: [{
-        data: [24, 21, 30, 22, 42, 26, 35, 29]
+        name: 'Dana Sisa',
+        data: [0, 100000000, 10000000, 800000000, -200000000, 200000000, 100000000, 500000000, 0]
       }],
       chart: {
-        height: 215,
+        height: 200,
         parentHeightOffset: 0,
         parentWidthOffset: 0,
         toolbar: {
@@ -508,31 +509,147 @@
         enabled: false
       },
       stroke: {
-        width: 2,
+        width: 4,
         curve: 'smooth'
       },
       legend: {
         show: false
       },
-      markers: {
-        size: 6,
-        colors: 'transparent',
-        strokeColors: 'transparent',
-        strokeWidth: 4,
-        discrete: [{
-          fillColor: config.colors.white,
-          seriesIndex: 0,
-          dataPointIndex: 7,
-          strokeColor: config.colors.primary,
-          strokeWidth: 2,
-          size: 6,
-          radius: 8
-        }],
-        hover: {
-          size: 7
+      
+      // markers: {
+      //   size: 6,
+      //   colors: 'transparent',
+      //   strokeColors: 'transparent',
+      //   strokeWidth: 4,
+      //   discrete: [{
+      //     fillColor: config.colors.white,
+      //     seriesIndex: 0,
+      //     dataPointIndex: 7,
+      //     strokeColor: config.colors.primary,
+      //     strokeWidth: 2,
+      //     size: 6,
+      //     radius: 8
+      //   }],
+      //   hover: {
+      //     size: 7
+      //   }
+      // },
+      colors: [config.colors.primary],
+      fill: {
+        type: 'gradient',
+        gradient: {
+          shade: shadeColor,
+          shadeIntensity: 0.6,
+          opacityFrom: 0.5,
+          opacityTo: 0.25,
+          stops: [0, 95, 100]
         }
       },
-      colors: [config.colors.primary],
+      grid: {
+        borderColor: borderColor,
+        strokeDashArray: 0,
+        padding: {
+          top: -20,
+          bottom: 10,
+          left: -10,
+          right: 0
+        }
+      },
+      xaxis: {
+        categories: ['', 'TA 2015 / 2016', 'TA 2016 / 2017', 'TA 2017 / 2018', 'TA 2018 / 2019', 'TA 2019 / 2020', 'TA 2020 / 2021', 'TA 2021 / 2022', ''],
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        },
+        labels: {
+          show: true,
+          style: {
+            fontSize: '10px',
+            colors: axisColor
+          }
+        }
+      },
+      yaxis: {
+        labels: {
+          show: false
+        }
+      }
+    };
+  if (typeof incomeChartEl !== undefined && incomeChartEl !== null) {
+    const incomeChart = new ApexCharts(incomeChartEl, incomeChartConfig);
+    incomeChart.render();
+  }
+
+  // Income Chart - Area chart
+  // --------------------------------------------------------------------
+  const incomeChartEl2 = document.querySelector('#chartTransaksi'),
+    incomeChartConfig2 = {
+      series: [{
+        name: 'Dana Masuk',
+        data: [0, 1800000000, 1500000000, 1500000000, 1900000000, 1800000000, 1200000000, 900000000, 0]
+      },
+      {
+        name: 'Dana Keluar',
+        data: [0, 1300000000, 1400000000, 1300000000, 2100000000, 1000000000, 1100000000, 800000000, 0]
+      }
+    ],
+      chart: {
+        height: '200',
+        parentHeightOffset: 0,
+        parentWidthOffset: 0,
+        toolbar: {
+          show: false
+        },
+        type: 'area'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: 4,
+        curve: 'smooth'
+      },
+      legend: {
+        show: false
+      },
+      // legend: {
+      //   show: true,
+      //   horizontalAlign: 'left',
+      //   position: 'bottom',
+      //   markers: {
+      //     height: 12,
+      //     width: 12,
+      //     radius: 12,
+      //     offsetX: 0
+      //   },
+      //   labels: {
+      //     colors: axisColor
+      //   },
+      //   itemMargin: {
+      //     horizontal: 10
+      //   }
+      // },
+      // markers: {
+      //   size: 6,
+      //   colors: 'transparent',
+      //   strokeColors: 'transparent',
+      //   strokeWidth: 4,
+      //   discrete: [{
+      //     fillColor: config.colors.white,
+      //     seriesIndex: 0,
+      //     dataPointIndex: 7,
+      //     strokeColor: config.colors.success,
+      //     strokeWidth: 2,
+      //     size: 6,
+      //     radius: 8
+      //   }],
+      //   hover: {
+      //     size: 7
+      //   }
+      // },
+      colors: [config.colors.success, config.colors.danger],
       fill: {
         type: 'gradient',
         gradient: {
@@ -548,13 +665,13 @@
         strokeDashArray: 3,
         padding: {
           top: -20,
-          bottom: -8,
+          bottom: 10,
           left: -10,
-          right: 8
+          right: 0
         }
       },
       xaxis: {
-        categories: ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        categories: ['', 'TA 2015 / 2016', 'TA 2016 / 2017', 'TA 2017 / 2018', 'TA 2018 / 2019', 'TA 2019 / 2020', 'TA 2020 / 2021', 'TA 2021 / 2022', ''],
         axisBorder: {
           show: false
         },
@@ -564,7 +681,7 @@
         labels: {
           show: true,
           style: {
-            fontSize: '13px',
+            fontSize: '10px',
             colors: axisColor
           }
         }
@@ -572,16 +689,134 @@
       yaxis: {
         labels: {
           show: false
-        },
-        min: 10,
-        max: 50,
-        tickAmount: 4
+        }
       }
     };
-  if (typeof incomeChartEl !== undefined && incomeChartEl !== null) {
-    const incomeChart = new ApexCharts(incomeChartEl, incomeChartConfig);
-    incomeChart.render();
+  if (typeof incomeChartEl2 !== undefined && incomeChartEl2 !== null) {
+    const incomeChart2 = new ApexCharts(incomeChartEl2, incomeChartConfig2);
+    incomeChart2.render();
   }
+
+  // Income Chart - Area chart
+  // --------------------------------------------------------------------
+  const incomeChartEl3 = document.querySelector('#chartTransaksiDana'),
+    incomeChartConfig3 = {
+      series: [{
+        name: 'Dana Masuk',
+        data: [0, 180000000, 150000000, 150000000, 190000000, 180000000, 120000000, 90000000, 150000000, 150000000, 190000000, 180000000, 120000000, 0]
+      },
+      {
+        name: 'Dana Keluar',
+        data: [0, 130000000, 140000000, 130000000, 210000000, 100000000, 110000000, 80000000, 140000000, 130000000, 210000000, 100000000, 110000000, 0]
+      },
+      {
+        name: 'Dana Sisa',
+        data: [0, 50000000, 10000000, 20000000, -20000000, 70000000, 10000000, 10000000, 10000000, 20000000, -20000000, 70000000, 10000000, 0]
+      }
+    ],
+      chart: {
+        height: '200',
+        parentHeightOffset: 0,
+        parentWidthOffset: 0,
+        toolbar: {
+          show: false
+        },
+        type: 'area'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: 4,
+        curve: 'smooth'
+      },
+      legend: {
+        show: false
+      },
+      // legend: {
+      //   show: true,
+      //   horizontalAlign: 'left',
+      //   position: 'bottom',
+      //   markers: {
+      //     height: 12,
+      //     width: 12,
+      //     radius: 12,
+      //     offsetX: 0
+      //   },
+      //   labels: {
+      //     colors: axisColor
+      //   },
+      //   itemMargin: {
+      //     horizontal: 10
+      //   }
+      // },
+      // markers: {
+      //   size: 6,
+      //   colors: 'transparent',
+      //   strokeColors: 'transparent',
+      //   strokeWidth: 4,
+      //   discrete: [{
+      //     fillColor: config.colors.white,
+      //     seriesIndex: 0,
+      //     dataPointIndex: 7,
+      //     strokeColor: config.colors.success,
+      //     strokeWidth: 2,
+      //     size: 6,
+      //     radius: 8
+      //   }],
+      //   hover: {
+      //     size: 7
+      //   }
+      // },
+      colors: [config.colors.success, config.colors.danger, config.colors.primary],
+      fill: {
+        type: 'gradient',
+        gradient: {
+          shade: shadeColor,
+          shadeIntensity: 0.6,
+          opacityFrom: 0.5,
+          opacityTo: 0.25,
+          stops: [0, 95, 100]
+        }
+      },
+      grid: {
+        borderColor: borderColor,
+        strokeDashArray: 3,
+        padding: {
+          top: -20,
+          bottom: 10,
+          left: -10,
+          right: 0
+        }
+      },
+      xaxis: {
+        categories: ['', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', ''],
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        },
+        labels: {
+          show: true,
+          style: {
+            fontSize: '10px',
+            colors: axisColor
+          }
+        }
+      },
+      yaxis: {
+        labels: {
+          show: false
+        }
+      }
+    };
+  if (typeof incomeChartEl3 !== undefined && incomeChartEl3 !== null) {
+    const incomeChart3 = new ApexCharts(incomeChartEl3, incomeChartConfig3);
+    incomeChart3.render();
+  }
+
+
 
   // Expenses Mini Chart - Radial Chart
   // --------------------------------------------------------------------

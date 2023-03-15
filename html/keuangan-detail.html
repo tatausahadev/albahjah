@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/"
+    data-template="vertical-menu-template-free">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>SMP Al Bahjah | TU-Apps </title>
+
+    <meta name="description" content="" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/boxicons-2.1.4/css/boxicons.min.css" />
+    <link rel="stylesheet" href="fonts/boxicons.scss" />
+
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
+
+    <script src="../assets/vendor/js/helpers.js"></script>
+
+    <script src="../assets/js/config.js"></script>
+
+    <!-- Tambahan -->
+    <link rel="stylesheet" href="../libs/select/select.css" />
+    <link rel="stylesheet" href="../assets/css/page-instansi.css">
+    <link rel="stylesheet" href="../assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/sweetalert2/sweetalert2.css" />
+
+    <!-- UPDATE -->
+    <link rel="stylesheet" href="../assets/new/core.css" />
+    <link rel="stylesheet" href="../assets/new/demo.css" />
+    <link rel="stylesheet" href="../assets/new/theme-default.css" />
+
+    <!-- <style>
+        .card-filter-side {
+            position: sticky;
+            top: 25px;
+        }
+    </style> -->
+
+    <style>
+        .light-style .bootstrap-select .filter-option-inner-inner {
+            color: #697a8d;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo">
+                    <a href="index.html" class="app-brand-link">
+                        <img class="img-fluid p-5" src="logo-tu-apps.png" alt="">
+                    </a>
+
+                    <a href="javascript:void(0);"
+                        class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                        <i class="bx bx-chevron-left bx-sm align-middle"></i>
+                    </a>
+                </div>
+
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-dashboard"></i>
+                            <div>Beranda</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Menu utama</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="transaksi-siswa.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                            <div>Transaksi Siswa</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="transaksi-pegawai.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                            <div> Transaksi Pegawai</div>
+                        </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="transaksi-instansi.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                            <div> Transaksi Instansi</div>
+                        </a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="keuangan.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-bar-chart-alt-2"></i>
+                            <div>Keuangan</div>
+                        </a>
+                    </li>
+
+
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Pengaturan Umum</span>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="instansi.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-bank"></i>
+                            <div>Instansi</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="periode-waktu.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-calendar"></i>
+                            <div>Periode Waktu</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0)" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-male-female"></i>
+                            <div>Pengguna</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="pengguna-siswa.html" class="menu-link">
+                                    <div>Siswa</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="pengguna-pegawai.html" class="menu-link">
+                                    <div>Pegawai</div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0)" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bxs-graduation"></i>
+                            <div>Kelas</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="kelas-formal.html" class="menu-link">
+                                    <div>Kelas Formal</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="kelas-non-formal.html" class="menu-link">
+                                    <div>Kelas Non-Formal</div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0)" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-transfer-alt"></i>
+                            <div>Transaksi</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="pengaturan-transaksi-master-data.html" class="menu-link">
+                                    <div>Master Data</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="pengaturan-transaksi-siswa.html" class="menu-link">
+                                    <div>Dari Siswa</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="pengaturan-transaksi-pegawai.html" class="menu-link">
+                                    <div>Dari Pegawai</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="pengaturan-transaksi-instansi.html" class="menu-link">
+                                    <div>Dari Instansi</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Lain - lain</span></li>
+
+
+                    <li class="menu-item">
+                        <a href="riwayat.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bxs-timer"></i>
+                            <div>Riwayat</div>
+                        </a>
+                    </li>
+
+                </ul>
+            </aside>
+
+            <div class="layout-page">
+
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+                    id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                            <i class="bx bx-menu bx-sm"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item d-flex align-items-center">
+                                <img style="height: 50px;" class="d-none d-md-block"
+                                    src="../assets/img/logo/logo-sekolah-header.png" alt="">
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+                            <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
+                                    class="fw-semibold bg-label-primary small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">SMP
+                                    <span class="bx bxs-bank text-white bg-primary rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Instansi Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">RA</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">PAUD</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">MI</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">SMP</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bxs-bank text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Yayasan</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item me-2 navbar-dropdown dropdown-user dropdown"><a
+                                    class="fw-semibold bg-label-warning small rounded-pill p-2 nav-link dropdown-toggle hide-arrow"
+                                    href="#" data-bs-toggle="dropdown">Operator
+                                    <span class="bx bx-user text-white bg-warning rounded-pill p-1"></span></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text small text-muted">Peran Anda</span></li>
+                                    <li>
+                                        <a class="dropdown-item" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-danger rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pengawas</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item active" selected href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-warning rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Operator</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-info rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Pegawai</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span
+                                                class="bx bx-user text-white bg-primary rounded-pill p-1 mt-1 me-2"></span></i>
+                                            <span class="align-middle pb-2">Siswa</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                    data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="../assets/img/avatars/muslim-3.jpg" alt
+                                            class="w-px-40 h-auto rounded-circle" />
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="../assets/img/avatars/muslim-3.jpg" alt
+                                                            class="w-px-40 h-auto rounded-circle" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-semibold d-block">Faishal Salim</span>
+                                                    <small class="text-muted">1020193124</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="profilku.html">
+                                            <i class="bx bx-user me-2"></i>
+                                            <span class="align-middle pb-2">Profilku</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="masuk.html">
+                                            <i class="bx bx-power-off me-2"></i>
+                                            <span class="align-middle pb-2">Keluar Apps</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="content-wrapper">
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="keuangan.html">Keuangan</a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <span href="javascript:void(0);">Periode TA 2019 / 2020</span>
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+
+                            <div class="col-sm-4 col-12">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span class="badge bg-label-info me-1 mb-3">Berlangsung</span>
+                                            <a type="button" class="btn btn-icon btn-outline-primary"
+                                                href="cetak-keuangan.html" target="_blank">
+                                                <span class="tf-icons bx bxs-download bx-sm"></span>
+                                            </a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-flex">
+                                                    <span class="btn btn-icon rounded-pill bg-primary">
+                                                        <i
+                                                            class="bx bx-calendar-check bx-sm bx-tada-hover text-white"></i>
+                                                    </span>
+                                                    &emsp;
+                                                    <h5 class="my-auto fw-bold">TA 2019 / 2020</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <div class="d-flex">
+                                                    <span class="btn btn-icon rounded-pill bg-label-success">
+                                                        <i class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                    </span>
+                                                    &emsp;
+                                                    <div>
+                                                        <h6 class="mb-0">
+                                                            Rp 1.800.000.000</h6>
+                                                        <span class="small">Dana Masuk
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <div class="d-flex">
+                                                    <span class="btn btn-icon rounded-pill bg-label-danger">
+                                                        <i class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                    </span>
+                                                    &emsp;
+                                                    <div>
+                                                        <h6 class="mb-0">
+                                                            Rp 1.000.000.000</h6>
+                                                        <span class="small">Dana Keluar
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 mt-4">
+                                                <div class="d-flex">
+                                                    <span class="btn btn-icon rounded-pill bg-label-primary">
+                                                        <i class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                    </span>
+                                                    &emsp;
+                                                    <div>
+                                                        <h6 class="mb-0">
+                                                            Rp 800.000.000</h6>
+                                                        <span class="small">Dana Sisa
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-8 col-12">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h5 class="fw-semibold">Informasi Dana</h5>
+                                    </div>
+                                    <div id="chartTransaksiDana"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="nav-align-top">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <button type="button" class="nav-link active p-3" role="tab"
+                                                data-bs-toggle="tab" data-bs-target="#tab-dana-masuk"
+                                                aria-controls="tab-dana-masuk" aria-controls="tab-dana-masuk"
+                                                aria-selected="true"><span
+                                                    class="badge badge-center rounded-pill bg-success me-1"><i
+                                                        class="bx bx-transfer-alt"></i></span>
+                                                Dana Masuk</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button type="button" class="nav-link p-3" role="tab" data-bs-toggle="tab"
+                                                data-bs-target="#tab-dana-keluar" aria-controls="tab-dana-keluar"
+                                                aria-selected="false"><span
+                                                    class="badge badge-center rounded-pill bg-danger me-1"><i
+                                                        class="bx bx-transfer-alt"></i></span> Dana Keluar</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button type="button" class="nav-link p-3" role="tab" data-bs-toggle="tab"
+                                                data-bs-target="#tab-dana-sisa" aria-controls="tab-dana-sisa"
+                                                aria-selected="false"><span
+                                                    class="badge badge-center rounded-pill bg-primary me-1"><i
+                                                        class="bx bx-transfer-alt"></i></span> Dana Sisa</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="tab-dana-masuk" role="tabpanel">
+                                            <div class="card-title header-elements">
+                                                <h5 class="mb-3 me-2">Dana Masuk</h5>
+                                                <div class="card-title-elements ms-auto">
+                                                    <!-- <a type="button" class="btn btn-primary text-white mb-3"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modal-pengaturan-dana-masuk">
+                                                        <i class="bx bxs-cog">&nbsp;</i> Pengaturan
+                                                    </a> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="row my-3">
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true" disabled>
+                                                        <option value="1">TA 2019 / 2020</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="1">Juli</option>
+                                                        <option value="2">Agustus</option>
+                                                        <option value="3">September</option>
+                                                        <option value="4">Oktober</option>
+                                                        <option value="5">November</option>
+                                                        <option value="6">Desember</option>
+                                                        <option value="7">Januari</option>
+                                                        <option value="8">Februari</option>
+                                                        <option value="9">Maret</option>
+                                                        <option value="10">April</option>
+                                                        <option value="11">Mei</option>
+                                                        <option value="12">Juni</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="0">Semua Transaksi
+                                                        </option>
+                                                        <option value="1">Transaksi Siswa
+                                                        </option>
+                                                        <option value="2">Transaksi Pegawai
+                                                        </option>
+                                                        <option value="3">Transaksi Instansi
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="0" selected="">Semua persentase</option>
+                                                        <option value="1">Sudah 100%</option>
+                                                        <option value="2">Kurang dari 100%</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="table-responsive">
+                                                <table
+                                                    class="table table-hover card-table table-striped table-borderless mb-4">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-primary">Nama Transaksi</th>
+                                                            <th class="text-primary">Asal Dana</th>
+                                                            <th class="text-primary">Persantase</th>
+                                                            <th class="text-primary text-end">Nominal (Rp)</th>
+                                                            <th class="text-primary text-center">Aksi</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="table-border-bottom-0">
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <span
+                                                                        class="btn btn-icon rounded-pill bg-label-success me-3">
+                                                                        <i
+                                                                            class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                                    </span>
+                                                                    <div>
+                                                                        <strong class="text-black">Penerimaan Santri
+                                                                            Baru</strong> <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Transaksi Siswa
+                                                            </td>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                    <div class="progress w-100" style="height:10px;">
+                                                                        <div class="progress-bar bg-success"
+                                                                            role="progressbar" style="width: 100%"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <small class="fw-semibold">100%</small>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end"> 180.000.000
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-detail-dana-masuk"
+                                                                    class="btn btn-outline-primary">Detail</a>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <span
+                                                                        class="btn btn-icon rounded-pill bg-label-success me-3">
+                                                                        <i
+                                                                            class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                                    </span>
+                                                                    <div>
+                                                                        <strong class="text-black">Daftar Ulang</strong>
+                                                                        <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Transaksi Siswa
+                                                            </td>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                    <div class="progress w-100" style="height:10px;">
+                                                                        <div class="progress-bar bg-success"
+                                                                            role="progressbar" style="width: 100%"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <small class="fw-semibold">100%</small>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end"> 240.000.000
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-detail-dana-masuk2"
+                                                                    class="btn btn-outline-primary">Detail</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <span
+                                                                        class="btn btn-icon rounded-pill bg-label-success me-3">
+                                                                        <i
+                                                                            class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                                    </span>
+                                                                    <div>
+                                                                        <strong class="text-black">SPP Bulanan</strong>
+                                                                        <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Transaksi Siswa
+                                                            </td>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                    <div class="progress w-100" style="height:10px;">
+                                                                        <div class="progress-bar bg-success"
+                                                                            role="progressbar" style="width: 79%"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <small class="fw-semibold">79%</small>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end"> 56.620.000
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-detail-dana-masuk3"
+                                                                    class="btn btn-outline-primary">Detail</a>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <span
+                                                                        class="btn btn-icon rounded-pill bg-label-success me-3">
+                                                                        <i
+                                                                            class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                                    </span>
+                                                                    <div>
+                                                                        <strong class="text-black">Dana Sisa dari
+                                                                            Periode Sebelumnya</strong> <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Transaksi Instansi
+                                                            </td>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                    <div class="progress w-100" style="height:10px;">
+                                                                        <div class="progress-bar bg-success"
+                                                                            role="progressbar" style="width: 100%"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <small class="fw-semibold">100%</small>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end"> 100.000.000
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-detail-dana-masuk4"
+                                                                    class="btn btn-outline-primary">Detail</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <nav aria-label="Page navigation" class="my-4">
+                                                <ul class="pagination justify-content-center">
+                                                    <li class="page-item prev">
+                                                        <a class="page-link" href="javascript:void(0);"><i
+                                                                class="tf-icon bx bx-chevrons-left"></i></a>
+                                                    </li>
+                                                    <li class="page-item active">
+                                                        <a class="page-link" href="javascript:void(0);">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">3</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">4</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">5</a>
+                                                    </li>
+                                                    <li class="page-item next">
+                                                        <a class="page-link" href="javascript:void(0);"><i
+                                                                class="tf-icon bx bx-chevrons-right"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="tab-dana-keluar" role="tabpanel">
+                                            <div class="card-title header-elements">
+                                                <h5 class="mb-3 me-2">Dana Keluar</h5>
+                                                <div class="card-title-elements ms-auto">
+                                                    <!-- <a type="button" class="btn btn-primary text-white mb-3"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modal-pengaturan-dana-keluar">
+                                                        <i class="bx bxs-cog">&nbsp;</i> Pengaturan
+                                                    </a> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="row my-3">
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true" disabled>
+                                                        <option value="1">TA 2019 / 2020</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="1">Juli</option>
+                                                        <option value="2">Agustus</option>
+                                                        <option value="3">September</option>
+                                                        <option value="4">Oktober</option>
+                                                        <option value="5">November</option>
+                                                        <option value="6">Desember</option>
+                                                        <option value="7">Januari</option>
+                                                        <option value="8">Februari</option>
+                                                        <option value="9">Maret</option>
+                                                        <option value="10">April</option>
+                                                        <option value="11">Mei</option>
+                                                        <option value="12">Juni</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="0">Semua Transaksi
+                                                        </option>
+                                                        <option value="1">Transaksi Siswa
+                                                        </option>
+                                                        <option value="2">Transaksi Pegawai
+                                                        </option>
+                                                        <option value="3">Transaksi Instansi
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="0" selected="">Semua persentase</option>
+                                                        <option value="1">Sudah 100%</option>
+                                                        <option value="2">Kurang dari 100%</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="table-responsive">
+                                                <table
+                                                    class="table table-hover card-table table-striped table-borderless mb-4">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-primary">Nama Transaksi</th>
+                                                            <th class="text-primary">Jenis Transaksi</th>
+                                                            <th class="text-primary">Persantase</th>
+                                                            <th class="text-primary text-end">Nominal (Rp)</th>
+                                                            <th class="text-primary text-center">Aksi</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="table-border-bottom-0">
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <span
+                                                                        class="btn btn-icon rounded-pill bg-label-danger me-3">
+                                                                        <i
+                                                                            class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                                    </span>
+                                                                    <div>
+                                                                        <strong class="text-black">Gaji Pokok
+                                                                            Bulanan</strong> <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Transaksi Pegawai
+                                                            </td>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                    <div class="progress w-100" style="height:10px;">
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" style="width: 100%"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <small class="fw-semibold">100%</small>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end"> 45.600.000
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-detail-dana-keluar"
+                                                                    class="btn btn-outline-primary">Detail</a>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <span
+                                                                        class="btn btn-icon rounded-pill bg-label-danger me-3">
+                                                                        <i
+                                                                            class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                                    </span>
+                                                                    <div>
+                                                                        <strong class="text-black">Tunjangan
+                                                                            Kesehatan</strong>
+                                                                        <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Transaksi Pegawai
+                                                            </td>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                    <div class="progress w-100" style="height:10px;">
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" style="width: 100%"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <small class="fw-semibold">100%</small>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end"> 14.300.000
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-detail-dana-keluar"
+                                                                    class="btn btn-outline-primary">Detail</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <span
+                                                                        class="btn btn-icon rounded-pill bg-label-danger me-3">
+                                                                        <i
+                                                                            class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                                    </span>
+                                                                    <div>
+                                                                        <strong class="text-black">Tunjangan Kepala
+                                                                            Sekolah</strong>
+                                                                        <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Transaksi Pegawai
+                                                            </td>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                    <div class="progress w-100" style="height:10px;">
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" style="width:0%"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <small class="fw-semibold">0%</small>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end"> 2.620.000
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-detail-dana-keluar2"
+                                                                    class="btn btn-outline-primary">Detail</a>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <span
+                                                                        class="btn btn-icon rounded-pill bg-label-danger me-3">
+                                                                        <i
+                                                                            class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                                                    </span>
+                                                                    <div>
+                                                                        <strong class="text-black">Pengadaan Alat
+                                                                            Olahraga</strong> <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Transaksi Instansi
+                                                            </td>
+                                                            </td>
+                                                            <td>
+                                                                <div
+                                                                    class="d-flex justify-content-between align-items-center gap-3">
+                                                                    <div class="progress w-100" style="height:10px;">
+                                                                        <div class="progress-bar bg-danger"
+                                                                            role="progressbar" style="width: 100%"
+                                                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <small class="fw-semibold">100%</small>
+                                                                </div>
+                                                            </td>
+                                                            <td class="text-end"> 15.200.000
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-detail-dana-keluar"
+                                                                    class="btn btn-outline-primary">Detail</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <nav aria-label="Page navigation" class="my-4">
+                                                <ul class="pagination justify-content-center">
+                                                    <li class="page-item prev">
+                                                        <a class="page-link" href="javascript:void(0);"><i
+                                                                class="tf-icon bx bx-chevrons-left"></i></a>
+                                                    </li>
+                                                    <li class="page-item active">
+                                                        <a class="page-link" href="javascript:void(0);">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">3</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">4</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="javascript:void(0);">5</a>
+                                                    </li>
+                                                    <li class="page-item next">
+                                                        <a class="page-link" href="javascript:void(0);"><i
+                                                                class="tf-icon bx bx-chevrons-right"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="tab-dana-sisa" role="tabpanel">
+                                            <div class="card-title header-elements">
+                                                <h5 class="mb-3 me-2">Berdasarkan Potongan</h5>
+                                                <div class="card-title-elements ms-auto">
+                                                    <a type="button" class="btn btn-primary text-white mb-3"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#modal-pengaturan-berdasarkan-potongan">
+                                                        <i class="bx bxs-cog">&nbsp;</i> Pengaturan
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="0">TA 2019 / 2020
+                                                        </option>
+                                                        <option value="1">TA 2018 / 2019
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="1">Juli</option>
+                                                        <option value="2">Agustus</option>
+                                                        <option value="3">September</option>
+                                                        <option value="4">Oktober</option>
+                                                        <option value="5">November</option>
+                                                        <option value="6">Desember</option>
+                                                        <option value="7">Januari</option>
+                                                        <option value="8">Februari</option>
+                                                        <option value="9">Maret</option>
+                                                        <option value="10">April</option>
+                                                        <option value="11">Mei</option>
+                                                        <option value="12">Juni</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="0" selected="">Semua Penugasan</option>
+                                                        <option value="1">Guru Mapel</option>
+                                                        <option value="2">Admin TU</option>
+                                                        <option value="3">Bendahara</option>
+                                                        <option value="4">Sekretaris</option>
+                                                        <option value="5">Kepala Sekolah</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-md-3 pb-3">
+                                                    <select class="selectpicker w-100" data-style="btn-default"
+                                                        data-live-search="true">
+                                                        <option value="0" selected="">Semua Pegawai</option>
+                                                        <option value="1">Faeshal Ramdhan</option>
+                                                        <option value="2">Bani Huda</option>
+                                                        <option value="3">Fatim Nur</option>
+                                                        <option value="4">Khoirul Huda</option>
+                                                        <option value="5">Nur Hidayah</option>
+                                                        <option value="6">Bagaspati Ariwibowo</option>
+                                                        <option value="7">Tri Sulistiowati</option>
+                                                        <option value="8">Hamdan Syukron</option>
+                                                        <option value="9">Rozik Fadholi</option>
+                                                        <option value="10">Isdah Nia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="table-responsive mt-3">
+                                                <table
+                                                    class="table table-hover card-table table-striped table-borderless mb-4">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-primary">
+                                                                Nama Potongan Pembayaran</th>
+                                                            <th class="text-primary">Penugasan Pegawai</th>
+                                                            <th class="text-primary">Status Data</th>
+                                                            <th class="text-primary text-center">Aksi</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="table-border-bottom-0">
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi-warning.jpg"
+                                                                        alt=""
+                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
+                                                                    <div>
+                                                                        <strong>Arisan Wajib Bulanan</strong><br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Semua Penugasan</td>
+                                                            <td>
+                                                                <span class="badge bg-label-info me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Potongan pembayaran ini ditampilkan pada periode ini"><i
+                                                                        class="bx bxs-show"></i> Ditampilkan</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-ubah-berdasarkan-potongan"
+                                                                    class="btn btn-outline-primary"><i
+                                                                        class="bx bxs-pencil">&nbsp;</i> Ubah</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi-warning.jpg"
+                                                                        alt=""
+                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
+                                                                    <div>
+                                                                        <strong>Lain - lain</strong> <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Semua Penugasan</td>
+                                                            <td>
+                                                                <span class="badge bg-label-info me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Potongan pembayaran ini ditampilkan pada periode ini"><i
+                                                                        class="bx bxs-show"></i> Ditampilkan</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-ubah-berdasarkan-potongan2"
+                                                                    class="btn btn-outline-primary"><i
+                                                                        class="bx bxs-pencil">&nbsp;</i> Ubah</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a class="d-flex mt-1 text-secondary" href="#">
+                                                                    <img src="../assets/img/icons/thumbnail/icon-transaksi-warning.jpg"
+                                                                        alt=""
+                                                                        class="w-px-40 h-px-40 rounded-circle mt-0 me-3 d-none d-sm-block">
+                                                                    <div>
+                                                                        <strong>Infaq Rutin</strong> <br>
+                                                                        <span class="small">TA 2019 / 2020 - Juli</span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>
+                                                            <td>Semua Penugasan</td>
+                                                            <td>
+                                                                <span class="badge bg-label-secondary me-1 mb-1"
+                                                                    data-bs-toggle="tooltip" data-bs-offset="0,4"
+                                                                    data-bs-placement="right" data-bs-html="true"
+                                                                    title=""
+                                                                    data-bs-original-title="Potongan pembayaran ini tidak ditampilkan pada periode ini"><i
+                                                                        class="bx bxs-hide"></i> Tidak
+                                                                    Ditampilkan</span>
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#modal-ubah-berdasarkan-potongan3"
+                                                                    class="btn btn-outline-primary"><i
+                                                                        class="bx bxs-pencil">&nbsp;</i> Ubah</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <nav aria-label="Page navigation" class="my-4">
+                                                <ul class="pagination justify-content-center">
+                                                    <li class="page-item prev">
+                                                        <a class="page-link" href="javascript:void(0);"><i
+                                                                class="tf-icon bx bx-chevrons-left"></i></a>
+                                                    </li>
+                                                    <li class="page-item active">
+                                                        <a class="page-link" href="javascript:void(0);">1</a>
+                                                    </li>
+                                                    <li class="page-item next">
+                                                        <a class="page-link" href="javascript:void(0);"><i
+                                                                class="tf-icon bx bx-chevrons-right"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal Detail Dana Masuk 1 -->
+        <div class="modal fade" id="modal-detail-dana-masuk" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Detail dana masuk</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-info mb-4" role="alert">
+                                    <span class="text-black my-auto">Berikut adalah informasi dana masuk
+                                        <b>Penerimaan Santri Baru</b> periode <b>TA 2019 / 2020 - Juli</b></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Jenis transaksi</p>
+                                                <span>Transaksi Siswa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-bar-chart-alt-2 bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2 w-75">
+                                                <p class="mb-0 small fw-normal">
+                                                    Persentase</p>
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                                    <div class="progress w-100" style="height:10px;">
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            style="width: 100%" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                    <small class="fw-semibold">100%</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-group bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Jumlah Siswa</p>
+                                                <span> 158 siswa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-coin-stack bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Total dana masuk <span>(158 siswa)</span></p>
+                                                <span> Rp 180.000.000
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="selectpickerSelectDeselect" class="form-label">Daftar Siswa</label>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 my-2">
+                                        <select id="namaKelasSelect" class="form-select">
+                                            <option disabled="" selected="" value="">Pilih Kelas
+                                            </option>
+                                            <option value="1" selected>Kelas I - A </option>
+                                            <option value="2">Kelas I - B</option>
+                                            <option value="3">Kelas I - C</option>
+                                            <option value="4">Kelas II - A </option>
+                                            <option value="5">Kelas II - B</option>
+                                            <option value="6">Kelas II - C</option>
+                                            <option value="7">Kelas III - A </option>
+                                            <option value="8">Kelas III - B</option>
+                                            <option value="9">Kelas III - C</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6 my-2">
+                                        <select id="statusSelect" class="form-select">
+                                            <option disabled="" selected="" value="">Pilih status
+                                            </option>
+                                            <option value="1">Belum Lunas</option>
+                                            <option value="2">Lunas</option>
+                                            <option value="3" selected>Semua status</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-hover card-table table-striped table-borderless mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-primary"><b>41</b> Siswa
+                                                </th>
+                                                <th class="text-primary">Nominal (Rp)</th>
+                                                <th class="text-primary">Status</th>
+                                                <th class="text-primary">Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-border-bottom-0">
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary"
+                                                        href="siswa-detail-non-aktif.html">
+                                                        <img src="../assets/img/avatars/default.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Faeshal Ramdhan</strong> <br>
+                                                            <span class="small">2019827318945</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>1.140.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:14 <br> oleh Nur Hasanah
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswa-1.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Agus
+                                                                Fakhriz</strong> <br>
+                                                            <span class="small">2019827318920</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>1.140.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:15 <br> oleh Nur Hasanah
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswi-1.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Fatim Nur</strong> <br>
+                                                            <span class="small">2019827318923</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>1.140.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:16 <br> oleh Bagas Septian
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswa-2.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Khoirul Huda</strong> <br>
+                                                            <span class="small">2019827318924</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>1.140.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:17 <br> oleh Faishal Salim
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary"
+                                                        href="siswa-detail-alumni.html">
+                                                        <img src="../assets/img/avatars/siswi-2.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Nur Hidayah</strong> <br>
+                                                            <span class="small">2019827318931</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>1.140.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:19 <br> oleh Nur Hasanah
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <nav aria-label="Page navigation" class="my-4">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item prev">
+                                            <a class="page-link" href="javascript:void(0);"><i
+                                                    class="tf-icon bx bx-chevrons-left"></i></a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="javascript:void(0);">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">4</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">5</a>
+                                        </li>
+                                        <li class="page-item next">
+                                            <a class="page-link" href="javascript:void(0);"><i
+                                                    class="tf-icon bx bx-chevrons-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                            Tutup
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Modal Detail Dana Masuk 2 -->
+         <div class="modal fade" id="modal-detail-dana-masuk2" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Detail dana masuk</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-info mb-4" role="alert">
+                                    <span class="text-black my-auto">Berikut adalah informasi dana masuk
+                                        <b>Daftar Ulang</b> periode <b>TA 2019 / 2020 - Juli</b></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Jenis transaksi</p>
+                                                <span>Transaksi Siswa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-bar-chart-alt-2 bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2 w-75">
+                                                <p class="mb-0 small fw-normal">
+                                                    Persentase</p>
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                                    <div class="progress w-100" style="height:10px;">
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            style="width: 100%" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                    <small class="fw-semibold">100%</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-group bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Jumlah Siswa</p>
+                                                <span> 295 siswa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-coin-stack bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Total dana masuk <span>(295 siswa)</span></p>
+                                                <span> Rp 240.000.000
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="selectpickerSelectDeselect" class="form-label">Daftar Siswa</label>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 my-2">
+                                        <select id="namaKelasSelect" class="form-select">
+                                            <option disabled="" selected="" value="">Pilih Kelas
+                                            </option>
+                                            <option value="1">Kelas I - A </option>
+                                            <option value="2">Kelas I - B</option>
+                                            <option value="3">Kelas I - C</option>
+                                            <option value="4" selected>Kelas II - A </option>
+                                            <option value="5">Kelas II - B</option>
+                                            <option value="6">Kelas II - C</option>
+                                            <option value="7">Kelas III - A </option>
+                                            <option value="8">Kelas III - B</option>
+                                            <option value="9">Kelas III - C</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6 my-2">
+                                        <select id="statusSelect" class="form-select">
+                                            <option disabled="" selected="" value="">Pilih status
+                                            </option>
+                                            <option value="1">Belum Lunas</option>
+                                            <option value="2">Lunas</option>
+                                            <option value="3" selected>Semua status</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-hover card-table table-striped table-borderless mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-primary"><b>31</b> Siswa
+                                                </th>
+                                                <th class="text-primary">Nominal (Rp)</th>
+                                                <th class="text-primary">Status</th>
+                                                <th class="text-primary">Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-border-bottom-0">
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary"
+                                                        href="siswa-detail-non-aktif.html">
+                                                        <img src="../assets/img/avatars/default.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Faeshal Ramdhan</strong> <br>
+                                                            <span class="small">2019827318945</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>814.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:14 <br> oleh Nur Hasanah
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswa-1.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Agus
+                                                                Fakhriz</strong> <br>
+                                                            <span class="small">2019827318920</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>814.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:15 <br> oleh Nur Hasanah
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswi-1.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Fatim Nur</strong> <br>
+                                                            <span class="small">2019827318923</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>814.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:16 <br> oleh Bagas Septian
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswa-2.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Khoirul Huda</strong> <br>
+                                                            <span class="small">2019827318924</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>814.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:17 <br> oleh Faishal Salim
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary"
+                                                        href="siswa-detail-alumni.html">
+                                                        <img src="../assets/img/avatars/siswi-2.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Nur Hidayah</strong> <br>
+                                                            <span class="small">2019827318931</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>814.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:19 <br> oleh Nur Hasanah
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <nav aria-label="Page navigation" class="my-4">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item prev">
+                                            <a class="page-link" href="javascript:void(0);"><i
+                                                    class="tf-icon bx bx-chevrons-left"></i></a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="javascript:void(0);">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">4</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">5</a>
+                                        </li>
+                                        <li class="page-item next">
+                                            <a class="page-link" href="javascript:void(0);"><i
+                                                    class="tf-icon bx bx-chevrons-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                            Tutup
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Detail Dana Masuk 3 -->
+        <div class="modal fade" id="modal-detail-dana-masuk3" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Detail dana masuk</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-info mb-4" role="alert">
+                                    <span class="text-black my-auto">Berikut adalah informasi dana masuk
+                                        <b>SPP Bulanan</b> periode <b>TA 2019 / 2020 - Juli</b></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Jenis transaksi</p>
+                                                <span>Transaksi Siswa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-bar-chart-alt-2 bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2 w-75">
+                                                <p class="mb-0 small fw-normal">
+                                                    Persentase</p>
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                                    <div class="progress w-100" style="height:10px;">
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            style="width: 79%" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                    <small class="fw-semibold">79%</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-group bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Jumlah Siswa</p>
+                                                <span> 295 siswa
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-coin-stack bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Total dana masuk <span>(233 siswa)</span></p>
+                                                <span> Rp 56.620.000
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="selectpickerSelectDeselect" class="form-label">Daftar Siswa</label>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 my-2">
+                                        <select id="namaKelasSelect" class="form-select">
+                                            <option disabled="" selected="" value="">Pilih Kelas
+                                            </option>
+                                            <option value="1">Kelas I - A </option>
+                                            <option value="2">Kelas I - B</option>
+                                            <option value="3">Kelas I - C</option>
+                                            <option value="4" selected>Kelas II - A </option>
+                                            <option value="5">Kelas II - B</option>
+                                            <option value="6">Kelas II - C</option>
+                                            <option value="7">Kelas III - A </option>
+                                            <option value="8">Kelas III - B</option>
+                                            <option value="9">Kelas III - C</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6 my-2">
+                                        <select id="statusSelect" class="form-select">
+                                            <option disabled="" selected="" value="">Pilih status
+                                            </option>
+                                            <option value="1">Belum Lunas</option>
+                                            <option value="2">Lunas</option>
+                                            <option value="3" selected>Semua status</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-hover card-table table-striped table-borderless mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-primary"><b>40</b> Siswa
+                                                </th>
+                                                <th class="text-primary">Nominal (Rp)</th>
+                                                <th class="text-primary">Status</th>
+                                                <th class="text-primary">Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-border-bottom-0">
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary"
+                                                        href="siswa-detail-non-aktif.html">
+                                                        <img src="../assets/img/avatars/default.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Faeshal Ramdhan</strong> <br>
+                                                            <span class="small">2019827318945</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>210.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-danger me-1">Belum Lunas</span>
+                                                </td>
+                                                <td class="small">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswa-1.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Agus
+                                                                Fakhriz</strong> <br>
+                                                            <span class="small">2019827318920</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>210.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-danger me-1">Belum Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswi-1.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Fatim Nur</strong> <br>
+                                                            <span class="small">2019827318923</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>210.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:16 <br> oleh Bagas Septian
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary" href="siswa-detail.html">
+                                                        <img src="../assets/img/avatars/siswa-2.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Khoirul Huda</strong> <br>
+                                                            <span class="small">2019827318924</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>210.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:17 <br> oleh Faishal Salim
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a class="d-flex mt-1 text-secondary"
+                                                        href="siswa-detail-alumni.html">
+                                                        <img src="../assets/img/avatars/siswi-2.jpg" alt=""
+                                                            class="w-px-40 h-px-40 rounded-circle mt-0 me-3">
+                                                        <div>
+                                                            <strong class="text-black">Nur Hidayah</strong> <br>
+                                                            <span class="small">2019827318931</span>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                                <td>210.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 10:19 <br> oleh Nur Hasanah
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <nav aria-label="Page navigation" class="my-4">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item prev">
+                                            <a class="page-link" href="javascript:void(0);"><i
+                                                    class="tf-icon bx bx-chevrons-left"></i></a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="javascript:void(0);">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">4</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript:void(0);">5</a>
+                                        </li>
+                                        <li class="page-item next">
+                                            <a class="page-link" href="javascript:void(0);"><i
+                                                    class="tf-icon bx bx-chevrons-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                            Tutup
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Detail Dana Masuk 4 -->
+        <div class="modal fade" id="modal-detail-dana-masuk4" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Detail dana masuk</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-info mb-4" role="alert">
+                                    <span class="text-black my-auto">Berikut adalah informasi dana masuk
+                                        <b>Dana sisa dari Periode Sebelumnya</b> periode <b>TA 2019 / 2020 -
+                                            Juli</b></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row mb-3">
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-transfer-alt bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Jenis transaksi</p>
+                                                <span>Transaksi Instansi
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-bar-chart-alt-2 bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2 w-75">
+                                                <p class="mb-0 small fw-normal">
+                                                    Persentase</p>
+                                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                                    <div class="progress w-100" style="height:10px;">
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            style="width: 100%" aria-valuemin="0" aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                    <small class="fw-semibold">100%</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-group bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Jumlah komponen dana</p>
+                                                <span> 1 komponen
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <div class="d-flex justify-content-start">
+                                            <span class="btn-icon rounded-pill bg-label-success">
+                                                <i class="bx bx-coin-stack bx-sm bx-tada-hover"></i>
+                                            </span>
+                                            <div class="ms-2">
+                                                <p class="mb-0 small fw-normal">
+                                                    Total dana masuk <span>(1 komponen)</span></p>
+                                                <span> Rp 100.000.000
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="selectpickerSelectDeselect" class="form-label">Daftar Komponen</label>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-hover card-table table-striped table-borderless mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-primary"><b>1</b> Komponen
+                                                </th>
+                                                <th class="text-primary">Nominal (Rp)</th>
+                                                <th class="text-primary">Status</th>
+                                                <th class="text-primary">Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-border-bottom-0">
+                                            <tr>
+                                                <td>
+                                                    <b class="text-black">Dana sisa dari Periode Sebelumnya</b>
+
+                                                </td>
+                                                <td>100.000.000 </td>
+                                                <td>
+                                                    <span class="badge bg-label-success me-1">Lunas</span>
+                                                </td>
+                                                <td class="small">
+                                                    10 Juni 2019 07:15 <br> oleh Nur Hasanah
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-label-secondary" data-bs-dismiss="modal">
+                            Tutup
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="../assets/vendor/libs/popper/popper.js"></script>
+        <script src="../assets/vendor/js/bootstrap.js"></script>
+        <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+        <script src="../assets/vendor/js/menu.js"></script>
+
+        <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+        <script src="../assets/js/main.js"></script>
+        <script src="../assets/vendor/libs/select2/select2.js"></script>
+        <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+
+        <script src="../assets/js/dashboards-analytics.js"></script>
+
+        <script src="../assets/js/sweetalert.min.js"></script>
+        <script src="../assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
+
+        <!-- Tambahan -->
+        <script src="../assets/vendor/libs/jquery-repeater/jquery-repeater.js"></script>
+        <script src="../assets/vendor/libs/cleavejs/cleave.js"></script>
+        <script src="../assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+        <script src="../libs/select/select.js"></script>
+        <script src="../assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+
+        <script>
+            function sweet() {
+                swal({
+                    title: "Data berhasil disimpan!",
+                    // text: "You clicked the button!",
+                    icon: "success",
+                    button: false,
+                    timer: 2000,
+                });
+            }
+        </script>
+
+        <script>
+            $("#namaBulanSelect").select2({
+                placeholder: "Pilih bulan pembayaran",
+                allowClear: true
+            });
+            $("#namaPeriodeSelect").select2({
+                placeholder: "Pilih Periode",
+                allowClear: false
+            });
+        </script>
+
+
+</body>
+
+</html>
